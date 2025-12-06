@@ -1,0 +1,327 @@
+<!--&lt;!&ndash; index.html &ndash;&gt;-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="el">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8" />-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--  <title>Πτυχιακή</title>-->
+<!--  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">-->
+<!--  <script src="{{ url_for('static', filename='popup.js') }}"></script>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--  <div class="app-container">-->
+<!--    <aside class="sidebar">-->
+
+<!--      <h2 class="logo"> 🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>-->
+<!--        <br>-->
+<!--        <button class="button-33" role="button">Ανέβασμα Αρχείου</button>-->
+<!--        <br>-->
+
+<!--      <nav>-->
+<!--        <ul class="menu" >-->
+<!--            <li onclick="window.location.href='/index'">🏠︎ Αρχική Σελίδα</li>-->
+<!--            <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>-->
+<!--            <li class="active"> ⓘ Πληροφορίες </li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+<!--    </aside>-->
+
+<!--    <main class="main-content">-->
+<!--      <div class="circle-image"></div>-->
+<!--      <header class="top-bar">-->
+<!--        <input type="text" class="search" placeholder="Αναζήτηση στον πίνακα  " />-->
+<!--        <button class="settings-btn">⚙️</button>-->
+<!--      </header>-->
+
+<!--      <section class="cards">-->
+<!--        <div class="card">-->
+<!--          <h3>Up to date</h3>-->
+<!--          <p>Όλα συγχρονισμένα!</p>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--          <h3>Needs my attention</h3>-->
+<!--          <p>Κάποια αρχεία χρειάζονται έλεγχο.</p>-->
+<!--        </div>-->
+<!--         <div class="card">-->
+<!--          <h3>Up to date</h3>-->
+<!--          <p>Όλα συγχρονισμένα!</p>-->
+<!--        </div>-->
+<!--      </section>-->
+
+<!--      <section class="cards">-->
+<!--        <div class="card">-->
+<!--          <h3>Up to date</h3>-->
+<!--          <p>Όλα συγχρονισμένα!</p>-->
+<!--        </div>-->
+<!--        </section>-->
+
+<!--         </main>-->
+<!--  </div>-->
+
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <title>Πτυχιακή – Analytics Παρουσίαση</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='information_style.css') }}">
+  <script src="{{ url_for('static', filename='information.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<body>
+<div class="page">
+  <div class="shell">
+
+    <!-- NAV -->
+    <header class="nav">
+      <div class="logo">
+        <div class="logo-mark">Π</div>
+        <div class="logo-text">Πτυχιακή Analytics</div>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-pill">Demo • Dummy δεδομένα</div>
+        <button class="nav-cta">
+          <span>●</span>
+          Ζωντανή παρουσίαση
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <!-- Left: copy -->
+      <article class="hero-text">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Πίνακας ελέγχου πτυχιακής εργασίας
+        </div>
+
+        <h1 class="hero-title">
+          Οπτικοποίηση &amp; Ανάλυση Δεδομένων
+          <span>Πτυχιακής</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Η εφαρμογή συγκεντρώνει, αναλύει και απεικονίζει τα δεδομένα της πτυχιακής εργασίας
+          σε έναν καθαρό, διαδραστικό πίνακα ελέγχου. Παρακολουθείς πρόοδο, ποιότητα και αποτελέσματα
+          σε πραγματικό χρόνο.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary">
+            Προβολή Dashboard
+            <span>↗</span>
+          </button>
+          <button class="btn-ghost">
+            Τεκμηρίωση Πτυχιακής
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <span><strong>+34%</strong> πιο γρήγορη ανάλυση δεδομένων</span>
+          <span><strong>3</strong> ενότητες: συλλογή, ανάλυση, αξιολόγηση</span>
+          <span><strong>100%</strong> διαδραστικά γραφήματα</span>
+        </div>
+
+        <div class="logos">
+          <span>Βελτιστοποιημένη για:</span>
+          <div class="logos-list">
+            <div class="logo-chip">Επιτροπή αξιολόγησης</div>
+            <div class="logo-chip">Παρουσίαση εργασιών</div>
+            <div class="logo-chip">Ερευνητικά δεδομένα</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right: main chart -->
+      <aside class="hero-chart">
+        <div class="hero-chart-header">
+          <div>
+            <div class="hero-chart-title">Εξέλιξη Δεικτών Πτυχιακής</div>
+            <div class="card-subtitle">Πορεία δειγμάτων &amp; μετρήσεων ανά εβδομάδα</div>
+          </div>
+          <div class="hero-chart-badge">+18.4% συνολική βελτίωση</div>
+        </div>
+
+        <div id="chart-main" style="width:100%;"></div>
+
+        <div class="hero-chart-footer">
+          <div class="hero-chart-kpis">
+            <div class="kpi-pill">
+              <span class="kpi-dot"></span>
+              <strong>92%</strong>
+              <span>ολοκλήρωση δειγμάτων</span>
+            </div>
+            <div class="kpi-pill">
+              <span class="kpi-dot" style="background:#22c55e;"></span>
+              <strong>+12</strong>
+              <span>νέα ευρήματα</span>
+            </div>
+          </div>
+          <span>Εβδομάδες εκτέλεσης πειραμάτων</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- STATS & FEATURES -->
+    <section class="grid-two">
+      <!-- Stats + bar chart -->
+      <article class="card">
+        <div class="card-title-row">
+          <div>
+            <div class="card-title">Βασικοί δείκτες πτυχιακής</div>
+            <div class="card-subtitle">Επισκόπηση απόδοσης &amp; προόδου</div>
+          </div>
+          <div class="card-subtitle">Ενημέρωση: σήμερα</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Συνολικά δεδομένα</div>
+            <div class="stat-value">
+              24.532
+              <span class="stat-trend">+3.2%</span>
+            </div>
+            <div class="card-subtitle">Καταγεγραμμένα σημεία μέτρησης</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Ενεργά σενάρια</div>
+            <div class="stat-value">
+              18
+              <span class="stat-trend">+4</span>
+            </div>
+            <div class="card-subtitle">Αριθμός πειραμάτων υπό εξέλιξη</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Ακρίβεια μοντέλου</div>
+            <div class="stat-value">
+              94.1%
+              <span class="stat-trend">+1.3%</span>
+            </div>
+            <div class="card-subtitle">Απόδοση αλγορίθμων / μεθοδολογίας</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Χρόνος ανάλυσης</div>
+            <div class="stat-value">
+              4.3h
+              <span class="stat-trend negative">-37%</span>
+            </div>
+            <div class="card-subtitle">Μέσος χρόνος ανά κύκλο ανάλυσης</div>
+          </div>
+        </div>
+
+        <div id="chart-bar" style="margin-top: 10px;"></div>
+      </article>
+
+      <!-- Features + radial chart -->
+      <article class="card">
+        <div class="card-title-row">
+          <div>
+            <div class="card-title">Ενότητες της εφαρμογής</div>
+            <div class="card-subtitle">Πώς υποστηρίζει την πτυχιακή</div>
+          </div>
+        </div>
+
+        <div id="chart-radial"></div>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-tag">1. Συλλογή δεδομένων</div>
+            <div class="feature-copy">
+              Εισαγωγή από ερωτηματολόγια, αισθητήρες ή εξαγωγές CSV με έλεγχο ποιότητας.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-tag">2. Ανάλυση &amp; επεξεργασία</div>
+            <div class="feature-copy">
+              Φιλτράρισμα, ομαδοποίηση, βασικά στατιστικά &amp; δοκιμή σεναρίων.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-tag">3. Οπτικοποίηση</div>
+            <div class="feature-copy">
+              Διαδραστικά γραφήματα για παρουσίαση στην επιτροπή και στο κείμενο.
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-tag">4. Εξαγωγή αναφορών</div>
+            <div class="feature-copy">
+              Έτοιμα γραφήματα για ένταξη στο κείμενο της πτυχιακής (PDF, εικόνες).
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="row">
+      <article class="preview">
+        <div class="preview-header">
+          <span>Προεπισκόπηση dashboard πτυχιακής</span>
+          <span class="card-subtitle">Ενότητα: σύνοψη ευρημάτων</span>
+        </div>
+
+        <div class="preview-window">
+          <div class="preview-table">
+            <strong>Πίνακας μετρήσεων</strong>
+            <div class="preview-placeholder" style="margin-top: 6px;"></div>
+          </div>
+          <div class="preview-side">
+            <strong>Σύντομη περιγραφή</strong>
+            <p style="margin-top: 5px;">
+              Κάθε γράφημα συνοδεύεται από λεκτική ερμηνεία,
+              ώστε η επιτροπή να μπορεί να συνδέσει ποσοτικά και ποιοτικά ευρήματα.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-title-row">
+          <div>
+            <div class="card-title">Πώς βοηθά στην παρουσίαση;</div>
+            <div class="card-subtitle">Σαφής αφήγηση γύρω από τα δεδομένα</div>
+          </div>
+        </div>
+
+        <ul style="font-size: 12px; color: var(--text-muted); margin-top: 10px; display: grid; gap: 8px;">
+          <li>Συνδέει θεωρία, μεθοδολογία και αποτελέσματα σε ένα ενιαίο dashboard.</li>
+          <li>Επιτρέπει στο κοινό να δει τάσεις &amp; σενάρια σε πραγματικό χρόνο.</li>
+          <li>Διευκολύνει την απάντηση σε ερωτήσεις της επιτροπής με άμεση οπτικοποίηση.</li>
+          <li>Παρέχει υλικό για σχήματα, διαγράμματα και πίνακες στο κείμενο της εργασίας.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <footer class="footer-cta">
+      <div>
+        <strong>Έτοιμο για παρουσίαση;</strong>
+        <div>Η σελίδα αυτή λειτουργεί ως βιτρίνα της πτυχιακής εφαρμογής, με έμφαση στην ανάλυση δεδομένων.</div>
+      </div>
+      <div class="footer-badges">
+        <div class="footer-badge">HTML • CSS • JavaScript</div>
+        <div class="footer-badge">ApexCharts</div>
+        <div class="footer-badge">Responsive Layout</div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+</body>
+</html>
+

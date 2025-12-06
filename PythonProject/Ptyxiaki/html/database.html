@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Πτυχιακή</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='database.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script>
+    // Hide sidebar instantly BEFORE rendering if last saved state was hidden
+    if (sessionStorage.getItem("sidebarState") === "hidden") {
+        document.documentElement.classList.add("prehide-sidebar");
+    }
+
+    // Remove prehide class ASAP after render so hover can work
+    window.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.classList.remove("prehide-sidebar");
+    });
+</script>
+
+
+  <script src="{{ url_for('static', filename='database_script.js') }}" defer></script>
+
+
+
+</head>
+
+<body>
+
+  <div id="left-zone"></div>
+
+  <div class="app-container">
+
+
+    <aside class="sidebar" id="sidebar">
+
+      <h2 class="logo"> 🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>
+      <br>
+      <button class="button-33" role="button">Ανέβασμα Αρχείου</button>
+      <br>
+
+      <nav>
+        <ul class="menu">
+          <li onclick="window.location.href='/index'">🏠︎ Αρχική Σελίδα</li>
+          <li class="active">⛁ Βάση Δεδομένων</li>
+          <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>
+          <li onclick="window.location.href='/statistics'">📈 Στατιστικά</li>
+        </ul>
+      </nav>
+    </aside>
+
+
+
+    <div id="content" class="content">
+
+      <main class="main-content">
+
+
+
+
+        <main class="table" id="customers_table">
+
+          <section class="table__header">
+            <h1>Πίνακας Document</h1>
+
+            <div class="input-group search-modern">
+              <input id="tableSearch" type="search" placeholder="Αναζήτησε για δεδομένα...">
+              <i class="fa fa-search"></i>
+            </div>
+
+            <div class="export__file">
+              <label for="export-file" class="export__file-btn" title="Export File"></label>
+              <input type="checkbox" id="export-file">
+              <div class="export__file-options">
+                <label>Export As →</label>
+                <label for="export-file" id="toPDF">PDF</label>
+                <label for="export-file" id="toJSON">JSON</label>
+                <label for="export-file" id="toCSV">CSV</label>
+                <label for="export-file" id="toEXCEL">EXCEL</label>
+              </div>
+            </div>
+          </section>
+
+          <section class="table__body">
+            <table>
+              <thead>
+                <tr>
+                  <th>DID</th>
+                  <th>ucid</th>
+                  <th>doc_number</th>
+                  <th>kind</th>
+                  <th>state</th>
+                  <th>date</th>
+                  <th>family_id</th>
+                  <th>status</th>
+                  <th>lang</th>
+                  <th>size_description</th>
+                  <th>size_description_pars</th>
+                  <th>size_description_words</th>
+                  <th>how_many_claims</th>
+                  <th>date_produced</th>
+                  <th>abstract_size_chars</th>
+                  <th>abstract_word_count</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for row in rows %}
+                  <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                    <td>{{ row[11] }}</td>
+                    <td>{{ row[12] }}</td>
+                    <td>{{ row[13] }}</td>
+                    <td>{{ row[14] }}</td>
+                    <td>{{ row[15] }}</td>
+                  </tr>
+                {% endfor %}
+
+                {% if rows|length == 0 %}
+                <tr>
+                  <td colspan="16" style="text-align:center; padding:20px;">
+                    Δεν βρέθηκαν εγγραφές.
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+
+            </table>
+          </section>
+
+        </main>
+
+
+
+        <div class="pagination">
+          {% if page > 1 %}
+          <a class="button-33" href="?page={{ page - 1 }}">⬅ Προηγούμενη</a>
+          {% endif %}
+
+          <span class="page-info">Σελίδα {{ page }} από {{ total_pages }}</span>
+
+          {% if page < total_pages %}
+          <a class="button-33" href="?page={{ page + 1 }}">Επόμενη ➡</a>
+          {% endif %}
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+<script src="{{ url_for('static', filename='database_script.js') }}"></script>
+
+</body>
+</html>
+
+
+
+

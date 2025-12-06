@@ -1,0 +1,301 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="el">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>XML Batch Processor</title>-->
+<!--    <link rel="stylesheet" href="/static/styles.css">-->
+<!--    <style>-->
+<!--        [data-lang] {-->
+<!--            display: none;-->
+<!--        }-->
+<!--        [data-lang][data-current="true"] {-->
+<!--            display: inline;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--    &lt;!&ndash; Manual Panel &ndash;&gt;-->
+<!--    <div id="manualPanel">-->
+<!--        <h2 style="display: flex; align-items: center; justify-content: space-between;">-->
+<!--            📘-->
+<!--            <span data-lang="gr" data-current="true">Περιγραφή Προγράμματος (Manual)</span>-->
+<!--            <span data-lang="en">Program Description (Manual)</span>-->
+
+<!--            &lt;!&ndash; Language Switch Flags &ndash;&gt;-->
+<!--            <span style="float: right;" class="flag-container">-->
+
+<!--                <button onclick="switchLanguage('gr')" title="Ελληνικά" style="background: none; border: none; cursor: pointer;" class="flag-btn">-->
+<!--            <img src="https://flagcdn.com/w40/gr.png" alt="GR">-->
+<!--    </button>-->
+<!--                <button onclick="switchLanguage('en')" title="English" style="background: none; border: none; cursor: pointer;" class="flag-btn">-->
+<!--            <img src="https://flagcdn.com/w40/gb.png" alt="GB">-->
+<!--        </button>-->
+<!--    </button>-->
+<!--            </span>-->
+<!--        </h2>-->
+
+<!--        <div id="manualContent">-->
+<!--            &lt;!&ndash; Greek Content &ndash;&gt;-->
+<!--            <div data-lang="gr" data-current="true">-->
+<!--                <ul>-->
+<!--                    <li>📁 Επίλεξε φάκελο με XML αρχεία.</li>-->
+<!--                    <li>▶ Πάτησε Play για επεξεργασία.</li>-->
+<!--                    <li>⏸ Κάνε Pause ή ■ Stop όποτε θέλεις.</li>-->
+<!--                    <li>📄 Φόρτωσε έγγραφα από τη βάση.</li>-->
+<!--                    <li>🔽 Χρησιμοποίησε φίλτρα για εμφάνιση πεδίων.</li>-->
+<!--                </ul>-->
+<!--                <p>-->
+<!--                    Το σύστημα επεξεργάζεται αρχεία XML που περιέχουν πληροφορίες ευρεσιτεχνιών. Κάθε XML περιλαμβάνει:-->
+<!--                </p>-->
+<!--                <ul>-->
+<!--                    <li>📄 Στοιχεία ταυτότητας του εγγράφου.</li>-->
+<!--                    <li>🌐 Τίτλοι σε πολλές γλώσσες.</li>-->
+<!--                    <li>👤 Πληροφορίες αιτούντων & εφευρετών.</li>-->
+<!--                    <li>🧠 Ταξινομήσεις IPC/CPC.</li>-->
+<!--                    <li>🔗 Προτεραιότητες & διεθνή στοιχεία.</li>-->
+<!--                    <li>📝 Περίληψη και βασικά μεταδεδομένα.</li>-->
+<!--                </ul>-->
+<!--                <p>-->
+<!--                    Αυτή η εφαρμογή επιτρέπει την ομαδική επεξεργασία αρχείων XML που περιέχουν ευρεσιτεχνίες. Ο χρήστης επιλέγει έναν φάκελο με XML, και το σύστημα αναλαμβάνει την ανάλυση των δεδομένων.-->
+<!--                    Η εφαρμογή διαβάζει πληροφορίες όπως τίτλους, ημερομηνίες, αιτούντες, ταξινομήσεις και αριθμούς εγγράφων.-->
+<!--                    Τα δεδομένα αποθηκεύονται σε βάση δεδομένων για ευκολότερη αναζήτηση και ανάλυση.-->
+<!--                    Υποστηρίζεται διαχείριση ροής με κουμπιά έναρξης, παύσης και διακοπής της διαδικασίας.-->
+<!--                    Εμφανίζεται δυναμική ένδειξη προόδου με ποσοστό και μπάρα.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    Η εμφάνιση των εγγράφων είναι οργανωμένη και φιλτραρισμένη (π.χ. μόνο DID).-->
+<!--                    Το γραφικό περιβάλλον είναι σκοτεινό και καθαρό, σχεδιασμένο για άνετη χρήση.-->
+<!--                    Η υποδομή βασίζεται σε Flask backend και JavaScript frontend.-->
+<!--                    Είναι κατάλληλη για μεγάλα σύνολα δεδομένων χωρίς χειροκίνητη επεξεργασία.-->
+<!--                    Το σύστημα αγνοεί κατεστραμμένα XML και συνεχίζει την επεξεργασία.-->
+<!--                    Υποστηρίζεται πλήρως από backend API για αποδοτική ροή.-->
+<!--                    Η εφαρμογή μπορεί να προσαρμοστεί σε διαφορετικά XML schemas.-->
+<!--                    Είναι χρήσιμη για ερευνητές, γραφεία ευρεσιτεχνιών και ανάλυση δεδομένων.-->
+<!--                    Οι πληροφορίες οργανώνονται σε πίνακα και μπορούν να εξαχθούν για αναφορές.-->
+<!--                    Η διαδικασία είναι πλήρως αυτοματοποιημένη και διαφανής στον χρήστη.-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; English Content &ndash;&gt;-->
+<!--            <div data-lang="en">-->
+<!--                <ul>-->
+<!--                    <li>📁 Select folder with XML files.</li>-->
+<!--                    <li>▶ Press Play to start processing.</li>-->
+<!--                    <li>⏸ Pause or ■ Stop at any time.</li>-->
+<!--                    <li>📄 Load documents from the database.</li>-->
+<!--                    <li>🔽 Use filters to display specific fields.</li>-->
+<!--                </ul>-->
+<!--                <p>-->
+<!--                    The system processes XML files containing patent information. Each XML includes:-->
+<!--                </p>-->
+<!--                <ul>-->
+<!--                    <li>📄 Document identity details.</li>-->
+<!--                    <li>🌐 Titles in multiple languages.</li>-->
+<!--                    <li>👤 Applicant & inventor data.</li>-->
+<!--                    <li>🧠 IPC/CPC classifications.</li>-->
+<!--                    <li>🔗 Priorities & international data.</li>-->
+<!--                    <li>📝 Abstract and core metadata.</li>-->
+<!--                </ul>-->
+<!--                <p>-->
+<!--                    This application enables batch processing of XML patent files. The user selects a folder, and the system analyzes the data.-->
+<!--                    It extracts titles, dates, applicants, classifications, and document numbers.-->
+<!--                    Data is stored in a database for easy search and analysis.-->
+<!--                    Workflow is controlled via Start, Pause, and Stop buttons.-->
+<!--                    A dynamic progress bar and percentage are displayed.-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    Documents are organized and filtered (e.g. only DID).-->
+<!--                    The UI is dark-themed and user-friendly.-->
+<!--                    It uses a Flask backend and JavaScript frontend.-->
+<!--                    Designed for large datasets without manual effort.-->
+<!--                    Corrupted XML files are skipped automatically.-->
+<!--                    Fully supported by backend APIs for efficient flow.-->
+<!--                    Adaptable to various XML schemas.-->
+<!--                    Useful for researchers, patent offices, and data analysis.-->
+<!--                    Information is shown in a table and exportable for reporting.-->
+<!--                    The process is fully automated and transparent to the user.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="container">-->
+<!--        <h1>Επεξεργασία XML με Έλεγχο</h1>-->
+
+<!--        <p>Επίλεξε φάκελο με αρχεία XML (μπορεί να περιέχει υποφακέλους):</p>-->
+<!--        <input type="file" id="folderInput" webkitdirectory directory multiple />-->
+<!--        <br /><br />-->
+
+<!--        <button id="playBtn" onclick="startProcessing()">▶ Play</button>-->
+<!--        <button id="pauseBtn" onclick="togglePause()" disabled>⏸ Pause</button>-->
+<!--        <button id="stopBtn" onclick="stopProcessing()" disabled>■ Stop</button>-->
+
+<!--        <p id="statusMessage"></p>-->
+
+<!--        <div id="progressContainer" style="display:none;">-->
+<!--            <p>Πρόοδος: <span id="progressText">0%</span></p>-->
+<!--            <div id="progressBar" style="height: 20px; background: #4caf50; width: 0%;"></div>-->
+<!--        </div>-->
+
+<!--        <hr />-->
+
+<!--        <h2>Εμφάνιση Όλων των Εγγράφων</h2>-->
+<!--        <label for="queryTypeSelect">Επέλεξε τι θέλεις να δεις:</label>-->
+<!--        <select id="queryTypeSelect">-->
+<!--            <option value="all">Όλα τα πεδία</option>-->
+<!--            <option value="did_only">Μόνο DID</option>-->
+<!--        </select>-->
+<!--        <button id="loadDocsBtn" onclick="loadDocuments()">Φόρτωση</button>-->
+
+<!--        <table id="resultsTable" border="1" style="margin-top: 20px; display: none; width: 100%;">-->
+<!--            <thead>-->
+<!--                <tr>-->
+<!--                    <th>DID</th>-->
+<!--                    <th>UCID</th>-->
+<!--                    <th>Doc Number</th>-->
+<!--                    <th>Date</th>-->
+<!--                </tr>-->
+<!--            </thead>-->
+<!--            <tbody></tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        let paused = false;-->
+
+<!--        async function startProcessing() {-->
+<!--            const input = document.getElementById('folderInput');-->
+<!--            const files = Array.from(input.files);-->
+<!--            if (files.length === 0) {-->
+<!--                alert("Παρακαλώ επίλεξε φάκελο με αρχεία.");-->
+<!--                return;-->
+<!--            }-->
+
+<!--            const batchSize = 20; // αριθμός αρχείων ανά παρτίδα-->
+<!--            let currentIndex = 0;-->
+
+<!--            document.getElementById("statusMessage").textContent = "Ξεκινά η επεξεργασία...";-->
+<!--            document.getElementById("progressContainer").style.display = "block";-->
+<!--            document.getElementById("pauseBtn").disabled = false;-->
+<!--            document.getElementById("stopBtn").disabled = false;-->
+
+<!--            while (currentIndex < files.length) {-->
+<!--                const batchFiles = files.slice(currentIndex, currentIndex + batchSize);-->
+<!--                const formData = new FormData();-->
+<!--                batchFiles.forEach(file => formData.append("files", file));-->
+
+<!--                try {-->
+<!--                    const res = await fetch("/upload_folder", {-->
+<!--                        method: "POST",-->
+<!--                        body: formData-->
+<!--                    });-->
+<!--                    const data = await res.json();-->
+<!--                    if (!res.ok) {-->
+<!--                        document.getElementById("statusMessage").textContent = `Σφάλμα: ${data.message}`;-->
+<!--                        break;-->
+<!--                    }-->
+<!--                    document.getElementById("statusMessage").textContent = data.message;-->
+
+<!--                    currentIndex += batchSize;-->
+<!--                    const progress = Math.min(100, Math.round((currentIndex / files.length) * 100));-->
+<!--                    document.getElementById("progressText").textContent = `${progress}%`;-->
+<!--                    document.getElementById("progressBar").style.width = `${progress}%`;-->
+
+<!--                    await new Promise(resolve => setTimeout(resolve, 300));-->
+<!--                } catch (error) {-->
+<!--                    document.getElementById("statusMessage").textContent = `Σφάλμα δικτύου: ${error.message}`;-->
+<!--                    break;-->
+<!--                }-->
+<!--            }-->
+
+<!--            if (currentIndex >= files.length) {-->
+<!--                document.getElementById("statusMessage").textContent = " Ολοκληρώθηκε.";-->
+<!--                document.getElementById("pauseBtn").disabled = true;-->
+<!--                document.getElementById("stopBtn").disabled = true;-->
+<!--            }-->
+<!--        }-->
+
+<!--        function togglePause() {-->
+<!--            const action = paused ? 'continue' : 'pause';-->
+<!--            fetch("/control", {-->
+<!--                method: "POST",-->
+<!--                headers: {'Content-Type': 'application/json'},-->
+<!--                body: JSON.stringify({ action })-->
+<!--            }).then(res => res.json())-->
+<!--              .then(data => {-->
+<!--                  paused = !paused;-->
+<!--                  document.getElementById("statusMessage").textContent = data.message;-->
+<!--                  document.getElementById("pauseBtn").textContent = paused ? "▶ Συνέχεια" : "⏸ Pause";-->
+<!--              });-->
+<!--        }-->
+
+<!--        function stopProcessing() {-->
+<!--            fetch("/control", {-->
+<!--                method: "POST",-->
+<!--                headers: {'Content-Type': 'application/json'},-->
+<!--                body: JSON.stringify({ action: "stop" })-->
+<!--            }).then(res => res.json())-->
+<!--              .then(data => {-->
+<!--                  document.getElementById("statusMessage").textContent = data.message;-->
+<!--                  document.getElementById("pauseBtn").disabled = true;-->
+<!--                  document.getElementById("stopBtn").disabled = true;-->
+<!--              });-->
+<!--        }-->
+
+<!--        function pollProgress() {-->
+<!--            const interval = setInterval(() => {-->
+<!--                fetch("/get_progress")-->
+<!--                    .then(res => res.json())-->
+<!--                    .then(data => {-->
+<!--                        document.getElementById("progressText").textContent = `${data.progress}%`;-->
+<!--                        document.getElementById("progressBar").style.width = `${data.progress}%`;-->
+
+<!--                        if (data.status === 'stopped' || data.progress >= 100) {-->
+<!--                            clearInterval(interval);-->
+<!--                            document.getElementById("statusMessage").textContent = " Ολοκληρώθηκε.";-->
+<!--                            document.getElementById("pauseBtn").disabled = true;-->
+<!--                            document.getElementById("stopBtn").disabled = true;-->
+<!--                        }-->
+<!--                    });-->
+<!--            }, 1000);-->
+<!--        }-->
+
+<!--        function loadDocuments() {-->
+<!--            const type = document.getElementById("queryTypeSelect").value;-->
+<!--            fetch("/query_documents", {-->
+<!--                method: "POST",-->
+<!--                headers: { 'Content-Type': 'application/json' },-->
+<!--                body: JSON.stringify({ queryType: type })-->
+<!--            })-->
+<!--            .then(res => res.json())-->
+<!--            .then(data => {-->
+<!--                const table = document.getElementById("resultsTable");-->
+<!--                const tbody = table.querySelector("tbody");-->
+<!--                tbody.innerHTML = "";-->
+<!--                data.results.forEach(doc => {-->
+<!--                    const tr = document.createElement("tr");-->
+<!--                    tr.innerHTML = `-->
+<!--                        <td>${doc.did}</td>-->
+<!--                        <td>${doc.ucid || ""}</td>-->
+<!--                        <td>${doc.doc_number || ""}</td>-->
+<!--                        <td>${doc.date || ""}</td>`;-->
+<!--                    tbody.appendChild(tr);-->
+<!--                });-->
+<!--                table.style.display = "table";-->
+<!--            });-->
+<!--        }-->
+
+<!--        function switchLanguage(lang) {-->
+<!--            document.querySelectorAll("[data-lang]").forEach(el => {-->
+<!--                el.setAttribute("data-current", el.getAttribute("data-lang") === lang ? "true" : "false");-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+

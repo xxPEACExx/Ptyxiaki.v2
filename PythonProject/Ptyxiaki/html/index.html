@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Πτυχιακή</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <script src="{{ url_for('static', filename='popup.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='upload.js') }}" defer></script>
+
+
+</head>
+<body>
+
+
+  <div class="app-container">
+
+      <div id="left-zone"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+      <h2 class="logo"> 🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>
+        <br>
+        <button class="button-33" role="button">Ανέβασμα Αρχείου</button>
+        <br>
+
+      <nav>
+
+        <ul class="menu" >
+          <li class="active">🏠︎ Αρχική Σελίδα</li>
+          <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>
+          <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>
+          <li onclick="window.location.href='/statistics'">📈 Στατιστικά</li>
+
+        </ul>
+      </nav>
+    </aside>
+
+
+
+
+    <div class="content" id="content">
+    <main class="main-content">
+
+
+
+      <header class="top-bar">
+
+        <input type="text" class="search" placeholder="Αναζήτηστε αρχεία ανά έτος και ημερομηνία  " />
+
+        <button class="settings-btn" onclick="window.open('https://github.com/xxPEACExx/Ptyxiaki', '_blank')">
+            <img src="static/github1.png" alt="GitHub" class="icon">
+        </button>
+
+          <button class="icon-btn theme-toggle" id="themeToggle">🌓</button>
+
+      </header>
+
+        <section class="cards">
+
+
+    <div class="card">
+        <div id="output"></div>
+
+    </div>
+</section>
+
+<section class="cards">
+
+    <div id="fileExplorer" class="card" style="width:100%">
+
+        <h3>📁 Διαδρομή Αρχείων</h3>
+
+        <div class="breadcrumbs-bar">
+
+
+        <span id="breadcrumbs"></span>
+        </div>
+
+        <div class="nav-buttons">
+    <button id="backBtn">⬅️ Πίσω</button>
+    <button id="forwardBtn">➡️ Μπροστά</button>
+</div>
+
+
+
+
+        <!-- Header table -->
+        <div class="file-header">
+            <span>Όνομα</span>
+            <span>Τύπος</span>
+            <span>Εισαγωγή</span>
+            <span>Ημερομηνία</span>
+            <span></span>
+        </div>
+
+        <!-- ΔΥΝΑΜΙΚΗ ΛΙΣΤΑ ΑΡΧΕΙΩΝ -->
+        <div id="fileList"></div>
+    </div>
+</section>
+
+
+    </main>
+  </div>
+  </div>
+
+  <div id="modernPopup" class="modern-popup">
+      <div class="popup-content">
+        <strong>Καλώς ήρθατε!</strong><br>
+        Σας προτείνουμε να διαβάσετε τις οδηγίες για να
+        μπορέσετε να χρησιμοποιήσετε σωστά την εφαρμογή.
+          Για περισσότερες πληροφορίες κάνετε κλίκ εδώ
+    </div>
+      <div class="progress-bar"></div>
+      </div>
+
+<div id="floatingCircle" class="floating-circle" style="display:none;">
+    <span>i</span>
+</div>
+
+
+
+
+     <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <span id="countdown">4</span> δευτ.
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
