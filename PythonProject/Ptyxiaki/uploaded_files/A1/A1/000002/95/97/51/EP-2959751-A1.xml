@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959751-A1" country="EP" doc-number="2959751" kind="A1" date="20151230" family-id="49370028" file-reference-id="254717" date-produced="20180826" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452350" ucid="EP-2959751-A1"><document-id><country>EP</country><doc-number>2959751</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14813845-A" is-representative="NO"><document-id mxw-id="PAPP193867668" load-source="docdb" format="epo"><country>EP</country><doc-number>14813845</doc-number><kind>A</kind><date>20140616</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193867669" load-source="patent-office" format="original"><country>EP</country><doc-number>14813845.6</doc-number><date>20140616</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162027322" ucid="CN-201310249850-A" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>201310249850</doc-number><kind>A</kind><date>20130620</date></document-id></priority-claim><priority-claim mxw-id="PPC162026788" ucid="CN-2014079917-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>2014079917</doc-number><kind>W</kind><date>20140616</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1871694548" load-source="docdb">H05B  37/02        20060101AFI20161130BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1871694549" load-source="docdb">H04L  12/64        20060101ALI20161130BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1981010637" load-source="docdb" scheme="CPC">Y02B  20/48        20130101 LA20160120BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987763035" load-source="docdb" scheme="CPC">H05B  37/0272      20130101 FI20150626BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987776466" load-source="docdb" scheme="CPC">H04L  12/6418      20130101 LI20151215BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165548516" lang="DE" load-source="patent-office">LED-BELEUCHTUNGSVORRICHTUNG, STEUERUNGSSYSTEM UND KONFIGURATIONSVERFAHREN</invention-title><invention-title mxw-id="PT165548517" lang="EN" load-source="patent-office">LED LIGHTING APPARATUS, CONTROL SYSTEM, AND CONFIGURATION METHOD</invention-title><invention-title mxw-id="PT165548518" lang="FR" load-source="patent-office">APPAREIL D'ÉCLAIRAGE À DEL, SYSTÈME DE COMMANDE ET PROCÉDÉ DE CONFIGURATION</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103313697" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO</last-name><address><country>CN</country></address></addressbook></applicant><applicant mxw-id="PPAR1103321781" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO., LTD</last-name></addressbook></applicant><applicant mxw-id="PPAR1101646105" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Zhejiang Shenghui Lighting Co., Ltd</last-name><iid>101500790</iid><address><street>West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing, Zhejiang 314015</city><country>CN</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103307908" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>SUN CHAOQUN</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103338154" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>SUN, CHAOQUN</last-name></addressbook></inventor><inventor mxw-id="PPAR1101644789" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>SUN, CHAOQUN</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park Jiaxing</street><city>Zhejiang 314015</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103344691" load-source="docdb" sequence="2" format="epo"><addressbook><last-name>WANG XIA</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103326836" load-source="docdb" sequence="2" format="intermediate"><addressbook><last-name>WANG, XIA</last-name></addressbook></inventor><inventor mxw-id="PPAR1101644194" load-source="patent-office" sequence="2" format="original"><addressbook><last-name>WANG, XIA</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park Jiaxing</street><city>Zhejiang 314015</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103327074" load-source="docdb" sequence="3" format="epo"><addressbook><last-name>SHEN JINXIANG</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103304316" load-source="docdb" sequence="3" format="intermediate"><addressbook><last-name>SHEN, JINXIANG</last-name></addressbook></inventor><inventor mxw-id="PPAR1101646437" load-source="patent-office" sequence="3" format="original"><addressbook><last-name>SHEN, JINXIANG</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park Jiaxing</street><city>Zhejiang 314015</city><country>CN</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR1101640004" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Jöstingmeier, Martin</last-name><iid>101285990</iid><address><street>Lohr, Jöstingmeier &amp; Partner Junkersstraße 3</street><city>82178 Puchheim</city><country>DE</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="CN-2014079917-W"><document-id><country>CN</country><doc-number>2014079917</doc-number><kind>W</kind><date>20140616</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2014201981-A1"><document-id><country>WO</country><doc-number>2014201981</doc-number><kind>A1</kind><date>20141224</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660700272" load-source="docdb">AL</country><country mxw-id="DS660700813" load-source="docdb">AT</country><country mxw-id="DS660700274" load-source="docdb">BE</country><country mxw-id="DS660787850" load-source="docdb">BG</country><country mxw-id="DS660621012" load-source="docdb">CH</country><country mxw-id="DS660717950" load-source="docdb">CY</country><country mxw-id="DS660700814" load-source="docdb">CZ</country><country mxw-id="DS660700287" load-source="docdb">DE</country><country mxw-id="DS660717955" load-source="docdb">DK</country><country mxw-id="DS660717956" load-source="docdb">EE</country><country mxw-id="DS660622454" load-source="docdb">ES</country><country mxw-id="DS660787851" load-source="docdb">FI</country><country mxw-id="DS660787852" load-source="docdb">FR</country><country mxw-id="DS660700288" load-source="docdb">GB</country><country mxw-id="DS660717957" load-source="docdb">GR</country><country mxw-id="DS660700289" load-source="docdb">HR</country><country mxw-id="DS660700819" load-source="docdb">HU</country><country mxw-id="DS660621013" load-source="docdb">IE</country><country mxw-id="DS660700290" load-source="docdb">IS</country><country mxw-id="DS660787853" load-source="docdb">IT</country><country mxw-id="DS660717958" load-source="docdb">LI</country><country mxw-id="DS660706114" load-source="docdb">LT</country><country mxw-id="DS660700820" load-source="docdb">LU</country><country mxw-id="DS660706127" load-source="docdb">LV</country><country mxw-id="DS660706128" load-source="docdb">MC</country><country mxw-id="DS660622903" load-source="docdb">MK</country><country mxw-id="DS660622904" load-source="docdb">MT</country><country mxw-id="DS660700821" load-source="docdb">NL</country><country mxw-id="DS660700295" load-source="docdb">NO</country><country mxw-id="DS660717963" load-source="docdb">PL</country><country mxw-id="DS660706130" load-source="docdb">PT</country><country mxw-id="DS660700822" load-source="docdb">RO</country><country mxw-id="DS660706135" load-source="docdb">RS</country><country mxw-id="DS660717964" load-source="docdb">SE</country><country mxw-id="DS660706136" load-source="docdb">SI</country><country mxw-id="DS660700296" load-source="docdb">SK</country><country mxw-id="DS660717965" load-source="docdb">SM</country><country mxw-id="DS660622905" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA146299071" ref-ucid="WO-2014201981-A1" lang="EN" load-source="patent-office"><p num="0000">Apparatus and control systems for LED lighting, and methods for configuring the control systems are provided. An LED lighting apparatus includes: a primary LED lighting device (1) containing a WiFi module (12) and a Zigbee module (13); and at least one secondary LED lighting device (2) containing a Zigbee module (23). An LED lighting control system includes an LED lighting apparatus, a WiFi router (3), and a smart terminal (4). A Zigbee network is formed by Zigbee modules (13, 23) included in the primary and secondary LED lighting devices. The WiFi module (12) of the primary LED lighting device is connected to internet via the WiFi router (3). The smart terminal (4) is configured to directly control lighting of the at least one secondary LED lighting device (2) via the primary LED lighting device (1).</p></abstract><abstract mxw-id="PA148423663" ref-ucid="WO-2014201981-A1" lang="EN" source="national office" load-source="docdb"><p>Apparatus and control systems for LED lighting, and methods for configuring the control systems are provided. An LED lighting apparatus includes: a primary LED lighting device (1) containing a WiFi module (12) and a Zigbee module (13); and at least one secondary LED lighting device (2) containing a Zigbee module (23). An LED lighting control system includes an LED lighting apparatus, a WiFi router (3), and a smart terminal (4). A Zigbee network is formed by Zigbee modules (13, 23) included in the primary and secondary LED lighting devices. The WiFi module (12) of the primary LED lighting device is connected to internet via the WiFi router (3). The smart terminal (4) is configured to directly control lighting of the at least one secondary LED lighting device (2) via the primary LED lighting device (1).</p></abstract><abstract mxw-id="PA146299072" ref-ucid="WO-2014201981-A1" lang="FR" load-source="patent-office"><p num="0000">L'invention concerne un appareil et des systèmes de commande pour l'éclairage à DEL et des procédés permettant de configurer les systèmes de commande. Un appareil d'éclairage à DEL comprend : un dispositif d'éclairage à DEL primaire (1) contenant un module Wi-Fi (12) et un module Zigbee (13) ; et au moins un dispositif d'éclairage à DEL secondaire (2) contenant un module Zigbee (23). Un système de commande d'éclairage à DEL comprend un appareil d'éclairage à DEL, un routeur Wi-Fi (3), et un terminal intelligent (4). Un réseau Zigbee est formé par des modules Zigbee (13, 23) compris dans les dispositifs d'éclairage à DEL primaire et secondaire. Le module Wi-Fi (12) du dispositif d'éclairage à DEL primaire est connecté à internet via le routeur Wi-Fi (3). Le terminal intelligent (4) est configuré pour commander directement l'éclairage du ou des dispositif(s) d'éclairage à DEL secondaire(s) (2) via le dispositif d'éclairage à DEL primaire (1).</p></abstract><abstract mxw-id="PA148423664" ref-ucid="WO-2014201981-A1" lang="FR" source="national office" load-source="docdb"><p>L'invention concerne un appareil et des systèmes de commande pour l'éclairage à DEL et des procédés permettant de configurer les systèmes de commande. Un appareil d'éclairage à DEL comprend : un dispositif d'éclairage à DEL primaire (1) contenant un module Wi-Fi (12) et un module Zigbee (13) ; et au moins un dispositif d'éclairage à DEL secondaire (2) contenant un module Zigbee (23). Un système de commande d'éclairage à DEL comprend un appareil d'éclairage à DEL, un routeur Wi-Fi (3), et un terminal intelligent (4). Un réseau Zigbee est formé par des modules Zigbee (13, 23) compris dans les dispositifs d'éclairage à DEL primaire et secondaire. Le module Wi-Fi (12) du dispositif d'éclairage à DEL primaire est connecté à internet via le routeur Wi-Fi (3). Le terminal intelligent (4) est configuré pour commander directement l'éclairage du ou des dispositif(s) d'éclairage à DEL secondaire(s) (2) via le dispositif d'éclairage à DEL primaire (1).</p></abstract><description mxw-id="PDES84417009" ref-ucid="WO-2014201981-A1" lang="EN" load-source="patent-office"><invention-title lang="EN"> LED LIGHTING APPARATUS, CONTROL SYSTEM, AND CONFIGURATION
+	 METHOD 
+	 </invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The present disclosure generally relates to the
+		field of LED (i.e., light emitting diode) lighting technology and, more
+		particularly, relates to apparatus, control systems, and methods for LED
+		lighting. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p27" num="2">　LED lighting may generally provide advantages in
+		energy conservation, environmental protection, controllable lighting, solid
+		state lighting, and long operational lifetime. LED lighting devices thus have
+		been widely used in various areas for public, commercial, and indoor lighting.
+		</p><p id="p26" num="3">　A Zigbee module is a module with a specification for
+		a suite of high level communication protocols used to create personal area
+		networks built from small, low-power digital radios.  A Zigbee module often
+		consumes low power with low cost, and is easy to form a network based on
+		network nodes with simple node configurations. The Zigbee module is therefore
+		suitable for remote controls with a low data transmission rate, including those
+		for lighting switches and remote dimming controls.</p><p id="p25" num="4">　　　　A conventional home lighting control system may
+		include a lighting lamp and a remote control to centrally control the lighting.
+		The remote control includes a mobile phone, a home gateway, and a wireless
+		coordinator. The home gateway includes a WiFi module and a Zigbee module. A
+		holder of the lighting lamp includes a Zigbee module. The mobile phone is
+		connected to the WiFi module of the home gateway. The Zigbee module of the home
+		gateway is connected with the wireless coordinator. The wireless coordinator is
+		connected with the Zigbee module of the lighting lamp. Instruction signals from
+		the mobile phone can be transmitted sequentially via: the WiFi module of the
+		home gateway, the Zigbee module of the home gateway, and the wireless
+		coordinator of the remote control; and then arrive at the Zigbee module in the
+		holder of the lighting lamp for lighting controls.</p><p id="p24" num="5">　　　　The mobile phone, however, does not include any
+		Zigbee module and therefore cannot use application software to directly control
+		the lighting. In addition, because the Zigbee module does not have any IP
+		address and cannot access a network, the conventional lighting system must have
+		a home gateway for accessing a network such as a LAN or internet. This requires
+		additional components and ultimately increases cost.</p><p id="p23" num="6"> Thus, there is a need to overcome these and other
+		problems of the prior art and to provide apparatus, control systems, and
+		configuration methods for LED lighting.</p></background-art><disclosure><tech-solution><heading id="h07">Technical Solution</heading><p id="p108" num="7">　One aspect or embodiment of the present
+		  disclosure includes an LED lighting apparatus. The LED lighting apparatus
+		  includes a primary LED lighting device and at least one secondary LED lighting
+		  device. The primary LED lighting device includes a WiFi module and a Zigbee
+		  module. The at least one secondary LED lighting device includes a Zigbee
+		  module. The primary LED lighting device and the at least one secondary LED
+		  lighting device are wirelessly connected by the Zigbee modules from each of the
+		  primary LED lighting device and the at least one secondary LED lighting device.
+		  </p><p id="p107" num="8">　The WiFi module communicates with the Zigbee
+		  module in the primary LED lighting device via a communication interface. The
+		  communication interface includes at least one of an I2C (inter-integrated
+		  circuit) interface, a UART (universal asynchronous receiver/transmitter)
+		  interface, an SPI (system packet interface) interface, and a USB (universal
+		  serial bus) interface.</p><p id="p106" num="9">　The primary LED lighting device further includes
+		  a power supply module, and a light emitting module connected to the power
+		  supply module to provide lighting of the primary LED lighting device. </p><p id="p105" num="10">　　The at least one secondary LED lighting device
+		  further includes a power supply module, and a light emitting module connected
+		  to the power supply module to provide lighting of the at least one secondary
+		  LED lighting device. </p><p id="p104" num="11">　　The LED lighting apparatus further includes a
+		  Zigbee network formed by the Zigbee modules from each of the primary LED
+		  lighting device and the at least one secondary LED lighting device. </p><p id="p103" num="12">　　Another aspect or embodiment of the present
+		  disclosure includes an LED lighting control system. The LED lighting control
+		  system includes a primary LED lighting device, at least one secondary LED
+		  lighting device, a WiFi router, and a smart terminal. The primary LED lighting
+		  device includes a WiFi module and a Zigbee module. The WiFi module is
+		  wirelessly connected to the WiFi router for the primary LED lighting device to
+		  access internet. The at least one secondary LED lighting device includes a
+		  Zigbee module. The Zigbee modules from each of the primary LED lighting device
+		  and the at least one secondary LED lighting device form a Zigbee network and
+		  the Zigbee modules in the Zigbee network are wirelessly connected. The smart
+		  terminal is configured to control lighting of the at least one secondary LED
+		  lighting device via the primary LED lighting device. </p><p id="p102" num="13">　The smart terminal is configured to send control
+		  instructions to the primary LED lighting device via the WiFi router, and the
+		  control instructions are further transmitted from the primary LED lighting
+		  device to each of the at least one secondary LED lighting device in the Zigbee
+		  network to control the lighting thereof. </p><p id="p101" num="14">　Alternatively, the smart terminal is directly
+		  connected to the WiFi module of the primary LED lighting device to send control
+		  instructions to each of the at least one secondary LED lighting device in the
+		  Zigbee network to control the lighting thereof.</p><p id="p100" num="15">　　The smart terminal is configured to send
+		  control instructions including a switching instruction, a luminance control
+		  instruction, and a combination thereof. </p><p id="p99" num="16">　　The WiFi module communicates with the Zigbee
+		  module in the primary LED lighting device via a communication interface. The
+		  communication interface includes at least one of an I2C (inter-integrated
+		  circuit) interface, a UART (universal asynchronous receiver/transmitter)
+		  interface, an SPI (system packet interface) interface, and a USB (universal
+		  serial bus) interface.</p><p id="p98" num="17">　　The primary LED lighting device further includes
+		  a power supply module, and a light emitting module connected to the power
+		  supply module to provide lighting of the primary LED lighting device. </p><p id="p97" num="18">　　The at least one secondary LED lighting device
+		  further includes a power supply module, and a light emitting module connected
+		  to the power supply module to provide lighting of the at least one secondary
+		  LED lighting device. </p><p id="p96" num="19">　　The smart terminal includes one of a mobile
+		  phone, a tablet PC, a desktop computer, and a notebook. Optionally, the smart
+		  terminal includes a server including a cloud server. </p><p id="p95" num="20">　　Another aspect or embodiment of the present
+		  disclosure includes a method for configuring an LED lighting control system. A
+		  primary LED lighting device each including a WiFi module and a Zigbee module is
+		  configured. The WiFi module is wirelessly connected to a WiFi router for the
+		  primary LED lighting device to access internet. At least one secondary LED
+		  lighting device including a Zigbee module is configured. The Zigbee modules
+		  from each of the primary LED lighting device and the at least one secondary LED
+		  lighting device form a Zigbee network, and the Zigbee modules in the Zigbee
+		  network are wirelessly connected. A smart terminal is configured to control
+		  lighting of the at least one secondary LED lighting device via the primary LED
+		  lighting device. </p><p id="p94" num="21">　　The smart terminal is configured to send control
+		  instructions to the primary LED lighting device via the WiFi router, and
+		  wherein the control instructions are further transmitted from the primary LED
+		  lighting device to each of the at least one secondary LED lighting device in
+		  the Zigbee network to control the lighting thereof. </p><p id="p93" num="22">　　Alternatively, the smart terminal is directly
+		  connected to the WiFi module of the primary LED lighting device to send control
+		  instructions to each of the at least one secondary LED lighting device in the
+		  Zigbee network to control the lighting thereof.</p><p id="p92" num="23">　　The smart terminal is configured to send control
+		  instructions including a switching instruction, a luminance control
+		  instruction, and a combination thereof. </p><p id="p91" num="24">　　The WiFi module communicates with the Zigbee
+		  module in the primary LED lighting device via a communication interface. The
+		  communication interface includes at least one of an I2C (inter-integrated
+		  circuit) interface, a UART (universal asynchronous receiver/transmitter)
+		  interface, an SPI (system packet interface) interface, and a USB (universal
+		  serial bus) interface.</p><p id="p90" num="25">　　The smart terminal includes one of a mobile
+		  phone, a tablet PC, a desktop computer, a notebook, and a cloud server. </p><p id="p89" num="26">　　Other aspects or embodiments of the present
+		  disclosure can be understood by those skilled in the art in light of the
+		  description, the claims, and the drawings of the present disclosure.</p></tech-solution><advantageous-effects><heading id="h09">Advantageous Effects And Industrial
+			 Applicablity</heading><p id="p118" num="27">　　Without limiting the scope of any claim and/or
+		  the specification, examples of industrial applicability and certain
+		  advantageous effects of the disclosed embodiments are listed for illustrative
+		  purposes. Various alternations, modifications, or equivalents to the technical
+		  solutions of the disclosed embodiments can be obvious to those skilled in the
+		  art and can be included in this disclosure.</p><p id="p117" num="28">　　Apparatus and control systems for LED lighting,
+		  and methods for configuring the control systems are provided. An LED lighting
+		  apparatus includes: a primary LED lighting device containing a WiFi module and
+		  a Zigbee module; and at least one secondary LED lighting device containing a
+		  Zigbee module. An LED lighting control system includes an LED lighting
+		  apparatus, a WiFi router, and a smart terminal for controlling lighting of the
+		  LED lighting apparatus. A Zigbee network is formed by Zigbee modules included
+		  in the primary/secondary LED lighting devices. The WiFi module of the primary
+		  LED lighting device is connected to internet via the WiFi router. </p><p id="p116" num="29">　　The disclosed LED lighting apparatus, control
+		  systems, and methods do not include conventionally-used Zigbee-containing
+		  gateway. System cost can then be reduced. In addition, the LED lighting control
+		  system is easy to operate at the user end. For example, various LED lighting
+		  devices, including a primary LED lighting device and secondary LED lighting
+		  device(s), can be configured in different places of a public, commercial,
+		  and/or indoor environment. By using a smart terminal, e.g., a smart phone, the
+		  lighting of each LED lighting device in those different places can be
+		  controlled using the disclosed LED lighting apparatus and control systems. </p><p id="p115" num="30"> Further, there is no need to configure a WiFi
+		  module in each LED lighting device and the WiFi module can only be configured
+		  in the primary LED lighting device to control lighting of each LED lighting
+		  device in the control system. System power consumption is therefore reduced and
+		  system cost is also reduced. Furthermore, a large number of LED lighting
+		  devices/nodes can be included to form a Zigbee network, while a smart terminal
+		  (such as a smart phone or a computer) can remotely control those large number
+		  of LED lighting devices through internet, without using conventional home
+		  gateway and/or conventional wireless coordinator. </p></advantageous-effects></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p124" num="31">　The following drawings are merely examples for
+		illustrative purposes according to various disclosed embodiments and are not
+		intended to limit the scope of the present disclosure. </p><p id="p123" num="32">　FIG. 1 depicts an exemplary LED lighting apparatus
+		including a primary LED lighting device and secondary LED lighting device(s)
+		consistent with various disclosed embodiments;</p><p id="p122" num="33">　FIG. 2A depicts an exemplary primary LED lighting
+		device consistent with various disclosed embodiments; </p><p id="p121" num="34">　FIG. 2B depicts an exemplary secondary LED
+		lighting device consistent with various disclosed embodiments; </p><p id="p120" num="35">　FIG. 3 depicts an exemplary LED lighting control
+		system consistent with various disclosed embodiments; and</p><p id="p119" num="36"> FIG. 4 depicts an exemplary method for configuring
+		an LED lighting control system consistent with various disclosed
+		embodiments.</p><p id="p156" num="37">Reference Sign List:</p><p id="p155" num="38">LED lighting apparatus 100；Primary LED lighting
+		device 1 ；Secondary LED lighting device 2； WiFi module 12；Zigbee module
+		13；Power supply module 15；Light emitting module 17；Zigbee module 23；Power
+		supply module 25；Light emitting module 27；LED lighting control system 300；WiFi
+		router 3；Smart terminal 4;</p></description-of-drawings><mode-for-invention><heading id="h15">Mode for Invention</heading><p id="p152" num="39">Reference will now be made in detail to exemplary
+		embodiments of the disclosure, which are illustrated in the accompanying
+		drawings. Wherever possible, the same reference numbers will be used throughout
+		the drawings to refer to the same or like parts.</p><p id="p151" num="40">　　Apparatus, control systems, and methods for LED
+		lighting are provided. The disclosed LED lighting apparatus and LED lighting
+		control systems are provided with low cost, simple configurations, and
+		convenient networking between devices therein. An exemplary LED lighting
+		control system can include one or more LED lighting apparatus. An exemplary LED
+		lighting apparatus can further include a primary LED lighting device and at
+		least one secondary LED lighting device. </p><p id="p150" num="41">　　FIG. 1 depicts an exemplary LED lighting
+		apparatus 100 consistent with various disclosed embodiments. For illustration
+		purposes, the exemplary device 100 shown in FIG. 1 includes a primary LED
+		lighting device 1 and three secondary LED lighting devices 2, although more or
+		less number of the secondary LED lighting devices 2 can be included for the
+		disclosed LED lighting device. </p><p id="p149" num="42">　　　　In one embodiment, each of the primary LED
+		lighting device 1 and the secondary LED lighting devices 2 can be an LED lamp
+		device (e.g., having one or more LED bulbs). Each of the primary LED lighting
+		device 1 and the secondary LED lighting devices 2 can include, for example, a
+		power supply module and a light emitting module connected to the corresponding
+		power supply module. The power supply module can supply power to corresponding
+		primary or secondary LED lighting device(s). </p><p id="p148" num="43">　　　　Specifically, FIG. 2A depicts an exemplary
+		primary LED lighting device 1, and FIG. 2B depicts an exemplary secondary LED
+		lighting device 2 consistent with various disclosed embodiments.</p><p id="p147" num="44">　　　　In FIG. 2A, the primary LED lighting device 1
+		can include, for example, a WiFi module 12, a Zigbee module 13, a power supply
+		module 15, and/or a light emitting module 17. The light emitting module 17 can
+		be connected to the power supply module 15 to provide lighting. The power
+		supply module 15 can supply power to the entire primary LED lighting device 1.
+		In various embodiments, one or more of the WiFi module 12, the Zigbee module
+		13, the power supply module 15, and the light emitting module 17 can be built
+		within a same primary LED lighting device 1. </p><p id="p146" num="45">　　　　The primary LED lighting device 1 can include a
+		communication interface between the WiFi module 12 and the Zigbee module 13.
+		Such communication interface can include at least one of an I2C (i.e.,
+		inter-integrated circuit), UART (i.e., universal asynchronous
+		receiver/transmitter), SPI (i.e., system packet interface), and/or USB (i.e.,
+		universal serial bus) interface.</p><p id="p145" num="46">　　　　In FIG. 2B, the secondary LED lighting device 2
+		can include, for example, a Zigbee module 23, a power supply module 25, and/or
+		a light emitting module 27. The light emitting module 27 can be connected to
+		the power supply module 25 to provide lighting. The power supply module 25 can
+		supply power to the entire secondary LED lighting device 2. One or more of
+		these components can be built within a same secondary LED lighting device 2. In
+		a certain embodiment, the secondary LED lighting device 2 does not include a
+		WiFi module but only includes a Zigbee module. </p><p id="p144" num="47">　　　　FIG. 3 depicts an exemplary LED lighting
+		control system 300 consistent with various disclosed embodiments. As shown in
+		FIG. 3, the exemplary LED lighting control system 300 can include, e.g., an LED
+		lighting device 100 including a primary LED lighting device 1 and at least one
+		secondary LED lighting device 2, a WiFi router 3, and/or a smart terminal 4.
+		</p><p id="p143" num="48">　　　　The WiFi router 3 can be used to access
+		Internet. The primary LED lighting device 1 can be wirelessly connected to the
+		WiFi router 3 via the WiFi module 12 in the primary LED lighting device 1 to
+		access internet or any other suitable network. </p><p id="p142" num="49">　　　　In various embodiments, a Zigbee network can be
+		formed by all Zigbee modules configured in the LED lighting apparatus/control
+		system. For example, a Zigbee network can include the Zigbee module 13 in the
+		primary LED lighting device 1 and the Zigbee module 23 in the secondary LED
+		lighting device 2, as shown in FIG. 3. </p><p id="p141" num="50">　　　　The smart terminal 4 can send control
+		instructions to the primary LED lighting device 1 via the WiFi router 3. The
+		control instructions can then be transmitted from the primary LED lighting
+		device 1 to other LED lighting device(s) (e.g., including each secondary LED
+		lighting device 2 and/or other possible LED lighting devices) in the Zigbee
+		network to thus control their lighting. </p><p id="p140" num="51">　　　　In some embodiments, the smart terminal 4 can
+		be directly connected to the WiFi module 12 in the primary LED lighting device
+		1 without using a WiFi router. The control instructions can then be sent to
+		each of other LED lighting devices in the Zigbee network from the primary LED
+		lighting device 1. </p><p id="p139" num="52">　　　　The control instructions can include, e.g., a
+		switching instruction, a luminance control instruction, and/or any other
+		suitable instructions for lighting controls of the LED lighting devices in the
+		LED lighting control system. The smart terminal 4 can be, e.g., a mobile phone,
+		a tablet PC, a desktop computer, and/or a notebook. In some embodiments, the
+		smart terminal 4 can be a server such as a cloud server.</p><p id="p138" num="53">　　　　FIG. 4 depicts an exemplary method for
+		configuring an LED lighting control system consistent with various disclosed
+		embodiments. </p><p id="p137" num="54">　　　　In Step 402, a primary LED lighting device is
+		configured to each include a WiFi module and a Zigbee module. The WiFi module
+		is wirelessly connected to a WiFi router for the primary LED lighting device to
+		access internet. </p><p id="p136" num="55">　　　　The WiFi module communicates with the Zigbee
+		module in the primary LED lighting device via a communication interface. The
+		communication interface includes at least one of an I2C (inter-integrated
+		circuit) interface, a UART (universal asynchronous receiver/transmitter)
+		interface, an SPI (system packet interface) interface, and a USB (universal
+		serial bus) interface.</p><p id="p135" num="56">　　　　The primary LED lighting device further
+		includes a power supply module, and a light emitting module connected to the
+		power supply module to provide lighting of the primary LED lighting device.
+		</p><p id="p134" num="57">　　　　In Step 404, at least one secondary LED
+		lighting device is configured to each include a Zigbee module. The Zigbee
+		modules from each of the primary LED lighting device and the at least one
+		secondary LED lighting device form a Zigbee network, and the Zigbee modules in
+		the Zigbee network are wirelessly connected. </p><p id="p133" num="58">　　　　The at least one secondary LED lighting device
+		further includes a power supply module , and a light emitting module connected
+		to the power supply module to provide lighting of the at least one secondary
+		LED lighting device. </p><p id="p132" num="59">　　　　In Step 406, a smart terminal is configured to
+		control lighting of the at least one secondary LED lighting device via the
+		primary LED lighting device. </p><p id="p131" num="60">　　　　The smart terminal is configured to send
+		control instructions to the primary LED lighting device via the WiFi router,
+		and wherein the control instructions are further transmitted from the primary
+		LED lighting device to each of the at least one secondary LED lighting device
+		in the Zigbee network to control the lighting thereof. </p><p id="p130" num="61">　　　　Alternatively, the smart terminal is directly
+		connected to the WiFi module of the primary LED lighting device to send control
+		instructions to each of the at least one secondary LED lighting device in the
+		Zigbee network to control the lighting thereof.</p><p id="p129" num="62">　　　　The smart terminal is configured to send
+		control instructions including a switching instruction, a luminance control
+		instruction, and a combination thereof. The smart terminal includes one of a
+		mobile phone, a tablet PC, a desktop computer, a notebook, and a cloud server.
+		</p><p id="p128" num="63">　　　　In this manner, the disclosed LED lighting
+		apparatus, control systems, and methods do not include conventionally-used
+		Zigbee-containing gateway. System cost can then be reduced. In addition, the
+		LED lighting control system is easy to operate at the user end. For example,
+		various LED lighting devices, including a primary LED lighting device and
+		secondary LED lighting device(s), can be configured in different places of a
+		public, commercial, and/or indoor environment. By using a smart terminal, e.g.,
+		a smart phone, the lighting of each LED lighting device in those different
+		places can be controlled using the disclosed LED lighting apparatus and control
+		systems. </p><p id="p127" num="64">　　　　Further, there is no need to configure a WiFi
+		module in each LED lighting device and the WiFi module can only be configured
+		in the primary LED lighting device to control lighting of the each LED lighting
+		device. System power consumption is therefore reduced and system cost is also
+		reduced. Furthermore, a large number of LED lighting devices/nodes can be
+		included to form the Zigbee network, while a smart terminal (such as a smart
+		phone or a computer) can remotely control these large number of LED lighting
+		devices through internet, without using conventional home gateway and/or
+		conventional wireless coordinator. </p><p id="p126" num="65">　　　　 Note that, the term "comprising", "including"
+		or any other variants thereof are intended to cover a non-exclusive inclusion,
+		such that the process, method, article, or apparatus containing a number of
+		elements also include not only those elements, but also other elements that are
+		not expressly listed; or further include inherent elements of the process,
+		method, article or apparatus. Without further restrictions, the statement
+		"includes a ......" does not exclude other elements included in the process,
+		method, article, or apparatus having those elements.</p><p id="p125" num="66">　　　　The embodiments disclosed herein are exemplary
+		only. Other applications, advantages, alternations, modifications, or
+		equivalents to the disclosed embodiments are obvious to those skilled in the
+		art and are intended to be encompassed within the scope of the present
+		disclosure.</p></mode-for-invention></description><claims mxw-id="PCLM76089301" ref-ucid="WO-2014201981-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text> 1. An LED lighting apparatus, comprising:</claim-text><claim-text>a primary LED lighting device and</claim-text><claim-text>at least one secondary LED lighting device,
+		  wherein:</claim-text><claim-text>the primary LED lighting device includes a WiFi module and a
+		  Zigbee module;</claim-text><claim-text>the at least one secondary LED lighting device includes a
+		  Zigbee module; and</claim-text><claim-text>the primary LED lighting device and the at least one
+		  secondary LED lighting device are wirelessly connected by the Zigbee modules
+		  from each of the primary LED lighting device and the at least one secondary LED
+		  lighting device.</claim-text><claim-text>2. The apparatus according to claim 1, wherein the WiFi
+		  module communicates with the Zigbee module in the primary LED lighting device
+		  via a communication interface, the communication interface including at least
+		  one of an I2C (inter-integrated circuit) interface, a UART (universal
+		  asynchronous receiver/transmitter) interface, an SPI (system packet interface)
+		  interface, and a USB (universal serial bus) interface.</claim-text><claim-text>3. The apparatus according to claim 1, wherein the primary
+		  LED lighting device further includes a power supply module, and a light
+		  emitting module connected to the power supply module to provide lighting of the
+		  primary LED lighting device.</claim-text><claim-text>4. The apparatus according to claim 1, wherein the at least
+		  one secondary LED lighting device further includes a power supply module, and a
+		  light emitting module connected to the power supply module to provide lighting
+		  of the at least one secondary LED lighting device.</claim-text><claim-text>5. The apparatus according to claim 1, further including a
+		  Zigbee network formed by the Zigbee modules from each of the primary LED
+		  lighting device and the at least one secondary LED lighting
+		  device.</claim-text><claim-text>6. An LED lighting control system, comprising:</claim-text><claim-text>a primary LED lighting device, at least one secondary LED
+		  lighting device, a WiFi router, and a smart terminal, wherein:</claim-text><claim-text>the primary LED lighting device includes a WiFi module and a
+		  Zigbee module, the WiFi module being wirelessly connected to the WiFi router
+		  for the primary LED lighting device to access internet;</claim-text><claim-text>the at least one secondary LED lighting device includes a
+		  Zigbee module;</claim-text><claim-text>the Zigbee modules from each of the primary LED lighting
+		  device and the at least one secondary LED lighting device form a Zigbee
+		  network;</claim-text><claim-text>the Zigbee modules in the Zigbee network are wirelessly
+		  connected; and</claim-text><claim-text>the smart terminal is configured to control lighting of the
+		  at least one secondary LED lighting device via the primary LED lighting
+		  device.</claim-text><claim-text>7. The system according to claim 6, wherein the smart
+		  terminal is configured to send control instructions to the primary LED lighting
+		  device via the WiFi router, and wherein the control instructions are further
+		  transmitted from the primary LED lighting device to each of the at least one
+		  secondary LED lighting device in the Zigbee network to control the lighting
+		  thereof.</claim-text><claim-text>8. The system according to claim 6, wherein the smart
+		  terminal is directly connected to the WiFi module of the primary LED lighting
+		  device to send control instructions to each of the at least one secondary LED
+		  lighting device in the Zigbee network to control the lighting
+		  thereof.</claim-text><claim-text>9. The system according to claim 6, wherein the smart
+		  terminal is configured to send control instructions including a switching
+		  instruction, a luminance control instruction, and a combination
+		  thereof.</claim-text><claim-text>10. The system according to claim 6, wherein the WiFi module
+		  communicates with the Zigbee module in the primary LED lighting device via a
+		  communication interface, the communication interface including at least one of
+		  an I2C (inter-integrated circuit) interface, a UART (universal asynchronous
+		  receiver/transmitter) interface, an SPI (system packet interface) interface,
+		  and a USB (universal serial bus) interface.</claim-text><claim-text>11. The system according to claim 6, wherein the primary LED
+		  lighting device further includes a power supply module, and a light emitting
+		  module connected to the power supply module to provide lighting of the primary
+		  LED lighting device.</claim-text><claim-text>12. The system according to claim 6, wherein the at least one
+		  secondary LED lighting device further includes a power supply module , and a
+		  light emitting module connected to the power supply module to provide lighting
+		  of the at least one secondary LED lighting device.</claim-text><claim-text>13. The system according to claim 6, wherein the smart
+		  terminal includes one of a mobile phone, a tablet PC, a desktop computer, and a
+		  notebook.</claim-text><claim-text>14. The system according to claim 6, wherein the smart
+		  terminal includes a server including a cloud server.</claim-text><claim-text>15. A method for configuring an LED lighting control system,
+		  comprising:</claim-text><claim-text>configuring a primary LED lighting device each including a
+		  WiFi module and a Zigbee module, wherein the WiFi module is wirelessly
+		  connected to a WiFi router for the primary LED lighting device to access
+		  internet;</claim-text><claim-text>configuring at least one secondary LED lighting device
+		  including a Zigbee module, wherein the Zigbee modules from each of the primary
+		  LED lighting device and the at least one secondary LED lighting device form a
+		  Zigbee network, and the Zigbee modules in the Zigbee network are wirelessly
+		  connected; and </claim-text><claim-text>configuring a smart terminal to control lighting of the at
+		  least one secondary LED lighting device via the primary LED lighting
+		  device.</claim-text><claim-text>16. The method according to claim 15, wherein the smart
+		  terminal is configured to send control instructions to the primary LED lighting
+		  device via the WiFi router, and wherein the control instructions are further
+		  transmitted from the primary LED lighting device to each of the at least one
+		  secondary LED lighting device in the Zigbee network to control the lighting
+		  thereof.</claim-text><claim-text>17. The method according to claim 15, wherein the smart
+		  terminal is directly connected to the WiFi module of the primary LED lighting
+		  device to send control instructions to each of the at least one secondary LED
+		  lighting device in the Zigbee network to control the lighting
+		  thereof.</claim-text><claim-text>18. The method according to claim 15, wherein the smart
+		  terminal is configured to send control instructions including a switching
+		  instruction, a luminance control instruction, and a combination
+		  thereof.</claim-text><claim-text>19. The method according to claim 15, wherein the WiFi module
+		  communicates with the Zigbee module in the primary LED lighting device via a
+		  communication interface, the communication interface including at least one of
+		  an I2C (inter-integrated circuit) interface, a UART (universal asynchronous
+		  receiver/transmitter) interface, an SPI (system packet interface) interface,
+		  and a USB (universal serial bus) interface.</claim-text><claim-text>20. The method according to claim 15, wherein the smart
+		  terminal includes one of a mobile phone, a tablet PC, a desktop computer, a
+		  notebook, and a cloud server.</claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

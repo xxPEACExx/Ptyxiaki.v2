@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959752-A1" country="EP" doc-number="2959752" kind="A1" date="20151230" family-id="49800816" file-reference-id="310470" date-produced="20180826" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452349" ucid="EP-2959752-A1"><document-id><country>EP</country><doc-number>2959752</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14825756-A" is-representative="NO"><document-id mxw-id="PAPP193867666" load-source="patent-office" format="original"><country>EP</country><doc-number>14825756.1</doc-number><date>20140711</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193867667" load-source="docdb" format="epo"><country>EP</country><doc-number>14825756</doc-number><kind>A</kind><date>20140711</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162029938" ucid="CN-201310308124-A" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>201310308124</doc-number><kind>A</kind><date>20130718</date></document-id></priority-claim><priority-claim mxw-id="PPC162028114" ucid="CN-2014082097-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>2014082097</doc-number><kind>W</kind><date>20140711</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1892461670" load-source="docdb">G01S   1/68        20060101ALI20160919BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1892461715" load-source="docdb">H04W  84/12        20090101ALI20160919BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1892469057" load-source="docdb">H05B  37/02        20060101AFI20160919BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1978001302" load-source="docdb" scheme="CPC">Y02B  20/445       20130101 LA20160128BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987043444" load-source="docdb" scheme="CPC">Y02B  20/48        20130101 LA20151228BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987043445" load-source="docdb" scheme="CPC">Y02B  20/42        20130101 LA20151228BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987043446" load-source="docdb" scheme="CPC">H04W   4/043       20130101 LI20151228BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987782014" load-source="docdb" scheme="CPC">H05B  37/0272      20130101 LI20150205BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987783500" load-source="docdb" scheme="CPC">G01C  21/206       20130101 FI20150205BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987798326" load-source="docdb" scheme="CPC">H04W   4/023       20130101 LI20150205BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165548513" lang="DE" load-source="patent-office">SYSTEME UND VERFAHREN ZUR INNENRAUMNAVIGATIONSSTEUERUNG DURCH LED-LEUCHTEN</invention-title><invention-title mxw-id="PT165548514" lang="EN" load-source="patent-office">SYSTEMS AND METHODS FOR INDOOR NAVIGATION CONTROL BY LED LIGHTING DEVICES</invention-title><invention-title mxw-id="PT165548515" lang="FR" load-source="patent-office">SYSTÈMES ET PROCÉDÉS POUR COMMANDE DE NAVIGATION D'INTÉRIEUR PAR DES DISPOSITIFS D'ÉCLAIRAGE À DEL</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103328716" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO</last-name><address><country>CN</country></address></addressbook></applicant><applicant mxw-id="PPAR1103344041" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO., LTD</last-name></addressbook></applicant><applicant mxw-id="PPAR1101651682" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Zhejiang Shenghui Lighting Co., Ltd</last-name><iid>101500790</iid><address><street>West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing, Zhejiang 314015</city><country>CN</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103305719" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>TUO JIABIN</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103303902" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>TUO, Jiabin</last-name></addressbook></inventor><inventor mxw-id="PPAR1101652283" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>TUO, Jiabin</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 314015</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103321121" load-source="docdb" sequence="2" format="epo"><addressbook><last-name>SHEN JINXIANG</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103304087" load-source="docdb" sequence="2" format="intermediate"><addressbook><last-name>SHEN, JINXIANG</last-name></addressbook></inventor><inventor mxw-id="PPAR1101641713" load-source="patent-office" sequence="2" format="original"><addressbook><last-name>SHEN, JINXIANG</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 314015</city><country>CN</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR1101642354" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Jöstingmeier, Martin</last-name><iid>101285990</iid><address><street>Lohr, Jöstingmeier &amp; Partner Junkersstraße 3</street><city>82178 Puchheim</city><country>DE</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="CN-2014082097-W"><document-id><country>CN</country><doc-number>2014082097</doc-number><kind>W</kind><date>20140711</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2015007189-A1"><document-id><country>WO</country><doc-number>2015007189</doc-number><kind>A1</kind><date>20150122</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660700803" load-source="docdb">AL</country><country mxw-id="DS660700207" load-source="docdb">AT</country><country mxw-id="DS660700805" load-source="docdb">BE</country><country mxw-id="DS660622883" load-source="docdb">BG</country><country mxw-id="DS660620999" load-source="docdb">CH</country><country mxw-id="DS660717932" load-source="docdb">CY</country><country mxw-id="DS660700208" load-source="docdb">CZ</country><country mxw-id="DS660700806" load-source="docdb">DE</country><country mxw-id="DS660717933" load-source="docdb">DK</country><country mxw-id="DS660717934" load-source="docdb">EE</country><country mxw-id="DS660787847" load-source="docdb">ES</country><country mxw-id="DS660622884" load-source="docdb">FI</country><country mxw-id="DS660622451" load-source="docdb">FR</country><country mxw-id="DS660700811" load-source="docdb">GB</country><country mxw-id="DS660717947" load-source="docdb">GR</country><country mxw-id="DS660700812" load-source="docdb">HR</country><country mxw-id="DS660700209" load-source="docdb">HU</country><country mxw-id="DS660621000" load-source="docdb">IE</country><country mxw-id="DS660717948" load-source="docdb">IS</country><country mxw-id="DS660622452" load-source="docdb">IT</country><country mxw-id="DS660717949" load-source="docdb">LI</country><country mxw-id="DS660622885" load-source="docdb">LT</country><country mxw-id="DS660706098" load-source="docdb">LU</country><country mxw-id="DS660622886" load-source="docdb">LV</country><country mxw-id="DS660622891" load-source="docdb">MC</country><country mxw-id="DS660706111" load-source="docdb">MK</country><country mxw-id="DS660706112" load-source="docdb">MT</country><country mxw-id="DS660700210" load-source="docdb">NL</country><country mxw-id="DS660787848" load-source="docdb">NO</country><country mxw-id="DS660621001" load-source="docdb">PL</country><country mxw-id="DS660622893" load-source="docdb">PT</country><country mxw-id="DS660700271" load-source="docdb">RO</country><country mxw-id="DS660622894" load-source="docdb">RS</country><country mxw-id="DS660621002" load-source="docdb">SE</country><country mxw-id="DS660622453" load-source="docdb">SI</country><country mxw-id="DS660787849" load-source="docdb">SK</country><country mxw-id="DS660621011" load-source="docdb">SM</country><country mxw-id="DS660706113" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA148496448" ref-ucid="WO-2015007189-A1" lang="EN" load-source="patent-office"><p num="0000">Systems and methods for indoor navigation control by LED lighting devices are provided. The indoor navigation control system includes at least two LED lighting devices each including a Wi-Fi module as a wireless access node to receive a Wi-Fi signal and to transmit the received Wi-Fi signal to an adjacent node such that nodes within a Wi-Fi signal coverage area has an access to Internet or LAN. A location server is configured to store location information of the Wi-Fi module of each LED lighting device with a unique MAC address. The at least two LED lighting devices and the location server are configured to communicate with a smart terminal to calculate a position, a moving direction, and a moving speed of an object according to the location information of each LED lighting device along with a moving time length of the object for an indoor navigation.</p></abstract><abstract mxw-id="PA149029512" ref-ucid="WO-2015007189-A1" lang="EN" source="national office" load-source="docdb"><p>Systems and methods for indoor navigation control by LED lighting devices are provided. The indoor navigation control system includes at least two LED lighting devices each including a Wi-Fi module as a wireless access node to receive a Wi-Fi signal and to transmit the received Wi-Fi signal to an adjacent node such that nodes within a Wi-Fi signal coverage area has an access to Internet or LAN. A location server is configured to store location information of the Wi-Fi module of each LED lighting device with a unique MAC address. The at least two LED lighting devices and the location server are configured to communicate with a smart terminal to calculate a position, a moving direction, and a moving speed of an object according to the location information of each LED lighting device along with a moving time length of the object for an indoor navigation.</p></abstract><abstract mxw-id="PA148496449" ref-ucid="WO-2015007189-A1" lang="FR" load-source="patent-office"><p num="0000">La présente invention concerne des systèmes et des procédés de commande de navigation d'intérieur par des dispositifs d'éclairage à DEL. Le système de commande de navigation d'intérieur comporte au moins deux dispositifs d'éclairage à DEL, comportant chacun un module Wi-Fi en tant que nœud d'accès sans fil afin de recevoir un signal Wi-Fi et de transmettre le signal Wi-Fi reçu à un nœud adjacent, de sorte que les nœuds à l'intérieur d'une zone de couverture de signal Wi-Fi disposent d'un accès à Internet ou à un réseau LAN. Un serveur de localisation est configuré de façon à mémoriser des informations de localisation du module Wi-Fi de chaque dispositif d'éclairage à DEL avec une adresse MAC unique. Les au moins deux dispositifs d'éclairage à DEL et le serveur de localisation sont configurés de façon à communiquer avec un terminal intelligent afin de calculer une position, une direction de déplacement et une vitesse de déplacement d'un objet, selon les informations de localisation de chaque dispositif d'éclairage à DEL avec une durée de déplacement de l'objet pour une navigation d'intérieur.</p></abstract><abstract mxw-id="PA149029513" ref-ucid="WO-2015007189-A1" lang="FR" source="national office" load-source="docdb"><p>La présente invention concerne des systèmes et des procédés de commande de navigation d'intérieur par des dispositifs d'éclairage à DEL. Le système de commande de navigation d'intérieur comporte au moins deux dispositifs d'éclairage à DEL, comportant chacun un module Wi-Fi en tant que nœud d'accès sans fil afin de recevoir un signal Wi-Fi et de transmettre le signal Wi-Fi reçu à un nœud adjacent, de sorte que les nœuds à l'intérieur d'une zone de couverture de signal Wi-Fi disposent d'un accès à Internet ou à un réseau LAN. Un serveur de localisation est configuré de façon à mémoriser des informations de localisation du module Wi-Fi de chaque dispositif d'éclairage à DEL avec une adresse MAC unique. Les au moins deux dispositifs d'éclairage à DEL et le serveur de localisation sont configurés de façon à communiquer avec un terminal intelligent afin de calculer une position, une direction de déplacement et une vitesse de déplacement d'un objet, selon les informations de localisation de chaque dispositif d'éclairage à DEL avec une durée de déplacement de l'objet pour une navigation d'intérieur.</p></abstract><description mxw-id="PDES87139243" ref-ucid="WO-2015007189-A1" lang="EN" load-source="patent-office"><invention-title lang="EN">SYSTEMS AND METHODS FOR INDOOR NAVIGATION CONTROL BY LED
+	 LIGHTING DEVICES
+	 </invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The present disclosure generally relates to the
+		field of LED (i.e., light emitting diode) lighting technology and, more
+		particularly, relates to systems and methods for indoor navigation control by
+		LED lighting devices. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p31" num="2"> LED lighting may generally provide advantages in
+		energy conservation, environmental protection, controllable lighting, solid
+		state lighting, and long operational lifetime. LED lighting devices thus have
+		been widely used in various areas for public, commercial, and indoor lighting.
+		</p><p id="p30" num="3"> There has been an increasing focus on precise
+		positioning and navigation to places of interest. Positioning technologies such
+		as global positioning system (GPS), cellular base positioning, and Wi-Fi
+		hotspot positioning have been commonly used. </p><p id="p29" num="4"> The GPS technologies use signals sent from
+		satellites that are evenly distributed and surrounding the earth to achieve
+		precise positioning in an open outdoor environment. GPS signals can provide
+		global coverage and work at any time of the day. GPS signals are used in a wide
+		range of applications with high accuracy. For each positioning operation,
+		however, GPS processor needs to search GPS satellite signals that are currently
+		available (generally involving at least three or more satellites) and then
+		calculate accurate position information using related signal processing
+		programs and algorithms. It often takes a long time for a system to accurately
+		position a device when GPS technologies are used, which, as a result, requires
+		high power consumption. In addition, GPS satellite signals may be blocked by
+		high-rise buildings and ceilings of rooms. GPS technologies thus cannot be
+		effectively used in an indoor environment or in an area having buildings with
+		high density.</p><p id="p28" num="5"> Mobile operators often use widely-distributed
+		cellular base stations. The cellular base stations may have a limit for signal
+		propagation up to several kilometers. Each base station has its unique encoding
+		information and precise location information. Therefore, whether it is indoor
+		or outdoor, the base station technologies may perform positioning operations
+		using received data of precise location information (corresponding to the
+		unique encoding of the base station) and signal strength for calculations.
+		Compared with GPS technologies, the base station technologies may take less
+		time for positioning. However, significant inaccuracies (e.g., in a range from
+		a few hundreds to a few thousands meters) may occur. The accuracy of base
+		station based technologies depends upon the distribution/coverage range of base
+		stations, the radio propagation environment, the number of signals that the
+		base station can receive, etc.</p><p id="p27" num="6"> Wi-Fi signal itself does not provide any positioning
+		or navigation ability. However, Wi-Fi router and hotspot module have features
+		including: (a) a relatively-fixed position (rarely being moved); (b) a globally
+		unique MAC (i.e., media access control) address for the processor; and (c) a
+		relatively short Wi-Fi signal propagation distance. </p><p id="p26" num="7"> Typically, the GPS location information, the
+		encoding information of a base station of the mobile operator, and the MAC
+		address information of a Wi-Fi hotspot may be automatically collected by a
+		mobile device in an outdoor environment. Such non-processed location data may
+		then be sent to a location server for further calculations and calibrations to
+		provide accurate location information that can be sent back to the mobile
+		device. </p><p id="p25" num="8"> Compared with GPS and base station based
+		technologies, positioning based on Wi-Fi hotspots may use less time and may
+		provide high efficiency. In addition, precise position information of Wi-Fi
+		hotspot may be stored in a database of the location server under a unique MAC
+		address. When the mobile device performs indoor positioning operations again,
+		even without GPS or base station positioning signals, location information in
+		the location server corresponding to the MAC address of the Wi-Fi hotspot can
+		be directly called in combination with signal strength of the received Wi-Fi
+		signals to quickly perform the positioning operations. Wi-Fi hotspot
+		technologies are suitable for positioning in a small area. Currently, the Wi-Fi
+		hotspot technologies have been widely used in many applications/software
+		products for a mobile device. </p><p id="p24" num="9"> However, Wi-Fi wireless router is configured in a
+		relatively fixed location with a signal transmission distance of tens or
+		hundreds of meters. All mobile devices under the Wi-Fi signal coverage can only
+		use location data that are previously saved on the location server by the
+		corresponding Wi-Fi wireless router. In addition, the Wi-Fi hotspot
+		technologies are restricted by the service range. Further, the Wi-Fi hotspot
+		technologies cannot provide information regarding direction, speed, and/or
+		other navigation data. Furthermore, the Wi-Fi hotspot technologies cannot be
+		used offline.</p><p id="p23" num="10"> Thus, there is a need to overcome these and other
+		problems of the prior art and to provide systems and methods for indoor
+		navigation control by LED lighting devices.</p></background-art><disclosure><tech-solution><heading id="h07">Technical Solution</heading><p id="p79" num="11"> One aspect or embodiment of the present
+		  disclosure includes an indoor navigation control system containing LED lighting
+		  devices. The indoor navigation control system includes at least two LED
+		  lighting devices configured in an indoor environment. Each LED lighting device
+		  includes a Wi-Fi module. Each LED lighting device is used as a wireless access
+		  node to receive a Wi-Fi signal and to transmit the received Wi-Fi signal to an
+		  adjacent node corresponding to an adjacent LED lighting device such that nodes
+		  within a Wi-Fi signal coverage area has an access to Internet or LAN (i.e.,
+		  local area network). The indoor navigation control system further includes a
+		  location server configured to store location information of the Wi-Fi module of
+		  each LED lighting device with a unique MAC address. The at least two LED
+		  lighting devices and the location server are configured to communicate with a
+		  smart terminal to calculate a position, a moving direction, and a moving speed
+		  of an object according to the location information of each LED lighting device
+		  along with a moving time length of the object for an indoor navigation. </p><p id="p78" num="12"> The indoor navigation control system further
+		  includes one of a wireless router and a wireless gateway. The one of the
+		  wireless router and the wireless gateway contains a Wi-Fi module.</p><p id="p77" num="13"> The smart terminal is further configured to read
+		  status of each LED lighting device and to remotely control lighting of each LED
+		  lighting device. The smart terminal is further configured to use the Wi-Fi
+		  module of each LED lighting device to transmit or receive a control command and
+		  a status command of each LED lighting device. </p><p id="p76" num="14"> The terminal device includes a desktop computer,
+		  a laptop, a tablet PC, a smart phone, and a remote control. The object for the
+		  indoor navigation includes the terminal device. </p><p id="p75" num="15"> Each LED lighting device further includes a
+		  driving power supply, an LED light-emitting component, and a RF (radio
+		  frequency) antenna. The Wi-Fi module of each LED lighting device is configured
+		  to receive data from a wireless router or a wireless gateway via the RF
+		  antenna, to process the data, and to send the processed data to the smart
+		  terminal via the RF antenna. </p><p id="p74" num="16"> The Wi-Fi module of each LED lighting device is
+		  configured to control the driving power supply to control a switching status,
+		  brightness, and color temperature of the LED lighting device according to a
+		  control command signal sent from the smart terminal. The Wi-Fi module of each
+		  LED lighting device and the driving power supply are integrated together on a
+		  same circuit board or are connected together via a connector. The Wi-Fi module
+		  of each LED lighting device is attached on an outer surface of a housing of the
+		  LED lighting device or configured independently from the LED lighting
+		  device.</p><p id="p73" num="17"> Another aspect or embodiment of the present
+		  disclosure includes an indoor navigation control method using LED lighting
+		  devices. At least two LED lighting devices are configured in an indoor
+		  environment to form a wireless local area network for data transmission. Each
+		  LED lighting device includes a Wi-Fi module. Each LED lighting device is used
+		  as a wireless access node to receive a Wi-Fi signal and to transmit the
+		  received Wi-Fi signal to an adjacent node corresponding to an adjacent LED
+		  lighting device. Location information of the Wi-Fi module of each LED lighting
+		  device having a unique MAC address is stored into a location server using a
+		  Wi-Fi positioning method. A node distribution plan is generated using a
+		  triangulating estimation method to calibrate node distribution, according to
+		  the location information of each LED lighting device in the location server
+		  along with Wi-Fi signal strength. A position, a moving direction, and a moving
+		  speed of an object in the indoor environment are calculated according to the
+		  location information of each LED lighting device and according to a moving time
+		  length of the object for an indoor navigation based on the node distribution
+		  plan. </p><p id="p72" num="18"> When the node distribution plan is generated, the
+		  node distribution plan is calibrated and optimized by uploading a building
+		  floor plan. The building floor plan is encrypted and downloading the building
+		  floor plan requires a downloading authorization, when the building floor plan
+		  involves a building structure secret.</p><p id="p71" num="19"> The node distribution plan is generated by a
+		  smart terminal. The smart terminal allows the Wi-Fi module of each LED lighting
+		  device to be independently named such that precise location information of each
+		  named LED lighting device is conveniently known and controlled. The Wi-Fi
+		  module of each LED lighting device is independently named in a group. </p><p id="p70" num="20"> When the node distribution plan is generated,
+		  status of each LED lighting device is read and each LED lighting device is
+		  remotely controlled by using an administrator managing mode requiring an
+		  authorization to manage lighting control, internet access, and the node
+		  distribution plan of each LED lighting device. Optionally, based on the
+		  position of the object, shopping guide and navigation information are pushed to
+		  the object. The object for the indoor navigation includes the terminal device.
+		  </p><p id="p69" num="21"> The node distribution plan is used to remotely
+		  control one LED lighting device or to remotely control all LED lighting devices
+		  configured in an area of the indoor environment. Such remote control includes
+		  control of switching on/off, adjusting brightness, setting time for turning
+		  on/off, and statistically collecting power consumption of one or more LED
+		  lighting devices. </p><p id="p68" num="22"> Other aspects or embodiments of the present
+		  disclosure can be understood by those skilled in the art in light of the
+		  description, the claims, and the drawings of the present disclosure.</p></tech-solution><advantageous-effects><heading id="h09">Advantageous Effects And INDUSTRIAL APPLICABILITY
+			 </heading><p id="p83" num="23"> Without limiting the scope of any claim and/or
+		  the specification, examples of industrial applicability and certain
+		  advantageous effects of the disclosed embodiments are listed for illustrative
+		  purposes. Various alternations, modifications, or equivalents to the technical
+		  solutions of the disclosed embodiments can be obvious to those skilled in the
+		  art and can be included in this disclosure.</p><p id="p82" num="24"> Systems and methods based on LED lighting devices
+		  for indoor navigation control are provided. Multiple LED lighting devices can
+		  be widely distributed and relatively fixed in an indoor environment. Each LED
+		  lighting device can contain a Wi-Fi module and can have own location
+		  information stored in a location server having an own unique MAC address. That
+		  is, the actual location of each LED lighting device can be bound with its own
+		  unique MAC address.</p><p id="p81" num="25"> In one embodiment, when a user enters into an
+		  unknown building, by communications among LED lighting devices, the location
+		  server, and a smart terminal (e.g., a smart phone), a node distribution plan
+		  for the unknown building can be generated and mapped. Each node corresponds to
+		  an LED lighting device. Compared with conventional Wi-Fi router-based
+		  technologies, the disclosed systems and methods can more accurately perform
+		  indoor positioning and navigation. For example, the disclosed systems and
+		  methods can be used in large venues, such as supermarkets, exhibition halls,
+		  and/or museums, to perform indoor positioning and navigation. </p><p id="p80" num="26"> In addition, based on a current location of the
+		  user, promotion (e.g., shopping guide) and/or navigation information for that
+		  current location can be pushed to the user. Further, according to the
+		  positioning and navigation information, one or more LED lighting devices can be
+		  selected. The working (e.g., lighting) status of the selected LED lighting
+		  device(s) can be controlled. </p></advantageous-effects></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p89" num="27"> The following drawings are merely examples for
+		illustrative purposes according to various disclosed embodiments and are not
+		intended to limit the scope of the present disclosure. </p><p id="p88" num="28"> FIG. 1 depicts an exemplary LED lighting device
+		including a Wi-Fi module consistent with various disclosed embodiments;</p><p id="p87" num="29"> FIG. 2 depicts an exemplary wireless local area
+		network (LAN) including LED lighting devices in a building consistent with
+		various disclosed embodiments;</p><p id="p86" num="30"> FIG. 3 depicts an exemplary indoor navigation
+		control system containing LED lighting devices consistent with various
+		disclosed embodiments; </p><p id="p85" num="31"> FIG. 4 depicts an exemplary indoor navigation
+		control method using LED lighting devices consistent with various disclosed
+		embodiments; and</p><p id="p84" num="32"> FIG. 5 depicts an exemplary control interface of a
+		terminal application program on a smart terminal consistent with various
+		disclosed embodiments.</p><p id="p92" num="33">REFERENCE SIGN LIST:</p><p id="p91" num="34">LED lighting device 60；Driving power supply 61；LED
+		light-emitting component 62；Wi-Fi module 63；RF (i.e., radio frequency) antenna
+		64；Room 70；Room 71；Wireless router/gateway 72；Wi-Fi signal coverage area
+		73；Expanded Wi-Fi signal coverage area 74；Indoor navigation control system
+		300；Smart terminal 2； Location server 3；Master bedroom 80；Control interface
+		81；Zooming buttons 83；Brightness-adjusting buttons 84；Timer button 85；Search
+		button 86；Monitor button 87；Setting button 88；</p></description-of-drawings><mode-for-invention><heading id="h15">Mode for Invention</heading><p id="p137" num="35"> Reference will now be made in detail to exemplary
+		embodiments of the disclosure, which are illustrated in the accompanying
+		drawings. Wherever possible, the same reference numbers will be used throughout
+		the drawings to refer to the same or like parts.</p><p id="p136" num="36"> Systems and methods based on LED lighting devices
+		for indoor navigation control are provided. Multiple LED lighting devices can
+		be widely distributed and relatively fixed in an indoor environment. Each LED
+		lighting device can contain a Wi-Fi module and can have its own location
+		information stored in a location server and have its own unique MAC address.
+		That is, the actual location of each LED lighting device can be bound with its
+		own unique MAC address.</p><p id="p135" num="37"> In one embodiment, when a user enters into an
+		unknown building, by communications among LED lighting devices, the location
+		server, and a smart terminal (e.g., a smart phone), a node distribution plan
+		for the unknown building can be generated and mapped. Each node corresponds to
+		an LED lighting device. Compared with conventional Wi-Fi router-based
+		technologies, the disclosed systems and methods can more accurately perform
+		indoor positioning and navigation. For example, the disclosed systems and
+		methods can be used in large venues, such as supermarkets, exhibition halls,
+		and/or museums, to perform indoor positioning and navigation. </p><p id="p134" num="38"> In addition, based on a current location of the
+		user, promotion (e.g., shopping guide) and/or navigation information for that
+		current location can be pushed to the user. Further, according to the
+		positioning and navigation information, one or more LED lighting devices can be
+		selected. The working (e.g., lighting) status of the selected LED lighting
+		device(s) can be controlled. </p><p id="p133" num="39"> FIG. 1 depicts an exemplary LED lighting device
+		including a Wi-Fi module consistent with various disclosed embodiments. As
+		shown in FIG. 1, the exemplary LED lighting device 60 can include a driving
+		power supply 61, an LED light-emitting component 62, a Wi-Fi module 63, and/or
+		a RF (i.e., radio frequency) antenna 64. </p><p id="p132" num="40"> The driving power supply 61 can be electrically
+		connected to the LED light-emitting component 62 and the Wi-Fi module 63 to
+		supply power and related control command signals to the LED light-emitting
+		component 62 and the Wi-Fi module 63. The Wi-Fi module 63 and the RF antenna 64
+		can be electrically connected to transmit RF signals there-between. </p><p id="p131" num="41"> Note that the LED lighting device 60 can be
+		configured to have any desired shape, which is not limited to the shape shown
+		in FIG. 1. In addition, the LED lighting device 60 can include any desired
+		number and/or type of light sources (e.g., the LED light-emitting component 62
+		such as bulbs), although FIG. 1 shows four bulbs for illustration purposes. In
+		one embodiment, one single bulb can be used as a light source. In another
+		embodiment, one or more devices each including multiple bulbs can be used as a
+		light source. The driving power of these bulb(s) can be connected to a same
+		Wi-Fi module (or sometimes a controller) to control and adjust status of the
+		LED lighting device 60.</p><p id="p130" num="42"> The Wi-Fi module 63 can operate under a single
+		band mode at 2.4 GHz or 5 GHz according to IEEE802.11 standard. Alternatively,
+		the Wi-Fi module 63 can operate under a dual band mode at 2.4 GHz and 5 GHz
+		according to IEEE802.11 standard. The Wi-Fi module 63 can receive data from a
+		wireless router or a wireless gateway (a wireless router/gateway) via the RF
+		antenna 64. The Wi-Fi module 63 can process the data via an internal signal
+		processing by a processor. The processed data can be sent to a user terminal
+		(not shown in FIG. 1), such as a smart terminal, via the RF antenna 64.
+		Meanwhile, the RF antenna 64 can receive a control command signal sent from the
+		smart terminal and then send the control command signal to the Wi-Fi module to
+		realize a network configuration (e.g., including the multiple LED lighting
+		devices) and a status control of the LED lighting device 60.</p><p id="p129" num="43"> The Wi-Fi module 63 can control the driving power
+		supply 61 to control a switching status, brightness, and a color temperature of
+		the LED lighting device 60, according to a control command signal, such as a
+		PWM (i.e., pulse width modulation) signal, sent from the smart terminal. </p><p id="p128" num="44"> The Wi-Fi module 63 can be built within the LED
+		lighting device 60. For example, the Wi-Fi module 63 and the driving power
+		supply 61 can be integrated together on the same circuit board. Alternatively,
+		the Wi-Fi module 63 and the driving power supply 61 can be connected together
+		via a connector.</p><p id="p127" num="45"> In some embodiments, the Wi-Fi module 63 can be
+		configured outside of the LED lighting device 60. For example, the Wi-Fi module
+		63 can be mounted or attached to an outer surface of a housing of the LED
+		lighting device 60. Alternatively, the Wi-Fi module 63 can be configured
+		independently from the LED lighting device 60.</p><p id="p126" num="46"> The RF antenna 64 can be discretely configured, or
+		can be integrated onto a circuit board. For example, to maintain a desired RF
+		signal transmission without affecting light output of the LED lighting device
+		60, the RF antenna 64 can be mounted or attached to an outer surface of the
+		housing of the LED lighting device 60; or can be mounted or attached to any
+		component within the LED lighting device 60; or can be integrated onto a
+		circuit board connecting the LED light-emitting module 62 and/or the driving
+		power supply 61. </p><p id="p125" num="47"> FIG. 2 depicts an exemplary wireless local area
+		network (LAN) formed by multiple LED lighting devices in an exemplary building
+		consistent with various disclosed embodiments. </p><p id="p124" num="48"> As shown in FIG. 2, multiple LED lighting devices
+		can be configured within an exemplary building to provide a three-dimensional
+		distribution. Each LED lighting device can include a built-in Wi-Fi module. In
+		the example of FIG. 2, the building can include two exemplary rooms: room 70
+		and room 71. Each room can be configured with three LED lighting devices 60.
+		For example, room 70 can include LED-1, LED-2, and LED-3, while room 71 can
+		include LED-4, LED-5, and LED-6. </p><p id="p123" num="49"> Note that although two rooms are included in the
+		exemplary building shown in FIG. 2 for illustration purposes, any number of
+		room(s), more or less than two, can be included without limitation. In
+		addition, although three LED lighting devices are configured in each exemplary
+		room shown in FIG. 2 for illustration purposes, any number of LED lighting
+		device(s), more or less than three, can be configured in one room. </p><p id="p122" num="50"> A wireless router/gateway 72 can be placed, e.g.,
+		in a corner location of the room or building, due to limitations of
+		distribution and length of optical fiber or ADSL telephone line used to connect
+		the wireless router/gateway 72. Since the Wi-Fi signal provided by the wireless
+		router/gateway 72 can have a limited coverage area, the Wi-Fi signal may not
+		provide sufficient Internet connection for users a little far away from the
+		wireless router/gateway 72 in the same building. </p><p id="p121" num="51"> However, as disclosed, an LED lighting device
+		(e.g., LED-1 in room 70 in FIG. 2) that is located nearby to the wireless
+		router/gateway 72 can be utilized to receive and to continuously amplify the
+		Wi-Fi signal transmitted from the wireless router/gateway 72. As such, the
+		LED-1 in room 70 together with the wireless router/gateway 72 can form an
+		increased Wi-Fi signal coverage area 73. Likewise, LED-2 and LED-4 that are
+		located nearby to the LED-1 can receive and continuously amplify the Wi-Fi
+		signal transmitted from LED-1 and thus to further expand the Wi-Fi signal
+		coverage area shown as an expanded Wi-Fi signal coverage area 74 in FIG. 2.
+		</p><p id="p120" num="52"> In this manner, the widely distributed LED
+		lighting devices within multiple rooms in a building can form a Wi-Fi network,
+		e.g., having a mesh-type structure with uniform and stable Wi-Fi signal. As
+		long as there is one LED lighting device on a node of the Wi-Fi network
+		receives the Wi-Fi signal from the wireless router/gateway inside a building,
+		the Wi-Fi signal can be progressively (e.g., in a manner of layer by layer)
+		propagated via adjacent LED lighting devices to form the Wi-Fi Network with a
+		wide coverage area and with stable signal.</p><p id="p119" num="53"> FIG. 3 depicts an exemplary indoor navigation
+		control system based on LED lighting devices consistent with various disclosed
+		embodiments. </p><p id="p118" num="54"> The exemplary indoor navigation control system 300
+		may include a wireless router/gateway 72, at least two LED lighting devices 60,
+		a smart terminal 2, and/or a location server 3. </p><p id="p117" num="55"> Each of the wireless router/gateway 72 and the at
+		least two LED lighting devices 60 can include a Wi-Fi module, such that each
+		LED lighting device 60 can be used as a wireless access node to receive a Wi-Fi
+		signal and to further transmit the received Wi-Fi signal to allow other nodes
+		within the Wi-Fi signal coverage area to have an access to the Internet or a
+		LAN. The Wi-Fi module in each of the wireless router/gateway 72 and the at
+		least two LED lighting devices 60 can store precise location information of the
+		Wi-Fi module under its own unique MAC address on the location sever 3. </p><p id="p116" num="56"> Service providers for the location server 3 can
+		include, e.g., Google, Skyhook Wireless, Navizon, and/or other suitable
+		providers. Suitable terminal application programs can be installed in the smart
+		terminal 2. Each Wi-Fi module of the wireless router/gateway 72 and the at
+		least two LED lighting devices 60 can be connected to the terminal application
+		programs. The terminal application programs can call and process location
+		information corresponding to a desired individual Wi-Fi module from the
+		location server 3, according to the unique MAC address of that individual Wi-Fi
+		module. </p><p id="p115" num="57"> When a location navigation service is needed by
+		the user, a terminal application program running on the smart terminal 2 can
+		send a request command to the location server and call a geocoding location on
+		the location server corresponding to a MAC address of each of the surrounding
+		Wi-Fi modules. The geocoding location can include various data, e.g.,
+		longitude, latitude, and/or room name.</p><p id="p114" num="58"> In one embodiment, the location of wireless
+		router/gateway 72 can be used as a reference point, in combination with the
+		location information of at least two nearby LED lighting devices 60, to
+		estimate an approximate location of an object to be tested using a
+		triangulating estimation method and a signal transmission loss model applied to
+		each node that is able to receive the Wi-Fi signal. The more of LED lighting
+		devices 60 is included and the more widely and uniformly the LED lighting
+		devices 60 are distributed, the greater accuracy of the positioning services
+		can be obtained. </p><p id="p113" num="59"> In the meanwhile, the terminal application program
+		can measure a time length that an object (e.g., the smart terminal held by a
+		user, or a user) moves from one point to another point within the signal
+		coverage area of each Wi-Fi module, i.e., using a distance difference, to
+		calculate an azimuth (including e.g., a position or location) and/or data of a
+		moving direction and a moving speed of the object or the user to achieve
+		high-precision indoor navigation. </p><p id="p112" num="60"> In addition, the smart terminal 2 (i.e., the user
+		terminal) can read status of each node (corresponding to each Wi-Fi module of
+		the LED lighting device) and remotely control the LED lighting device
+		corresponding to each node in the indoor navigation control system. The smart
+		terminal 2 can use the Wi-Fi module at each node as a Wi-Fi wireless access
+		point to transmit and/or receive control and status command signals of each LED
+		lighting device to ultimately control the LED lighting device at any point
+		within the Wi-Fi signal coverage area. </p><p id="p111" num="61"> The smart terminal 2 can include, e.g., desktop
+		computers, laptops, tablet PCs, smart phones, and a specially-designed remote
+		control.</p><p id="p110" num="62"> FIG. 4 depicts an exemplary indoor navigation
+		control method using LED lighting devices consistent with various disclosed
+		embodiments. </p><p id="p109" num="63"> In Step 410, multiple LED lighting devices each
+		built-in with a Wi-Fi module can be configured to form a uniformly-distributed
+		wireless local area network with high-speed data transmission. For example, at
+		least two LED lighting devices can be configured. </p><p id="p108" num="64"> In Step 411, based on a Wi-Fi positioning method,
+		location information of each node of the LED lighting device can be stored
+		under the name of a unique MAC address corresponding to the Wi-Fi module of
+		that LED lighting device in the location server. </p><p id="p107" num="65"> In Step 412, according to the location information
+		of each LED lighting device stored in the location server along with a Wi-Fi
+		signal strength, the terminal application program can generate a node
+		distribution plan (or plot) using triangulating estimation method to calibrate
+		distribution of the nodes. </p><p id="p106" num="66"> In Step 413, in some cases, the user can upload a
+		building floor plan (or a building blueprint) to calibrate and optimize the
+		node distribution plan. </p><p id="p105" num="67"> In Step 414, because each node has a relatively
+		fixed location and is close to other nodes, the terminal application program on
+		the smart terminal can calculate a position, a moving direction, and a moving
+		speed of an object (e.g., the smart terminal or a user) according to the
+		location information of the node and moving time length of the object’s
+		movement to achieve indoor high-precision navigation.</p><p id="p104" num="68"> In addition, for the node distribution plan based
+		on the building floor plan as described in Step 413, confidential information
+		related to building structure may be involved. In this case, the administrator
+		of the smart terminal can manage the downloading of the building structure
+		information with appropriate authorization level and with encryption, without
+		affecting the operations of indoor navigations.</p><p id="p103" num="69"> In various embodiments, the LED lighting devices
+		can be installed in a supermarket, an exhibition hall, a museum, and/or other
+		large venues. In addition to the navigation process depicted in Step 414, a
+		general control module of an additional wireless LAN can be used to push
+		information related to promotions (e.g., of shopping guide) and/or navigations,
+		according to an instant position of a customer or a visitor. Information
+		related to promotions and/or navigations can include, for example, publicity
+		and navigation of product promotions, query and navigation of certain fixed
+		products, recommendation and navigation of certain paths, background
+		introduction of an exhibition point, query of stream distribution of people in
+		each exhibition region, query of surrounding facilities and services, emergency
+		escape routes, etc.</p><p id="p102" num="70"> FIG. 5 depicts an exemplary control interface of a
+		terminal application program on a smart terminal for illustrating a positioning
+		and/or navigation method in a house using the disclosed indoor navigation
+		system. The exemplary control interface also illustrates remote controlling of
+		selected LED lighting device(s) in the indoor navigation system, while
+		performing positioning and/or navigation in the house. </p><p id="p101" num="71"> As shown, the exemplary house can include a master
+		bedroom 80, a second bedroom, a guest bedroom, a kitchen, a dining room, a
+		living room, big and small bath rooms, big and small balconies, etc. The indoor
+		navigation system (e.g., the system 300 of FIG. 3 including at least two LED
+		lighting devices 60, a wireless router/gateway 72, a location server, etc.) can
+		be adopted and accommodated to the exemplary house of FIG. 5. </p><p id="p100" num="72"> Additionally, the control interface 81 can include
+		zooming buttons 83, brightness-adjusting buttons 84, a timer button 85, a
+		search button 86, a monitor button 87, and/or a setting button 88. </p><p id="p99" num="73"> For example, to allow a user to clearly know
+		his/her position in the house and to precisely control any LED lighting
+		device(s) in the house, SSID (i.e., service set identifier) of the Wi-Fi module
+		of each LED lighting device within the indoor navigation system can be named
+		separately or in groups (e.g., grouped according to an area) as desired. For
+		example, the master bedroom 80 in the house of FIG. 5 can include six LED
+		lighting devices named as: master bedroom-door (mb-door), master bedroom-desk
+		(mb-desk), master bedroom-bed end 1 (mb-end1), master bedroom-bed end 2
+		(mb-end2), master bedroom-bed head 1 (mb-head1), and master bedroom-bed head 2
+		(mb-head2). </p><p id="p98" num="74"> Alternatively, the node distribution plan of the
+		indoor navigation system can be used to directly control operational or working
+		status of any desired LED lighting device(s) in the house. For example, the
+		user can select an individual LED lighting device or select LED lighting
+		devices in an area to precisely control their working status. </p><p id="p97" num="75"> The control interface 81 can also provide an
+		azimuth mark 82 to show a position where the user is located in the house. The
+		zooming buttons 83 can be used to enlarge or reduce a displaying range on a
+		screen for the control interface 81. The brightness-adjusting buttons 84 can be
+		used to adjust the brightness of LED lighting device(s) at selected node(s).
+		The timer button 85 can be used to set a time for tuning on or turning off the
+		LED lighting device(s) at the selected node(s). The search button 86 can be
+		used to find an indoor location to be routed for navigation. The monitor button
+		87 can be used to statistically collect power consumption amount, running time,
+		remaining lifetime, etc. of the LED lighting device(s) in the house. The
+		setting button 88 can be used to configure the terminal application program and
+		other related functions. </p><p id="p96" num="76"> When starting an indoor navigation, the search
+		button 86 can be clicked on to provide an input box for inputting a
+		destination. After the terminal application program receives the destination, a
+		navigation routing can be visually displayed on the control interface 81
+		according to the node distribution plan of the indoor navigation system. For
+		example, the dotted line in FIG. 5 shows a navigation routing from the azimuth
+		mark 82 in the living room to the big balcony of the house.</p><p id="p95" num="77"> It is apparent that the control interface 81 is not
+		limited to the interface design shown in FIG. 5, nor limited to a particular
+		operating system. The control interface 81 can correspond to any suitable
+		application program(s) running on any suitable operating system(s) with certain
+		desired functions.</p><p id="p94" num="78"> It is apparent that, the term "comprising",
+		"including" or any other variants thereof are intended to cover a non-exclusive
+		inclusion, such that the process, method, article, or apparatus containing a
+		number of elements also include not only those elements, but also other
+		elements that are not expressly listed; or further include inherent elements of
+		the process, method, article or apparatus. Without further restrictions, the
+		statement "includes a ......" does not exclude other elements included in the
+		process, method, article, or apparatus having those elements.</p><p id="p93" num="79"> The embodiments disclosed herein are exemplary
+		only. Other applications, advantages, alternations, modifications, or
+		equivalents to the disclosed embodiments are obvious to those skilled in the
+		art and are intended to be encompassed within the scope of the present
+		disclosure.</p></mode-for-invention></description><claims mxw-id="PCLM78842104" ref-ucid="WO-2015007189-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text>1.An indoor navigation control system containing LED lighting
+		  devices, comprising: </claim-text><claim-text>at least two LED lighting devices configured in an indoor
+		  environment, wherein each LED lighting device comprises a Wi-Fi module and each
+		  LED lighting device is used as a wireless access node to receive a Wi-Fi signal
+		  and to transmit the received Wi-Fi signal to an adjacent node corresponding to
+		  an adjacent LED lighting device such that nodes within a Wi-Fi signal coverage
+		  area has an access to Internet or LAN (local area network); and</claim-text><claim-text>a location server configured to store location information of
+		  the Wi-Fi module of each LED lighting device with a unique MAC address, wherein
+		  the at least two LED lighting devices and the location server are configured to
+		  communicate with a smart terminal to calculate a position, a moving direction,
+		  and a moving speed of an object according to the location information of each
+		  LED lighting device along with a moving time length of the object for an indoor
+		  navigation. </claim-text><claim-text>2.The system according to claim 1, further comprising one of
+		  a wireless router and a wireless gateway, wherein the one of the wireless
+		  router and the wireless gateway comprises a Wi-Fi module. </claim-text><claim-text>3.The system according to claim 2, wherein the smart terminal
+		  is further configured to read status of each LED lighting device and to
+		  remotely control lighting of each LED lighting device. </claim-text><claim-text>4.The system according to claim 2, wherein the smart terminal
+		  is further configured to use the Wi-Fi module of each LED lighting device to
+		  transmit or receive a control command and a status command of each LED lighting
+		  device. </claim-text><claim-text>5.The system according to claim 1, wherein the terminal
+		  device comprises a desktop computer, a laptop, a tablet PC, a smart phone, and
+		  a remote control.</claim-text><claim-text>6.The system according to claim 1, wherein the object for the
+		  indoor navigation comprises a terminal device. </claim-text><claim-text>7.The system according to claim 1, wherein each LED lighting
+		  device further comprises a driving power supply, an LED light-emitting
+		  component, and a RF (radio frequency) antenna. </claim-text><claim-text>8.The system according to claim 7, wherein the Wi-Fi module
+		  of each LED lighting device is configured to receive data from a wireless
+		  router or a wireless gateway via the RF antenna, to process the data, and to
+		  send the processed data to the smart terminal via the RF antenna.</claim-text><claim-text>9.The system according to claim 7, wherein the Wi-Fi module
+		  of each LED lighting device is configured to control the driving power supply
+		  to control a switching status, brightness, and a color temperature of the LED
+		  lighting device according to a control command sent from the smart terminal.
+		  </claim-text><claim-text>10.The system according to claim 7, wherein the Wi-Fi module
+		  and the driving power supply of each LED lighting device are integrated
+		  together on a same circuit board or are connected together via a
+		  connector.</claim-text><claim-text>11.The system according to claim 7, wherein the Wi-Fi module
+		  of each LED lighting device is attached on an outer surface of a housing of the
+		  LED lighting device or configured independently from the LED lighting
+		  device.</claim-text><claim-text>12.An indoor navigation control method using LED lighting
+		  devices, comprising: </claim-text><claim-text>configuring at least two LED lighting devices in an indoor
+		  environment to form a wireless local area network for data transmission,
+		  wherein each LED lighting device comprises a Wi-Fi module and each LED lighting
+		  device is used as a wireless access node to receive a Wi-Fi signal and to
+		  transmit the received Wi-Fi signal to an adjacent node corresponding to an
+		  adjacent LED lighting device; </claim-text><claim-text>storing location information of the Wi-Fi module of each LED
+		  lighting device having a unique MAC address into a location server using a
+		  Wi-Fi positioning method; </claim-text><claim-text>generating a node distribution plan using a triangulating
+		  estimation method to calibrate a node distribution, according to the location
+		  information of each LED lighting device in the location server along with a
+		  Wi-Fi signal strength; and</claim-text><claim-text>calculating a position, a moving direction, and a moving
+		  speed of an object in the indoor environment according to the location
+		  information of each LED lighting device and a moving time length of the object
+		  for an indoor navigation based on the node distribution plan. </claim-text><claim-text>13.The method according to claim 12, further comprising
+		  calibrating and optimizing the node distribution plan by uploading a building
+		  floor plan.</claim-text><claim-text>14.The method according to claim 13, where the building floor
+		  plan is encrypted and downloading the building floor plan requires a
+		  downloading authorization, when the building floor plan involves a building
+		  structure secret.</claim-text><claim-text>15.The method according to claim 12, wherein generating the
+		  node distribution plan is implemented by a smart terminal, wherein the smart
+		  terminal allows the Wi-Fi module of each LED lighting device to be
+		  independently named such that precise location information of each named LED
+		  lighting device is conveniently known and controlled, and wherein the Wi-Fi
+		  module of each LED lighting device is independently named in a group.
+		  </claim-text><claim-text>16.The method according to claim 12, wherein the step of
+		  generating the node distribution plan further comprises reading status of each
+		  LED lighting device and remotely controlling each LED lighting device by using
+		  an administrator managing mode requiring an authorization to manage lighting
+		  control, internet access, and the node distribution plan of each LED lighting
+		  device. </claim-text><claim-text>17.The method according to claim 12, further comprising
+		  pushing shopping guide and navigation information to the object based on the
+		  position of the object. </claim-text><claim-text>18.The method according to claim 12, wherein the object for
+		  the indoor navigation comprises the terminal device. </claim-text><claim-text>19.The method according to claim 12, further comprising using
+		  the node distribution plan to remotely control one LED lighting device or to
+		  remotely control all LED lighting devices configured in an area of the indoor
+		  environment.</claim-text><claim-text>20.The method according to claim 19, wherein the remote
+		  control comprises control of switching on/off, adjusting brightness, setting
+		  time for turning on/off, and statistically collecting power consumption amount
+		  of one or more LED lighting devices. </claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

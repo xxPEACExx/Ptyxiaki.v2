@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959273-A1" country="EP" doc-number="2959273" kind="A1" date="20151230" family-id="48145590" file-reference-id="312929" date-produced="20180825" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452858" ucid="EP-2959273-A1"><document-id><country>EP</country><doc-number>2959273</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14708693-A" is-representative="NO"><document-id mxw-id="PAPP193868684" load-source="patent-office" format="original"><country>EP</country><doc-number>14708693.8</doc-number><date>20140224</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193868685" load-source="docdb" format="epo"><country>EP</country><doc-number>14708693</doc-number><kind>A</kind><date>20140224</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162028592" ucid="IB-2014059207-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>IB</country><doc-number>2014059207</doc-number><kind>W</kind><date>20140224</date></document-id></priority-claim><priority-claim mxw-id="PPC162027809" ucid="IT-PD20130042-A" load-source="docdb"><document-id format="epo"><country>IT</country><doc-number>PD20130042</doc-number><kind>A</kind><date>20130225</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1988520020" load-source="docdb">G01F  11/32        20060101AFI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988520517" load-source="docdb">A47L  13/50        20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988525604" load-source="docdb">B67D   3/02        20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988527659" load-source="docdb">B67D   3/00        20060101ALI20140911BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1984698287" load-source="docdb" scheme="CPC">B08B  13/00        20130101 LI20160107BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1984698546" load-source="docdb" scheme="CPC">B67D   3/0045      20130101 LI20160108BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1984701647" load-source="docdb" scheme="CPC">G01F  11/32        20130101 FI20160108BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1984703859" load-source="docdb" scheme="CPC">A47L  13/50        20130101 LI20160107BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165550040" lang="DE" load-source="patent-office">DOSIERUNGSVORRICHTUNG ZUR EINWEICHUNG EINES REINIGUNGSTUCH MIT EINEM REINIGUNGSMITTEL</invention-title><invention-title mxw-id="PT165550041" lang="EN" load-source="patent-office">DOSING DEVICE FOR SOAKING A CLEANING CLOTH WITH DETERGENT</invention-title><invention-title mxw-id="PT165550042" lang="FR" load-source="patent-office">DISPOSITIF DE DOSAGE POUR MOUILLER UN TISSU DE NETTOYAGE AVEC DU DÉTERGENT</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103307661" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>TTS CLEANING S R L</last-name><address><country>IT</country></address></addressbook></applicant><applicant mxw-id="PPAR1103324885" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>TTS CLEANING S.R.L.</last-name></addressbook></applicant><applicant mxw-id="PPAR1101642291" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>TTS Cleaning S.r.l.</last-name><iid>101544541</iid><address><street>Viale dell'Artigianato, 12/14</street><city>35010 Santa Giustina in Colle (PD)</city><country>IT</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103306086" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZORZO RENATO</last-name><address><country>IT</country></address></addressbook></inventor><inventor mxw-id="PPAR1103320613" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZORZO, RENATO</last-name></addressbook></inventor><inventor mxw-id="PPAR1101640624" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>ZORZO, RENATO</last-name><address><street>Via Roncà 17</street><city>I-35010 Onara di Tombolo (PD)</city><country>IT</country></address></addressbook></inventor></inventors></parties><international-convention-data><pct-or-regional-filing-data ucid="IB-2014059207-W"><document-id><country>IB</country><doc-number>2014059207</doc-number><kind>W</kind><date>20140224</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2014128671-A1"><document-id><country>WO</country><doc-number>2014128671</doc-number><kind>A1</kind><date>20140828</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660790361" load-source="docdb">AL</country><country mxw-id="DS660707961" load-source="docdb">AT</country><country mxw-id="DS660714635" load-source="docdb">BE</country><country mxw-id="DS660630045" load-source="docdb">BG</country><country mxw-id="DS660629014" load-source="docdb">CH</country><country mxw-id="DS660714636" load-source="docdb">CY</country><country mxw-id="DS660707962" load-source="docdb">CZ</country><country mxw-id="DS660790363" load-source="docdb">DE</country><country mxw-id="DS660714637" load-source="docdb">DK</country><country mxw-id="DS660714638" load-source="docdb">EE</country><country mxw-id="DS660630132" load-source="docdb">ES</country><country mxw-id="DS660630046" load-source="docdb">FI</country><country mxw-id="DS660629019" load-source="docdb">FR</country><country mxw-id="DS660790364" load-source="docdb">GB</country><country mxw-id="DS660714651" load-source="docdb">GR</country><country mxw-id="DS660790365" load-source="docdb">HR</country><country mxw-id="DS660707967" load-source="docdb">HU</country><country mxw-id="DS660629020" load-source="docdb">IE</country><country mxw-id="DS660714652" load-source="docdb">IS</country><country mxw-id="DS660630055" load-source="docdb">IT</country><country mxw-id="DS660714653" load-source="docdb">LI</country><country mxw-id="DS660630056" load-source="docdb">LT</country><country mxw-id="DS660733194" load-source="docdb">LU</country><country mxw-id="DS660630057" load-source="docdb">LV</country><country mxw-id="DS660630058" load-source="docdb">MC</country><country mxw-id="DS660733199" load-source="docdb">MK</country><country mxw-id="DS660733200" load-source="docdb">MT</country><country mxw-id="DS660630133" load-source="docdb">NL</country><country mxw-id="DS660709845" load-source="docdb">NO</country><country mxw-id="DS660630134" load-source="docdb">PL</country><country mxw-id="DS660733201" load-source="docdb">PT</country><country mxw-id="DS660629021" load-source="docdb">RO</country><country mxw-id="DS660733202" load-source="docdb">RS</country><country mxw-id="DS660630139" load-source="docdb">SE</country><country mxw-id="DS660707968" load-source="docdb">SI</country><country mxw-id="DS660709846" load-source="docdb">SK</country><country mxw-id="DS660709851" load-source="docdb">SM</country><country mxw-id="DS660630067" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA139078900" ref-ucid="WO-2014128671-A1" lang="EN" load-source="patent-office"><p num="0000">This invention concerns a device for dosing a liquid detergent for soaking cleaning cloths, which releases an exact amount of liquid detergent; in particular, the invention refers to the actuating devices for operating the valve that the above-mentioned dosing device is fitted with.</p></abstract><abstract mxw-id="PA139545455" ref-ucid="WO-2014128671-A1" lang="EN" source="national office" load-source="docdb"><p>This invention concerns a device for dosing a liquid detergent for soaking cleaning cloths, which releases an exact amount of liquid detergent; in particular, the invention refers to the actuating devices for operating the valve that the above-mentioned dosing device is fitted with.</p></abstract><abstract mxw-id="PA139078901" ref-ucid="WO-2014128671-A1" lang="FR" load-source="patent-office"><p num="0000">L'invention concerne un dispositif pour doser un détergent liquide pour mouiller des tissus de nettoyage, qui libère une quantité exacte de détergent liquide ; en particulier, l'invention concerne des dispositifs d'actionnement pour actionner la valve montée sur le dispositif de dosage mentionné ci-dessus.</p></abstract><abstract mxw-id="PA139545456" ref-ucid="WO-2014128671-A1" lang="FR" source="national office" load-source="docdb"><p>L'invention concerne un dispositif pour doser un détergent liquide pour mouiller des tissus de nettoyage, qui libère une quantité exacte de détergent liquide ; en particulier, l'invention concerne des dispositifs d'actionnement pour actionner la valve montée sur le dispositif de dosage mentionné ci-dessus.</p></abstract><description mxw-id="PDES78479815" ref-ucid="WO-2014128671-A1" lang="EN" load-source="patent-office"><invention-title lang="EN"> DOSING DEVICE FOR SOAKING A CLEANING CLOTH WITH DETERGENT
+	 </invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The field of this invention concerns a device for
+		dosing a liquid detergent for soaking a cleaning cloth with a previously
+		calibrated amount of liquid.</p><p id="p127" num="2"> In particular, the object of the invention concerns
+		actuating devices for displacing the valve with which the above-mentioned
+		dosing device is fitted. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p217" num="3"> In the professional cleaning industry there are
+		dosing devices that tend to optimise the consumption of the liquid detergent,
+		not only to avoid waste, but above all as an aid for operators in carrying out
+		the various operations.</p><p id="p216" num="4"> In fact, with the above-mentioned dosing device the
+		various operations of dilution and soaking of a cleaning cloth with an optimal
+		amount of detergent is easy and extremely precise.</p><p id="p215" num="5"> In fact, the amount of liquid detergent that has to
+		soak a cloth varies according to the type of cloth, and also the nature of the
+		surface to be cleaned.</p><p id="p214" num="6"> For these and other reasons, the dosing device in
+		the professional cleaning industry is proving to be an essential instrument for
+		professional operators.</p><p id="p213" num="7"> Evidently, because of its widespread use by the
+		above-mentioned operators and because it is an article that can be used
+		immediately, dosing devices need to be fitted with actuating devices that are
+		simple and intuitive to use.</p><p id="p212" num="8"> It is equally evident that because these
+		instruments are aimed at the professional sector it is indispensable that they
+		are reliable over time.</p><p id="p211" num="9"> The dosing devices that are currently sold on the
+		market do not meet the requirement of having actuating devices that are easy
+		and intuitive to use, and above all they are completely unreliable.</p><p id="p210" num="10"> Indeed, some of them have operating controls that
+		are not easy to see, or else difficult to use, and they are also not so
+		intuitive with a movement that is opposite to what the operator might
+		expect.</p><p id="p209" num="11"> Moreover, all the above-mentioned dosing devices
+		have actuators equipped with interrelated moving parts that are located within
+		the structure of each device and that are somewhat hidden, therefore they
+		cannot be seen and are continually exposed to the aggressive detergents
+		used.</p><p id="p208" num="12"> Indeed, with the continual cycle of dampness and
+		dryness involved in the various cleaning operations, these moving parts get a
+		layer of residue that over time obstruct and compromise the correct movement of
+		the parts.</p><p id="p207" num="13"> Finally, as is well known to sector experts, the
+		above-mentioned actuating devices, fitted with numerous metallic springs,
+		require continual maintenance for replacing these metallic springs that
+		deteriorate due to corrosion from the aggressive detergents used.</p><p id="p206" num="14"> Replacing these metallic springs inside the
+		structure of the dosing devices, and working on the related moving parts,
+		requires the complete disassembly, which should be carried out only by
+		technically skilled personnel.</p><p id="p205" num="15"> So, these actuating devices of these dosing
+		devices are quite unreliable and not very ergonomic, and above all they require
+		continuous maintenance.</p><p id="p204" num="16"> Coming now to the actual modes of operation, we
+		see that the operator, after gripping the respective actuating devices, is
+		forced, after the displacement that induces the valve to open, to hold these
+		same actuating devices in the opening position until the storage chamber with
+		which the dosing device is fitted is completely empty.</p><p id="p203" num="17"> Because sometimes the operators are impatient, and
+		above all because it cannot be verified how much time the operation for
+		completely emptying the storage chamber requires, very often the emptying
+		operation is terminated early by the operator, without the liquid detergent
+		storage chamber being fully emptied, and thereby frustrating the meaning itself
+		of using a dosing device.</p><p id="p202" num="18"> In fact, the operator tends to prematurely end the
+		detergent release phase by closing the dosing device's valve, because in some
+		dosing devices, especially in the final phase of releasing the last of the
+		liquid detergent in the chamber, this liquid flows out at an exasperatingly
+		slow rate.</p></background-art><disclosure><tech-problem><heading id="h05">Technical Problem</heading><p id="p154" num="19"> The purpose of this invention is to overcome one
+		  or more of the above-mentioned drawbacks.</p><p id="p153" num="20"> Another purpose of this invention is to make
+		  available actuating devices of a dosing device that is reliable over time.</p><p id="p152" num="21"> A further purpose of this invention is to make
+		  available actuating devices of a dosing device that are visible, exposed for
+		  easy gripping and which are easily used by the operator.</p><p id="p151" num="22"> An even further purpose of this invention is to
+		  make available actuating devices of a dosing device whose movement is
+		  intuitive, and does not require any particular training or special information
+		  for the personnel.</p><p id="p150" num="23"> Another purpose of this invention is to make
+		  available actuating devices of a dosing device that can easily be controlled,
+		  and above all inspected, without the need for disassembling the internal parts
+		  of the dosing device, and that can be carried out by technically competent
+		  personnel.</p><p id="p149" num="24"> An additional purpose of this invention is to
+		  make available actuating devices of a dosing device that are efficient from a
+		  mechanical viewpoint, without requiring cumbersome operating levers or
+		  prolonged and excessive force on the part of the operator.</p><p id="p148" num="25"> A different purpose of this invention is to make
+		  available actuating devices of a dosing device that have none of the drawbacks
+		  of a continual wetting-drying.</p><p id="p147" num="26"> An even further purpose of this invention is to
+		  make available actuating devices of a dosing device whose elastic parts are not
+		  exposed and/or subject to premature deterioration.</p><p id="p146" num="27"> An additional purpose of this invention is to
+		  make available actuating devices of a dosing device that can be easily
+		  maintained even by the operators themselves without the need to call skilled
+		  technical personnel.</p><p id="p145" num="28"> Another purpose of this invention is to make
+		  available actuating devices of a dosing device that can be operated immediately
+		  without the operator being forced to waste an enormous amount of time moving
+		  them and holding them.</p><p id="p144" num="29"> A further purpose of this invention is to make
+		  available actuating devices of a dosing device that can provide an immediate
+		  indication of how much time is left before the liquid detergent is completely
+		  released from the storage chamber.</p></tech-problem><tech-solution><heading id="h07">Technical Solution</heading><p id="p157" num="30"> All the above-mentioned purposes are fulfilled
+		  by the actuating devices of a dosing device as shown and characterised by the
+		  attached claims.</p><p id="p156" num="31"> In particular, the subject of this invention
+		  consists of actuating devices for displacing a valve inside a dosing device,
+		  which is fitted with a storage chamber and on the bottom has an outlet pipe for
+		  releasing the liquid detergent stored inside said chamber, and because said
+		  outlet section of said outlet pipe is closed by said valve and forced to open
+		  with a straight line movement along its main axis by said actuating devices,
+		  beneficially said actuating devices are joined to said valve by means of a
+		  connection on the outside of said dosing device.</p><p id="p155" num="32"> In particular, said connection between the valve
+		  and the actuating devices, on the outside of said dosing device, is configured
+		  as an extension of the valve outside the dosing device, which is joined to a
+		  track whose generatrix has a diverging radius, at the end of an arm of a lever,
+		  whose opposite arm, with respect to the hinging fulcrum, can be gripped for the
+		  operating movement.</p></tech-solution><advantageous-effects><heading id="h09">Advantageous Effects</heading><p id="p164" num="33"> Advantageously said lever is pivoted on the
+		  outside of said dosing device, and can be easily accessed and inspected.</p><p id="p163" num="34"> Said lever that can be gripped and operated by
+		  the operator is ergonomically available at the front of said dosing device.</p><p id="p162" num="35"> The movement of said lever, which can be gripped
+		  and operated by the operator, ideally reproduces the state of the flow of the
+		  liquid detergent, facilitating the intuitive learning how to operate the dosing
+		  device.</p><p id="p161" num="36"> Advantageously said lever has its rotation
+		  travel limited at the top and bottom by an end stop corresponding to the
+		  situation of the valve in the opening and closing conditions of the outlet
+		  pipe.</p><p id="p160" num="37"> The travel of the of the lever from down
+		  upwards, advantageously related to a linear lowering of the valve with the
+		  respective opening of the outlet pipe of the liquid detergent stored inside the
+		  dosing device, is carried out directly by the operator by gripping a handle on
+		  the end of the front arm.</p><p id="p159" num="38"> The travel of the lever from down upwards,
+		  advantageously related to a linear raising of the valve with the respective
+		  closing of the outlet pipe of the detergent liquid that has already flowed from
+		  the dosing device into the soaking basin beneath, is stimulated by elastic
+		  devices, outside the dosing device, that act either directly on the valve, near
+		  the lower end, or directly on the operating lever.</p><p id="p158" num="39"> Advantageously said travel of the movement of
+		  the lever for reclosing the valve is conveniently slowed down by a motion or
+		  clutch damper device that prolongs the closure of the valve, providing a degree
+		  of certainty that all the liquid stored is drained off from the dosing device
+		  before the outlet pipe is completely closed by the valve.</p></advantageous-effects></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p172" num="40"> The technical features of the invention, according
+		to the above-mentioned purposes, can be clearly seen in the content of the
+		claims below and its advantages will be even clearer in the detailed
+		description that follows, made with reference to the attached drawings, which
+		represent a form that is purely by way of example and in no way limited,
+		where:</p><p id="p171" num="41"> - fig. 1 shows a perspective view of the
+		invention;</p><p id="p170" num="42"> . fig. 2 shows a cross-section according to a
+		vertical symmetrical plane and passing through the valve body;</p><p id="p169" num="43"> - fig. 3 shows the object of the invention
+		according to a side plan view;</p><p id="p168" num="44"> - fig. 4 shows a cross-section of the object of
+		fig. 3 according to a plane parallel to the view and passing through the valve
+		body;</p><p id="p167" num="45"> - fig. 5 shows a rear plan view of the object of
+		the invention;</p><p id="p166" num="46"> - fig. 6 shows a cross-section of the object of
+		fig. 5 according to a plane parallel to the plan view and passing through the
+		valve body.</p><p id="p165" num="47"> - fig. 7 shows a perspective view, in a separate
+		manner, of just the valve and one lever to highlight the relative connection of
+		the valve to the actuating devices.</p></description-of-drawings><best-mode><heading id="h13">Best Mode</heading><p id="p200" num="48"> The dosing device 1 is a device capable of
+		receiving, retaining and releasing upon a command a pre-determined amount of
+		liquid detergent.</p><p id="p199" num="49"> On the top of the dosing device 1 there is a tank
+		17 full of liquid detergent, with a hole on the bottom for a hydraulic
+		connection, by means of an inlet pipe 3, with the inside of the body 2 of the
+		dosing device 1.</p><p id="p198" num="50"> The inside of the body 2 of the dosing device 1 is
+		composed of a chamber 5 for storing a variable volume, capable of storing a
+		certain amount of liquid detergent coming from said tank 17 on top of said
+		dosing device 1.</p><p id="p197" num="51"> The variation of this volume takes place using the
+		rotation of a handle 7, on the front part of the body 2, which moves a
+		partition 6 inside the chamber 5.</p><p id="p196" num="52"> After this variable volume chamber 5 has been
+		filled with liquid detergent and the relative inlet pipe 3 has been
+		hermetically closed by a gasket 11 coupled to the top part (9, 18) of this
+		valve 8, the outlet pipe 4 opens to release said liquid detergent into a basin
+		below for soaking the cleaning cloth.</p><p id="p195" num="53"> In particular said valve 8 has a special gasket 12
+		on its lower part 10 for closing the outlet pipe 4.</p><p id="p194" num="54"> Advantageously the valve 8 of the invention both
+		opens and closes the inlet pipe 3 and outlet pipe 4 of the dosing device 1.</p><p id="p193" num="55"> At the lower end of the valve 8 there is a
+		connection 19 that joins with the actuating devices 20 for its displacement
+		between the two pre-defined positions of opening and closing the outlet pipe
+		4.</p><p id="p192" num="56"> Advantageously said actuating devices are composed
+		of a pair of levers 14, whose front arms 21, protruding from the front of the
+		body 2 of said dosing device 1, are, at their front end, connected together by
+		a grip 15 that can be moved by the operator.</p><p id="p191" num="57"> Said levers are hinged on the outside of the
+		dosing device 1 along the horizontal axis, so they can be moved by the operator
+		with a rotation movement from up downwards, forcing the flow of the liquid
+		detergent from the top tank 17 to the lower basin.</p><p id="p190" num="58"> Said hinging of the actuating devices 20 to the
+		outside of the body 2 of the dosing device 1 corresponds to the pivot 26 of the
+		levers 14.</p><p id="p189" num="59"> The arm 22 of the levers 14, opposite to the front
+		one 21 protruding at the front, is connected, near its free end with the
+		connection 19 protruding at the bottom 13 of the valve.</p><p id="p188" num="60"> Advantageously said connection 19 is solidly
+		joined to said lower protruding part 19 of the valve 8, and can be a single
+		piece.</p><p id="p187" num="61"> Advantageously said connection is made using the
+		constraint between a linchpin 23 forced to move within a track slot 24 with a
+		generatrix with an increasing radius.</p><p id="p186" num="62"> With this connection you obtain the linear
+		displacement of the valve 8 by means of the rotation of the levers 14 of the
+		actuating devices 20.</p><p id="p185" num="63"> The repositioning in the raised condition of the
+		valve 8 for closing the outlet tube 4 for releasing the liquid detergent,
+		occurs automatically stimulated by elastic devices (eventually protected by a
+		protection 25), which can act directly on the lower part of the valve 8 or
+		directly on the levers 14.</p><p id="p184" num="64"> However, to prevent the outlet tube closing too
+		quickly, without all the liquid stored in said dosing device 1 being released,
+		the return movement is dampened and slowed down by a clutch 16, which
+		preferably acts on the levers 14.</p><p id="p183" num="65"> This clutch, however, is operational and effective
+		preferably with the valve 8 in the condition of maximum opening to then fail or
+		become non-operational, accelerating the transient state of closing near the
+		repositioning closing phase of the outlet pipe 4 for the release of the liquid
+		detergent.</p><p id="p182" num="66"> Fig. 7 shows an example of a device that allows
+		the clutch to be active only for a part of the travel movement of the levers
+		14, composed of a profile with 25 teeth, on which the clutch 16 engages for a
+		partial stretch of said travel.</p><p id="p181" num="67"> With this differentiated movement in the
+		repositioning speed of the valve 8 from the open position to the closed one, we
+		get the advantageous effect of maintaining the outlet section of the outlet
+		pipe 4 open for a longer period of time, which is favourable to the speedy
+		release of the liquid detergent, and the advantageous effect of reducing the
+		time and closing the outlet pipe 4 more quickly and safely by the valve 8
+		repositioning in the closed state.</p><p id="p180" num="68"> In practice we have verified how the invention
+		does the job and attains the pre-set purposes.</p><p id="p179" num="69"> In particular with this invention we have
+		developed actuating devices that move the valve of a dosing device and which
+		are joined to the outside body of the dosing device.</p><p id="p178" num="70"> In particular, with the invention, a joint was
+		made between the actuating devices that is reliable, easily inspected and
+		easily maintained.</p><p id="p177" num="71"> Furthermore, with the invention we have developed
+		a movement of the operating levers whose travel ideally reproduces the state of
+		the flow of the liquid detergent.</p><p id="p176" num="72"> And last but not least, with the invention we have
+		developed a displacement of the valve for closing the outlet pipe that is
+		opportunely differentiated to facilitate the discharge speed of the liquid
+		detergent, in less time, slowing down the reclosing movement with a clutch, and
+		deactivating and rendering inactive said clutch near the closing of the outlet
+		pipe for a quick and secure closing displacement of the valve.</p><p id="p175" num="73"> The invention conceived in this way is open to
+		numerous modifications and variants, all falling within the ambit of the
+		inventive concept; moreover all the parts can be replaced by other technically
+		equivalent components.</p><p id="p174" num="74"> In practice, the materials used, as well as the
+		dimensions and the contingent forms, can vary according to requirements and the
+		state of the technology.</p><p id="p173" num="75"> Where the characteristics and the technologies
+		mentioned in any claim are followed by reference marks, these marks have been
+		placed with the only aim of increasing the understanding of the claims and as a
+		result these reference marks have no limiting effect on the interpretation of
+		each element identified by way of example by these reference marks.</p></best-mode></description><claims mxw-id="PCLM70080144" ref-ucid="WO-2014128671-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text><claim-text> Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for moving a valve (8) inside the dosing
+			 device (1), whose body (2) is equipped with a storage chamber (5) and on the
+			 bottom it has an outlet pipe (4) for releasing the liquid detergent stored
+			 inside said storage chamber (5), and with said outlet section of said outlet
+			 pipe (4) closed by said valve (8) and forced to open, by means of a rectilinear
+			 displacement along it main axis, by said actuating devices (20), characterised
+			 by the fact that said actuation devices (20) are joined to said valve (8) by
+			 means of a connection (19) on the outside of said dosing device
+			 (1).</claim-text></claim-text></claim><claim id="c190" num="2"><claim-text><claim-text>Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to claim 1, characterised by the fact that said connection
+			 (19) on the outside of said dosing device (1) is integral with and joined, or
+			 all of a piece, with a protruding part at the bottom (13) of the valve
+			 (8).</claim-text></claim-text></claim><claim id="c191" num="3"><claim-text><claim-text> Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices for displacing a valve (8) inside the dosing
+			 device (1) according to claim 1, characterised by the fact that said connection
+			 (19) between the valve (8) and the actuating devices (20), on the outside body
+			 (2) of said dosing device (1), takes the form of an lower extension (13) of the
+			 valve (8) on the outside of the dosing device (1), which is joined to a track,
+			 whose generatrix has a diverging radius, on the end of an arm of a lever (22),
+			 whose opposite arm (21), with respect to the hinging fulcrum (26), has a grip
+			 (15) suitable for being worked for the operating movement of said actuating
+			 devices (20).</claim-text></claim-text></claim><claim id="c192" num="4"><claim-text><claim-text>Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to claim 1 or 2, characterised by the fact that said lever
+			 (14) is pivoted on the outside of the body (2) of said dosing device (1), and
+			 can be easily accessed and readily serviced</claim-text></claim-text></claim><claim id="c193" num="5"><claim-text><claim-text>Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to the previous claim, characterised by the fact that said
+			 grip (15), which can be handled and worked by the operator, is on the front
+			 part of said dosing device (1) positioned in an ergonomic manner.</claim-text></claim-text></claim><claim id="c194" num="6"><claim-text><claim-text> Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices for displacing a valve (8) inside the dosing
+			 device (1) according to claim 3, characterised by the fact that the rotation
+			 movement of the lever (14) fitted with a grip (15) and which can be worked by
+			 the operator, ideally reproduces the flow behaviour of the liquid detergent,
+			 making it easier to intuitively learn how to use the dosing
+			 device.</claim-text></claim-text></claim><claim id="c195" num="7"><claim-text><claim-text>Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to claim 3, characterised by the fact that said lever (14)
+			 has limited rotation travel on the top and on the bottom corresponding to the
+			 situation of the valve (8) in an open and closed condition of the outlet pipe
+			 (4).</claim-text></claim-text></claim><claim id="c196" num="8"><claim-text><claim-text> Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices for displacing a valve (8) inside the dosing
+			 device (1) according to claim 3, characterised by the fact that the travel of
+			 the movement of the lever (14) from the top downwards is related to a linear
+			 lowering of the valve (8) with the respective opening of the outlet pipe (4)
+			 for the liquid detergent stored inside the dosing device (1), and is carried
+			 out directly by the operator holding a grip (15) connected solidly at the end
+			 of the arm (21) in front of the lever (14).</claim-text></claim-text></claim><claim id="c197" num="9"><claim-text><claim-text> Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to claim 3, characterised by the fact that the travel of
+			 the lever (14) from the bottom upwards, advantageously related to a linear
+			 displacement of the valve (8) with the respective closing of the outlet pipe
+			 (4) of the liquid detergent that has already flowed from the dosing device (1)
+			 into the soaking basin underneath, is brought about by elastic devices, on the
+			 outside of the dosing device (1), which act either directly on the valve (8),
+			 near the lower end, or directly on the operating lever.</claim-text></claim-text></claim><claim id="c198" num="10"><claim-text><claim-text>Detergent dosing device for soaking cleaning cloths
+			 comprising actuating devices (20) for displacing a valve (8) inside the dosing
+			 device (1) according to the previous claim, characterised by the fact that said
+			 travel of the lever (14) for reclosing the valve (8) is opportunely slowed down
+			 by a device for damping the motion or clutch (16), which prolongs the closing
+			 of the valve (8) making sure that all the liquid that has been stored flows
+			 from the dosing device (1) before the valve (8) finishes closing the outlet
+			 pipe (4).</claim-text></claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

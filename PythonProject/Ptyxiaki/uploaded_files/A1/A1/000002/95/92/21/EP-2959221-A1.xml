@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959221-A1" country="EP" doc-number="2959221" kind="A1" date="20151230" family-id="49607941" file-reference-id="300013" date-produced="20180825" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452910" ucid="EP-2959221-A1"><document-id><country>EP</country><doc-number>2959221</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14832075-A" is-representative="NO"><document-id mxw-id="PAPP193868788" load-source="docdb" format="epo"><country>EP</country><doc-number>14832075</doc-number><kind>A</kind><date>20140711</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193868789" load-source="patent-office" format="original"><country>EP</country><doc-number>14832075.7</doc-number><date>20140711</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162029956" ucid="CN-201310332830-A" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>201310332830</doc-number><kind>A</kind><date>20130801</date></document-id></priority-claim><priority-claim mxw-id="PPC162028899" ucid="CN-2014082061-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>2014082061</doc-number><kind>W</kind><date>20140711</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1886960657" load-source="ipcr">H04R   1/28        20060101ALI20161012BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1886960658" load-source="ipcr">H04R   1/02        20060101ALI20161012BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1886960659" load-source="ipcr">F21V  33/00        20060101AFI20161012BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1886960660" load-source="ipcr">F21V  23/00        20150101ALI20161012BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1886960661" load-source="ipcr">F21K   9/23        20160101ALI20161012BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1987779379" load-source="ipcr">F21V  29/50        20150101A I20151210RHCN        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1890308540" load-source="docdb" scheme="CPC">H04R   1/2819      20130101 LI20161005BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1913117538" load-source="docdb" scheme="CPC">F21K   9/23        20160801 LI20160801BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987768187" load-source="docdb" scheme="CPC">F21V  33/0056      20130101 LI20150326BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987768832" load-source="docdb" scheme="CPC">H04R   1/2803      20130101 LA20150312BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987783475" load-source="docdb" scheme="CPC">H04R   1/028       20130101 FI20150312BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987785722" load-source="docdb" scheme="CPC">F21V  23/009       20130101 LI20150326BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987798689" load-source="docdb" scheme="CPC">H04R   9/022       20130101 LA20150312BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165550196" lang="DE" load-source="patent-office">LED-BELEUCHTUNGSVORRICHTUNG UND LAUTSPRECHER</invention-title><invention-title mxw-id="PT165550197" lang="EN" load-source="patent-office">A LED LIGHTING DEVICE AND SPEAKER</invention-title><invention-title mxw-id="PT165550198" lang="FR" load-source="patent-office">DISPOSITIF D'ÉCLAIRAGE À DEL ET HAUT-PARLEUR</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103333817" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO</last-name><address><country>CN</country></address></addressbook></applicant><applicant mxw-id="PPAR1103341240" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO., LTD</last-name></addressbook></applicant><applicant mxw-id="PPAR1101646996" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Zhejiang Shenghui Lighting Co., Ltd</last-name><iid>101500790</iid><address><street>West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing, Zhejiang 314015</city><country>CN</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103309760" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>WEN CAIFANG</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103311058" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>WEN, Caifang</last-name></addressbook></inventor><inventor mxw-id="PPAR1101650839" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>WEN, Caifang</last-name><address><street>Zhejiang Shenghui Lighting Co. LTD West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 31401</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103324368" load-source="docdb" sequence="2" format="epo"><addressbook><last-name>WANG XIA</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103317407" load-source="docdb" sequence="2" format="intermediate"><addressbook><last-name>WANG, XIA</last-name></addressbook></inventor><inventor mxw-id="PPAR1101641045" load-source="patent-office" sequence="2" format="original"><addressbook><last-name>WANG, XIA</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 314015</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103313517" load-source="docdb" sequence="3" format="epo"><addressbook><last-name>SHEN JINXIANG</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103314950" load-source="docdb" sequence="3" format="intermediate"><addressbook><last-name>SHEN, JINXIANG</last-name></addressbook></inventor><inventor mxw-id="PPAR1101645675" load-source="patent-office" sequence="3" format="original"><addressbook><last-name>SHEN, JINXIANG</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 314015</city><country>CN</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR1101639547" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Jöstingmeier, Martin</last-name><iid>101285990</iid><address><street>Lohr, Jöstingmeier &amp; Partner Junkersstraße 3</street><city>82178 Puchheim</city><country>DE</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="CN-2014082061-W"><document-id><country>CN</country><doc-number>2014082061</doc-number><kind>W</kind><date>20140711</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2015014203-A1"><document-id><country>WO</country><doc-number>2015014203</doc-number><kind>A1</kind><date>20150205</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660711145" load-source="docdb">AL</country><country mxw-id="DS660629841" load-source="docdb">AT</country><country mxw-id="DS660711155" load-source="docdb">BE</country><country mxw-id="DS660708518" load-source="docdb">BG</country><country mxw-id="DS660715429" load-source="docdb">CH</country><country mxw-id="DS660630845" load-source="docdb">CY</country><country mxw-id="DS660629842" load-source="docdb">CZ</country><country mxw-id="DS660711156" load-source="docdb">DE</country><country mxw-id="DS660630846" load-source="docdb">DK</country><country mxw-id="DS660630855" load-source="docdb">EE</country><country mxw-id="DS660790618" load-source="docdb">ES</country><country mxw-id="DS660708571" load-source="docdb">FI</country><country mxw-id="DS660708572" load-source="docdb">FR</country><country mxw-id="DS660711157" load-source="docdb">GB</country><country mxw-id="DS660630856" load-source="docdb">GR</country><country mxw-id="DS660711158" load-source="docdb">HR</country><country mxw-id="DS660629847" load-source="docdb">HU</country><country mxw-id="DS660715430" load-source="docdb">IE</country><country mxw-id="DS660711163" load-source="docdb">IS</country><country mxw-id="DS660708573" load-source="docdb">IT</country><country mxw-id="DS660630857" load-source="docdb">LI</country><country mxw-id="DS660734562" load-source="docdb">LT</country><country mxw-id="DS660629848" load-source="docdb">LU</country><country mxw-id="DS660734567" load-source="docdb">LV</country><country mxw-id="DS660734568" load-source="docdb">MC</country><country mxw-id="DS660630985" load-source="docdb">MK</country><country mxw-id="DS660630986" load-source="docdb">MT</country><country mxw-id="DS660708574" load-source="docdb">NL</country><country mxw-id="DS660790619" load-source="docdb">NO</country><country mxw-id="DS660715435" load-source="docdb">PL</country><country mxw-id="DS660630995" load-source="docdb">PT</country><country mxw-id="DS660708579" load-source="docdb">RO</country><country mxw-id="DS660630996" load-source="docdb">RS</country><country mxw-id="DS660708580" load-source="docdb">SE</country><country mxw-id="DS660630997" load-source="docdb">SI</country><country mxw-id="DS660790620" load-source="docdb">SK</country><country mxw-id="DS660715436" load-source="docdb">SM</country><country mxw-id="DS660734570" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA149442993" ref-ucid="WO-2015014203-A1" lang="EN" load-source="patent-office"><p num="0000">A LED lighting device and speaker may include a LED lighting unit(2), a speaker(3), an outer casing(4), and a power supply module(5). The LED lighting unit(2) and the speaker(3) are placed on the outer casing(4). There is also a sound guiding tube(42) on the outer casing(4). The sound guiding tube(42) on the outer casing(4) may expand the audio bandwidth, enhance bass quality, reduce speaker(3) vibration displacements, and protect the speaker(3). Further, the gap between the sound guiding tube(42) and the bottom of the outer casing(4) provides a heat dissipation path for the heat generated by the power supply module(5). In addition, the sound guiding tube(42) and the hollowed lampshade(l) forms a path that increases the air circulation between the interior and exterior of the LED lighting device and speaker. Finally, the sound guiding tube(42) adds to the heating dissipating surface of the LED lighting device and speaker and therefore improves the efficiency of heat dissipation.</p></abstract><abstract mxw-id="PA149753026" ref-ucid="WO-2015014203-A1" lang="EN" source="national office" load-source="docdb"><p>A LED lighting device and speaker may include a LED lighting unit(2), a speaker(3), an outer casing(4), and a power supply module(5). The LED lighting unit(2) and the speaker(3) are placed on the outer casing(4). There is also a sound guiding tube(42) on the outer casing(4). The sound guiding tube(42) on the outer casing(4) may expand the audio bandwidth, enhance bass quality, reduce speaker(3) vibration displacements, and protect the speaker(3). Further, the gap between the sound guiding tube(42) and the bottom of the outer casing(4) provides a heat dissipation path for the heat generated by the power supply module(5). In addition, the sound guiding tube(42) and the hollowed lampshade(l) forms a path that increases the air circulation between the interior and exterior of the LED lighting device and speaker. Finally, the sound guiding tube(42) adds to the heating dissipating surface of the LED lighting device and speaker and therefore improves the efficiency of heat dissipation.</p></abstract><abstract mxw-id="PA149442994" ref-ucid="WO-2015014203-A1" lang="FR" load-source="patent-office"><p num="0000">Dispositif d'éclairage à DEL et haut-parleur, pouvant comprendre une unité (2) d'éclairage à DEL, un haut-parleur (3), un boîtier extérieur (4), et un module (5) d'alimentation. L'unité (2) d'éclairage à DEL et le haut-parleur (3) sont placés sur le boîtier extérieur (4). Un tube (42) de guidage du son se trouve également sur le boîtier extérieur (4). Le tube (42) de guidage du son situé sur le boîtier extérieur (4) peut élargir la bande passante audio, améliorer la qualité des graves, réduire les déplacements vibratoires du haut-parleur (3) et protéger le haut-parleur (3). En outre, l'écartement entre le tube (42) de guidage du son et le fond du boîtier extérieur (4) constitue un trajet de dissipation thermique pour la chaleur générée par le module (5) d'alimentation. De plus, le tube (42) de guidage du son et l'abat-jour évidé (1) forment un passage qui accroît la circulation d'air entre l'intérieur et l'extérieur du dispositif d'éclairage à DEL et du haut-parleur. Enfin, le tube (42) de guidage du son accroît la surface de dissipation thermique du dispositif d'éclairage à DEL et du haut-parleur et améliore ainsi le rendement de dissipation thermique.</p></abstract><abstract mxw-id="PA149753027" ref-ucid="WO-2015014203-A1" lang="FR" source="national office" load-source="docdb"><p>Dispositif d'éclairage à DEL et haut-parleur, pouvant comprendre une unité (2) d'éclairage à DEL, un haut-parleur (3), un boîtier extérieur (4), et un module (5) d'alimentation. L'unité (2) d'éclairage à DEL et le haut-parleur (3) sont placés sur le boîtier extérieur (4). Un tube (42) de guidage du son se trouve également sur le boîtier extérieur (4). Le tube (42) de guidage du son situé sur le boîtier extérieur (4) peut élargir la bande passante audio, améliorer la qualité des graves, réduire les déplacements vibratoires du haut-parleur (3) et protéger le haut-parleur (3). En outre, l'écartement entre le tube (42) de guidage du son et le fond du boîtier extérieur (4) constitue un trajet de dissipation thermique pour la chaleur générée par le module (5) d'alimentation. De plus, le tube (42) de guidage du son et l'abat-jour évidé (1) forment un passage qui accroît la circulation d'air entre l'intérieur et l'extérieur du dispositif d'éclairage à DEL et du haut-parleur. Enfin, le tube (42) de guidage du son accroît la surface de dissipation thermique du dispositif d'éclairage à DEL et du haut-parleur et améliore ainsi le rendement de dissipation thermique.</p></abstract><description mxw-id="PDES87611499" ref-ucid="WO-2015014203-A1" lang="EN" load-source="patent-office"><invention-title lang="EN">[Title established by the ISA under Rule 37.2] A LED LIGHTING DEVICE AND SPEAKER
+</invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The present disclosure relates to the field of light
+		emitting diode (LED) technologies and, more particularly, relates to an LED
+		lighting device and speaker. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p25" num="2"> LEDs provide controllable lighting and solid-state
+		lighting. They consume less power than traditional lighting devices, and are
+		environmentally friendly. Over time, LEDs have been widely used for various
+		lighting applications such as public place lightings, office and indoor
+		lightings, etc. </p><p id="p24" num="3"> Speakers play an important role in modern daily life
+		entertainment. To provide lighting and play music at the same time, current LED
+		lighting device and speaker designs combine speakers and LEDs into one
+		integrated device. However, the present designs of such devices often simply
+		place a speaker onto an LED lighting device to provide lighting and audio
+		playing capabilities. As a result, the resulting device often has poor heat
+		dissipation capacity, low quality bass, and may be difficult to manufacture.
+		</p><p id="p23" num="4"> The present disclosure is directed to solve one or
+		more problems set forth above and other problems.</p></background-art><disclosure><tech-solution><heading id="h07">Technical Solution</heading><p id="p31" num="5"> Embodiments consistent with the present disclosure
+		  provide an LED lighting device and a speaker. This LED lighting device and
+		  speaker may deliver high quality bass, and dissipate heat efficiently. This LED
+		  lighting device and speaker also have a simplified structure. </p><p id="p30" num="6"> In one embodiment, an LED lighting device and
+		  speaker includes an LED lighting unit configured to emit light, a speaker
+		  configured to play audio signals, an outer casing configured to hold the LED
+		  lighting unit and speaker, and a power supply module configured to supply power
+		  to the LED lighting unit and speaker. Further, the LED lighting unit and the
+		  speaker are fixed on a top surface of the outer casing by screws. The outer
+		  casing includes a sound guiding tube. </p><p id="p29" num="7"> Moreover, the outer casing and the sound guiding
+		  tube may be fully integrated. The outer casing may have a hollow structure and
+		  a concave top surface. The sound guiding tube may run through the top surface
+		  of the outer casing. One end of the sound guiding tube may protrude above the
+		  top surface of the outer casing. The other end of the sound guiding tube may
+		  extend toward a bottom surface of the outer casing and maintain a gap between
+		  itself and the bottom surface. </p><p id="p28" num="8"> In addition, the LED lighting unit and the speaker
+		  may be set on the top surface of the outer casing by screws. The sound guiding
+		  tube may have a hollow structure with both ends being open. The cross section
+		  of the sound guiding tube may be round. The lampshade has a hollowed out design
+		  and snaps into the outer casing. </p><p id="p27" num="9"> Finally, the power supply module may include a
+		  power supply, a base with a hollow interior, and a light socket. The outer
+		  casing may be connected to the base. The power supply may be placed in the
+		  base. The power supply may be connected to the light socket and to the LED
+		  lighting unit. The base may be connected to the outer casing by screws.</p><p id="p26" num="10"> Embodiments consistent with the present
+		  disclosure may expand the audio bandwidth of the speaker, enhance the quality
+		  of bass, and reduce speaker vibration displacements, which protects the
+		  speaker. Further, the gap between the sound guiding tube and the bottom of the
+		  outer casing provides a heat dissipation path for the heat generated by the
+		  power supply module. In addition, the sound guiding tube and the hollowed
+		  lampshade forms a path that increases the air circulation between the interior
+		  and exterior of the LED lighting device and speaker. Finally, the sound guiding
+		  tube adds to the heating dissipating surface of the LED lighting device and
+		  speaker and therefore improves the efficiency of heat dissipation.</p></tech-solution><advantageous-effects><heading id="h09">Advantageous Effects And INDUSTRIAL
+			 APPLICABILITY</heading><p id="p35" num="11"> Without limiting the scope of any claim and/or
+		  the specification, examples of industrial applicability and certain
+		  advantageous effects of the disclosed embodiments are listed for illustrative
+		  purposes. Various alternations, modifications, or equivalents to the technical
+		  solutions of the disclosed embodiments can be obvious to those skilled in the
+		  art and can be included in this disclosure.</p><p id="p34" num="12"> In some embodiments consistent with the present
+		  disclosure, an RF module may be added to the LED lighting device and speaker.
+		  The RF module may enable users to control the LED lighting device and speaker
+		  remotely, such as switching the device on/off, adjusting light and sound
+		  settings, etc. The RF module may also connect the LED lighting device and
+		  speaker to the internet to stream music online.</p><p id="p33" num="13"> In some embodiments consistent with the present
+		  disclosure, a Bluetooth module may be included in the LED lighting device and
+		  speaker. The LED lighting device and speaker may be paired with a smart phone,
+		  a tablet, etc. through the Bluetooth module. A user may install an application
+		  on the smartphone or tablet to control lighting or play music stored on the
+		  device. </p><p id="p32" num="14"> In some embodiments consistent with the present
+		  disclosure, multiple LED lighting device and speakers may be configured to form
+		  2.0-channle, 2.1-channel, 5.1-channel, etc. audio systems. Further, the LED
+		  lighting unit may be configured to change its light colors or light intensities
+		  according to the rhythm or volume of the music played through the speaker.</p></advantageous-effects></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p40" num="15"> The following drawings are merely examples for
+		illustrative purposes according to various disclosed embodiments and are not
+		intended to limit the scope of the present disclosure. </p><p id="p39" num="16"> FIG. 1 is an exploded view of an exemplary LED
+		lighting device and speaker consistent with various embodiments of the present
+		disclosure; </p><p id="p38" num="17"> FIG. 2 is an exploded view from another viewpoint
+		of an exemplary LED lighting device and speaker consistent with various
+		embodiments of the present disclosure; </p><p id="p37" num="18"> FIG. 3 is a schematic illustrating the structure of
+		the outer casing of an exemplary LED lighting device and speaker consistent
+		with various embodiments of the present disclosure; and</p><p id="p36" num="19"> FIG. 4 is the A-A cross sectional view of the
+		structure of the outer casing of an exemplary LED lighting device and speaker
+		consistent with various embodiments of the present disclosure.</p><p id="p52" num="20">REFERENCE SIGN LIST：</p><p id="p51" num="21">Lampshade 1</p><p id="p50" num="22">LED lighting unit 2</p><p id="p49" num="23">Speaker 3</p><p id="p48" num="24">Outer casing 4</p><p id="p47" num="25">Power supply module 5</p><p id="p46" num="26">Top surface of the outer casing 41</p><p id="p45" num="27">Sound guiding tube 42</p><p id="p44" num="28">Power supply 51</p><p id="p43" num="29">Base 52</p><p id="p42" num="30">Light socket 53</p></description-of-drawings><mode-for-invention><heading id="h15">Mode for Invention</heading><p id="p61" num="31"> Reference will now be made in detail to exemplary
+		embodiments of the invention, which are illustrated in the accompanying
+		drawings. Hereinafter, embodiments consistent with the disclosure will be
+		described with reference to drawings. Wherever possible, the same reference
+		numbers will be used throughout the drawings to refer to the same or like
+		parts. It is apparent that the described embodiments are some but not all of
+		the embodiments of the present invention. Based on the disclosed embodiment,
+		persons of ordinary skill in the art may derive other embodiments consistent
+		with the present disclosure, all of which are within the scope of the present
+		invention.</p><p id="p60" num="32"> An exemplary embodiment consistent with the present
+		disclosure is described below. FIG. 1 to FIG. 4 illustrate an exemplary
+		configuration of an LED lighting device and speaker consistent with the present
+		disclosure. The LED lighting device and speaker may include a lampshade 1, an
+		LED lighting unit 2, a speaker 3, an outer casing 4, and a power supply module
+		5. The power supply module 5 may further include a power supply 51, a base 52,
+		and a light socket 53. </p><p id="p59" num="33"> As shown in FIG. 1, the base 52 may have a hollow
+		interior. The power supply 51 may be placed inside the base 52. The power
+		supply 51 may be connected to the light socket 53 and the LED lighting unit 2.
+		</p><p id="p58" num="34"> In this embodiment, the outer casing 4 may be a
+		cylinder with a hollow interior and a concave top surface 41. The LED lighting
+		unit 2 and the speaker 3 may be fixed to the top surface 41 by screws (not
+		shown here). The lampshade 1 may snap into the outer casing 4. The snap
+		structure may use designs that are well known to those skilled in the art. The
+		base 52 and the outer casing 4 may be connected together by screws. </p><p id="p57" num="35"> As shown in FIG. 1, FIG. 2 and FIG. 4, the outer
+		casing 4 may include a sound guiding tube 42. The sound guiding tube 42 may be
+		integrated together with the outer casing 4 as one piece. One end of the sound
+		guiding tube 42 may protrude out of the top surface 41. The other end of the
+		sound guiding tube 42 may extend toward the bottom surface of the outer casing
+		4, but stay above the bottom surface. As a result, a gap may be formed between
+		the lower end of the sound guiding tube 42 and the bottom surface of the outer
+		casing 4. </p><p id="p56" num="36"> The sound guiding tube 42 may have a circular
+		shaped cross section as shown in this embodiment. The sound guide tube 42 may
+		be designed to use tubes of different cross sectional shapes such as square,
+		polygon, etc. Moreover, the sound guiding tube 42 may expand the audio
+		bandwidth of the speaker and may improve its bass quality. The sound guide tube
+		42 may also reduce the vibration displacement of the speaker 3, which may
+		better protect the speaker 3. </p><p id="p55" num="37"> As shown in FIG. 1 and FIG. 2, the lampshade 1 may
+		have a hollowed out design. The sound guiding tube 42 may therefore connect the
+		internal air (of the power supply chamber) to the external air. As a result,
+		heat generated by the power supply 51 may be dissipated efficiently through
+		convection. Further, the sound guiding tube 42 adds to the surface area of the
+		outer casing 4, which improves the heat dissipation efficiency. </p><p id="p54" num="38"> The design, including the material, shape, size, or
+		position, of the sound guiding tube 42 may be determined based on the internal
+		space of the LED lighting device and speaker, the power of the speaker, the
+		desirable sound effect, etc. For example, the length of the sound guiding tube
+		may be adjusted to achieve better sound quality or better heat dissipation. In
+		another example, multiple sound guiding tubes may also be used to achieve
+		better sound quality or better heat dissipation. Further, the thickness or the
+		material of the sound guiding tube 42 may be selected to improve heat
+		dissipation efficiency. In addition, the position of the sound guiding tube 42
+		may also be adjusted to achieve better vibration displacement reduction.</p><p id="p53" num="39"> Other embodiments of the disclosure will be
+		apparent to those skilled in the art from consideration of the specification
+		and practice of the invention disclosed herein. It is intended that the
+		specification and examples be considered as exemplary only, with a true scope
+		and spirit of the invention being indicated by the claims.</p></mode-for-invention></description><claims mxw-id="PCLM79316929" ref-ucid="WO-2015014203-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text/><claim-text>1. An LED lighting device and speaker, comprising:
+		  </claim-text><claim-text>an LED lighting unit configured to emit light;</claim-text><claim-text>a speaker configured to play audio signals;</claim-text><claim-text>an outer casing configured to hold the LED lighting unit and
+		  speaker; </claim-text><claim-text>a sound guiding tube, running through the outer casing,
+		  configured to guide sound and dissipate heat; and</claim-text><claim-text>a power supply module configured to supply power to the LED
+		  lighting unit and speaker; </claim-text><claim-text>wherein the LED lighting unit and the speaker are fixed on a
+		  top surface of the outer casing by screws. </claim-text><claim-text>2. The LED lighting device and speaker according to claim 1,
+		  wherein the outer casing and the sound guiding tube are fully integrated into
+		  one piece.</claim-text><claim-text>3. The LED lighting device and speaker according to claim 1,
+		  wherein the outer casing has a hollow structure and a concave top surface.
+		  </claim-text><claim-text>4. The LED lighting device and speaker according to claim 3,
+		  wherein the sound guiding tube runs through the top surface of the outer
+		  casing, with one end of the sound guiding tube protruding above the top surface
+		  of the outer casing, and the other end of the sound guiding tube extending
+		  toward a bottom surface of the outer casing and maintaining a gap between
+		  itself and the bottom surface.</claim-text><claim-text>5. The LED lighting device and speaker according to claim 3,
+		  wherein the LED lighting unit and the speaker are both bond on the top surface
+		  of the outer casing by screws.</claim-text><claim-text>6. The LED lighting device and speaker according to claim 1,
+		  wherein the sound guiding tube has a hollow structure, with two open
+		  ends.</claim-text><claim-text>7. The LED lighting device and speaker according to claim 1,
+		  wherein a cross section of the sound guiding tube is round. </claim-text><claim-text>8. The LED lighting device and speaker according to claim 1,
+		  wherein the lampshade has a hollow design and is snapped into the outer casing.
+		  </claim-text><claim-text>9. The LED lighting device and speaker according to claim 8,
+		  wherein the lampshade, the sound guiding tube, and the outer casing provide an
+		  airflow path to dissipate heat generated by the power supply module.
+		  </claim-text><claim-text>10. The LED lighting device and speaker according to claim 1,
+		  wherein the power supply module includes a power supply, a base with a hollow
+		  interior, and a light socket.</claim-text><claim-text>11. The LED lighting device and speaker according to claim
+		  10, wherein the outer casing is connected to the base; the power supply is
+		  placed in the base; and the power supply is connected to the light socket and
+		  to the LED lighting unit.</claim-text><claim-text>12. The LED lighting device and speaker according to claim
+		  11, wherein the base is connected to the outer casing by screws.</claim-text><claim-text>13. A method for heat dissipation and sound guiding in an LED
+		  lighting device and speaker, comprising: </claim-text><claim-text>emitting light through an LED lighting unit of the LED
+		  lighting device and speaker;</claim-text><claim-text>playing audio through a speaker of the LED lighting device
+		  and speaker; and</claim-text><claim-text>guiding sound by a sound guiding tube running through an
+		  outer casing holding the LED lighting unit and the speaker; </claim-text><claim-text>wherein the LED lighting unit and the speaker are fixed on a
+		  top surface of the outer casing by screws. </claim-text><claim-text>14. The method for heat dissipation and sound guiding in an
+		  LED lighting device and speaker accordingly to claim 13, further comprising:
+		  </claim-text><claim-text>dissipating heat generated by the LED lighting unit through
+		  the sound guiding tube.</claim-text><claim-text>15. The method for heat dissipation and sound guiding in an
+		  LED lighting device and speaker accordingly to claim 14, wherein the outer
+		  casing and the sound guiding tube are fully integrated into one
+		  piece.</claim-text><claim-text>16. The method for heat dissipation and sound guiding in an
+		  LED lighting device and speaker accordingly to claim 15, wherein the outer
+		  casing has a hollow structure and a concave top surface. </claim-text><claim-text>17. The method for heat dissipation and sound guiding in an
+		  LED lighting device and speaker accordingly to claim 16, wherein the sound
+		  guiding tube runs through the top surface of the outer casing, with one end of
+		  the sound guiding tube protruding above the top surface of the outer casing,
+		  and the other end of the sound guiding tube extending toward a bottom surface
+		  of the outer casing and maintaining a gap between itself and the bottom
+		  surface.</claim-text><claim-text>18. The method for heat dissipation and sound guiding in an
+		  LED lighting device and speaker accordingly to claim 13, wherein the sound
+		  guiding tube has a hollow structure, with two open ends.</claim-text><claim-text>19. An LED lighting device and speaker, comprising:
+		  </claim-text><claim-text>a lampshade with a hollowed-out structure;</claim-text><claim-text>an LED lighting unit configured to emit light;</claim-text><claim-text>a speaker configured to play audio signals;</claim-text><claim-text>an outer casing configured to hold the LED lighting unit and
+		  speaker; </claim-text><claim-text>a sound guiding tube running through the outer casing
+		  configured to guide sound and dissipate heat; and</claim-text><claim-text>a power supply module configured to supply power to the LED
+		  lighting unit and speaker; </claim-text><claim-text>wherein the outer casing, the sound guiding tube, and the
+		  lampshade form an airflow path to dissipate heat generated by the power supply
+		  module and to guide sound played by the speaker.</claim-text><claim-text/></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

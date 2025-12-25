@@ -23,7 +23,7 @@
   --transition-fast: 0.2s ease;
 }
 
-/* Dark theme override */
+/* einai gia to dark theme */
 body.dark-theme {
   --bg-body: #0f172a;
   --bg-sidebar: #020617;
@@ -63,9 +63,7 @@ body {
 
 
 
-/* ============================================
-   LAYOUT
-=============================================== */
+/* gia to layout (na thimithw na fainetai pio omorfo*/
 
 .app-container {
   display: flex;
@@ -93,9 +91,7 @@ body {
   margin-left: 0;
 }
 
-/* ============================================
-   SIDEBAR
-=============================================== */
+
 
 .sidebar {
   width: 260px;
@@ -163,9 +159,7 @@ body {
   box-shadow: var(--shadow-strong);
 }
 
-/* ============================================
-   TOP BAR
-=============================================== */
+/* h bara anazhthshs */
 
 .top-bar {
   display: flex;
@@ -225,9 +219,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* ============================================
-   CARDS
-=============================================== */
+/* gia tin emfanisi twn tetragwgwn */
 
 .cards {
   display: flex;
@@ -278,9 +270,7 @@ body {
   font-size: 0.92rem;
 }
 
-/* ============================================
-   FLOATING ACTION BUTTON
-=============================================== */
+
 
 .fab {
   position: fixed;
@@ -305,9 +295,7 @@ body {
   transform: translateY(-2px) scale(1.02);
 }
 
-/* ============================================
-   FILE EXPLORER
-=============================================== */
+/* olo to css touu file explorer */
 
 #fileExplorer {
   padding: 1.2rem;
@@ -388,7 +376,7 @@ body {
   border-radius: 6px;
 }
 
-/* Upload progress */
+
 #uploadProgress {
     position: fixed;
     bottom: 20px;
@@ -402,9 +390,7 @@ body {
     color: var(--text-main);
 }
 
-/* ============================================
-   RESPONSIVE (TABLET / MOBILE)
-=============================================== */
+/* asxeto alla as to prostesoume mias pou to psaksame. Einai gia kinita kai tablet */
 
 @media (max-width: 900px) {
   .app-container {
@@ -481,9 +467,7 @@ body {
   }
 }
 
-/* ============================================
-   ANIMATIONS
-=============================================== */
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
@@ -624,8 +608,8 @@ body {
     padding: 18px 22px;
     width: 280px;
 
-    background: rgba(185,215,255,0.85);     /* pastel blue με transparency */
-    backdrop-filter: blur(12px);             /* glass effect */
+    background: rgba(185,215,255,0.85);
+    backdrop-filter: blur(12px);
     border-radius: 16px;
 
     color: #0b2d56;
@@ -646,7 +630,7 @@ body {
     transform: translateY(0) scale(1);
 }
 
-/* progress bar */
+/* h bara proodou */
 .progress-bar {
     margin-top: 10px;
     height: 5px;
@@ -657,7 +641,7 @@ body {
     transition: width linear;
 }
 
-/* floating circle */
+
 .floating-circle {
     position: fixed;
     bottom: 20px;
@@ -696,4 +680,133 @@ body {
 .settings-btn .icon {
     width: 24px;
     height: 24px;
+}
+
+.upload-popup {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 290px;
+    padding: 18px 20px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-strong);
+    border-radius: 16px;
+    z-index: 99999;
+}
+
+.hidden { display: none !important; }
+
+.upload-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.circle-progress {
+    width: 74px;
+    height: 74px;
+    position: relative;
+}
+.circle-progress svg { width: 74px; height: 74px; transform: rotate(-90deg); }
+.circle-progress circle { fill: none; stroke-width: 7; stroke: var(--border-soft); }
+
+#progress-circle {
+    stroke: var(--accent);
+    stroke-linecap: round;
+    stroke-dasharray: 219;
+    stroke-dashoffset: 219;
+    transition: stroke-dashoffset 0.2s linear;
+}
+#upload-percent {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.upload-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.control-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+}
+.control-btn.danger { background: #d93025; }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #1e1e1e;
+    padding: 25px;
+    width: 420px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    transform: translateY(-10px);
+    animation: dropIn 0.25s ease forwards;
+}
+
+@keyframes dropIn {
+    to { transform: translateY(0); }
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal-btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-btn.cancel {
+    background: #333;
+    color: white;
+}
+
+.modal-btn.confirm {
+    background: #ffd500;
+    color: black;
+    font-weight: bold;
+}
+#upload-status {
+    transition: opacity 0.3s;
+    opacity: 1;
 }

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959272-A1" country="EP" doc-number="2959272" kind="A1" date="20151230" family-id="48145589" file-reference-id="313851" date-produced="20180825" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452859" ucid="EP-2959272-A1"><document-id><country>EP</country><doc-number>2959272</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14708692-A" is-representative="NO"><document-id mxw-id="PAPP193868686" load-source="patent-office" format="original"><country>EP</country><doc-number>14708692.0</doc-number><date>20140224</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193868687" load-source="docdb" format="epo"><country>EP</country><doc-number>14708692</doc-number><kind>A</kind><date>20140224</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162035096" ucid="IB-2014059205-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>IB</country><doc-number>2014059205</doc-number><kind>W</kind><date>20140224</date></document-id></priority-claim><priority-claim mxw-id="PPC162036560" ucid="IT-PD20130041-A" load-source="docdb"><document-id format="epo"><country>IT</country><doc-number>PD20130041</doc-number><kind>A</kind><date>20130225</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1988520688" load-source="docdb">B67D   3/00        20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988520907" load-source="docdb">B67D   3/02        20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988522460" load-source="docdb">A47L  13/50        20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988523006" load-source="docdb">F16K  31/528       20060101ALI20140911BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988523647" load-source="docdb">G01F  11/32        20060101AFI20140911BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1981010755" load-source="docdb" scheme="CPC">A47L  13/50        20130101 FI20160122BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1981011048" load-source="docdb" scheme="CPC">F16K  31/528       20130101 LI20160121BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1981014057" load-source="docdb" scheme="CPC">B67D   3/0045      20130101 LI20160122BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1981014179" load-source="docdb" scheme="CPC">G01F  11/32        20130101 LI20160122BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165550043" lang="DE" load-source="patent-office">VENTILKÖRPER EINER DOSIERVORRICHTUNG</invention-title><invention-title mxw-id="PT165550044" lang="EN" load-source="patent-office">VALVE BODY OF A DOSING DEVICE</invention-title><invention-title mxw-id="PT165550045" lang="FR" load-source="patent-office">CORPS DE SOUPAPE D'UN DISPOSITIF DE DOSAGE</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103317622" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>T T S CLEANING S R L</last-name><address><country>IT</country></address></addressbook></applicant><applicant mxw-id="PPAR1103342219" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>T.T.S. CLEANING S.R.L.</last-name></addressbook></applicant><applicant mxw-id="PPAR1101642237" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>T.T.S. Cleaning S.r.l.</last-name><iid>101543661</iid><address><street>Via dell'Artigianato N°. 12/14</street><city>35010 Santa Giustina in Colle (PD)</city><country>IT</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103319626" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZORZO RENATO</last-name><address><country>IT</country></address></addressbook></inventor><inventor mxw-id="PPAR1103341642" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZORZO, RENATO</last-name></addressbook></inventor><inventor mxw-id="PPAR1101646864" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>ZORZO, RENATO</last-name><address><street>Via Roncà 17</street><city>I-35010 Onara di Tombolo (PD)</city><country>IT</country></address></addressbook></inventor></inventors></parties><international-convention-data><pct-or-regional-filing-data ucid="IB-2014059205-W"><document-id><country>IB</country><doc-number>2014059205</doc-number><kind>W</kind><date>20140224</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2014128670-A1"><document-id><country>WO</country><doc-number>2014128670</doc-number><kind>A1</kind><date>20140828</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660629022" load-source="docdb">AL</country><country mxw-id="DS660790367" load-source="docdb">AT</country><country mxw-id="DS660629032" load-source="docdb">BE</country><country mxw-id="DS660709852" load-source="docdb">BG</country><country mxw-id="DS660714654" load-source="docdb">CH</country><country mxw-id="DS660630140" load-source="docdb">CY</country><country mxw-id="DS660790368" load-source="docdb">CZ</country><country mxw-id="DS660629033" load-source="docdb">DE</country><country mxw-id="DS660630141" load-source="docdb">DK</country><country mxw-id="DS660630142" load-source="docdb">EE</country><country mxw-id="DS660707969" load-source="docdb">ES</country><country mxw-id="DS660709853" load-source="docdb">FI</country><country mxw-id="DS660709854" load-source="docdb">FR</country><country mxw-id="DS660629034" load-source="docdb">GB</country><country mxw-id="DS660630147" load-source="docdb">GR</country><country mxw-id="DS660629039" load-source="docdb">HR</country><country mxw-id="DS660790369" load-source="docdb">HU</country><country mxw-id="DS660714659" load-source="docdb">IE</country><country mxw-id="DS660630148" load-source="docdb">IS</country><country mxw-id="DS660709859" load-source="docdb">IT</country><country mxw-id="DS660630149" load-source="docdb">LI</country><country mxw-id="DS660733211" load-source="docdb">LT</country><country mxw-id="DS660630068" load-source="docdb">LU</country><country mxw-id="DS660733212" load-source="docdb">LV</country><country mxw-id="DS660733213" load-source="docdb">MC</country><country mxw-id="DS660630069" load-source="docdb">MK</country><country mxw-id="DS660630070" load-source="docdb">MT</country><country mxw-id="DS660790370" load-source="docdb">NL</country><country mxw-id="DS660707970" load-source="docdb">NO</country><country mxw-id="DS660714660" load-source="docdb">PL</country><country mxw-id="DS660733223" load-source="docdb">PT</country><country mxw-id="DS660790371" load-source="docdb">RO</country><country mxw-id="DS660733224" load-source="docdb">RS</country><country mxw-id="DS660714661" load-source="docdb">SE</country><country mxw-id="DS660709860" load-source="docdb">SI</country><country mxw-id="DS660707975" load-source="docdb">SK</country><country mxw-id="DS660714662" load-source="docdb">SM</country><country mxw-id="DS660630079" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA139078902" ref-ucid="WO-2014128670-A1" lang="EN" load-source="patent-office"><p num="0000">The object of this invention is a valve body of a cleaning appliance, specifically a dosing device, whose valve body can open and close the inlet and outlet pipes of the dosing chamber of said dosing device, to release a correct amount of detergent for soaking a cleaning cloth.</p></abstract><abstract mxw-id="PA139545457" ref-ucid="WO-2014128670-A1" lang="EN" source="national office" load-source="docdb"><p>The object of this invention is a valve body of a cleaning appliance, specifically a dosing device, whose valve body can open and close the inlet and outlet pipes of the dosing chamber of said dosing device, to release a correct amount of detergent for soaking a cleaning cloth.</p></abstract><abstract mxw-id="PA139078903" ref-ucid="WO-2014128670-A1" lang="FR" load-source="patent-office"><p num="0000">L'invention concerne un corps de soupape d'un dispositif de nettoyage, en particulier un dispositif de dosage, dont le corps de soupape peut ouvrir et fermer les tuyaux d'entrée et de sortie de la chambre de dosage dudit dispositif de dosage, pour libérer une quantité correcte de détergent dont on souhaite imprégner un chiffon de nettoyage.</p></abstract><abstract mxw-id="PA139545458" ref-ucid="WO-2014128670-A1" lang="FR" source="national office" load-source="docdb"><p>L'invention concerne un corps de soupape d'un dispositif de nettoyage, en particulier un dispositif de dosage, dont le corps de soupape peut ouvrir et fermer les tuyaux d'entrée et de sortie de la chambre de dosage dudit dispositif de dosage, pour libérer une quantité correcte de détergent dont on souhaite imprégner un chiffon de nettoyage.</p></abstract><description mxw-id="PDES78479816" ref-ucid="WO-2014128670-A1" lang="EN" load-source="patent-office"><invention-title lang="EN"> VALVE BODY OF A DOSING DEVICE 
+	 </invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The field of application of the invention concerns a
+		valve body of a cleaning appliance, specifically a dosing device, whose valve
+		body can open and close the inlet and outlet pipes of the dosing chamber of
+		said dosing device, to release the right amount of detergent for soaking a
+		cleaning cloth. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p44" num="2"> It is well known that all appliances in the
+		professional sector have to meet higher levels of quality than those to be used
+		in a domestic setting.</p><p id="p43" num="3"> This quality level refers both to the construction
+		material as well as to the relative design, so that said appliances are durable
+		and easy to use, in order to facilitate the continuous operations of a sector
+		operator, and furthermore that said equipment can use and consume just the
+		amount of detergent that is strictly necessary for cleaning requirements.</p><p id="p42" num="4"> Another important aspect of such appliances is that
+		when needed they can be quickly restored to their full functionality following
+		a simple and practical maintenance operation.</p><p id="p41" num="5"> It is very clear that said maintenance operations,
+		which often concern the parts that are subject to wear, are carried out not by
+		cleaning personnel but by specific personnel specialised in maintenance and
+		reconditioning.</p><p id="p40" num="6"> This service, which is very often entrusted to
+		outside companies, is important and crucial for establishing how successful an
+		article is commercially.</p><p id="p39" num="7"> Bearing this in mind, one of the aspects that
+		increasingly characterises professional cleaning is the end quality carried out
+		with the minimum, but at the same time correct, amount of detergent.</p><p id="p38" num="8"> One piece of equipment that allows you to carry out
+		the above-mentioned objectives is concretised in a calibrated dosing device for
+		cleaning detergents.</p><p id="p37" num="9"> Indeed, a detergent dosing device has the aim of
+		releasing an exact amount of liquid detergent into a specific soaking basin,
+		inside which a cleaning cloth is then placed.</p><p id="p36" num="10"> It is very clear that both the dilution of the
+		chemical concentrate, as well as the amount of detergent to be released are
+		fixed previously according to requirements, like for example the type of cloth
+		used and the type of floor to be cleaned and the dirt to be treated.</p><p id="p35" num="11"> In the past there have been attempts to pursue
+		these aims with equipment that in many ways have proven to be
+		unsatisfactory.</p><p id="p34" num="12"> In fact, the complexity and poor versatility of the
+		current detergent dosing devices is well known, which include a top tank that
+		is joined to a dosing chamber underneath, inside which there is a valve
+		operated by actuating devices controlled by the operator, to release the liquid
+		stored inside the chamber itself, into a basin underneath.</p><p id="p33" num="13"> An example of such devices is shown in
+		US4174977.</p><p id="p32" num="14"> Later, by adopting a dosing device with a variable
+		volume of the type shown in DE3724849, the volume of the dosing chamber was
+		rendered variable, to release a pre-set amount of liquid.</p><p id="p31" num="15"> One of these dosing devices, with a variable volume
+		chamber of the type shown in DE3724849, and of the same type shown in
+		US4174977, but with a complicated, intricate valve, is shown in EP1736091.</p><p id="p30" num="16"> In fact the valve used in the device shown in
+		EP1736091 is composed of numerous moving parts connected together with numerous
+		springs: and all within the dosing chamber and constantly dampened by the
+		detergent.</p><p id="p29" num="17"> These and other examples of previous dosing devices
+		for releasing a pre-set amount of detergent, have proven to be poorly accepted
+		by professional operators because of their inherent drawbacks.</p><p id="p28" num="18"> One of the main drawbacks of current dosing devices
+		concerns the difficult maintenance and the replacement of worn parts, with
+		lengthy periods of time required for carrying out the above-mentioned
+		operations.</p><p id="p27" num="19"> Moreover, these very dosing devices have evident
+		operational difficulty, because the operator has to, with each change of the
+		detergent, go to a specific area and discharge/empty out all the detergent,
+		even that in the tank, in order to then fill the tank and use a fresh and
+		different type of detergent.</p><p id="p26" num="20"> Another negative aspect concerns the impossibility
+		of inspecting and checking the valve component in the dosing chamber.</p><p id="p25" num="21"> In fact, generally this valve component is made
+		from the assembly of various moving parts united in a chamber that is
+		constantly dampened by the detergent, and therefore subject to a premature loss
+		of functionality, both regarding the seal as well as the precision
+		operations.</p><p id="p24" num="22"> In fact, it is well known that the continual
+		wetting-drying of a moving part immersed in a detergent leads to the
+		stratification of continual and superimposed films that create encrustations
+		limiting/impeding the free operation of the above-mentioned moving parts.</p><p id="p23" num="23"> This loss of functionality renders the device
+		unusable because of the continuous and undesired dripping.</p></background-art><disclosure><tech-problem><heading id="h05">Technical Problem</heading><p id="p52" num="24"> The object of this invention is to overcome one
+		  or more of the drawbacks of the prior art.</p><p id="p51" num="25"> Another object of this invention is to make
+		  available a valve body of a dosing device that is always reliable.</p><p id="p50" num="26"> A further object is to make available a valve
+		  body of a dosing device that is easy to construct.</p><p id="p49" num="27"> An even further object is to make available a
+		  valve body of a dosing device that is easy to maintain.</p><p id="p48" num="28"> Another object is to make available a valve body
+		  of a dosing device that is easy to adjust, both regarding the travel of the
+		  stroke as well as regarding the closure of the inlet and outlet conduits of the
+		  dosing chamber.</p><p id="p47" num="29"> A further object of this invention is to make
+		  available a valve body of a dosing device that is reliable over time and whose
+		  moving parts are secure.</p><p id="p46" num="30"> Another object of this invention is to make
+		  available a valve body of a dosing device that can be visibly inspected.</p><p id="p45" num="31"> Another object of this invention is to make
+		  available a valve body of a dosing device that facilitates the operations for
+		  changing the type of detergent, making them quick and simple.</p></tech-problem><tech-solution><heading id="h07">Technical Solution</heading><p id="p08" num="32"> All the above-mentioned aims are realised by a
+		  valve body of a dosing device, which has a hollow body of the device for
+		  storing and holding a pre-determined amount of a cleaning liquid, where said
+		  valve body is composed of a first valve body element and a second valve body
+		  element, and moreover said valve body is inserted inside hollow body of the
+		  same device for dosing liquid detergent, for the opening and closing of the
+		  inlet pipe and outlet pipe, respectively for supplying and emptying the
+		  detergent inside the hollow body, where said valve body can move in a sliding
+		  manner between two pre-set positions following the operation of the actuating
+		  devices, to a first position opening the inlet and the closing of the outlet,
+		  and a second position of closing the inlet and opening the outlet, and where
+		  said valve body has, near the opposite ends, profiles that join to the relative
+		  seals for closing the inlet and outlet pipes, and with the closing profile of
+		  the outlet pipe located on the outside of the hollow body since the lower part
+		  of the first element of valve body for the closing of the lower pipe, is always
+		  exposed outside the hollow body, and the part of the valve body to which the
+		  seal is connected for closing the lower pipe, with the lower part of the first
+		  element of the valve body protruding partly on the outside of the hollow body,
+		  shows the seal for sealing closed the outlet pipe. </p></tech-solution><advantageous-effects><heading id="h09">Advantageous Effects</heading><p id="p68" num="33"> Advantageously the seal for closing the outlet
+		  pipe is, during closing, subject to the pressure ofn the lower part of the
+		  first element of the valve body that pushes from the outside of the hollow
+		  body.</p><p id="p67" num="34"> Advantageously the seal for closing the outlet
+		  pipe is on the closing edge of the outlet pipe.</p><p id="p66" num="35"> Avantageously said first element of the valve
+		  body can be extracted from within the hollow body through the outlet pipe for
+		  its maintenance and/or its replacement.</p><p id="p65" num="36"> Advantageously at least one of said seals is
+		  joined solidly to the upper and/or lower element of the valve body, remaining
+		  exposed and protruding during at least one of the pre-set positions so that it
+		  can be easily replaced.</p><p id="p64" num="37"> Alternatively to the advantage previously set
+		  out, at least one of said seals is connected solidly to the mouth of the
+		  opening of the inlet pipe and/or outlet pipe, held inside a specific housing,
+		  remaining securely sheltered when the device is operating.</p><p id="p63" num="38"> Said first lower element and said second upper
+		  element connect, supporting directly or entering into contact following the
+		  movement with the relative seals for closing the outlet and inlet pipes; in
+		  both modes of installing the seals, because of their arrangement, the
+		  inspection and maintenance of the seals are considerably simplified, since the
+		  seal on top of the second element is near the inlet mouth and the seal below
+		  the first element is near the outlet mouth.</p><p id="p62" num="39"> Advantageously said first and said second element
+		  of the valve body are connected to each other, avoiding the need for any moving
+		  parts that in the long terms could create the same problems of movement and
+		  lack of guaranteed closing reliability of the prior art.</p><p id="p61" num="40"> Opportunely, in a second variant for operating
+		  said valve body it is composed of two elements joined together, eventually in
+		  an adjustable manner; since the two elements can be easily extracted and
+		  removed from the hollow body through the same inlet and outlet openings for
+		  eventual cleaning and/or replacement of the elements themselves or their
+		  seals.</p><p id="p60" num="41"> Opportunely each of the two elements making up
+		  the valve body, a first lower valve body element and a second upper valve body
+		  element, has independent elastic devices for closing and/or opening the
+		  respective inlet and outlet pipes.</p><p id="p59" num="42"> Advantageously said second element of the valve
+		  body for opening and closing the inlet pipe of the hollow body can be removed
+		  from inside the hollow body through the inlet pipe for its maintenance and/or
+		  its replacement.</p><p id="p58" num="43"> Opportunely said second upper element of the
+		  valve body is connected in a moving way to the hollow body.</p><p id="p57" num="44"> Very advantageously said second element of the
+		  valve body is connected in a movable manner to a removable tank above the
+		  hollow body of the dosing device.</p><p id="p56" num="45"> Advantageously said second element opens the
+		  inlet pipe of the hollow body following a push from the upper end of the first
+		  element of the valve body.</p><p id="p55" num="46"> Advantageously said second upper element can take
+		  up again its inlet closing position brought about by independent elastic
+		  devices that act on the upper element of the valve body; guaranteeing in any
+		  circumstance a secure closing against the liquid in the tank coming out, in the
+		  absence of an efficient push of the underlying lower element of the valve
+		  body.</p><p id="p54" num="47"> Advantageously said first and said second element
+		  of the valve body are axially overlapping, in itself an excellent design
+		  decision, that of the movement of the various parts subject to unidirectional
+		  operating forces.</p><p id="p53" num="48"> Opportunely, said second upper element of the
+		  valve body is solidly connected to a removable tank on top of the hollow body
+		  of the dosing device, allowing for the removal and replacement with an
+		  identical tank for changing the detergent or increasing autonomy.</p></advantageous-effects></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p82" num="49"> The technical characteristics of the valve body of
+		the dosing device, according to the various actuation modes but always
+		according to the same invention, for the above-mentioned objectives, can be
+		clearly observed in the claims below, and its benefits will be clearer in the
+		detailed description that follows, made with reference to the attached
+		diagrams, which represent an example of some ways it could be made, and so
+		should not be considered in any way limiting, where:</p><p id="p81" num="50"> fig. 1 shows a perspective view of a dosing device
+		accessorised on the top with a tank and on the bottom with a soaking basin;</p><p id="p80" num="51"> fig. 2 shows a perspective view of the dosing
+		device that is the object of this invention;</p><p id="p79" num="52"> fig. 3 shows a vertical cross-section perspective
+		view of the device of fig. 2 passing through the axis of the valve body;</p><p id="p78" num="53"> fig. 4 shows a plan view of the device of
+		fig.3;</p><p id="p77" num="54"> fig. 5 shows an enlarged view of the object of fig.
+		3 without the top tank and without any moving parts;</p><p id="p76" num="55"> fig. 6 shows a perspective view of just the valve
+		body in one of the construction modes, two elements connected to each
+		other;</p><p id="p75" num="56"> fig. 7 shows a vertical cross-section view of only
+		the valve body of fig. 6</p><p id="p74" num="57"> fig. 8 shows a perspective and cross-section view
+		of the dosing device equipped with a valve body in a different construction
+		mode, with the two elements separated from one another;</p><p id="p73" num="58"> fig. 9 shows the device of fig. 8 with the first
+		lower element of the valve body lowered and the outlet pipe open;</p><p id="p72" num="59"> figs. 10 and 11 respectively show a vertical
+		cross-section view the device of fig. 8 and fig. 9, but perpendicular with
+		respect to the previous diagrams;</p><p id="p71" num="60"> fig, 12 shows a perspective view of only the valve
+		body of figs. 8 to 11;</p><p id="p70" num="61"> fig. 13 shows a vertical cross-section view of only
+		the valve body of fig. 12;</p><p id="p69" num="62"> figs. 14 and 15 show the removable tank with the
+		second upper element of the valve body on the bottom.</p></description-of-drawings><best-mode><heading id="h13">Best Mode</heading><p id="p126" num="63"> On top of the dosing device 1 there is a tank 10
+		communicating hydraulically with the hollow body 2 beneath, from which is
+		released the detergent stored in its dosage volume 12, into a soaking basin 11
+		underneath.</p><p id="p125" num="64"> The inlet 8 and outlet 9 pipes of the hollow body
+		2 are opened and closed by a float valve 3 inside said hollow body 2.</p><p id="p124" num="65"> In a first preferred and not limiting realisation
+		of the valve body 3, it has two individual elements 4, 5 floating in the hollow
+		body 2, with a possibility of their limited movement along its main axis.</p><p id="p123" num="66"> The first element 4 of the valve body 3 is lower
+		down and has a tubular configuration, preferably conical or truncated-conical;
+		said first element 4 near the lower base has a hydraulic seal 6 for sealing the
+		outlet pipe 9, or closing pipe, of the hollow body 2, in a first raised
+		position explained above.</p><p id="p122" num="67"> In this configuration, said first element 4, on
+		the bottom, pushes with its top end the second element 5 of the valve body 3,
+		on the top, and preferably with a single main axis between the two
+		elements.</p><p id="p121" num="68"> Following the push of the first element 4, the
+		seal 7, which the second element 5 has, opens the inlet 8 of the hollow body 2
+		and hydraulically connects the inside of the tank 10, above the hollow body 2,
+		with its dosing volume 12, and allowing it to fill with detergent that flows
+		from the top tank 10.</p><p id="p120" num="69"> In this situation, with the first element 4, the
+		one lower than the valve body 3, which closes the outlet 9 of the dosing device
+		1 and with the second element 5, the one above the valve body, kept open,
+		pulled aside from the high end of the lower element 4, the dosing device 1 is
+		in a rest configuration, with the dosing volume chamber 12 filled with liquid
+		detergent and communicating hydraulically with the inside of the tank 10
+		above.</p><p id="p119" num="70"> Following a movement of the actuating devices,
+		which act on the lower element 4 of the valve body 3, this latter shifts
+		downwards in a sliding manner along its main axis, pulling the seal 6 with
+		which it is equipped at the base away from the respective housing in the outlet
+		pipe 9 of the hollow body 2, and opening the outlet of the dosing device 1.</p><p id="p118" num="71"> Said opening of the outlet of the dosing device 1
+		makes the detergent in the dosing chamber 12 flow into the soaking basin 11
+		underneath to soak a cleaning cloth or mop.</p><p id="p117" num="72"> With this shifting of the lower element 4,
+		following a movement of the actuating devices, also the closing of the inlet 8
+		of the hollow body 2 starts, following the shifting from the raised rest
+		position of the second element 5.</p><p id="p116" num="73"> Said second element 5, usually kept pushed upwards
+		by the upper part of the first element, positioned lower down, following the
+		absence of a lower push, moves downwards with its seal 7 with which it is
+		fitted, with the closing of the inlet 8 of the hollow body 2.</p><p id="p115" num="74"> This closing of the inlet 8 prevents the hydraulic
+		communication between the tank 10 and the hollow body 2, preventing the flow of
+		the detergent from the tank 10 inside the dosing chamber 12 until the outlet 9
+		of the hollow body 2 is open.</p><p id="p114" num="75"> The movement downwards of the second element 5,
+		the one above the valve body 3, is possible after the pressure of the liquid
+		detergent inside the tank 10, but can also occur through independent elastic
+		device 13 that act directly on the upper element 5.</p><p id="p113" num="76"> After the dosing chamber 12 has been completely
+		emptied, these same actuating devices that previously moved towards the opening
+		of the first element 4, or also other elastic devices 14 that act directly on
+		said lower element 4, bring that first element 4 back to its rest condition,
+		with the closure of the outlet 9 of the dosing device 1.</p><p id="p112" num="77"> After the dosing chamber 12 has been empties, and
+		the outlet pipe 9 of the seal 6 at the base of the first element 4 has
+		re-closed, the filling cycle for the dosing chamber restarts with the shifting
+		to an opening state of the inlet 8 of the upper element 5 of the valve body
+		3.</p><p id="p111" num="78"> Advantageously dais first element 4, the one below
+		the valve body 3, partially comes out from the hollow body 2 during the opening
+		of the outlet 9.</p><p id="p110" num="79"> In this state it is possible to evaluate the state
+		of wear and intervene to eventually replace the seal 6 at the base of the lower
+		element 4.</p><p id="p109" num="80"> Moreover, with this shifting of the valve body 3,
+		a visual evaluation and consequent maintenance work is possible, to clean
+		and/or replacement, directly on the housing against which the lower seal 6
+		realises the hydraulic seal.</p><p id="p108" num="81"> In fact it is very important that the lower part
+		of the first element of the valve body is always exposed on the outside of the
+		hollow body, and therefore able to connect to the closing profile of the outlet
+		pipe on the outside of the hollow body.</p><p id="p107" num="82"> The closing seal of the outlet pipe, which is
+		compressed due to the hydraulic seal between the lower part of the first
+		element of the valve body and the closing profile of the outlet pipe is
+		therefore exposed during the moving away towards the outside of the lower part
+		of the first element of the hollow body and made visible for an inspection.</p><p id="p106" num="83"> Said sealing of the outlet pipe is on the closing
+		edge of the outlet pipe, preferably on a specific housing of the lower part of
+		the first element of the hollow body, but could also be on a specific housing
+		of the valve body facing its outside.</p><p id="p105" num="84"> With the above-mentioned configuration, the first
+		element of the valve body can be easily removed from the valve body, without
+		requiring any intervention, for example opening one of its parts or
+		disassembling it.</p><p id="p104" num="85"> This extraction of the first element of the valve
+		body is therefore simple to carry out by pulling it through the outlet pipe of
+		the valve body after eventually disconnecting the relative actuating devices
+		and/or elastic devices that act on said first element of the valve body.</p><p id="p103" num="86"> In this way the hollow body is simple to construct
+		and easy to maintain, but above all the seals, at least the one of the outlet
+		pipe is easy to replace, without having to, as in known devices of the prior
+		art, disassemble the hollow body itself to access a valve body that is inside
+		said hollow body and with the seals on the inside.</p><p id="p102" num="87"> Another advantage is the fact that the thrust due
+		to the closing action of the first element of the valve body, takes place by
+		means of elastic devices on the outside of the hollow body.</p><p id="p101" num="88"> Said push compresses the seal between the lower
+		part of the first element of the valve body against the external profile of the
+		outlet pipe, is a push of the first element of the valve body from outside the
+		valve body.</p><p id="p100" num="89"> In order to also easily work on the upper seal 7,
+		designated to close the inlet 8, you necessarily have to pass through the
+		inside of the tank 10.</p><p id="p99" num="90"> It is clear that in the case where this is still
+		full of detergent, this maintenance intervention is quite awkward.</p><p id="p98" num="91"> In an improved actuation method, shown as a second
+		variant for actuating the invention, the tank 15 can be removed from the dosing
+		device 1.</p><p id="p97" num="92"> Advantageously, therefore, said tank 15 has its own
+		valve 16 for closing its detergent outlet pipe 17, which moves, when opening
+		and closing, just like the inlet valve of the hollow body 2; namely pushed from
+		below upwards by the second element 5 underneath, the one above the valve body
+		3 for opening, and returns to a closed position following the pressure of the
+		liquid detergent above or by means of the independent elastic devices 18.</p><p id="p96" num="93"> This possibility of removing said tank 15 provides
+		not only the user with a convenient way to carry out maintenance, because the
+		upper element 5 of the valve body 3, and its seal 7, can be accessed directly,
+		but this also allows you to easily replace the type of detergent for the
+		cleaning you intend to carry out.</p><p id="p95" num="94"> This simple replacement of the tank 15, without the
+		need to empty a tank 10 fixed to the dosing unit 1, considerably simplifies the
+		cleaning operations, facilitating the cleaning of each environment completely
+		before moving on to other operations.</p><p id="p94" num="95"> Moreover, this availability of further tanks 15
+		with the exact dilution of the chemical concentrate, effectively prepared at
+		the start of the cleaning operations, increases autonomy in cleaning
+		operations, without any forced downtime.</p><p id="p93" num="96"> For a simple and inexpensive realisation, the
+		replacement of the second element 5, the one above the valve body 3, joined to
+		the hollow body 2, can be provided for depending on the functions and location,
+		with the closing valve 16 of the outlet pipe of the removable tank 15.</p><p id="p92" num="97"> This valve 16 acts as and takes the place of the
+		one fixed to the hollow body 2 when the removable tank 15 is installed above
+		the dosing device 1, with its outlet pipe 17 above the inlet 8 of the hollow
+		body 2, and is the independent closing element after the tank 15 of the dosing
+		device 1 has been removed.</p><p id="p91" num="98"> Clearly the maintenance of this valve 16, connected
+		directly to the removable tank 15, can be easily carried out, both from above,
+		through the inside of the tank 15 itself, and from below, since the valve 16 is
+		practically exposed at the bottom on the outlet pipe 17 of the tank 15.</p><p id="p90" num="99"> It can easily be understood that the installation
+		phase of the tank 15 onto the dosing device 1 is carried out in a guided manner
+		so that the valve 16 of the tank 15 and the part of the valve body 3 that can
+		connect correctly to each other to correctly open the valve 16 of the tank 15
+		after the hydraulic seal has been realised between the outlet pipe 17 of the
+		tank 15 and the inlet 8 of the hollow body 2.</p><p id="p89" num="100"> In a second preferred and non-limiting actuation
+		method for the valve body 3, it is two elements 4, 5 joined solidly to each
+		other, in a floating manner with respect to the hollow body 2, with the
+		possibility of their limited movement along its main axis.</p><p id="p88" num="101"> Eventually said connection of the two elements 4
+		and 5 is adjustable in order to recuperate and regulate the reciprocal distance
+		between the seals with respect to the dedicated housing on the inlet and
+		outlet.</p><p id="p87" num="102"> Advantageously this distance between the two seals
+		for the inlet and the outlet is less than the distances of the closing sections
+		of the inlet and outlet pipes of the hollow body, thereby guaranteeing the
+		closing of a first pipe before the opening of the second pipe.</p><p id="p86" num="103"> In this last method there is never any direct
+		hydraulic communication between the tank 10 and the soaking basin 11, something
+		that would cause the direct passage of the detergent through the hollow body
+		2.</p><p id="p85" num="104"> The invention, conceived in this way, is
+		susceptible to numerous modifications and variants, all falling within the
+		ambit of the inventive concept; moreover, all the parts can be replaced by
+		other technically equivalent components.</p><p id="p84" num="105"> In practice, the materials used, as well as the
+		dimensions and the contingent forms, can be whatever is required and according
+		to the state of the art.</p><p id="p83" num="106"> Where the characteristics and the technologies
+		mentioned in any claim are followed by reference marks, these marks are there
+		for the only purpose of making the claims more understandable and as a
+		consequence these references in no way limit the interpretation of each element
+		identified by way of example by these reference marks.</p></best-mode></description><claims mxw-id="PCLM70080145" ref-ucid="WO-2014128670-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text><claim-text>Valve body of a dosing device (1), fitted with a hollw body
+			 (2) for stroing and retaining a pre-determined amount of a cleaning liquid,
+			 where said valve body (3) is composed of a first valve body element (4) and a
+			 second valve body element (5), where also said valve body (3) is inserted
+			 inside a hollow body (2) of the same dosing device (1) for a liquid detergent,
+			 for the opening and closing of the inlet pipe (8) and the outlet pipe (9),
+			 respectively for supplying and emptying the detergent inside the hollow 5 body
+			 (2), with said valve body (3) being able to slide between two pre-set positions
+			 following the operation of the actuation devices, in a first position with the
+			 opening of the inlet (8) and the closing of the outlet (9) and a second
+			 position with the inlet (8) closed and the outlet (9) open, characterised by
+			 the fact that said valve body (3) has, near the opposite ends, profiles that
+			 join to the relative seals (6, 7) for closing the inlet (8) and outlet (9)
+			 pipes, and having the closing profile of the outlet pipe (9) on the outside of
+			 the hollow body (2) since the lower part of the first element (4) of the valve
+			 body (3) suited to closing the outlet pipe (9) is always exposed on the outside
+			 of the hollow body (2)</claim-text><claim-text>and the part (4) of the valve body (3) to which the seal
+			 (6) is joined for the closing of the lower pipe, following an opening movemnt
+			 of the outlet pipe (9), with the lower part of the first element (4) of the
+			 valve body (3) partially protruding on the outside of the hollow body (2),
+			 shows the seal for sealing the closing of the outlet pipe (9), following a
+			 closing movement of the outlet (9), moves the part (5) of the valve body (3) to
+			 which is joined the seal (7) dedicated to the closing of the upper
+			 pipe.</claim-text></claim-text></claim><claim id="c127" num="2"><claim-text><claim-text>Valve body of a dosing device according to claim 1,
+			 characterized by the fact that the seal for closing the outlet pipe (9) is,
+			 when closing, subject to the pressure from the lower part of the element (4) of
+			 the valve body (3) thta pushes from outside the hollow body (2).</claim-text></claim-text></claim><claim id="c128" num="3"><claim-text><claim-text>Valve body of a dosing device (1) according to claim 1,
+			 characterised by the fact that the seal for closing the outlet pipe (9) is on
+			 the closing edge of the oputlet pipe (9).</claim-text></claim-text></claim><claim id="c129" num="4"><claim-text><claim-text>Valve body of a dosing device according to claim 1,
+			 characterised by the fact that at least one of said first element (4) of the
+			 valve body (3) can be removed from inside the hollow body (2) through the
+			 outlet pipe (9) for its maintenance and/or replacement.</claim-text></claim-text></claim><claim id="c130" num="5"><claim-text><claim-text>Valve body of a dosing device according to claim 1,
+			 characterised by the fact that said valve body (3) and a second upper elemnt
+			 (5) which are connected directly to each other, supporting either directly or
+			 entering into contact following the movement of the relative seals (6, 7) for
+			 closing the outlet pipe (9)and the inlet pipe (8).</claim-text></claim-text></claim><claim id="c131" num="6"><claim-text><claim-text>Valve body of a dosing device (1) according to the previous
+			 claim, characterised by the act that said first lower element (4) of the valve
+			 body (3) aid said second upper element (4) of the valve body (3) are joined
+			 together in an adjustable manner.</claim-text></claim-text></claim><claim id="c132" num="7"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the fact that one of said seals (6, 7) is
+			 solidly connected to the upper element (5) and/or lower element (4) of the
+			 valve body (3), remaining exposed and protruding during at least one of the
+			 pre-set positions.</claim-text></claim-text></claim><claim id="c133" num="8"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the act that one of said seals (6, 7) is
+			 solidly connected to the mouth opening of the inlet pipe (8) and/or the outlet
+			 pipe (9) retained within a specific housing.</claim-text></claim-text></claim><claim id="c134" num="9"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the act that said first lower element (4)
+			 of the valve body (3) can take up again its closing poistion of the outlet (9)
+			 brought about bu independent elastic devices that act on the part outside the
+			 hollow body (2) of the first element (4) of the valve body (3).</claim-text></claim-text></claim><claim id="c135" num="10"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the act that said upper element (5) of
+			 the valve body (3) can take up again its closing poistion of the inlet (8)
+			 brought about by independent elastic devices (13) that act on the upper element
+			 (5) of the valve body (3).</claim-text></claim-text></claim><claim id="c136" num="11"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the act that said first element (4) and
+			 said second element (5) of the valve body (3) are axially
+			 overlapping.</claim-text></claim-text></claim><claim id="c137" num="12"><claim-text><claim-text>Valve body of a dosing device according to one or more of
+			 the previous claims, characterised by the act that said second element (5) of
+			 the valve body is connected to a removanble tank (15) above the hollow body (2)
+			 of the dosing device (1).</claim-text></claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

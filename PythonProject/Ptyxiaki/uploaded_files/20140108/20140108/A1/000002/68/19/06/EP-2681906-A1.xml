@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2681906-A1" country="EP" doc-number="2681906" kind="A1" date="20140108" family-id="46757636" file-reference-id="311895" date-produced="20180823" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="146586382" ucid="EP-2681906-A1"><document-id><country>EP</country><doc-number>2681906</doc-number><kind>A1</kind><date>20140108</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-12751776-A" is-representative="NO"><document-id mxw-id="PAPP154848574" load-source="docdb" format="epo"><country>EP</country><doc-number>12751776</doc-number><kind>A</kind><date>20120221</date><lang>EN</lang></document-id><document-id mxw-id="PAPP220440083" load-source="docdb" format="original"><country>EP</country><doc-number>12751776.1</doc-number><date>20120221</date></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC140556498" ucid="JP-2011043232-A" load-source="docdb"><document-id format="epo"><country>JP</country><doc-number>2011043232</doc-number><kind>A</kind><date>20110228</date></document-id></priority-claim><priority-claim mxw-id="PPC140557495" ucid="JP-2011115379-A" load-source="docdb"><document-id format="epo"><country>JP</country><doc-number>2011115379</doc-number><kind>A</kind><date>20110524</date></document-id></priority-claim><priority-claim mxw-id="PPC140549850" ucid="JP-2012001145-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>JP</country><doc-number>2012001145</doc-number><kind>W</kind><date>20120221</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-2142246786" load-source="docdb">H01L  27/146       20060101ALI20141020BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-2142248040" load-source="docdb">H04N   5/369       20110101ALI20141020BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-2142248321" load-source="docdb">H04N   5/355       20110101AFI20141020BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-2142248640" load-source="docdb">H04N   9/04        20060101ALI20141020BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-2142251043" load-source="docdb">H04N  13/02        20060101ALI20141020BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1627944076" load-source="docdb" scheme="CPC">H04N  13/257       20180501 FI20180612BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1642417186" load-source="docdb" scheme="CPC">H04N  13/218       20180501 LI20180510BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818223" load-source="docdb" scheme="CPC">H04N   9/045       20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818224" load-source="docdb" scheme="CPC">H04N   5/3696      20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818225" load-source="docdb" scheme="CPC">H04N   5/35563     20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818226" load-source="docdb" scheme="CPC">H01L  27/14641     20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818227" load-source="docdb" scheme="CPC">H01L  27/14627     20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818228" load-source="docdb" scheme="CPC">H01L  27/14621     20130101 LI20170127BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1853818229" load-source="docdb" scheme="CPC">H01L  27/14605     20130101 LI20170127BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT132363779" lang="DE" load-source="patent-office">FESTKÖRPERABBILDUNGSVORRICHTUNG UND KAMERASYSTEM</invention-title><invention-title mxw-id="PT132363780" lang="EN" load-source="patent-office">SOLID-STATE IMAGING DEVICE AND CAMERA SYSTEM</invention-title><invention-title mxw-id="PT132363781" lang="FR" load-source="patent-office">DISPOSITIF D'IMAGERIE À SEMI-CONDUCTEURS ET SYSTÈME DE CAMÉRA</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR919539433" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>SONY CORP</last-name><address><country>JP</country></address></addressbook></applicant><applicant mxw-id="PPAR919532407" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>SONY CORPORATION</last-name></addressbook></applicant><applicant mxw-id="PPAR919016148" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Sony Corporation</last-name><iid>100830309</iid><address><street>1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR919514547" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>HIROTA ISAO</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR919516163" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>HIROTA, ISAO</last-name></addressbook></inventor><inventor mxw-id="PPAR919009418" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>HIROTA, ISAO</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR919008630" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Jackson, Jonathan Andrew</last-name><suffix>et al</suffix><iid>100783408</iid><address><street>D Young &amp; Co LLP 120 Holborn</street><city>London EC1N 2DY</city><country>GB</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="JP-2012001145-W"><document-id><country>JP</country><doc-number>2012001145</doc-number><kind>W</kind><date>20120221</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2012117691-A1"><document-id><country>WO</country><doc-number>2012117691</doc-number><kind>A1</kind><date>20120907</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS549851483" load-source="docdb">AL</country><country mxw-id="DS549837477" load-source="docdb">AT</country><country mxw-id="DS549838138" load-source="docdb">BE</country><country mxw-id="DS549837973" load-source="docdb">BG</country><country mxw-id="DS549914610" load-source="docdb">CH</country><country mxw-id="DS549838139" load-source="docdb">CY</country><country mxw-id="DS549837482" load-source="docdb">CZ</country><country mxw-id="DS549851484" load-source="docdb">DE</country><country mxw-id="DS549838140" load-source="docdb">DK</country><country mxw-id="DS549838141" load-source="docdb">EE</country><country mxw-id="DS549770098" load-source="docdb">ES</country><country mxw-id="DS549837974" load-source="docdb">FI</country><country mxw-id="DS549914611" load-source="docdb">FR</country><country mxw-id="DS549851485" load-source="docdb">GB</country><country mxw-id="DS549838146" load-source="docdb">GR</country><country mxw-id="DS549851490" load-source="docdb">HR</country><country mxw-id="DS549837483" load-source="docdb">HU</country><country mxw-id="DS549914612" load-source="docdb">IE</country><country mxw-id="DS549838147" load-source="docdb">IS</country><country mxw-id="DS549837975" load-source="docdb">IT</country><country mxw-id="DS549838148" load-source="docdb">LI</country><country mxw-id="DS549837976" load-source="docdb">LT</country><country mxw-id="DS549759926" load-source="docdb">LU</country><country mxw-id="DS549837977" load-source="docdb">LV</country><country mxw-id="DS549837986" load-source="docdb">MC</country><country mxw-id="DS549759927" load-source="docdb">MK</country><country mxw-id="DS549759928" load-source="docdb">MT</country><country mxw-id="DS549838149" load-source="docdb">NL</country><country mxw-id="DS549851491" load-source="docdb">NO</country><country mxw-id="DS549838154" load-source="docdb">PL</country><country mxw-id="DS549837987" load-source="docdb">PT</country><country mxw-id="DS549837484" load-source="docdb">RO</country><country mxw-id="DS549837988" load-source="docdb">RS</country><country mxw-id="DS549838155" load-source="docdb">SE</country><country mxw-id="DS549914613" load-source="docdb">SI</country><country mxw-id="DS549851492" load-source="docdb">SK</country><country mxw-id="DS549851493" load-source="docdb">SM</country><country mxw-id="DS549759937" load-source="docdb">TR</country></ep-contracting-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA99834034" ref-ucid="WO-2012117691-A1" lang="EN" load-source="patent-office"><p num="0000">A solid-state imaging device includes: a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction; and a multi-lens array in which multi-lenses which allow light to be incident on the plurality of color pixels are arranged, wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color pixels which are different in color in the first direction.</p></abstract><abstract mxw-id="PA100330199" ref-ucid="WO-2012117691-A1" lang="EN" source="national office" load-source="docdb"><p>A solid-state imaging device includes: a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction; and a multi-lens array in which multi-lenses which allow light to be incident on the plurality of color pixels are arranged, wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color pixels which are different in color in the first direction.</p></abstract><abstract mxw-id="PA99834035" ref-ucid="WO-2012117691-A1" lang="FR" load-source="patent-office"><p num="0000">Un dispositif d'imagerie à semi-conducteurs comprend : une section de réseau de pixels dans laquelle une pluralité de pixels de couleur sont agencés sous la forme d'une matrice dans une première direction et une seconde direction qui est perpendiculaire à la première direction ; et un réseau multi-lentilles dans lequel de multiples lentilles qui permettent à la lumière d'être incidente sur la pluralité de pixels de couleur sont agencées, dans les pixels de couleur respectifs de la section de réseau de pixels, des pixels de couleur adjacents dans au moins une direction parmi la première direction et la seconde direction étant alloués à un pixel pour L en stéréo et un pixel pour R en stéréo, et le réseau multi-lentilles étant disposé de telle sorte qu'au moins une partie du réseau multi-lentilles permet à la lumière d'être incidente sur les pixels de couleur adjacents qui sont différents en couleur dans la première direction.</p></abstract><abstract mxw-id="PA100330200" ref-ucid="WO-2012117691-A1" lang="FR" source="national office" load-source="docdb"><p>Un dispositif d'imagerie à semi-conducteurs comprend : une section de réseau de pixels dans laquelle une pluralité de pixels de couleur sont agencés sous la forme d'une matrice dans une première direction et une seconde direction qui est perpendiculaire à la première direction ; et un réseau multi-lentilles dans lequel de multiples lentilles qui permettent à la lumière d'être incidente sur la pluralité de pixels de couleur sont agencées, dans les pixels de couleur respectifs de la section de réseau de pixels, des pixels de couleur adjacents dans au moins une direction parmi la première direction et la seconde direction étant alloués à un pixel pour L en stéréo et un pixel pour R en stéréo, et le réseau multi-lentilles étant disposé de telle sorte qu'au moins une partie du réseau multi-lentilles permet à la lumière d'être incidente sur les pixels de couleur adjacents qui sont différents en couleur dans la première direction.</p></abstract><description mxw-id="PDES51231645" ref-ucid="WO-2012117691-A1" lang="EN" load-source="patent-office"><invention-title lang="EN">SOLID-STATE IMAGING DEVICE AND CAMERA SYSTEM</invention-title><technical-field><p num="0001">
+The present disclosure relates to a solid-state imaging device and a camera system which are applicable to a stereo camera or a monocular 3D stereo camera which employs a light field technology, for example.
+</p></technical-field><background-art><p num="0002">
+As a light field camera, a technique disclosed in PTL 1 is known.
+</p><p num="0003">
+In this technique, a color coding (color array) of a color filter is a zigzag array obtained by rotating an RGB Bayer array by 45 degrees, in which four adjacent pixels in the vertical and horizontal directions have the same color.  That is, this technique has a color coding in which respective filters of R, G and B are arranged in a square shape in a unit of four pixels of the same color.
+</p><p num="0004">
+Further, one multi-lens array is shared in the unit of four pixels <br/>
+<img file="JPOXMLDOC01-appb-I000001.jpg" he="4.2" img-content="drawing" img-format="jpg" inline="no" orientation="portrait" wi="71.9"/>
+to cover different colors.
+</p><p num="0005">
+Further, in PTL 2, a technique is disclosed in which a parallax and a wide dynamic range (WDR) are used together by differentiating sensitivity of each camera in a multocular 3D camera.
+</p></background-art><citation-list><patent-literature><p num="0006">
+[PTL 1]  JP-A-2010-239337<br/>
+[PTL 2]  JP-A-2003-18445
+</p></patent-literature></citation-list><?BRFSUM description="Brief Summary" end="lead"?><summary-of-invention><tech-problem><p num="0007">
+However, in the technique disclosed in JP-A-2010-239337, it is necessary to have a complicated structure and to perform a complicated signal processing, in order to obtain full resolution.
+</p><p num="0008">
+Further, in the technique disclosed in JP-A-2003-18445, since the parallax is not obtained due to saturation in twin lenses, there is a disadvantage such as an insufficient range in the wide dynamic range (WDR).
+</p><p num="0009">
+Accordingly, it is desirable to provide a solid-state imaging device and a camera system which are capable of obtaining a stereo image of a wide dynamic range (WDR) with a monocular arrangement without a complicated structure and complicated signal processing.
+</p></tech-problem><tech-solution><p num="0010">
+An embodiment of the present disclosure is directed to a solid-state imaging device including: a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction; and a multi-lens array in which multi lenses which allow light to be incident on the plurality of color pixels are arranged, wherein in the respective color pixels of the pixel array section, the adjacent color pixels in at least one direction of the first direction and the second direction are allocated to an L pixel and an R pixel for stereo, and wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent pixels which are different in color in the first direction.
+</p><p num="0011">
+Another embodiment of the present disclosure is directed to a camera system including: a solid-state imaging device; and an optical system which forms an object image on the solid-state imaging device, wherein the solid-state imaging device includes a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction, and a multi-lens array in which multi lenses which allow light to be incident on the plurality of color pixels are arranged, wherein in the respective color pixels of the pixel array section, the adjacent color pixels in at least one direction of the first direction and the second direction are allocated to an L pixel and an R pixel for stereo, and wherein the multi-lens array is disposed so that at least part of the multi-lens array allows light to be incident on the adjacent pixels which are different in color in the first direction.
+</p></tech-solution><advantageous-effects><p num="0012">
+According to the embodiments of the present disclosure, it is possible to obtain a stereo image of a wide dynamic range (WDR) with a monocular arrangement without a complicated structure and a complicated signal processing.
+</p></advantageous-effects></summary-of-invention><?BRFSUM description="Brief Summary" end="tail"?><description-of-drawings><p num="0013"><figref num="1">Fig. 1 is a system configuration diagram schematically illustrating a configuration of a solid-state imaging device (CMOS image sensor) according to an embodiment of the present disclosure;</figref><figref num="2">Fig. 2 is a circuit diagram illustrating an example of a circuit configuration of a unit pixel;</figref><figref num="3">Fig. 3 is a circuit diagram illustrating an example of a circuit configuration in a case where four adjacent pixels addition is performed in a pixel;</figref><figref num="4">Fig. 4 is a diagram illustrating a Bayer array as an example of a pixel array;</figref><figref num="5">Fig. 5 is a conceptual diagram illustrating a pixel division according to the embodiment of the present disclosure;</figref><figref num="6">Fig. 6 is a diagram illustrating a first characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="7">Fig. 7 is a diagram illustrating a second characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="8">Fig. 8 is a diagram illustrating a third characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="9">Fig. 9 is a diagram illustrating a fourth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="10">Figs. 10A to 10C are diagrams illustrating a fifth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="11">Figs. 11A to 11C are diagrams illustrating a sixth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="12">Fig. 12 is a diagram illustrating a seventh characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="13">Fig. 13 is a diagram illustrating an eighth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure;</figref><figref num="14">Fig. 14 is a diagram illustrating a configuration example of a monocular 3D stereo camera to which the solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure is applied;</figref><figref num="15">Fig. 15 is a diagram illustrating object distance dependency of image height variation in a monocular 3D stereo camera to which the solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure is applied;</figref><figref num="16">Fig. 16 shows diagrams illustrating image formation variation with respect to an object distance in a monocular 3D stereo camera to which the solid-state imaging device (CMOS image sensor) according to the embodiment of the present disclosure is applied; and</figref><figref num="17">Fig. 17 is a diagram illustrating an example of a configuration of a camera system to which the solid-state imaging device according to the embodiment of the present disclosure is applied.</figref></p></description-of-drawings><description-of-embodiments><p num="0014">
+Hereinafter, an embodiment of the present disclosure will be described with reference to the accompanying drawings.
+</p><p num="0015">
+Description will be made in the following order.<br/>
+      1.  Configuration example of solid-state imaging device (example of CMOS image sensor)<br/>
+      2.  Characteristic configurations of the present embodiment<br/>
+      2-1.  First characteristic configuration example<br/>
+      2-2.  Second characteristic configuration example<br/>
+      2-3.  Third characteristic configuration example<br/>
+      2-4.  Fourth characteristic configuration example<br/>
+      2-5.  Fifth characteristic configuration example<br/>
+      2-6.  Sixth characteristic configuration example<br/>
+      2-7.  Seventh characteristic configuration example<br/>
+      2-8.  Eighth characteristic configuration example<br/>
+      3.  Configuration example of applicable monocular 3D stereo camera<br/>
+      4.  Configuration example of camera system
+</p><p num="0016">
+&lt;1.  Configuration example of solid-state imaging device&gt;
+</p><heading>System configuration</heading><p num="0017">
+Fig. 1 is a system configuration diagram schematically illustrating a configuration of a CMOS image sensor which is, for example, an X-Y address type solid-state imaging device, according to an embodiment of the present disclosure.
+</p><p num="0018">
+A CMOS image sensor 10 according to the present embodiment includes a pixel array section 12 which is formed on a semiconductor substrate (hereinafter, may be referred to as a "sensor chip") 11, a peripheral circuit section which is integrated on the semiconductor substrate 11 similarly to the pixel array section 12.
+</p><p num="0019">
+As the peripheral circuit section, for example, a vertical driving section 13, a column processing section 14, a horizontal driving section 15, and a system control section 16 are arranged.  Further, a DSP (Digital Signal Processor) circuit 31 which forms a signal processing system, and an image memory 32 are disposed outside the sensor chip 11.
+</p><p num="0020">
+Pixel units (not shown) (hereinafter, may be referred to as "pixels"), each of which includes a photoelectric converting device which photoelectrically converts incident visible light into electric charges according to its light intensity, are arranged in an array form in the pixel array section 12.
+</p><p num="0021">
+A specific circuit configuration of the pixel unit will be described later.  A color filter array 33 is formed on a light receiving surface (light incident surface) of the pixel array section 12, and a multi-lens array (MLA) 34 is arranged on an upper section side of the color filter array 33.  Further, an on-chip lens (OCL) is arranged on the color filter array 33.
+</p><p num="0022">
+Basically, in the present embodiment, as described later, a configuration is employed in which LR parallax separation is performed by the multi-lens array (MLA), as a stereoscopic version of a light field.
+</p><p num="0023">
+Further, in the present embodiment, as described later, it is possible to obtain a WDR image of 3D stereo with a monocular arrangement.
+</p><p num="0024">
+Further, in the pixel array section 12, a pixel drive line 18 is wired along the right and left direction (pixel array direction of a pixel row / horizontal direction) in Fig. 1 for each row and a vertical signal line 17 is formed along the up and down direction in Fig. 1 (pixel array direction of a pixel column / vertical direction) for each column, with respect to the pixel array of a matrix form.
+</p><p num="0025">
+An end of the pixel drive line 18 is connected to an output end of the vertical driving section 13 corresponding to each row.  In Fig. 1, one pixel drive line 18 is shown, but the number of the pixel drive lines 18 is not limited to one.
+</p><p num="0026">
+The vertical driving section 13 includes a shift register, an address decoder, and the like.  Here, although a specific configuration is not shown, the vertical driving section 13 has a configuration of including a reading scanning system and a resetting scanning system.  The reading scanning system sequentially performs a selective scanning in the unit of rows with respect to the pixel unit from which signals are read.
+</p><p num="0027">
+On the other hand, the resetting scanning system performs a resetting scanning of resetting unnecessary charges from the photoelectric converting devices of the pixel unit of a read row, with respect to the read row in which reading scanning is performed by the reading scanning system, prior to the reading scanning by the time of a shutter speed.
+</p><p num="0028">
+By the resetting of the unnecessary charges through the resetting scanning system, a so-called electronic shutter operation is performed.
+</p><p num="0029">
+Here, the electronic shutter operation refers to an operation of discarding optical charges of the photoelectric converting device and newly starting an exposure (accumulation of optical charges).
+</p><p num="0030">
+The signals read by the reading operation through the reading scanning system correspond to the amount of light which is incident after the immediately previous reading operation or the electronic shutter operation.
+</p><p num="0031">
+Further, a period from the reading timing through the immediately previous reading operation or the resetting timing through the electronic shutter operation to the reading timing through the current reading operation becomes the time where optical charges are accumulated in the pixel unit (exposure time).
+</p><p num="0032">
+In the present embodiment, as described later, by employing a device which controls the exposure time or changes transmittance of color filters, it is possible to obtain an image of a wide dynamic range.
+</p><p num="0033">
+The signal output from each unit pixel of the pixel row which is selectively scanned by the vertical driving section 13 is supplied to the column processing section 14 through each of the vertical signal lines 17.
+</p><p num="0034">
+The column processing section 14 performs a signal processing which is determined in advance, with respect to an analog pixel signal which is output from each pixel of the selected row, for each pixel column of the pixel array section 12.
+</p><p num="0035">
+As the signal processing in the column processing section 14, for example, a CDS (Correlated Double Sampling) process is used.
+</p><p num="0036">
+The CDS process is a process of receiving a reset level and a signal level output from each pixel of the selected row, obtaining signals of pixels corresponding to one row by obtaining a level difference between them, and removing fixed pattern noise of the pixels.
+</p><p num="0037">
+It is possible for the column processing section 14 to have an A/D converting function of digitalizing an analog pixel signal.
+</p><p num="0038">
+The horizontal driving section 15 includes a shift register, an address decoder, and the like, and sequentially and selectively scans circuit portions corresponding to the pixel rows of the column processing section 14.
+</p><p num="0039">
+By the selective scanning through the horizontal driving section 15, the pixel signals which are signal-processed for each pixel row by the column processing section 14 are sequentially output to the outside of the sensor chip 11.
+</p><p num="0040">
+That is, the pixel signals corresponding to the color coding (color array) of the color filter array 33 are output as raw data from the sensor chip 11.
+</p><p num="0041">
+The system control section 16 receives a clock, data instructing an operation mode, or the like which is given from the outside of the sensor chip 11, and outputs data such as internal information of the CMOS image sensor 10.
+</p><p num="0042">
+The system control section 16 has a dynamic generator which generates a variety of dynamic signals and performs a drive control of the vertical driving section 13, the column processing section 14, the horizontal driving section 15 and the like on the basis of the variety of dynamic signals generated by the dynamic generator.
+</p><p num="0043">
+The DSP circuit 31 which is an external circuit of the sensor chip 11 temporarily stores image data corresponding to one frame, for example, which is output from the sensor chip 11 in the image memory 32, and performs a demosaicing process or the like on the basis of the pixel information which is stored in the image memory 32.
+</p><p num="0044">
+Here, the demosaicing process is a process of complementing color information by collecting sufficient color information from signals of peripheral pixels and assigning the collected color information to a signal of each pixel having only monochromic color information, to create a full color image.
+</p><p num="0045">
+(Circuit configuration of unit pixel)
+</p><p num="0046">
+Fig. 2 is a circuit diagram illustrating an example of a circuit configuration of a unit pixel 20.
+</p><p num="0047">
+As shown in Fig. 2, the unit pixel 20 according to the present embodiment includes a photoelectric converting device, namely, a photodiode 21, and four transistors of a transfer transistor 22, a reset transistor 23, an amplification transistor 24 and a selection transistor 25, for example.
+</p><p num="0048">
+Here, as the four transistors 22 to 25, for example, an N channel MOS transistor is used.  However, the conductive combination of the transfer transistor 22, the reset transistor 23, the amplification transistor 24 and the selection transistor 25, as mentioned above, is only an example, and the present embodiment is not limited to the combination.
+</p><p num="0049">
+As the pixel drive line 18, for example, three drive lines of a transfer line 181, a reset line 182 and a selection line 183 are commonly wired to each pixel of the same pixel row, with respect to the pixel unit 20.
+</p><p num="0050">
+Each one end of the transfer line 181, the reset line 182 and the selection line 183 is connected to an output end of the vertical driving section 13 corresponding to each pixel row, in the unit of pixel rows.
+</p><p num="0051">
+The photodiode 21 includes an anode electrode which is connected to negative supply (for example, ground), and photoelectrically converts received light into optical charges (here, photoelectrons) of the amount of charges corresponding to the light amount.
+</p><p num="0052">
+A cathode electrode of the photodiode 21 is electrically connected to a gate electrode of the amplification transistor 24 through the transfer transistor 22.
+</p><p num="0053">
+A node 26 which is electrically connected to the gate electrode of the amplification transistor 24 is referred to as an "FD (floating diffusion)" section.
+</p><p num="0054">
+The transfer transistor 22 is connected between the cathode electrode of the photodiode 21 and the FD section 26.
+</p><p num="0055">
+A transfer pulse <br/>
+<img file="JPOXMLDOC01-appb-I000002.tif" he="3.5" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="5.9"/>
+ in which a high level (for example, Vdd level) is active (hereinafter, referred to as "high active") is assigned to a gate electrode of the transfer transistor 22 through the transfer line 181.
+</p><p num="0056">
+As the transfer pulse <br/>
+<img file="JPOXMLDOC01-appb-I000003.tif" he="3.5" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="5.9"/>
+ is assigned, the transfer transistor 22 is turned on to transfer the optical charges which are electrically converted by the photodiode 21 to the FD section 26.
+</p><p num="0057">
+The reset transistor 23 includes a drain electrode which is connected to the pixel power Vdd and a source electrode which is connected to the FD section 26.
+</p><p num="0058">
+Before transfer of the signal charges to the FD section 26 from the photodiode 21, a reset pulse <br/>
+<img file="JPOXMLDOC01-appb-I000004.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="9.8"/>
+ of high active is assigned to a gate electrode of the reset transistor 23 through the reset line 182.
+</p><p num="0059">
+As the reset pulse <br/>
+<img file="JPOXMLDOC01-appb-I000005.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="9.8"/>
+ is assigned, the reset transistor 23 is turned on to discard the charges of the FD section 26 to the pixel power Vdd, thereby resetting the FD section 26.
+</p><p num="0060">
+The amplification transistor 24 includes a gate electrode which is connected to the FD section 26 and a drain electrode which is connected to the pixel power Vdd.
+</p><p num="0061">
+Further, the amplification transistor 24 outputs an electric potential of the FD section 26 after being reset by the reset transistor 23 as a reset signal (reset level) Vreset.
+</p><p num="0062">
+The amplification transistor 24 outputs the electric potential of the FD section 26 after the signal charges are transferred by the transfer transistor 22 as a light accumulation signal (signal level) Vsig.
+</p><p num="0063">
+The selection transistor 25 includes, for example, a drain electrode which is connected to a source electrode of the amplification transistor 24 and a source electrode which is connected to the vertical signal line 17.
+</p><p num="0064">
+A selection pulse <br/>
+<img file="JPOXMLDOC01-appb-I000006.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.3"/>
+ of high active is assigned to a gate electrode of the selection transistor 25 through the selection line 183.
+</p><p num="0065">
+As the selection pulse <br/>
+<img file="JPOXMLDOC01-appb-I000007.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.3"/>
+ is assigned, the selection transistor 25 is turned on to set the unit pixel 20 to a selection state, and to relay the signal output from the amplification transistor 24 to the vertical signal line 17.
+</p><p num="0066">
+It is possible to employ a circuit configuration in which the selection transistor 25 is connected between the pixel power Vdd and the drain of the amplification transistor 24.
+</p><p num="0067">
+Further, the unit pixel 20 is not limited to the configuration of including the above-described four transistors.
+</p><p num="0068">
+For example, a pixel configuration including three transistors in which the amplification transistor 24 and the selection transistor 25 are shared may be used, and any configuration of pixel circuit may be used.
+</p><p num="0069">
+(Pixel addition)
+</p><p num="0070">
+However, in moving image capturing, in order to increase the frame rate and to realize high speed moving image capturing, pixel addition of adding signals of a plurality of adjacent pixels for reading is generally performed.
+</p><p num="0071">
+The pixel addition may be performed in a pixel, on the vertical signal line 17, in the column processing section 14, in a subsequent signal processing section, or the like.
+</p><p num="0072">
+Here, as an example, a pixel configuration in a case where signals of four pixels adjacent in the vertical and horizontal directions in a square array of <br/>
+<img file="JPOXMLDOC01-appb-I000008.tif" he="4.6" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.2"/>
+ for example, are added in a pixel will be described.
+</p><p num="0073">
+Fig. 3 is a circuit diagram illustrating an example of a circuit configuration in a case where four adjacent pixel addition is performed in a pixel.  Same reference numerals are given in the figure to the same sections as in Fig. 2.
+</p><p num="0074">
+In Fig. 3, the photodiodes 21 of four adjacent pixels in the vertical and horizontal directions are referred to as photodiodes 21-1, 21-2, 21-3 and 21-4.
+</p><p num="0075">
+With respect to the photodiodes 21-1, 21-2, 21-3, and 21-4, four transfer transistors 22-1, 22-2, 22-3, and 22-4 are installed, and the reset transistor 23, the amplification transistor 24 and the selection transistor 25 are respectively installed.
+</p><p num="0076">
+That is, in the transfer transistors 22-1, 22-2, 22-3, and 22-4, one electrode thereof is connected to each cathode electrode of the photodiodes 21-1, 21-2, 21-3, and 21-4, and the other electrode thereof is commonly connected to the gate electrode of the amplification transistor 24.
+</p><p num="0077">
+The FD section 26 which is common to the photodiodes 21-1, 21-2, 21-3, and 21-4 is electrically connected to the gate electrode of the amplification transistor 24.
+</p><p num="0078">
+The reset transistor 23 includes a drain electrode which is connected to the pixel power Vdd and a source electrode which is connected to the FD section 26.
+</p><p num="0079">
+In the above pixel configuration corresponding to the four adjacent pixel addition, by assigning the transfer pulse <br/>
+<img file="JPOXMLDOC01-appb-I000009.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.1"/>
+ to the four transfer transistors 22-1, 22-2, 22-3, and 22-4 at the same timing, it is possible to realize pixel addition between the four adjacent pixels.
+</p><p num="0080">
+That is, signal charges transferred to the FD section 26 from the photodiodes 21-1, 21-2, 21-2, 21-3, and 21-4 by the transfer transistors 22-1, 22-2, 22-3, and 22-4 are added in the FD section 26 (may be referred to as "FD addition").
+</p><p num="0081">
+On the other hand, by assigning the transfer pulse <br/>
+<img file="JPOXMLDOC01-appb-I000010.tif" he="4.1" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.1"/>
+ to the transfer transistors 22-1, 22-2, 22-3, and 22-4 at different timings, it is possible to realize signal output in the unit of pixel.
+</p><p num="0082">
+That is, it is possible to enhance the frame rate by performing the pixel addition in moving image capturing, while it is possible to enhance the resolution by independently reading all pixel signals in still image capturing.
+</p><p num="0083">
+&lt;Pixel array&gt;
+</p><p num="0084">
+As described above, the pixel array section 12 includes the plurality of pixels which are arranged in the matrix form.
+</p><p num="0085">
+The pixel array section 12 employs, for example, the Bayer array as shown in Fig. 4 as the pixel array.
+</p><p num="0086">
+In the pixel array section 12 according to the present embodiment, one pixel is divided into a plurality of divided pixel cells DPCs each including a photoelectric converting device formed by a hotodiode, for example.
+</p><p num="0087">
+Specifically, in the solid-state imaging device (CMOS image sensor) 10, one pixel under the same color filter of the Bayer array is divided into the plurality of divided DPCs of two or more.  In this case, the two or more of pixel cells DPCs which are different in sensitivity and accumulation time can be divided by changing the sensitivity or accumulation time (exposure time).
+</p><p num="0088">
+Hereinafter, a case where one pixel DPC is divided into four divided pixel cells DPC-A to DPC-D will be described as an example.
+</p><p num="0089">
+Fig. 5 is a conceptual diagram illustrating pixel division according to the present embodiment.
+</p><p num="0090">
+In Fig. 5, a division method in the case of the Bayer array is shown.  In an example in which one pixel under the same color filter is divided into four, for example, the sensitivities and accumulation time are different from each other in the respective divided pixels.
+</p><p num="0091">
+In Fig. 5, as an example, a case where a G (green) pixel PCG is divided into four pixels of DPC-A, DPC-B, DPC-C, and DPC-D is shown.  For example, it is possible to divide the G pixel PCG into two pixels of DPC-A and DPC-B.
+</p><p num="0092">
+&lt;2.  Characteristic configuration of the present embodiment&gt;
+</p><p num="0093">
+In the present embodiment, the CMOS image sensor 10 of the above configuration is formed as a solid-state imaging device which can be applied to a stereo camera or a monocular 3D stereo camera which employs a light field technology.
+</p><p num="0094">
+Hereinafter, characteristic configurations of the solid-state imaging device which can be applied to the stereo camera or the monocular 3D stereo camera will be described in detail.
+</p><p num="0095">
+Hereinafter, in the X-Y coordinates shown in the figures, the X direction represents a first direction, the Y direction represents a second direction.  Further, the X direction may be referred to as the horizontal direction or transverse direction, and the Y direction may be referred to as the vertical direction or longitudinal direction.
+</p><p num="0096">
+&lt;2-1.  First characteristic configuration example&gt;
+</p><p num="0097">
+Fig. 6 is a diagram illustrating a first characteristic configuration example of the solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0098">
+A CMOS image sensor 10A in Fig. 6 can be applied to a stereo camera, and performs LR parallax separation by the multi-lens array 34 as a stereo version of a light field.
+</p><p num="0099">
+In this configuration, the horizontal resolution becomes 1/2, but it is usefully matched with a side-by-side recording system.
+</p><p num="0100">
+Here, L represents the left in stereo, and R represents the right in stereo.
+</p><p num="0101">
+In the CMOS image sensor 10A, a pixel array section 12A employs a division method of each pixel in the case of the Bayer array.
+</p><p num="0102">
+In Fig. 6, the color filter array 33 is formed so that a G pixel PCG11-1, an R pixel PCR11, a G pixel PCG11-2, and a B pixel PCB11 have the Bayer array of <br/>
+<img file="JPOXMLDOC01-appb-I000011.tif" he="4.6" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.2"/>
+  This array is formed in a matrix form.
+</p><p num="0103">
+In the example of Fig. 6, an example in which a G pixel PCG12-1 of an adjacent Bayer array is disposed adjacent to the B pixel PCB11 in the transverse direction, and an R pixel PCR12 of an adjacent Bayer array is disposed adjacent to the G pixel PCG11-2 in the transverse direction is partially shown.
+</p><p num="0104">
+In the example of Fig. 6, the G pixel PCG11-1, the B pixel PCB11, and the G pixel PCG12-1 are disposed in the first row, and the R pixel PCR11, the G pixel PCG11-2, and the R pixel PCR12 are disposed in the second row.
+</p><p num="0105">
+Further, in the example of Fig. 6, the G pixel PCG11-1, the R pixel PCR11, the G pixel PCG11-2, and the B pixel PCB11 are respectively divided into two in the transverse direction (X direction).
+</p><p num="0106">
+The G pixel PCG11-1 includes two divided pixels of DPC-AG1 and DPC-BG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.
+</p><p num="0107">
+The R pixel PCR11 includes two divided pixels of DPC-AR1 and DPC-BR1.  In this example, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.
+</p><p num="0108">
+The B pixel PCB11 includes two divided pixels of DPC-AB1 and DPC-BB1.  In this example, the divided pixel DPC-AB1 is allocated for R in stereo, and the divided pixel DPC-BB1 is allocated for L in stereo.
+</p><p num="0109">
+The G pixel PCG11-2 includes two divided pixels of DPC-AG1 and DPC-BG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.
+</p><p num="0110">
+The G pixel PCG12-1 includes two divided pixels of DPC-AG1 and DPC-BG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.
+</p><p num="0111">
+The R pixel PCR12 includes two divided pixels of DPC-AR1 and DPC-BR1.  In this example, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.
+</p><p num="0112">
+In this example, the same R and L functions for stereo are allocated to the respective divided pixels of the same column of the pixel array (array in the Y direction).
+</p><p num="0113">
+In other words, the R and L functions for stereo are alternately allocated to the respective divided pixels of the same row of the pixel array (array in the X direction).
+</p><p num="0114">
+As shown in Fig. 6, a light shielding section BLD or a wiring is formed on the semiconductor substrate 11, and the color filter array 33 is formed thereon.  Further, the on-chip lens (OCL) array 35 is formed on the color filter array 33.
+</p><p num="0115">
+Respective on-chip lenses OCLs of the on-chip lens array 35 are formed in a matrix form so as to correspond to the respective divided pixels in the pixel array section 12A.
+</p><p num="0116">
+Further, the multi-lens array 34 in which multi-lenses ML are formed in a matrix form is disposed, facing the light incident side of the on-chip lens array 35.
+</p><p num="0117">
+In the example of Fig. 6, the colors of pixels which are shared in the transverse direction (X direction) of the respective multi-lenses ML of the multi-lens array 34 are disposed so as not to be the same color but different colors, differently from a normal array.
+</p><p num="0118">
+In the example of Fig. 6, a first multi-lens system ML1 and a second multi-lens system ML2 are shown.
+</p><p num="0119">
+The first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-BG1 for L in stereo of the G pixel PCG11-1 and the divided pixel DPC-AB1 for R in stereo of the B pixel PCB11 adjacent to the G pixel PCG11-1, in the first row.
+</p><p num="0120">
+Similarly, the first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-BR1 for L in stereo of the R pixel PCR11 and the divided pixel DPC-AG1 for R in stereo of the G pixel PCB11-2 adjacent to the R pixel PCR11, in the second row.
+</p><p num="0121">
+The second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-BB1 for L in stereo of the B pixel PCB11 and the divided pixel DPC-AG1 for R in stereo of the G pixel PCG12-1 adjacent to the B pixel PCB11, in the first row.
+</p><p num="0122">
+Similarly, the second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-BG1 for L in stereo of the G pixel PCG11-2 and the divided pixel DPC-AR1 for R in stereo of the R pixel PCR12 adjacent to the G pixel PCG11-2, in the second row.
+</p><p num="0123">
+In this way, by setting the color pixels shared by one multi-lens ML to be different in color, it is possible to improve the mixed color (extinction ratio) of L and R in stereo by the lens gap and different color separation.
+</p><p num="0124">
+Further, it is possible to select a discrete lens DSCL or a cylindrical lens CYLDL in the longitudinal direction (Y direction).
+</p><p num="0125">
+In a case where the on-chip lens OCL is not present, by using the discrete lens DSCL, it is possible to enhance the light focusing ratio.
+</p><p num="0126">
+In the example of Fig. 6, the lens shape over two divided pixels is a flat shape which is long in the transverse direction (X direction) in order to prevent influence on the lens of the shared divided pixels which are adjacent to each other in the longitudinal direction (Y direction).
+</p><p num="0127">
+&lt;2-2.  Second characteristic configuration example&gt;
+</p><p num="0128">
+Fig. 7 is a diagram illustrating a second characteristic configuration example of the solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0129">
+A CMOS image sensor 10B in Fig. 7 is different from the CMOS image sensor 10A in Fig. 6 as follows.
+</p><p num="0130">
+In the CMOS image sensor 10B in Fig. 7, each pixel is not divided into two pixels but is divided into four pixels of <br/>
+<img file="JPOXMLDOC01-appb-I000012.tif" he="4.0" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="7.4"/>
+ as shown in Fig. 5, and the same color filter is also disposed in the longitudinal (up and down) direction to distribute two conditions of the parallax and wide dynamic range (WDR) by four pixels of the same color.
+</p><p num="0131">
+With such a configuration, the CMOS image sensor 10B can be applied to a monocular 3D stereo camera of a wide dynamic range (WDR) on the basis of the Bayer array.
+</p><p num="0132">
+As described above, in the example of Fig. 7, the G pixel PCG11-1, the R pixel PCR11, the G pixel PCG11-2, and the B pixel PCB11 are respectively divided into four of <br/>
+<img file="JPOXMLDOC01-appb-I000013.tif" he="4.4" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="6.9"/>
+ in the transverse direction (X direction) and the longitudinal direction (Y direction).<br/>
+ 
+</p><p num="0133">
+The G pixel PCG11-1 includes four divided pixels of DPC-AG1, DPC-BG1, DPC-CG1 and DPC-DG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for R in stereo, and the divide pixel DPC-DG1 is allocated for L in stereo.
+</p><p num="0134">
+The R pixel PCR11 includes four divided pixels of DPC-AR1, DPC-BR1, DPC-CR1, and DPC-DR1.  In this example, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.  The divided pixel DPC-CR1 is allocated for R in stereo, and the divided pixel DPC-DR1 is allocated for L in stereo.
+</p><p num="0135">
+The B pixel PCB11 includes four divided pixels of DPC-AB1, DPC-BB1, DPC-CB1, and DPC-DB1.  In this example, the divided pixel DPC-AB1 is allocated for R in stereo, and the divided pixel DPC-BB1 is allocated for L in stereo.  The divided pixel DPC-CB1 is allocated for R in stereo, and the divided pixel DPC-DB1 is allocated for L in stereo.
+</p><p num="0136">
+The G pixel PCG11-2 includes four divided pixels of DPC-AG1, DPC-BG1, DPC-CG1, and DPC-CG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for R in stereo, and the divided pixel DPC-DG1 is allocated for L in stereo.
+</p><p num="0137">
+The G pixel PCG12-1 includes four divided pixels of DPC-AG1, DPC-BG1, DPC-CG1, and DPC-DG1.  In this example, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for R in stereo, and the divided pixel DPC-DG1 is allocated for L in stereo.
+</p><p num="0138">
+The R pixel PCR12 includes four divided pixels of DPC-AR1, DPC-BR1, DPC-CR1, and DPC-DR1.  In this example, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.  The divided pixel DPC-CR1 is allocated for R in stereo, and the divided pixel DPC-DR1 is allocated for L in stereo.
+</p><p num="0139">
+Also in this example, the same R and L functions for stereo are allocated to the respective divided pixels of the same column of the pixel array (array in the Y direction).
+</p><p num="0140">
+In other words, the R and L functions for stereo are alternatively allocated to the respective divided pixels of the same row of the pixel array (array in the X direction).
+</p><p num="0141">
+In Fig. 7, the portion of the semiconductor substrate 11 is omitted for simplicity, and only the multi-lens array 34 is shown.
+</p><p num="0142">
+Also in this example, the colors of pixels which are shared in the transverse direction (X direction) of the respective multi-lenses ML of the multi-lens array 34 are disposed so as not to be the same color but different colors, differently from a normal array.
+</p><p num="0143">
+Also in the example of Fig. 7, the first multi-lens system ML1 and the second multi-lens system ML2 are shown.
+</p><p num="0144">
+The first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-BG1 for L in stereo of the G pixel PCG11-1 and the divided pixel DPC-AB1 for R in stereo of the B pixel PCB11 adjacent to the G pixel PCG11-1, in the first row.
+</p><p num="0145">
+The first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-DG1 for L in stereo of the G pixel PCR11-1 and the divided pixel DPC-CB1 for R in stereo of the B pixel PCB11 adjacent to the G pixel PCR11-1, in the second row.
+</p><p num="0146">
+The first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-BR1 for L in stereo of the R pixel PCB11 and the divided pixel DPC-AG1 for R in stereo of the G pixel PCG11-2 adjacent to the R pixel PCR11, in the third row.
+</p><p num="0147">
+The first multi-lens system ML1 is disposed to be shared by the divided pixel DPC-DR1 for L in stereo of the R pixel PCR11 and the divided pixel DPC-CG1 for R in stereo of the G pixel PCG11-2 adjacent to the R pixel PCR11, in the fourth row.
+</p><p num="0148">
+The second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-BB1 for L in stereo of the B pixel PCB11 and the divided pixel DPC-AG1 for R in stereo of the G pixel PCG12-1 adjacent to the B pixel PCB11, in the first row.
+</p><p num="0149">
+The second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-DB1 for L in stereo of the B pixel PCB11 and the divided pixel DPC-CG1 for R in stereo of the G pixel PCG12-1 adjacent to the B pixel PCB11, in the second row.
+</p><p num="0150">
+The second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-BG1 for L in stereo of the G pixel PCG11-2 and the divided pixel DPC-AB1 for R in stereo of the R pixel PCR12 adjacent to the G pixel PCG11-2, in the third row.
+</p><p num="0151">
+The second multi-lens system ML2 is disposed to be shared by the divided pixel DPC-DG1 for L in stereo of the G pixel PCG11-2 and the divided pixel for R in stereo DPC-CR1 of the R pixel PCR12 adjacent to the G pixel PCG11-2, in the fourth row.
+</p><p num="0152">
+In this way, in a similar way to the example of Fig. 6, in the example of Fig. 7, by setting the color pixels shared by one multi-lens ML to be different in color, it is possible to improve the mixed color (extinction ratio) of L and R in stereo by the lens gap and different color separation.
+</p><p num="0153">
+Further, it is possible to select a discrete lens DSCL or a cylindrical lens CYLDL in the longitudinal direction (Y direction).
+</p><p num="0154">
+In a case where the on-chip lens OCL is not present, by using the discrete lens DSCL, it is possible to enhance the light focusing ratio.
+</p><p num="0155">
+Also in the example of Fig. 7, the lens shape over two divided pixels is a flat shape which is long in the transverse direction (X direction) in order to prevent influence on the lens of the shared divided pixels which are adjacent to each other in the longitudinal direction (Y direction).
+</p><p num="0156">
+Further, in the example of Fig. 7, in order to obtain a wide dynamic range, it is configured that the respective rows in the pixel row array alternately become low and high in sensitivity.
+</p><p num="0157">
+As the configuration of the low sensitivity pixels and the high sensitivity pixels to obtain the wide dynamic range, it is possible to employ both of an exposure control by a shutter or the like and a device structure for changing transmittance of the color filter.
+</p><p num="0158">
+The CMOS image sensor 10B can be applied to a face camera or the like of a mobile electronic apparatus such as a mobile phone.  In the face camera of a mobile electronic apparatus, since the sky is inserted as a background and the face is in a close distance, it is optimal to obtain a WDR image with a monocular arrangement.
+</p><p num="0159">
+In the mobile electronic apparatus, the CMOS image sensor 10B can be applied to a user interface (UI) through depth information.
+</p><p num="0160">
+&lt;2-3.  Third characteristic configuration example&gt;
+</p><p num="0161">
+Fig. 8 is a diagram illustrating a third characteristic configuration example of the solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0162">
+A CMOS image sensor 10C in Fig. 8 is different from the CMOS image sensor 10B in Fig. 7 as follows.
+</p><p num="0163">
+In the CMOS image sensor 10C, instead of alternately setting the respective rows to the low sensitivity and the high sensitivity, L pixels and R pixels are set to the low sensitivity and the high sensitivity in each row, and the sensitivities of L pixels and R pixels are switched for each row.
+</p><p num="0164">
+In the first row, the L divided pixels correspond to the high sensitivity and the R divided pixels correspond to the low sensitivity.
+</p><p num="0165">
+In the second row, the L divided pixels correspond to the low sensitivity and the R divided pixels correspond to the high sensitivity.
+</p><p num="0166">
+In the third row, the L divided pixels correspond to the high sensitivity and the R divided pixels correspond to the low sensitivity.
+</p><p num="0167">
+In the fourth row, the L divided pixels correspond to the low sensitivity and the R divided pixels correspond to the high sensitivity.
+</p><p num="0168">
+In the example of Fig. 8, since the centers of conbined images of low sensitivity LR images and high sensitivity LR images of the respect colors coincide with each other in the middle thereof, the linearity of a space phase at the time of WDR is maintained, to thereby hardly affect the resolution.
+</p><p num="0169">
+&lt;2-4.  Fourth characteristic configuration example&gt;
+</p><p num="0170">
+Fig. 9 is a diagram illustrating a fourth characteristic configuration example of the solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0171">
+A CMOS image sensor 10D in Fig. 9 is different from the CMOS image sensor 10B in Fig. 7 in that the L pixel and the R pixel are switched each row.
+</p><p num="0172">
+In the G pixel PCG11-1, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for L in stereo, and the divided pixel DPC-DG1 is allocated for R in stereo.
+</p><p num="0173">
+In the R pixel PCR11, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.  The divided pixel DPC-CR1 is allocated for L in stereo, and the divided pixel DPC-DR1 is allocated for R in stereo.
+</p><p num="0174">
+In the B pixel PCB11, the divided pixel DPC-AB1 is allocated for R in stereo, and the divided pixel DPC-BB1 is allocated for L in stereo.  The divided pixel DPC-CB1 is allocated for L in stereo, and the divided pixel DPC-DB1 is allocated for R in stereo.
+</p><p num="0175">
+In the G pixel PCG11-2, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for L in stereo, and the divided pixel DPC-DG1 is allocated for R in stereo.
+</p><p num="0176">
+In the G pixel PCG12-1, the divided pixel DPC-AG1 is allocated for R in stereo, and the divided pixel DPC-BG1 is allocated for L in stereo.  The divided pixel DPC-CG1 is allocated for L in stereo, and the divided pixel DPC-DG1 is allocated for R in stereo.
+</p><p num="0177">
+In the R pixel PCR12, the divided pixel DPC-AR1 is allocated for R in stereo, and the divided pixel DPC-BR1 is allocated for L in stereo.  The divided pixel DPC-CR1 is allocated for L in stereo, and the divided pixel DPC-DR1 is allocated for R in stereo.
+</p><p num="0178">
+In the example of Fig. 9, since L and R deviate from each other by a half cycle in the adjacent shared divided pixels in the longitudinal direction (Y direction), a region where the multi-lens ML can be disposed is enlarged, and thus, it is possible to make the shape of the multi-lens ML close to a round shape instead of a flat shape, and thereby easily form the lens.
+</p><p num="0179">
+&lt;2-5.  Fifth characteristic configuration example&gt;
+</p><p num="0180">
+Figs. 10A to 10C are diagrams illustrating a fifth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0181">
+The characteristic of a CMOS image sensor 10E of Figs. 10A to 10C is basically a square array (rectangular array) instead of a zigzag array, and the L pixel and the R pixel are switched each row.
+</p><p num="0182">
+In the CMOS image sensor 10E, in addition to the fact that the L pixel and the R pixel are switched each row, the first column, the third column, the fifth column and the seventh column are G pixel stripes of only G pixels.
+</p><p num="0183">
+Further, the multi-lens ML is disposed so that each G pixel PCG serves as the L pixel or the R pixel in stereo in cooperation with the R pixel PCR or the B pixel PCB which are adjacent in the X direction.
+</p><p num="0184">
+Here, the G pixel is represented as the reference sign PCG, the B pixel is represented as the reference sign PCB, and the R pixel is represented as the reference sign PCR, for simplicity.
+</p><p num="0185">
+In this configuration, the colors of pixels which are shared in the transverse direction (X direction) of the respective multi-lenses ML of the multi-lens array 34 are disposed so as not to be the same color but different colors, differently from a normal array.
+</p><p num="0186">
+In the example of Fig. 10A, the G pixel PCG in the second row and the fourth row which are even rows is allocated as a pixel (divided pixel) for L in stereo.
+</p><p num="0187">
+On the other hand, the B pixel PCB or the R pixel PCR which shares the multi-lens ML with the G pixel PCG is allocated as a pixel (divided pixel) for R in stereo.
+</p><p num="0188">
+In the example of Fig. 10A, the G pixel PCG in the third row and the fifth row which are odd rows is allocated as a pixel (divided pixel) for R in stereo.
+</p><p num="0189">
+On the other hand, the B pixel PCB or the R pixel PCR which shares the multi-lens ML with the G pixel PCG is allocated as a pixel (divided pixel) for L in stereo.
+</p><p num="0190">
+On the basis of the pixel array shown in Fig. 10A, for example, as shown in Fig. 10B, it is possible to realize a so-called Bayer honeycomb (zigzag) array by using only the L parallax pixels.
+</p><p num="0191">
+Further, on the basis of the pixel array shown in Fig. 10A, for example, as shown in Fig. 10C, it is possible to realize a so-called Bayer honeycomb array by using only the R parallax pixels.
+</p><p num="0192">
+In the above-described configurations, the 2D zigzag Bayer array is obtained by adding the L pixel and the R pixel in the Y direction.  In this case, since the addition is performed in the same vertical signal line, the addition process becomes easy.
+</p><p num="0193">
+Also in the example of Figs. 10A to 10C, by setting the color pixels shared by one multi-lens ML to be different in color, it is possible to improve the mixed color (extinction ratio) of L and R in stereo by the lens gap and different color separation.
+</p><p num="0194">
+Further, in the example of Figs. 10A to 10C, since L and R deviate from each other by a half cycle in the shared divided pixels adjacent in the longitudinal direction (Y direction), a region where the multi-lens ML can be disposed is enlarged, and thus, it is possible to make the shape of the multi-lens ML close to a round shape instead of a flat shape, and thereby easily form the lens.
+</p><p num="0195">
+&lt;2-6.  Sixth characteristic configuration example&gt;
+</p><p num="0196">
+Figs. 11A to 11C are diagrams illustrating a sixth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0197">
+A CMOS image sensor 10F of Figs. 11A to 11C basically has a square array (rectangular array) instead of a zigzag array, and the L pixel and the R pixel are switched each row.
+</p><p num="0198">
+In the CMOS image sensor 10F, in addition to the fact that the L pixel and the R pixel are switched each row, the second row and the fourth row are G pixel stripes of only G pixels.
+</p><p num="0199">
+Further, the multi-lens ML is disposed so that each G pixel PCG serves as the L pixel or the R pixel in stereo in cooperation with the R pixel PCR or the B pixel PCB adjacent in the X direction.
+</p><p num="0200">
+Here, the G pixel is represented as the reference sign PCG, the B pixel is represented as the reference sign PCB, and the R pixel is represented as the reference sign PCR, for simplicity.
+</p><p num="0201">
+In this configuration, in the first row, the third row and the fifth row, the colors of pixels which are shared in the transverse direction (X direction) of the respective multi-lenses ML of the multi-lens array 34 are disposed so as not to be the same color but different colors, differently from a normal array.
+</p><p num="0202">
+That is, in the first row, the third row, and the fifth row, the B pixel PCB and the R pixel PCR which are adjacent to each other in the X direction share the multi-lens ML.  Here, one is allocated as a pixel (divided pixel) for L in stereo, and the other is allocated as a pixel (divided pixel) for R in stereo.
+</p><p num="0203">
+Further, in the second and fourth rows, the adjacent G pixels PCG of the same color share the multi-lens ML.  Here, one is allocated as a pixel (divided pixel) for L in stereo, and the other is allocated as a pixel (divided pixel) for R in stereo.
+</p><p num="0204">
+On the basis of the pixel array shown in Fig. 11A, for example, as shown in Fig. 11B, it is possible to realize a so-called Bayer honeycomb (zigzag) array by using only the L parallax pixels.
+</p><p num="0205">
+Further, on the basis of the pixel array shown in Fig. 11A, for example, as shown in Fig. 11C, it is possible to realize a so-called Bayer honeycomb array by using only the R parallax pixels.
+</p><p num="0206">
+Also in the example of Figs. 11A to 11C, by setting the color pixels shared by one multi-lens ML to be different in color, it is possible to improve the mixed color (extinction ratio) of L and R in stereo by the lens gap and different color separation.
+</p><p num="0207">
+Further, in the example of Figs. 11A to 11C, since L and R deviate from each other by a half cycle in the shared divided pixels adjacent in the longitudinal direction (Y direction), a region where the multi-lens ML can be disposed is enlarged, and thus, it is possible to make the shape of the multi-lens ML close to a round shape instead of a flat shape, and thereby easily form the lens.
+</p><p num="0208">
+Also in the example of Figs. 11A to 11C, since L and R deviate from each other by a half cycle in the shared divided pixels adjacent in the longitudinal direction (Y direction), a region where the multi-lens ML can be disposed is enlarged, and thus, it is possible to make the shape of the multi-lens ML close to a round shape instead of a flat shape, and thereby easily form the lens.
+</p><p num="0209">
+&lt;2-7.  Seventh characteristic configuration example&gt;
+</p><p num="0210">
+Fig. 12 is a diagram illustrating a seventh characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0211">
+In a CMOS image sensor 10G in Fig. 12, a pupil correction of the on-chip lens OCL and the multi-lens array (MLA) 34 can be performed according to the change in an optical axis (OX), in order to improve the mixed color (extinction ratio) of the L pixel and the R pixel.
+</p><p num="0212">
+&lt;2-8.  Eighth characteristic configuration example&gt;
+</p><p num="0213">
+Fig. 13 is a diagram illustrating an eighth characteristic configuration example of a solid-state imaging device (CMOS image sensor) according to the present embodiment.
+</p><p num="0214">
+A CMOS image sensor 10H in Fig. 13 shows that a pixel array using white pixels PCW instead of the Bayer array may be employed.
+</p><p num="0215">
+Here, the white pixels are also included in the color pixels.
+</p><p num="0216">
+&lt;3.  Configuration example of applicable monocular 3D stereo camera&gt;
+</p><p num="0217">
+Fig. 14 is a diagram illustrating a configuration example of a monocular 3D stereo camera to which a solid-state imaging device (CMOS image sensor) according to the present embodiment is applied.
+</p><p num="0218">
+A monocular 3D stereo camera 100 basically includes an optical system 110 having an image forming lens 111 on the object side of the multi-lens array 34.
+</p><p num="0219">
+A zoom lens may be disposed in the optical system 110.
+</p><p num="0220">
+As described above, according to the present embodiment, the following effects may be obtained.
+</p><p num="0221">
+According to the present embodiment, as the stereo version of the light field, the LR parallax separation is performed by the multi-lens array 34.
+</p><p num="0222">
+Further, by at least partially setting the color pixels shared by one multi-lens ML to be different in color, it is possible to improve the mixed color (extinction ratio) of L and R in stereo by the lens gap and different color separation.
+</p><p num="0223">
+Further, two conditions of the parallax and wide dynamic range are distributed among four pixels of the same color.  Thus, assuming that recording information may be reduced to 1/4, by using one condition for the WDR of low sensitivity and high sensitivity and using the other condition for the LR parallax with respect to the Quad type sensor of the same color four pixels array, it is possible to obtain WDR images in stereo in a monocular manner.
+</p><p num="0224">
+That is, according to the present embodiment, it is possible to obtain wide dynamic range (WDR) images in stereo in a monocular manner without a complicated structure and a complicated signal processing.
+</p><p num="0225">
+Further, it is possible to achieve both the wide dynamic range (WDR) and the LR parallax with low costs.
+</p><p num="0226">
+Fig. 15 is a diagram illustrating object distance dependency of image height variation in a monocular 3D stereo camera to which a solid-state imaging device (CMOS image sensor) according to the present embodiment is applied.
+</p><p num="0227">
+In Fig. 15, the transverse axis represents the object distance (mm), and the longitudinal axis represents the image height variation (mm), respectively.
+</p><p num="0228">
+In this case, the object distance dependency of the image height variation in a focus point of 3m is shown.
+</p><p num="0229">
+It is indicated that if the object distance is not within 1.5m even in a fine pixel pitch of 1.12mm, a separation characteristic of the parallax images is not preferable in this camera.
+</p><p num="0230">
+Accordingly, the monocular 3D stereo camera on which the solid-state imaging device according to the present embodiment is mounted is suitable for short distance photographing in stereo application.
+</p><p num="0231">
+Accordingly, as described above, the monocular 3D stereo camera is optimal for the face camera of the mobile electronic device.
+</p><p num="0232">
+Fig. 16 shows diagrams illustrating image formation variations with respect to object distances in a monocular 3D stereo camera to which a solid-state imaging device (CMOS image sensor) according to the present embodiment is applied.
+</p><p num="0233">
+In Fig. 16, the transverse axis represents the object distance (mm) and the longitudinal axis represents the image height variation <br/>
+<img file="JPOXMLDOC01-appb-I000014.tif" he="4.6" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="8.9"/>
+respectively.
+</p><p num="0234">
+The upper left diagram in Fig. 16 represents the field angle dependency, the upper right diagram in Fig. 16 represents the F value dependency, and the lower left diagram in Fig. 16 represents the zoom dependency, respectively.
+</p><p num="0235">
+Here, in a wide angle where the extinction ratio is <br/>
+<img file="JPOXMLDOC01-appb-I000015.tif" he="4.6" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="5.3"/>
+ and a focal distance f is about 28mm, an oval monocular parallax of 3/2 inches or less does not become 3m or more.
+</p><p num="0236">
+It can be understood that zoom is most effective in the example of Fig. 16.
+</p><p num="0237">
+In the present embodiment, the pixel array has been described as a square array, but a checkerboard array in which the RGB Bayer array or the like is rotated by 45 degrees may be employed.
+</p><p num="0238">
+The solid-state imaging device having the above-described effects may be applied as an imaging device of a digital camera or a video camera.
+</p><p num="0239">
+&lt;4.  Configuration example of camera system&gt;
+</p><p num="0240">
+Fig. 17 is a diagram illustrating a configuration example of a camera system to which the solid-state imaging device according to the present embodiment is applied.
+</p><p num="0241">
+As shown in Fig. 17, a camera system 200 includes an imaging device 210 to which the CMOS image sensor (solid-state imaging device) 10, 10A, 10B, 10C, 10D, 10F, 10G or 10H according to the present embodiment can be applied.
+</p><p num="0242">
+The camera system 200 includes an optical system which guides incident light to the pixel area of the imaging device 210 (forms an object image), such as a lens 220 which forms an image of the incident light (image light) on an imaging surface.
+</p><p num="0243">
+The camera system 200 includes a drive circuit (DRV) 230 which drives the imaging device 210, and a signal processing circuit (PRC) 240 which processes an output signal of the imaging device 210.
+</p><p num="0244">
+The drive circuit 230 includes a timing generator (not shown) which generates a variety of timing signals including start pulses or clock pulses which drive circuits in the imaging device 210, and drives the imaging device 210 by a predetermined timing signal.
+</p><p num="0245">
+Further, the signal processing circuit 240 performs a predetermined signal processing with respect to the output signal of the imaging device 210.
+</p><p num="0246">
+The image signal processed by the signal processing circuit 240 is recorded on a recording medium such as a memory.  The image information recorded on the recording medium is hard-copied by a printer or the like.  Further, the image signal processed by the signal processing circuit 240 is displayed as a moving image on a monitor including a liquid crystal display or the like.
+</p><p num="0247">
+As described above, in the imaging apparatus such as a digital still camera, as the above-described solid-state imaging devices 10, 10A, 10B, 10C, 10D, 10F, 10G or 10H is mounted as the imaging device 210, it is possible to achieve a camera of high accuracy with low power consumption.
+</p><p num="0248">
+The present disclosure may have the following configurations.<br/>
+      (1)  A solid-state imaging device including:<br/>
+      a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction; and<br/>
+      a multi-lens array in which multi lenses which allow light to be incident on the plurality of color pixels are arranged,<br/>
+      wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent pixels which are different in color in the first direction.<br/>
+      (2) The solid-state imaging device according to (1),<br/>
+      wherein the plurality of adjacent pixels or one pixel of the pixel array section includes a plurality of divided pixels which are regions whose light sensitivities or amounts of accumulated charges are different from each other,<br/>
+      wherein the respective divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent divided pixels which are different in color in the first direction.<br/>
+      (3) The solid-state imaging device according to (2),<br/>
+      wherein the plurality of divided pixels are formed in at least the first direction, and<br/>
+      wherein the adjacent divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo.<br/>
+      (4) The solid-state imaging device according to (3),<br/>
+      wherein the color pixels include the plurality of divided pixels which are arranged in a square shape in the first direction and the second direction, and<br/>
+      wherein the color pixels are formed so that the color pixels of low sensitivity and the color pixels of high sensitivity are alternately arranged in respective rows of the matrix-formed arrangement of the color pixels.<br/>
+      (5) The solid-state imaging device according to (3) or (4),<br/>
+      wherein the divided pixels are allocated to become the same pixels for L or R in stereo in the same column and are allocated to become the same pixels for R or L in stereo in an adjacent column, in the matrix-formed arrangement of the color pixels.<br/>
+      (6) The solid-state imaging device according to (4),<br/>
+      wherein the divided pixels which are adjacent to each other in the first direction and the second direction are allocated to become different pixels for L and R in stereo.<br/>
+      (7) The solid-state imaging device according to (4),<br/>
+      wherein the divided pixels are formed so that the pixels for L in stereo correspond to the high sensitivity or the low sensitivity and the pixels for R in stereo correspond to the low sensitivity or the high sensitivity in the same row, and so that the pixels for L in stereo correspond to the low sensitivity or the high sensitivity and the pixels for R in stereo correspond to the high sensitivity or the low sensitivity in an adjacent row, in the matrix-formed arrangement of the color pixels.<br/>
+      (8) The solid-state imaging device according to any one of (2) to (7),<br/>
+      wherein the pixel array section includes a color filter array which is disposed on a light receiving section, and an on-chip lens array which is formed on the color filter array to correspond to each divided pixel,<br/>
+      wherein the multi-lens array is disposed on a light incident side of the on-chip lens array, and<br/>
+      wherein in the multi-lenses and on-chip lenses, pupil correction is performed according to change in an optical axis.<br/>
+      (9) A camera system including:<br/>
+      a solid-state imaging device; and<br/>
+      an optical system which forms an object image on the solid-state imaging device,<br/>
+      wherein the solid-state imaging device includes a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction, and a multi-lens array in which multi lenses which allow light to be incident on the plurality of color pixels are arranged,<br/>
+      wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color pixels which are different in color in the first direction.<br/>
+      (10) The camera system according to (9),<br/>
+      wherein the plurality of adjacent color pixels or one color pixel of the pixel array section includes a plurality of divided pixels which are regions whose light sensitivities or amounts of accumulated charges are different from each other,<br/>
+      wherein the respective divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color divided pixels which are different in color in the first direction.<br/>
+      (11) The camera system according to (10),<br/>
+      wherein the plurality of divided pixels are formed in<br/>
+      at least the first direction, and<br/>
+      wherein the adjacent divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo.<br/>
+      (12) The camera system according to (11),<br/>
+      wherein the color pixels include the plurality of divided pixels which are arranged in a square shape in the first direction and the second direction, and<br/>
+      wherein the color pixels are formed so that the color pixels of low sensitivity and the color pixels of high sensitivity are alternately arranged in respective rows of the matrix-formed arrangement of the color pixels.<br/>
+      (13) The camera system according to (11) or (12),<br/>
+      wherein the divided pixels are allocated to become the same pixels for L or R in stereo in the same column and are allocated to become the same pixels for R or L in stereo in an adjacent column, in the matrix-formed arrangement of the color pixels.<br/>
+      (14) The camera system according to (12),<br/>
+      wherein the divided pixels which are adjacent to each other in the first direction and the second direction are allocated to become different pixels for L and R in stereo.<br/>
+      (15) The camera system according to (12),<br/>
+      wherein the divided pixels are formed so that the pixels for L in stereo correspond to the high sensitivity or the low sensitivity and the pixels for R in stereo correspond to the low sensitivity or the high sensitivity in the same row, and so that the pixels for L in stereo correspond to the low sensitivity or the high sensitivity and the pixels for R in stereo correspond to the high sensitivity or the low sensitivity in an adjacent row, in the matrix-formed arrangement of the color pixels.<br/>
+      (16) The camera system according to any one of (10) to (15),<br/>
+      wherein the pixel array section includes a color filter array which is disposed on a light receiving section, and an on-chip lens array which is formed on the color filter array to correspond to each divided pixel,<br/>
+      wherein the multi-lens array is disposed on a light incident side of the on-chip lens array, and<br/>
+      wherein in the multi-lenses and on-chip lenses, pupil correction is performed according to change in an optical axis.
+</p><p num="0249">
+The present disclosure contains subject matter related to those disclosed in Japanese Priority Patent Applications JP 2011-043232 and JP 2011-115379 filed in the Japan Patent Office on February 28, 2011 and May 24, 2011, respectively, the entire contents of which are hereby incorporated by reference.
+</p><p num="0250">
+It should be understood by those skilled in the art that various modifications, combinations, sub-combinations and alterations may occur depending on design requirements and other factors insofar as they are within the scope of the appended claims or the equivalents thereof.
+</p></description-of-embodiments><reference-signs-list><p num="0251">
+10, 10A to 10H   SOLID-STATE IMAGING DEVICE (CMOS IMAGE SENSOR)<br/>
+11    SEMICONDUCTOR SUBSTRATE (SENSOR CHIP)<br/>
+12    PIXEL ARRAY SECTION<br/>
+13    VERTICAL DRIVING SECTION<br/>
+14    COLUMN PROCESSING SECTION<br/>
+15    HORIZONTAL DRIVING SECTION<br/>
+16    SYSTEM CONTROL SECTION<br/>
+20    UNIT PIXEL<br/>
+21    PHOTODIODE<br/>
+22    TRANSFER TRANSISTOR<br/>
+23    RESET TRANSISTOR<br/>
+24    AMPLIFICATION TRANSISTOR<br/>
+25    SELECTION TRANSISTOR<br/>
+26    FD (FLOATING DIFFUSION) SECTION<br/>
+31    DSP CIRCUIT<br/>
+32    IMAGE MEMORY<br/>
+33    COLOR FILTER ARRAY<br/>
+34    MULTI-LENS ARRAY<br/>
+OCL   ON-CHIP LENS<br/>
+ML, ML1, ML2     MULTI-LENS<br/>
+DPC-A to DPC-D   DIVIDED PIXEL<br/>
+200   CAMERA SYSTEM<br/>
+210   IMAGING DEVICE<br/>
+220   LENS<br/>
+230   DRIVE CIRCUIT<br/>
+240   SIGNAL PROCESSING CIRCUIT
+</p></reference-signs-list></description><claims mxw-id="PCLM44850771" ref-ucid="WO-2012117691-A1" lang="EN" load-source="patent-office"><claim num="1"><claim-text>
+      A solid-state imaging device comprising:<br/>
+      a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction; and<br/>
+      a multi-lens array in which multi-lenses which allow light to be incident on the plurality of color pixels are arranged,<br/>
+      wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent pixels which are different in color in the first direction.
+</claim-text></claim><claim num="2"><claim-text>
+      The solid-state imaging device according to claim 1,<br/>
+      wherein the plurality of adjacent pixels or one pixel of the pixel array section includes a plurality of divided pixels which are regions whose light sensitivities or amounts of accumulated charges are different from each other,<br/>
+      wherein the respective divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that the light is incident on the different color divided pixels at least a part of which have different adjacent colors in the first direction.
+</claim-text></claim><claim num="3"><claim-text>
+      The solid-state imaging device according to claim 2,<br/>
+      wherein the plurality of divided pixels are formed in at least the first direction, and<br/>
+      wherein the adjacent divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo.
+</claim-text></claim><claim num="4"><claim-text>
+      The solid-state imaging device according to claim 3,<br/>
+      wherein the color pixels include the plurality of divided pixels which are arranged in a square shape in the first direction and the second direction, and<br/>
+      wherein the color pixels are formed so that the color pixels of low sensitivity and the color pixels of high sensitivity are alternately arranged in respective rows of the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="5"><claim-text>
+      The solid-state imaging device according to claim 4,<br/>
+      wherein the divided pixels are allocated to become the same pixels for L or R in stereo in the same column and are allocated to become the same pixels for R or L in stereo in an adjacent column, in the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="6"><claim-text>
+      The solid-state imaging device according to claim 4,<br/>
+      wherein the divided pixels which are adjacent to each other in the first direction and the second direction are allocated to become different pixels for L and R in stereo.
+</claim-text></claim><claim num="7"><claim-text>
+      The solid-state imaging device according to claim 4,<br/>
+      wherein the divided pixels are formed so that the pixels for L in stereo correspond to the high sensitivity or the low sensitivity and the pixels for R in stereo correspond to the low sensitivity or the high sensitivity in the same row, and so that the pixels for L in stereo correspond to the low sensitivity or the high sensitivity and the pixels for R in stereo correspond to the high sensitivity or the low sensitivity in an adjacent row, in the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="8"><claim-text>
+      The solid-state imaging device according to claim 2,<br/>
+      wherein the pixel array section includes a color filter array which is disposed on a light receiving section, and an on-chip lens array which is formed on the color filter array to correspond to each divided pixel,<br/>
+      wherein the multi-lens array is disposed on a light incident side of the on-chip lens array, and<br/>
+      wherein in the multi-lenses and on-chip lenses, pupil correction is performed according to change in an optical axis.
+</claim-text></claim><claim num="9"><claim-text>
+      A camera system comprising:<br/>
+      a solid-state imaging device; and<br/>
+      an optical system which forms an object image on the solid-state imaging device,<br/>
+      wherein the solid-state imaging device includes a pixel array section in which a plurality of color pixels are arranged in a matrix form in a first direction and a second direction which is perpendicular to the first direction, and a multi-lens array in which multi-lenses which allow light to be incident on the plurality of color pixels are arranged,<br/>
+      wherein in the respective color pixels of the pixel array section, color pixels adjacent in at least one direction of the first direction and the second direction are allocated to a pixel for L in stereo and a pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color pixels which are different in color in the first direction.
+</claim-text></claim><claim num="10"><claim-text>
+      The camera system according to claim 9,<br/>
+      wherein the plurality of adjacent color pixels or one color pixel of the pixel array section includes a plurality of divided pixels which are regions whose light sensitivities or amounts of accumulated charges are different from each other,<br/>
+      wherein the respective divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo, and<br/>
+      wherein the multi-lens array is disposed so that at least part of the multi-lens array allows the light to be incident on the adjacent color divided pixels which are different in color in the first direction.
+</claim-text></claim><claim num="11"><claim-text>
+      The camera system according to claim 10,<br/>
+      wherein the plurality of divided pixels are formed in<br/>
+      at least the first direction, and<br/>
+      wherein the adjacent divided pixels are allocated to the pixel for L in stereo and the pixel for R in stereo.
+</claim-text></claim><claim num="12"><claim-text>
+      The camera system according to claim 11,<br/>
+      wherein the color pixels include the plurality of divided pixels which are arranged in a square shape in the first direction and the second direction, and<br/>
+      wherein the color pixels are formed so that the color pixels of low sensitivity and the color pixels of high sensitivity are alternately arranged in respective rows of the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="13"><claim-text>
+      The camera system according to claim 12,<br/>
+      wherein the divided pixels are allocated to become the same pixels for L or R in stereo in the same column and are allocated to become the same pixels for R or L in stereo in an adjacent column, in the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="14"><claim-text>
+      The camera system according to claim 12,<br/>
+      wherein the divided pixels which are adjacent to each other in the first direction and the second direction are allocated to become different pixels for L and R in stereo.
+</claim-text></claim><claim num="15"><claim-text>
+      The camera system according to claim 12,<br/>
+      wherein the divided pixels are formed so that the pixels for L in stereo correspond to the high sensitivity or the low sensitivity and the pixels for R in stereo correspond to the low sensitivity or the high sensitivity in the same row, and so that the pixels for L in stereo correspond to the low sensitivity or the high sensitivity and the pixels for R in stereo correspond to the high sensitivity or the low sensitivity in an adjacent row, in the matrix-formed arrangement of the color pixels.
+</claim-text></claim><claim num="16"><claim-text>
+      The camera system according to claim 10,<br/>
+      wherein the pixel array section includes a color filter array which is disposed on a light receiving section, and an on-chip lens array which is formed on the color filter array to correspond to each divided pixel,<br/>
+      wherein the multi-lens array is disposed on a light incident side of the on-chip lens array, and<br/>
+      wherein in the multi-lenses and on-chip lenses, pupil correction is performed according to change in an optical axis.
+</claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

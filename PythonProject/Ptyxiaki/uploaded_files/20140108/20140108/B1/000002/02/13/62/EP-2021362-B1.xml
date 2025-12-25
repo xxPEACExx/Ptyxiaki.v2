@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2021362-B1" country="EP" doc-number="2021362" kind="B1" date="20140108" family-id="38801726" file-reference-id="318250" date-produced="20180826" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="146588711" ucid="EP-2021362-B1"><document-id><country>EP</country><doc-number>2021362</doc-number><kind>B1</kind><date>20140108</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-07748214-A" is-representative="NO"><document-id mxw-id="PAPP154850903" load-source="docdb" format="epo"><country>EP</country><doc-number>07748214</doc-number><kind>A</kind><date>20070608</date><lang>EN</lang></document-id><document-id mxw-id="PAPP220173476" load-source="docdb" format="original"><country>EP</country><doc-number>07748214.9</doc-number><date>20070608</date></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC140557166" ucid="SE-0601261-A" load-source="docdb"><document-id format="epo"><country>SE</country><doc-number>0601261</doc-number><kind>A</kind><date>20060608</date></document-id></priority-claim><priority-claim mxw-id="PPC140549936" ucid="SE-2007000551-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>SE</country><doc-number>2007000551</doc-number><kind>W</kind><date>20070608</date></document-id></priority-claim><priority-claim mxw-id="PPC140555897" ucid="US-81176906-P" load-source="docdb"><document-id format="epo"><country>US</country><doc-number>81176906</doc-number><kind>P</kind><date>20060608</date></document-id></priority-claim></priority-claims><dates-of-public-availability><intention-to-grant-date><date>20130726</date></intention-to-grant-date><search-report-dispatch-date><date>20090925</date></search-report-dispatch-date></dates-of-public-availability><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL1989326418" load-source="docdb">C07K  14/435       20060101AFI20130705BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL1991288431" load-source="docdb" scheme="CPC">C07K  14/46        20130101 FI20140110BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT132370766" lang="DE" load-source="patent-office">FLUORESZIERENDE PROTEINE UND FÜR DIESE CODIERENDE GENE</invention-title><invention-title mxw-id="PT132370767" lang="EN" load-source="patent-office">FLUORESCENT PROTEINS AND GENES ENCODING THEM</invention-title><invention-title mxw-id="PT132370768" lang="FR" load-source="patent-office">PROTÉINES FLUORESCENTES ET GÈNES CODANT CES PROTÉINES</invention-title><citations><non-patent-citations><nplcit><text>BOMATI ERIN K ET AL: "Amphioxus encodes the largest known family of green fluorescent proteins, which have diversified into distinct functional classes", BMC EVOLUTIONARY BIOLOGY, BIOMED CENTRAL LTD., LONDON, GB, vol. 9, no. 1, 21 April 2009 (2009-04-21), pages 77, XP021047763, ISSN: 1471-2148, DOI: 10.1186/1471-2148-9-77</text><sources><source mxw-id="PNPL66947414" load-source="docdb" name="EXA"/></sources></nplcit><nplcit><text>DATABASE UNIPROT [online] 1 March 2003 (2003-03-01), "RecName: Full=Heat shock 70 kDa protein 13; AltName: Full=Microsomal stress-70 protein ATPase core; AltName: Full=Stress-70 protein chaperone microsome-associated 60 kDa protein; Flags: Precursor;", retrieved from EBI accession no. UNIPROT:Q8BM72 Database accession no. Q8BM72</text><sources><source mxw-id="PNPL66947415" load-source="docdb" name="EXA"/></sources></nplcit><nplcit><text>LI G ET AL: "Evolutionary and functional diversity of green fluorescent proteins in cephalochordates", GENE, ELSEVIER, AMSTERDAM, NL, vol. 446, no. 1, 1 October 2009 (2009-10-01), pages 41 - 49, XP026446254, ISSN: 0378-1119, [retrieved on 20090715]</text><sources><source mxw-id="PNPL66947416" load-source="docdb" name="EXA"/></sources></nplcit></non-patent-citations></citations></technical-data><parties><applicants><applicant mxw-id="PPAR919523557" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>INNOVENTUS PROJECT AB</last-name><address><country>SE</country></address></addressbook></applicant><applicant mxw-id="PPAR919522727" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>INNOVENTUS PROJECT AB</last-name></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR919545890" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ISRAELSSON OLLE</last-name><address><country>SE</country></address></addressbook></inventor><inventor mxw-id="PPAR919533328" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ISRAELSSON, OLLE</last-name></addressbook></inventor><inventor mxw-id="PPAR919024377" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>ISRAELSSON, OLLE</last-name><address><street>Göran Perssons väg 25</street><city>S-171 55 Solna</city><country>SE</country></address></addressbook></inventor></inventors><assignees><assignee mxw-id="PPAR919024379" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Innoventus Project AB</last-name><iid>100146678</iid><address><street>Uppsala Science Park</street><city>751 83 Uppsala</city><country>SE</country></address></addressbook></assignee></assignees><agents><agent mxw-id="PPAR919024378" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Linde, Jörgen</last-name><iid>101257705</iid><address><street>Zacco Sweden AB P.O. Box 5581</street><city>114 85 Stockholm</city><country>SE</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="SE-2007000551-W"><document-id><country>SE</country><doc-number>2007000551</doc-number><kind>W</kind><date>20070608</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2007142582-A1"><document-id><country>WO</country><doc-number>2007142582</doc-number><kind>A1</kind><date>20071213</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS549879616" load-source="docdb">AT</country><country mxw-id="DS549883347" load-source="docdb">BE</country><country mxw-id="DS549805084" load-source="docdb">BG</country><country mxw-id="DS549925165" load-source="docdb">CH</country><country mxw-id="DS549872921" load-source="docdb">CY</country><country mxw-id="DS549879617" load-source="docdb">CZ</country><country mxw-id="DS549883348" load-source="docdb">DE</country><country mxw-id="DS549872930" load-source="docdb">DK</country><country mxw-id="DS549872931" load-source="docdb">EE</country><country mxw-id="DS549789506" load-source="docdb">ES</country><country mxw-id="DS549805085" load-source="docdb">FI</country><country mxw-id="DS549805086" load-source="docdb">FR</country><country mxw-id="DS549883349" load-source="docdb">GB</country><country mxw-id="DS549872932" load-source="docdb">GR</country><country mxw-id="DS549879618" load-source="docdb">HU</country><country mxw-id="DS549925166" load-source="docdb">IE</country><country mxw-id="DS549883354" load-source="docdb">IS</country><country mxw-id="DS549805087" load-source="docdb">IT</country><country mxw-id="DS549872933" load-source="docdb">LI</country><country mxw-id="DS549895680" load-source="docdb">LT</country><country mxw-id="DS549879619" load-source="docdb">LU</country><country mxw-id="DS549895685" load-source="docdb">LV</country><country mxw-id="DS549895686" load-source="docdb">MC</country><country mxw-id="DS549788031" load-source="docdb">MT</country><country mxw-id="DS549789507" load-source="docdb">NL</country><country mxw-id="DS549788032" load-source="docdb">PL</country><country mxw-id="DS549925167" load-source="docdb">PT</country><country mxw-id="DS549789508" load-source="docdb">RO</country><country mxw-id="DS549788037" load-source="docdb">SE</country><country mxw-id="DS549925168" load-source="docdb">SI</country><country mxw-id="DS549805092" load-source="docdb">SK</country><country mxw-id="DS549872938" load-source="docdb">TR</country></ep-contracting-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><description mxw-id="PDES63961130" lang="EN" load-source="patent-office"><!-- EPO <DP n="1"> --><p id="p0001" num="0001">The present invention relates to a class of new fluorescent proteins and genes encoding them.</p><heading id="h0001">Background</heading><p id="p0002" num="0002">Fluorescent proteins (FPs), in particular green fluorescent proteins, are commonly used fluorescent makers in molecular biology to monitor gene expression and protein localization in living organisms and in medical diagnostic applications.</p><p id="p0003" num="0003">Fluorescent proteins are found in a variety of marine organisms ranging from the jellyfish <i>Aequorea victoria,</i> to the Indo-Pacific coral <i>Discosoma.</i> <patcit id="pcit0001" dnum="WO2004058973A"><text>WO 2004/058973</text></patcit> discloses fluorescent proteins isolated from Copepoda species, and genes encoding said proteins. The proteins are used for e.g. labelling of biomolecules. Due to their genetically encoded fluorescence, fluorescent proteins have become most important marker molecules and tools in cell biology. Becoming spontaneously fluorescent without any requirements for cofactors, substrates or other gene products, FPs have revolutionized research in many areas of biology.</p><p id="p0004" num="0004">During recent years FPs have also gathered strong appreciation as powerful tools for the drug discovery process. As fluorescent probes, FPs enable both real-time and non-invasive reporting in living cells. This ability provides a basis for cell-based monitoring of FP-linked targets upon administration of external drugs. The impact of FPs has been revolutionary; FPs have not only facilitated visualization of intricate cellular architecture but they have also acted as markers of protein dynamics and behavior in cell biology. These applications have been translated to drug discovery where fluorescence proteins have been utilized in fluorescence and confocal imaging, HTS/HCS screening assays and for in <i>vivo</i> diagnostics. FPs cannot only be used in early stage target characterization but also in retrieving non-invasive 'whole organism' data and in evaluating lead compound toxicology.</p><p id="p0005" num="0005">Limitations of most fluorescent proteins are generally associated with molecular brightness and/or stability. Moreover, many FPs have additional complications involving protein folding, chromophore maturation and self-association. Although FPs have vastly improved over the years, mainly by introducing mutations, they still exhibit major limitations.</p><p id="p0006" num="0006">There is an interest in obtaining new fluorescent proteins with different properties compared to known fluorescent proteins. For instance, there are no fluorescent proteins on the market that can be used in paraffin sections at room temperature for immunohistochemical purposes since they lose their fluorescence intensity under such conditions.<!-- EPO <DP n="2"> --></p><heading id="h0002"><b>Description of the invention</b></heading><p id="p0007" num="0007">The present invention provides a class of new fluorescent proteins with different properties compared to known proteins, e.g. they can be used in paraffin sections at room temperature for immunohistochemical purposes since they retain their fluorescence intensity under such conditions.</p><p id="p0008" num="0008">One aspect of the invention is directed to an isolated and purified structural gene encoding a fluorescent protein encoding a mutant or recombinant protein that has at least 80% amino acid sequence identity with the fluorescent protein, and comprising the internal amino acid sequence
+<img id="ib0001" file="imgb0001.tif" wi="126" he="11" img-content="dna" img-format="tif"/>
+wherein
+<ul><li>Xaa in position 3 is Ala or Gly,</li><li>Xaa in position 4 is Phe, His or Tyr,</li><li>Xaa in position 5 is His, Tyr or Asn, or</li><li>Xaa in position 10 is Phe or Tyr.</li></ul></p><p id="p0009" num="0009">The term "structural gene" means the protein coding nucleotide sequence of a gene or polynucleotide.</p><p id="p0010" num="0010">The internal sequence SEQ ID NO:47 is found in all hitherto analyzed proteins of the new class of fluorescent proteins, but some amino acid substitution, extension and/or deletion in this sequence may be possible, especially in the positions where there are variations in the amino acids, i.e. where the amino acid is Xaa.</p><p id="p0011" num="0011">A mutant or recombinant protein that has at least 80% amino acid sequence identity with a fluorescent protein defined in this invention may be truncated and/or have amino acid substitutions, insertions and/or deletions and have any percentage of amino acid identity with regard to the fluorescent protein defined in this invention between 80% and 99.9 %, such as at least 80%, 81%, 82%, 83%, 84%, 85%, 86%,87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, 99%, 99.5% or 99.9 % identity.</p><p id="p0012" num="0012">In an embodiment of the invention the structural gene is selected from the group consisting of SEQ ID NOs: 1-23.</p><p id="p0013" num="0013">In another embodiment of the invention the structural gene is selected from the group consisting of SEQ ID NOs: 48 - 67.<!-- EPO <DP n="3"> --></p><p id="p0014" num="0014">In still another embodiment of the invention the structural gene is selected from the group consisting of SEQ ID NOs: 88 - 90.</p><p id="p0015" num="0015">The nucleotide sequences SEQ ID NOs: 88 -90 are examples of isolated and purified structural genes encoding mutant proteins of the invention. The exemplified mutant sequences have the sequence of the wild-type <i>Branchiostoma lanceolatum</i> nucleotide sequence SEQ ID NO: 59 from position 7 including position 666, and some point mutations. The nucleotide A in positions 356 and 357 of the mutant sequences SEQ ID NO: 88-90, respectively, has been inserted instead of the nucleotide C in the wild-type sequence, and further the nucleotide C in position 524 of the mutant sequences SEQ ID NOs: 89 and 90, respectively, has been inserted instead of the nucleotide A in the wild-type sequence. In addition, the mutant sequence SEQ ID NO: 90 has in position 469 the nucleotide A instead of G in the wild-type sequence and in position 471 the nucleotide G instead of C in the wild-type sequence.</p><p id="p0016" num="0016">Another aspect of the invention is directed to a vector comprising a structural gene according to the invention, such as a structural gene selected from the group consisting of SEQ ID NOs: 1-23, SEQ ID NOs: 48 - 67 and SEQ ID NOs: 88 -90. The vector may be any vector which can comprise a structural gene of the invention and necessary flanking regions with regulatory elements necessary for expression of the desired fluorescent protein of the invention or a fusion protein comprising such a protein according to the invention. The regulatory elements necessary for expression are e.g. a suitable operon or promoter that is natural or foreign to the host selected for expression of the protein. Suitable vectors useful in the present invention are e.g. plasmids, cosmids and virus expression vectors.</p><p id="p0017" num="0017">Yet another aspect of the invention is directed to a host cell comprising a vector according to the invention or comprising a transgene including a structural gene according to the invention. The transgene should be operably inserted into the genome of the host to express the desired fluorescent protein of the invention or a fusion protein comprising such a protein according to the invention. Suitable host cells are both prokaryotic cells such as <i>Escherichia coli</i> cells, and eukaryotic cells such as mammalian, insect, yeast, and plant cells.<!-- EPO <DP n="4"> --></p><p id="p0018" num="0018">The internal sequence SEQ ID NO:47 may possibly have some amino acid substitution, extension and/or deletion in this sequence, especially in the positions where there are variations in the amino acids, i.e. where the amino acid is Xaa.</p><p id="p0019" num="0019">In an embodiment of the invention the protein of the invention is an isolated or recombinant fluorescent protein or an isolated mutant or recombinant protein that has at least 80% amino acid sequence identity with the fluorescent protein, and has the Internal amino acid sequence
+<img id="ib0002" file="imgb0002.tif" wi="115" he="11" img-content="dna" img-format="tif"/>
+wherein
+<ul><li>Xaa in position 3 is Ala or Gly,</li><li>Xaa in position 4 is Phe, His or Tyr,</li><li>Xaa in position 5 is His, Tyr or Asn, or</li><li>Xaa in position 10 is Phe or Tyr.</li></ul></p><p id="p0020" num="0020">In analyzed wild-type proteins according to the Invention, the C-terminal Pro in SEQ ID NO: 47 is followed by Asp Gly, Ala Gly, Asp Asp or Gly Gly.</p><p id="p0021" num="0021">A mutant or recombinant protein that has at least 80% amino acid sequence identity with a fluorescent protein defined in this invention may be truncated and/or have amino acid substitutions, insertions and/or deletions and have any percentage of amino acid identity with regard to the fluorescent protein defined in this invention between 80% and 99.9 %, such as at least 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, 99%, 99.5% or 99.9 % identity.</p><p id="p0022" num="0022">In the invention the fluorescent protein is a protein that has an amino acid sequence selected from the group consisting of SEQ ID NOs: 24 -46, SEQ ID NOs: 68 - 87, and SEQ ID NOs: 91-93.</p><p id="p0023" num="0023">The amino acid sequences SEQ ID NOs: 91 -93 are examples of mutant proteins of the invention that have the amino acid sequence SEQ ID NO: 79 of the wild-type <i>Branchiostoma lanceolatum</i> and some point mutations. In the amino acid sequences SEQ ID NOs: 91 -93, the Thr of the wild-type protein in position 119 has been replaced by Lys, and further in the sequences SEQ ID NOs: 92 and 93, the amino acid Asn of the wild-type protein in position 175 has been replaced by Thr. Additionally, the amino acid Asp of the wild-type protein in position 157 has been replaced by Lys in the sequence SEQ ID NO: 93.<!-- EPO <DP n="5"> --></p><p id="p0024" num="0024">The recombinant fluorescent proteins comprised by the present invention may be in monomeric, dimeric or multimeric, such as tetrameric, form.</p><heading id="h0003"><b>Use of fluorescent proteins according to the invention</b></heading><p id="p0025" num="0025">Due to the inherent property of FPs to spontaneously become fluorescent, and in all organisms and in all types of cells, FPs have become invaluable tools in many biological and medical disciplines. A wide range of applications of the FPs have been developed that can be classified into four areas; visualizing / monitoring of organisms, cells, proteins and molecular events. The fluorescent proteins and structural genes encoding the them according to the invention may be used in all hitherto known applications of fluorescent proteins, such as those described below.</p><p id="p0026" num="0026">To visualize an organism, a structural gene encoding a FP can be introduced and together with appropriate regulatory sequences become expressed as an inheritable fluorescent marker in a variety of organisms ranging from virus, bacteria and yeast to plants, fish and mice. For example, infections of viruses and bacteria can be monitored, as well as the survival and spread of genetically modified organisms, GMOs. Since the FPs according to the invention can be functionally expressed in both prokaryotic and eukaryotic cells, and they have excellent stability, brightness and photoresistance, they are expected to be excellent for such applications.</p><p id="p0027" num="0027">To visualize cells or organelles, a structural gene encoding a FP may be introduced as a transgene in e.g. germ line cells and <i>in vitro</i> cultured cells. For example, monitoring of cell fate/lineages in transgenic animals, of cancer cells <i>in vivo,</i> of wound healing and of neurite outgrowth can be accomplished. Additional examples are marking of organelles (mitochondria, nuclei ; etc) and GFP imaging: methodology and application to investigate cellular compartmentation in plants. (See e.g. for a review <nplcit id="ncit0001" npl-type="s"><text>J Exp Bot. 2001 Apr;52(356):529-39</text></nplcit>.) The properties of the FPs according to the invention enables them to be used for paraffin-imbedded and section tissues.</p><p id="p0028" num="0028">To visualize proteins, a structural gene encoding a FP can be fused to a gene of interest producing a fusion protein that is tagged by the FP chromophore. The fusion protein can then be monitored in e.g. living cells in real time, thus enabling analyzes of cellular localization of individual proteins (numerous examples in the prior art).</p><p id="p0029" num="0029">Protein-protein interactions can be followed by labeling two different proteins with two different chromophores, and their interaction can be monitored by FRET (Fluorescence resonance energy transfer) or BRET (Bioluminescence Resonance Energy Transfer) in case of a bioluminescent donor to a fluorescent acceptor protein.</p><p id="p0030" num="0030">In drug screening protein-drug interactions are studied. Co-localization of fluorescent fusion proteins with intracellular localization markers are used as indicators of<!-- EPO <DP n="6"> --> movements of intracellular fluorescent fusion proteins/peptides. The aggregation or internalization of fluorescent-tagged plasma membrane proteins (e.g. G-protein coupled receptors) can be used as drug screening assays.</p><p id="p0031" num="0031">In the literature there are numerous references to the use of FPs and genes encoding them as sensors for different purposes, such as sensors for protease activity: Detection of MMP activity in living cells by a genetically encoded surface-displayed FRET sensor. <nplcit id="ncit0002" npl-type="s"><text>Biochim Biophys Acta 2007 Man;1773(3):400-7, Epub 2006 Nov 11</text></nplcit><i>,</i> and Development and application of a GFP-FRET intracellular caspase assay for drug screening. <nplcit id="ncit0003" npl-type="s"><text>J Biomol Screen. 2000 Oct,5(5):307-18</text></nplcit><i>;</i> as sensors for atoms or ions: Genetic oxygen sensor: GFP as an indicator of intracellular oxygenation <nplcit id="ncit0004" npl-type="s"><text>Adv Exp Med Biol. 2005;566:39-44</text></nplcit><i>,</i> Elimination of environmental sensitivity in a cameleon FRET-based calcium sensor via replacement of the acceptor with Venus. <nplcit id="ncit0005" npl-type="s"><text>Cell Calcium. 2005 Apr,37(4):341-8</text></nplcit><i>,</i> Construction of a whole-cell gene reporter for the fluorescent bioassay of nitrate. <nplcit id="ncit0006" npl-type="s"><text>Anal Biochem. 2004 May 1;328(1):60-6</text></nplcit><i>,</i> and Transgenic mice expressing a pH and Cl- sensing yellow-fluorescent protein under the control of a potassium channel promoter. <nplcit id="ncit0007" npl-type="s"><text>Eur J Neurosci. 2002 Jan;15(1):40-50</text></nplcit><i>;</i> as sensors for organic molecules: A new green fluorescent protein-based bacterial biosensor for analyzing phenanthrene fluxes. <nplcit id="ncit0008" npl-type="s"><text>Environ Microbiol. 2006 Apr;8(4):697-708</text></nplcit><i>,</i> and Live imaging of glucose homeostasis in nuclei of COS-7 cells. <nplcit id="ncit0009" npl-type="s"><text>J Fluoresc. 2004 Sep;14(5):603-9</text></nplcit><i>;</i> as sensors for electrical activity or neural cell activation: A hybrid approach to measuring electrical activity in genetically specified neurons". <nplcit id="ncit0010" npl-type="s"><text>Nat Neurosci. 2005 Nov;B(11):1619-26. Epub 2005 Oct</text></nplcit><i>,</i> and A genetically encoded optical probe of membrane voltage. <nplcit id="ncit0011" npl-type="s"><text>Neuron. 1997 Oct;19(4):735-41</text></nplcit><i>:</i> as sensors for cell cycle: Characterization and gene expression profiling of a stable cell line expressing a cell cycle GFP sensor. <nplcit id="ncit0012" npl-type="s"><text>Cell Cycle. 2005 Jan;4(1):191-5. Epub 2005 Jan 29</text></nplcit><i>;</i> as sensors for promoters or gene activation; A high-throughput approach to promoter study using green fluorescent protein. <nplcit id="ncit0013" npl-type="s"><text>Biotechnol Prog. 2004 Nov-Dec;20(6):1634-40</text></nplcit><i>;</i> and as sensors for apoptosis: Degradation of GFP-labelled POM121, a non-invasive sensor of nuclear apoptosis, precedes clustering of nuclear pores and externalization of phosphatidylserine. <nplcit id="ncit0014" npl-type="s"><text>Apoptosis. 2004 May;9(3):363-8</text></nplcit><i>.</i></p><p id="p0032" num="0032">The invention will now be illustrated by description of drawings and of embodiments and experiments of the invention, but it should be understood that the scope of for the invention is not limited to any described details.</p><heading id="h0004"><b>Short description of the drawings</b></heading><p id="p0033" num="0033"><ul><li><figref idrefs="f0001"><b>Fig. 1</b></figref> is a diagram that shows emission spectra after excitation at 500-520 nm of four FPs of the invention, namely Green Y-1 = SEQ ID NO: 68 ; Yellow O-1 = SEQ ID NO: 74; Orange O-2 = SEQ ID NO: 75 and Red R-5 = SEQ ID NO: 79.<!-- EPO <DP n="7"> --></li><li><figref idrefs="f0001"><b>Fig. 2</b></figref> is a diagram that shows the fluorescence plotted against time for the reference EGFP and two FPs of the invention, Green FP Y-1 = SEQ ID NO: 68; Red FP R-4 = SEQ ID NO: 78, indicating that the FPs are resistant to photobleaching.</li><li><figref idrefs="f0002"><b>Fig. 3</b></figref> is a diagram that shows the fluorescence plotted against pH for the reference EGFP and a red FP, R-4 = SEQ ID NO: 78, of the invention, indicating that R-4 is insensitive to pH.</li><li><figref idrefs="f0002"><b>Fig. 4</b></figref> is a diagram that shows the fluorescence plotted against temperature for the reference EGFP (squares) and Red FP (triangles), R-1= SEQ ID NO: 76, and Green FP (circles), Y-3 = SEQ ID NO: 70, of the invention. The fluorescence was recorded after 1 h (and 1 min for EGFP) after incubation at the indicated temperature.</li><li><figref idrefs="f0003"><b>Fig. 5</b></figref> is a diagram that shows the fluorescence plotted against concentration of ethanol for the reference EGFP (squares) and Red FP (triangles), R-1= SEQ ID NO: 76, and Green FP (circles), Y-3 = SEQ ID NO: 70, of the invention. The fluorescence was recorded after 1 h after incubation at the indicated concentration of ethanol.</li><li><figref idrefs="f0003">Fig<b>. 6</b></figref> is a diagram that shows absorbance plotted against elution volume in size exclusion chromatography of the wild-type FP wt R-5 (SEQ ID NO: 79), the double mutant Mut B (SEQ ID NO: 92) and the triple mutant Mut C (SEQ ID NO: 93) as well as EGFP.</li><li><figref idrefs="f0004"><b>Fig. 7</b></figref> is a diagram that shows normalized fluorescence plotted against wavelength in excitation and emission spectra of mutant R-5C, SEQ ID NO: 93. The emission spectra were recorded after excitation at 590 nm.</li></ul></p><heading id="h0005"><b>Description of embodiments and experiments of the invention</b></heading><heading id="h0006"><u>Natural occurrence of fluorescent proteins of the invention</u></heading><p id="p0034" num="0034">Proteins comprised by the definition of fluorescent proteins according to the invention occur naturally in the Cephalochordata (amphioxus) e.g. <i>Branchiostoma floridae</i> or <i>8ranchiostoma Janceolatum.</i> They are expressed in supportive cells in the anteriormost of the body, e.g., cells in the coelom walls, the subepidermal canals, the oral cirri skeleton, and the oral cirri tufts. However, the number of different positive cell types varies between different individuals.</p><p id="p0035" num="0035">The proteins are found as either only a single fluorescent protein, or as a mixture of different fluorescent proteins.</p><p id="p0036" num="0036">All properties have been examined at room temperature unless otherwise stated.<!-- EPO <DP n="8"> --></p><heading id="h0007"><u>Characteristics of the fluorescent proteins of the invention</u></heading><p id="p0037" num="0037">The fluorescence characteristics of selected FPs have been determined by confocal laser scanning microscopy on bacterial colonies with samples in 96-well plates and on proteins purified after expression in <i>E. coli.</i> Brightness was calculated as the product of quantum yield and molar extinction coefficient-determined by comparing the Coomassie Brilliant Blue staining intensity, after SDS-PAGE, of known amounts of EGFP (Enhanced Green Fluorescence Protein) with the new FPs. Purified EGFP has been employed as reference fluorescent protein.</p><heading id="h0008"><u>Optical properties of fluorescent proteins of the invention</u></heading><p id="p0038" num="0038">The purified proteins are yellow to orange in solution, and yellow to red in solid state.</p><p id="p0039" num="0039">The absorption maxima for the purified native proteins are at 210 nm (peptide bonds), 260 nm (aromatic amino acid residues), and 484-490 nm (fluorophore). Upon denaturation, the peak at 260 nm is shifted to 280 nm, and the fluorophore peak is almost completely lost.</p><p id="p0040" num="0040">The emission spectrum of fluorescent cells <i>in situ</i> and of purified proteins consists of peaks at 485, 500, 515, 530, 545, 560, 575, 590, 610 and 635 nm. The number of peaks varies between individuals and between different cell types in the same individual. The absorption maxima for each individual protein might be slightly shifted from these values due to overlaying of neighbouring peaks.</p><p id="p0041" num="0041">Excitation at 458 nm results in peaks at 485 and 500 nm (primary excitation), and 545-635 nm (presumably fluorescence resonance energy transfer, FRET) Excitation at 476 or 486 nm results in peaks at 515 and 530 nm (primary excitation), and 545-635 nm (presumably FRET). Excitation at 514 nm results in peaks at 545-635 nm (primary excitation).</p><p id="p0042" num="0042">The excitation spectra of all analyzed new FPs are very similar with maxima around 510-520 nm, in accordance with the identity of the chromophore forming residues, but in spite of this similarity the emission spectra differ considerable as shown in <figref idrefs="f0001">Figure 1</figref>. This property thus suggests a new mechanism for generation of colour diversity as compared to other known fluorescent proteins.</p><heading id="h0009"><u>Resistance to bleaching</u></heading><p id="p0043" num="0043">The fluorescence has similar bleaching resistance in strong light as the most resistant fluorescent protein (EGFP (Enhanced Green Fluorescence Protein) and Emerald).<!-- EPO <DP n="9"> --> The photostability, i.e. resistance to bleaching, was determined on proteins in solutions (Tris-HCl, pH 7.5) that were placed between a cover slip and a microscope slide and exposed to the highest possible light intensity in a fluorescent microscope (mercury lamp, 100X oil immersion). As shown in <figref idrefs="f0001">Figure 2</figref>, the new FPs are very resistant to bleaching and display an even greater photostability than EGFP.</p><heading id="h0010"><u>Maturation and Stoke's shift</u></heading><p id="p0044" num="0044">As other red fluorescent proteins, the new red variants go through a maturation stage before reaching the mature form that emits red light. In contrast to many other wild-type red FPs the maturation step is quite fast as red fluorescence can be observed in growing <i>E</i>. <i>coli</i> colonies.</p><p id="p0045" num="0045">Another interesting feature of the red variants is the very large difference between absorption and emission max, the Stoke's shift is more than 100 nm.</p><heading id="h0011"><u>Insensitivity to environmental effects</u></heading><p id="p0046" num="0046">The fluorescence is pH dependent. Fluorescence occurs in weakly acidic, neutral and basic solutions but not in acidic and strongly basic solutions. The green fluorescence has a maximum at pH 10, at least 50% fluorescence between pKa1 and pKa2 (limits for &gt;50% of maximal fluorescence; pKa1 = 7.7, and pKa2 = 11.6), and has almost a linear dependence of pH between pH 6-9.</p><p id="p0047" num="0047">The new FPs are extremely stable and insensitive to environmental effects. The pH sensitivity has been analyzed with a red variant (R-4 = SEQ ID NO: 78) and as shown in <figref idrefs="f0002">Figure 3</figref>, the fluorescence of R-4 is maintained over a wider pH range than the fluorescence of EGFP.</p><heading id="h0012"><u>Physical properties of fluorescent proteins of the invention</u></heading><p id="p0048" num="0048">The apparent molecular weight of a native, proteinase K-treated protein is about 25 kDa (gel filtration) and of denaturated protein is about 30-35 kDa (SDS-PAGE). The green fluorescent proteins are slightly larger than the red ones. The protein oligomerizes and predominantly forms tetramers. However, trimers and pentamers, hexamers, dimers and octamers, and polymers are also present (in decreasing order of frequency).</p><heading id="h0013"><u>Chemical properties of fluorescent proteins of the invention</u></heading><p id="p0049" num="0049">The proteins are soluble in water, phosphate buffer and Tris buffer but not in acetone, ethanol, glycerol or xylene. The proteins can be precipitated with acetone or ethanol but not with ammonium sulfate (80% of saturated solution).</p><p id="p0050" num="0050">The fluorescence is lost upon denaturation.<!-- EPO <DP n="10"> --></p><p id="p0051" num="0051">The fluorescence resists proteinase K (0.1-1 mg/ml at 45°C overnight), detergents (10% sodium dodecyl sulfate, and 0.1% triton X-100), aldehyde fixation (formaldehyde, and glutaraldehyde), chelates (1 M EDTA), many organic solvents (acetone, ethanol, glycerol, melted paraffin, and xylene), high salinity (80% saturated ammonium sulfate, 4M sodium chloride, and saturated disodium hydrogen phosphate), low salinity (distilled water), heavy metal ions (cupper chloride, lead nitrate, and silver nitrate), weak oxidizing agents (hydrogen peroxide, oxygen in air, potassium chromate in neutral solution, potassium dichromate in neutral solution, potassium ferricyanide, silver nitrate, and sodium chlorate in neutral solution), weak reducing agents (10 mM dithiothreitol, and pyrogallol in neutral solution), and moderately high temperatures (45°C for 12 h, 65°C for 1 h).</p><p id="p0052" num="0052">The fluorescence is destroyed by some organic solvents e.g. (benzyl alcohol - benzyl benzoate mixture, strong oxidizing agents (iodine, periodic acid potassium chromate in acid solution, potassium dichromate in acid solution, potassium permanganate, sodium chlorate in alkaline solution, and sodium hypochlorite in alkaline solution), strong reducing agents (pyrogallol in alkaline solution), and very high temperature (98°C).</p><heading id="h0014"><u>Stability of the fluorescent proteins</u></heading><p id="p0053" num="0053">The stability of the FPs has been analyzed both <i>in situ</i> and using purified proteins after expression in <i>E. coli.</i> As shown in <figref idrefs="f0002">Figures 4</figref> and <figref idrefs="f0003">5</figref>, two of the recombinantly expressed proteins of the invention, Red FP (R-1= SEQ ID NO: 76) and Green FP (Y-3 = SEQ ID NO: 70), are very thermostable and withstand high concentrations of ethanol. The new FPs are also stable in e.g. 6 M guanidine hydrochloride, and withstand many organic solvents making them useful in histochemical applications including those using paraffin imbedded and sectioned tissues.</p><heading id="h0015"><u>Bright red FPs</u></heading><p id="p0054" num="0054">The brightness (product of quantum yield and molar extinction coefficient) has been calculated for two of the new red variants, and they are clearly among the brightest red wild-type proteins ever found. The Table below summarizes the fluorescence characteristics of selected members of the FPs of the invention.<!-- EPO <DP n="11"> -->
+<tables id="tabl0001" num="0001"><table frame="bottom"><title><u><b>Table . Fluorescence characteristics of selected FPs or the invention and a selection</b> of <b>reference proteins (from Ref. 1).</b></u></title><tgroup cols="6" colsep="0"><colspec colnum="1" colname="col1" colwidth="25mm"/><colspec colnum="2" colname="col2" colwidth="27mm"/><colspec colnum="3" colname="col3" colwidth="29mm"/><colspec colnum="4" colname="col4" colwidth="28mm"/><colspec colnum="5" colname="col5" colwidth="29mm"/><colspec colnum="6" colname="col6" colwidth="30mm"/><thead><row><entry valign="middle"><b>Class</b></entry><entry align="center" valign="middle"><b>Protein</b></entry><entry align="center" valign="middle"><b>Excitation max (nm)</b></entry><entry align="center" valign="middle"><b>Emission max (nm)</b></entry><entry align="center" valign="middle"><b>Brightness</b></entry><entry align="center" valign="middle"><b>Photostability</b></entry></row></thead><tbody><row><entry valign="middle">Far-red</entry><entry valign="middle">mPlum</entry><entry align="center" valign="middle">590</entry><entry align="center" valign="middle">649</entry><entry align="center" valign="middle">4.1</entry><entry align="center" valign="middle">53</entry></row><row><entry valign="middle"/><entry valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/></row><row><entry valign="middle">Red</entry><entry valign="middle">mCherry</entry><entry align="center" valign="middle">587</entry><entry align="center" valign="middle">610</entry><entry align="center" valign="middle">16</entry><entry align="center" valign="middle">96</entry></row><row><entry valign="middle"/><entry valign="middle">mStrawberry</entry><entry align="center" valign="middle">574</entry><entry align="center" valign="middle">596</entry><entry align="center" valign="middle">26</entry><entry align="center" valign="middle">15</entry></row><row><entry valign="middle"/><entry valign="middle">DsRed-mono</entry><entry align="center" valign="middle">556</entry><entry align="center" valign="middle">586</entry><entry align="center" valign="middle">3.5</entry><entry align="center" valign="middle">16</entry></row><row><entry valign="middle"/><entry valign="middle">R-4</entry><entry align="center" valign="middle">520</entry><entry align="center" valign="middle">615</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">ND</entry></row><row><entry valign="middle"/><entry valign="middle">R-5</entry><entry align="center" valign="middle">520</entry><entry align="center" valign="middle">620</entry><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">180</entry></row><row><entry valign="middle"/><entry valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/></row><row><entry valign="middle">Orange</entry><entry valign="middle">mOrange</entry><entry align="center" valign="middle">548</entry><entry align="center" valign="middle">562</entry><entry align="center" valign="middle">49</entry><entry align="center" valign="middle">9</entry></row><row><entry valign="middle"/><entry valign="middle">mKO</entry><entry align="center" valign="middle">548</entry><entry align="center" valign="middle">559</entry><entry align="center" valign="middle">31</entry><entry align="center" valign="middle">122</entry></row><row><entry valign="middle"/><entry valign="middle">O-1</entry><entry align="center" valign="middle">530</entry><entry align="center" valign="middle">545</entry><entry align="center" valign="middle">ND</entry><entry align="center" valign="middle">ND</entry></row><row><entry valign="middle"/><entry valign="middle">O-2</entry><entry align="center" valign="middle">530</entry><entry align="center" valign="middle">560</entry><entry align="center" valign="middle">ND</entry><entry align="center" valign="middle">ND</entry></row><row><entry valign="middle"/><entry valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/></row><row><entry valign="middle">Yellow green</entry><entry valign="middle">Venus</entry><entry align="center" valign="middle">515</entry><entry align="center" valign="middle">528</entry><entry align="center" valign="middle">53</entry><entry align="center" valign="middle">15</entry></row><row><entry valign="middle"/><entry valign="middle">EYFP</entry><entry align="center" valign="middle">514</entry><entry align="center" valign="middle">527</entry><entry align="center" valign="middle">51</entry><entry align="center" valign="middle">60</entry></row><row><entry valign="middle"/><entry valign="middle">Y-1</entry><entry align="center" valign="middle">518</entry><entry align="center" valign="middle">530</entry><entry align="center" valign="middle">ND</entry><entry align="center" valign="middle">180</entry></row><row><entry valign="middle"/><entry valign="middle">Y-3</entry><entry align="center" valign="middle">518</entry><entry align="center" valign="middle">530</entry><entry align="center" valign="middle">ND</entry><entry align="center" valign="middle">ND</entry></row><row><entry valign="middle"/><entry valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/><entry align="center" valign="middle"/></row><row><entry valign="middle">Green</entry><entry valign="middle">EGFP</entry><entry align="center" valign="middle">489</entry><entry align="center" valign="middle">507</entry><entry align="center" valign="middle">34</entry><entry align="center" valign="middle">174</entry></row></tbody></tgroup><tgroup cols="6" rowsep="0"><colspec colnum="1" colname="col1" colwidth="25mm"/><colspec colnum="2" colname="col2" colwidth="27mm"/><colspec colnum="3" colname="col3" colwidth="29mm"/><colspec colnum="4" colname="col4" colwidth="28mm"/><colspec colnum="5" colname="col5" colwidth="29mm"/><colspec colnum="6" colname="col6" colwidth="30mm"/><tbody><row><entry namest="col1" nameend="col6" align="justify">ND: not determined<br/>
+R-4= SEQ ID NO: 78; R-5 = SEQ ID NO: 79; O-1= SEQ ID NO: 74; O-2= SEQ ID NO: 75; Y-1= SEQ ID NO: 68; Y-3= SEQ ID NO: 70.<br/>
+Ref.1=<nplcit id="ncit0015" npl-type="s"><text> Shaner, N.C. et al. A guide to choosing fluorescent proteins. Nature Methods 2 (12) 905-909, 2005</text></nplcit>.</entry></row></tbody></tgroup></table></tables></p><heading id="h0016"><u>Isolating fluorescent proteins from Cephalochordata</u></heading><p id="p0055" num="0055">Several hundred specimens of lancelet, i.e. Cephalochordata, also named amphioxus, are collected. In this example <i>Branchiostoma lanceolatum</i> were collected. Their heads were cut off and mixed with an equal volume of a neutral buffer solution (e.g., 10 mM Tris, pH 7.5, 10 mM NaCl). The mixture was digested with proteinase K (final concentration of 0.1 mg/ml) at 40°C over-night followed by centrifugation for 10 min at 16 000 rpm to remove any remaining debris. The supernatant was loaded on a Sephadex G-200 column (30-100 cm; equilibrated with the same buffer as used during the digestion) and gel filtrated. Fluorescent fractions were collected, pooled, and precipitated by addition of 1.8 volumes of acetone and centrifugation for 1 min at 16000 rpm. The supernatant was discharged. The<!-- EPO <DP n="12"> --> pellet was washed with 65% acetone, briefly dried (allowing remaining acetone to evaporate), dissolved in water, denaturated with sodium dodecyl sulfate (SDS; final concentration of 1 %) and dithiothreitol (DTT; final concentration 100 mM) at 95°C for 3 min, and loaded on a 2.5% SDS-PAGE gel. After the completed gel electrophoresis and Coomassie staining, the two bands at around 30 kDalton were cut out, eluted, and digested into fragments with trypsin. The fragments are analyzed with tandem mass spectrometry using MALDI-TOF (matrix assisted laser desorption-time of flight) to obtain their amino acid sequence. Degenerated oligonucleotide primers are designed from these amino acid sequences. These primers are used for 5'-RACE PCR (rapid amplification of cDNA ends polymerase chain reaction) on cDNA that is prepared from purified mRNA from lancelet heads. The PCR products are size separated by agarose electrophoresis. The different bands are cut out, purified, cloned, and sequenced. Oligonucleotide primers are designed from the obtained sequences and used for 3'RACE PCR on the same cDNA to obtain the complete coding region. The PCR products are cloned into an expression vector, and fluorescent transformants are selected and sequenced. All steps are performed at roomtemperature unless otherwise stated.</p><heading id="h0017"><u>Isolating fluorescent proteins from genome project</u></heading><p id="p0056" num="0056">The known amino acid sequence of green fluorescent proteins (GFP) from copepods (obtained from GenBank) are used for searches through the unassembled trace files obtained from genomic sequencing of Florida lancelet (Branchiostoma floridae) (available at http://www.ensembl.org/). Nucleotide sequences containing putative GFP-like exons were selected. These sequences were elongated by successive searches with the sequences for new matching sequences and alignments of these new sequences to these already found. This is repeated for many cycles until either complete genes were obtained, or no more new sequences are found. The assembled genes are analyzed by a splicing prediction software [NetGene2 software (http://www.cbs.dtu.dk/services/NetGene2/)] and putative exons are converted into amino acid sequences. The obtained nucleotide sequences are analyzed for conserved regions. Degenerated oligonucleotide primers are designed for two different conserved regions (located in exon 3 and exon 6). These primers are used for nested 5'-RACE PCR on cDNA that is prepared from purified mRNA from lancelet heads. The PCR products are size separated by agarose electrophoresis. The different bands are cut out, purified, cloned, and sequenced. Oligonucleotide primers are designed from the obtained sequences and used for 3'RACE PCR on the same cDNA to obtain the complete coding region. The PCR products are cloned into an expression vector, and fluorescent transformants are selected and sequenced.<!-- EPO <DP n="13"> --></p><heading id="h0018"><u>Cloning and sequencing</u></heading><p id="p0057" num="0057">RNA was prepared and through RT-PCR, using degenerate PCR -primers, and 5'- and 3'-RACE, full-length cDNA clones could subsequently be obtained by fluorescence screening of <i>E. coli</i> colonies. The obtained full-length clones represent yellow/green, orange and red FPs. No blue or pure green FPs were among the full-length clones, but a number of incomplete clones were sequenced that may represent these colours.</p><p id="p0058" num="0058">In total some 40 unique sequences encoding novel fluorescent proteins have been obtained so far. The individual proteins are structurally closely related and although distinct from other known fluorescent proteins they clearly belong to the same superfamily.</p><heading id="h0019"><b>Mutant proteins</b></heading><heading id="h0020"><u>a. Aggregation state</u></heading><p id="p0059" num="0059">The wild-type fluorescent proteins have a tendency to self-aggregate and form tetramers. Among the limited number of new FPs that we so far have analyzed, no monomeric variant has been observed, but the tendency to self-aggregate appears to vary among individual variants. In order to generate a pure monomeric variant, which would be advantageous for certain applications, the protein R-5 (SEQ ID NO: 79) was subjected to limited mutagenesis after extensive 3-D modelling. Three amino acid residues were chosen as suitable candidates for mutagenesis, and three mutants with single, double and triple mutations were constructed and custom made by an external laboratory. After expression in <i>E. coli</i> and purification their aggregation state were analyzed by gel-chromatography on a HiPrep Sephacryl S-200 column. The conditions used (i.e. high protein concentrations) were chosen to promote aggregation, and EGFP, which is a weak forming dimer, did elute as a peak with an apparent molecular weight of ∼60 kDa, i.e. as a dimer. As shown in <figref idrefs="f0003">Figure 6</figref>, the double mutant of R-5 (Mut B), SEQ ID NO: 92, also eluted as a dimer whereas the triple mutant (Mut C), SEQ lD NO: 93, eluted with an apparent molecular weight of -30 kDa, i.e. as a monomer.</p><heading id="h0021"><u>b. Characteristics of mutant fluorescent proteins</u></heading><p id="p0060" num="0060">The dimeric mutant (Mut B), SEQ ID NO: 92, has a diminished tendency to self-aggregate, but folds less efficiently than the wild-type protein. The optical properties appear to be the same as the wild-type R-5 (SEQ ID NO: 79) protein. Neither excitation-emission spectra, nor brightness or stability appear different from the wild-type protein. However, the monomeric mutant (Mut C), SEQ ID NO: 93, has lost much of the brightness of the wild-type protein, and - probably due to a maturation defect - has its major emission peak shifted to the<!-- EPO <DP n="14"> --> orange part of the spectra. Interestingly, the mutants, including the monomeric variant, have also a new emission peak with a maximum at ∼660 nm with excitation at 590 nm. The emission peak is quite wide and although the overall intensity is low, there is a clear emission up to 750 nm, thus extending into the infrared part of the spectra (<figref idrefs="f0004">Figure 7</figref>), which is a clear benefit for <i>in vivo</i> applications.<!-- EPO <DP n="15"> --></p><heading id="h0022">SEQUENCE LISTING</heading><p id="p0061" num="0061"><ul><li>&lt;110&gt; Innoventus Project AB</li><li>&lt;120&gt; Fluorescent proteins and genes encoding them</li><li>&lt;130&gt; P40600048PCT00</li><li>&lt;150&gt; <patcit id="pcit0002" dnum="US60811769B"><text>US 60/811,769</text></patcit><br/>
+&lt;151&gt; 2006-06-08</li><li>&lt;150&gt; <patcit id="pcit0003" dnum="SE06012611"><text>SE 0601261-1</text></patcit><br/>
+&lt;151&gt; 2006-06-08</li><li>&lt;160&gt; 93</li><li>&lt;170&gt; PatentIn version 3.4</li><li>&lt;210&gt; 1<br/>
+&lt;211&gt; 480<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 1
+<img id="ib0003" file="imgb0003.tif" wi="165" he="56" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 2<br/>
+&lt;211&gt; 678<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 2
+<img id="ib0004" file="imgb0004.tif" wi="165" he="50" img-content="dna" img-format="tif"/><!-- EPO <DP n="16"> -->
+<img id="ib0005" file="imgb0005.tif" wi="165" he="34" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 3<br/>
+&lt;211&gt; 479<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 3
+<img id="ib0006" file="imgb0006.tif" wi="165" he="56" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 4<br/>
+&lt;211&gt; 473<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 4
+<img id="ib0007" file="imgb0007.tif" wi="165" he="57" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 5<br/>
+&lt;211&gt; 672<br/>
+<!-- EPO <DP n="17"> -->&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 5
+<img id="ib0008" file="imgb0008.tif" wi="165" he="86" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 6<br/>
+&lt;211&gt; 696<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 6
+<img id="ib0009" file="imgb0009.tif" wi="165" he="86" img-content="dna" img-format="tif"/><!-- EPO <DP n="18"> --></li><li>&lt;210&gt; 7<br/>
+&lt;211&gt; 693<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 7
+<img id="ib0010" file="imgb0010.tif" wi="165" he="86" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 8<br/>
+&lt;211&gt; 699<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 8
+<img id="ib0011" file="imgb0011.tif" wi="165" he="86" img-content="dna" img-format="tif"/><!-- EPO <DP n="19"> --></li><li>&lt;210&gt; 9<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 9
+<img id="ib0012" file="imgb0012.tif" wi="165" he="78" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 10<br/>
+&lt;211&gt; 663<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 10
+<img id="ib0013" file="imgb0013.tif" wi="165" he="89" img-content="dna" img-format="tif"/><!-- EPO <DP n="20"> --></li><li>&lt;210&gt; 11<br/>
+&lt;211&gt; 669<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 11
+<img id="ib0014" file="imgb0014.tif" wi="165" he="86" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 12<br/>
+&lt;211&gt; 654<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 12
+<img id="ib0015" file="imgb0015.tif" wi="165" he="79" img-content="dna" img-format="tif"/><!-- EPO <DP n="21"> --></li><li>&lt;210&gt; 13<br/>
+&lt;211&gt; 696<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 13
+<img id="ib0016" file="imgb0016.tif" wi="165" he="85" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 14<br/>
+&lt;211&gt; 657<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 14
+<img id="ib0017" file="imgb0017.tif" wi="165" he="79" img-content="dna" img-format="tif"/><!-- EPO <DP n="22"> --></li><li>&lt;210&gt; 15<br/>
+&lt;211&gt; 762<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 15
+<img id="ib0018" file="imgb0018.tif" wi="165" he="93" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 16<br/>
+&lt;211&gt; 668<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 16
+<img id="ib0019" file="imgb0019.tif" wi="165" he="72" img-content="dna" img-format="tif"/><!-- EPO <DP n="23"> -->
+<img id="ib0020" file="imgb0020.tif" wi="165" he="12" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 17<br/>
+&lt;211&gt; 669<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 17
+<img id="ib0021" file="imgb0021.tif" wi="165" he="85" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 18<br/>
+&lt;211&gt; 666<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 18
+<img id="ib0022" file="imgb0022.tif" wi="165" he="64" img-content="dna" img-format="tif"/><!-- EPO <DP n="24"> -->
+<img id="ib0023" file="imgb0023.tif" wi="165" he="19" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 19<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 19
+<img id="ib0024" file="imgb0024.tif" wi="165" he="78" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 20<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 20
+<img id="ib0025" file="imgb0025.tif" wi="165" he="64" img-content="dna" img-format="tif"/><!-- EPO <DP n="25"> -->
+<img id="ib0026" file="imgb0026.tif" wi="165" he="13" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 21<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 21
+<img id="ib0027" file="imgb0027.tif" wi="165" he="78" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 22<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 22
+<img id="ib0028" file="imgb0028.tif" wi="165" he="71" img-content="dna" img-format="tif"/><!-- EPO <DP n="26"> -->
+<img id="ib0029" file="imgb0029.tif" wi="165" he="7" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 23<br/>
+&lt;211&gt; 657<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 23
+<img id="ib0030" file="imgb0030.tif" wi="165" he="78" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 24<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 24
+<img id="ib0031" file="imgb0031.tif" wi="148" he="76" img-content="dna" img-format="tif"/><!-- EPO <DP n="27"> -->
+<img id="ib0032" file="imgb0032.tif" wi="149" he="77" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 25<br/>
+&lt;211&gt; 228<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 25
+<img id="ib0033" file="imgb0033.tif" wi="149" he="114" img-content="dna" img-format="tif"/><!-- EPO <DP n="28"> -->
+<img id="ib0034" file="imgb0034.tif" wi="165" he="54" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 26<br/>
+&lt;211&gt; 164<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 26
+<img id="ib0035" file="imgb0035.tif" wi="150" he="122" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 27<br/>
+&lt;211&gt; 150<br/>
+&lt;212&gt; PRT<br/>
+<!-- EPO <DP n="29"> -->&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 27
+<img id="ib0036" file="imgb0036.tif" wi="149" he="114" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 28<br/>
+&lt;211&gt; 216<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 28
+<img id="ib0037" file="imgb0037.tif" wi="148" he="65" img-content="dna" img-format="tif"/><!-- EPO <DP n="30"> -->
+<img id="ib0038" file="imgb0038.tif" wi="149" he="88" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 29<br/>
+&lt;211&gt; 236<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 29
+<img id="ib0039" file="imgb0039.tif" wi="149" he="99" img-content="dna" img-format="tif"/><!-- EPO <DP n="31"> -->
+<img id="ib0040" file="imgb0040.tif" wi="148" he="65" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 30<br/>
+&lt;211&gt; 243<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 30
+<img id="ib0041" file="imgb0041.tif" wi="148" he="121" img-content="dna" img-format="tif"/><!-- EPO <DP n="32"> -->
+<img id="ib0042" file="imgb0042.tif" wi="148" he="50" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 31<br/>
+&lt;211&gt; 243<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 31
+<img id="ib0043" file="imgb0043.tif" wi="149" he="133" img-content="dna" img-format="tif"/><!-- EPO <DP n="33"> -->
+<img id="ib0044" file="imgb0044.tif" wi="151" he="39" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 32<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 32
+<img id="ib0045" file="imgb0045.tif" wi="149" he="144" img-content="dna" img-format="tif"/><!-- EPO <DP n="34"> -->
+<img id="ib0046" file="imgb0046.tif" wi="110" he="9" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 33<br/>
+&lt;211&gt; 231<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 33
+<img id="ib0047" file="imgb0047.tif" wi="150" he="170" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 34<br/>
+<!-- EPO <DP n="35"> -->&lt;211&gt; 230<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Ranchiostoma floridae</li><li>&lt;400&gt; 34
+<img id="ib0048" file="imgb0048.tif" wi="149" he="170" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 35<br/>
+&lt;211&gt; 218<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 35<!-- EPO <DP n="36"> -->
+<img id="ib0049" file="imgb0049.tif" wi="149" he="159" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 36<br/>
+&lt;211&gt; 231<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 36
+<img id="ib0050" file="imgb0050.tif" wi="148" he="31" img-content="dna" img-format="tif"/><!-- EPO <DP n="37"> -->
+<img id="ib0051" file="imgb0051.tif" wi="149" he="133" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 37<br/>
+&lt;211&gt; 218<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 37
+<img id="ib0052" file="imgb0052.tif" wi="148" he="61" img-content="dna" img-format="tif"/><!-- EPO <DP n="38"> -->
+<img id="ib0053" file="imgb0053.tif" wi="148" he="99" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 38<br/>
+&lt;211&gt; 253<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 38
+<img id="ib0054" file="imgb0054.tif" wi="148" he="88" img-content="dna" img-format="tif"/><!-- EPO <DP n="39"> -->
+<img id="ib0055" file="imgb0055.tif" wi="155" he="88" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 39<br/>
+&lt;211&gt; 221<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 39
+<img id="ib0056" file="imgb0056.tif" wi="156" he="114" img-content="dna" img-format="tif"/><!-- EPO <DP n="40"> -->
+<img id="ib0057" file="imgb0057.tif" wi="149" he="43" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 40<br/>
+&lt;211&gt; 222<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 40
+<img id="ib0058" file="imgb0058.tif" wi="156" he="144" img-content="dna" img-format="tif"/><!-- EPO <DP n="41"> -->
+<img id="ib0059" file="imgb0059.tif" wi="131" he="9" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 41<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 41
+<img id="ib0060" file="imgb0060.tif" wi="149" he="156" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 42<br/>
+&lt;211&gt; 169<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 42<!-- EPO <DP n="42"> -->
+<img id="ib0061" file="imgb0061.tif" wi="149" he="122" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 43<br/>
+&lt;211&gt; 233<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 43
+<img id="ib0062" file="imgb0062.tif" wi="148" he="68" img-content="dna" img-format="tif"/><!-- EPO <DP n="43"> -->
+<img id="ib0063" file="imgb0063.tif" wi="148" he="99" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 44<br/>
+&lt;211&gt; 219<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 44
+<img id="ib0064" file="imgb0064.tif" wi="148" he="88" img-content="dna" img-format="tif"/><!-- EPO <DP n="44"> -->
+<img id="ib0065" file="imgb0065.tif" wi="149" he="65" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 45<br/>
+&lt;211&gt; 211<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 45
+<img id="ib0066" file="imgb0066.tif" wi="149" he="122" img-content="dna" img-format="tif"/><!-- EPO <DP n="45"> -->
+<img id="ib0067" file="imgb0067.tif" wi="148" he="31" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 46<br/>
+&lt;211&gt; 218<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma floridae</li><li>&lt;400&gt; 46
+<img id="ib0068" file="imgb0068.tif" wi="149" he="155" img-content="dna" img-format="tif"/><!-- EPO <DP n="46"> --></li><li>&lt;210&gt; 47<br/>
+&lt;211&gt; 11<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma sp.</li><li>&lt;220&gt;<br/>
+&lt;221&gt; VARIANT<br/>
+&lt;222&gt; (3)..(10)<br/>
+&lt;223&gt; Xaa in position 3 is Ala or Gly<br/>
+Xaa in position 4 is Phe, His or Tyr<br/>
+Xaa in position 5 is His, Tyr or Asn<br/>
+Xaa in position 10 is Phe or Tyr</li><li>&lt;400&gt; 47
+<img id="ib0069" file="imgb0069.tif" wi="101" he="8" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 48<br/>
+&lt;211&gt; 1570<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 48
+<img id="ib0070" file="imgb0070.tif" wi="165" he="115" img-content="dna" img-format="tif"/><!-- EPO <DP n="47"> -->
+<img id="ib0071" file="imgb0071.tif" wi="165" he="84" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 49<br/>
+&lt;211&gt; 1120<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 49
+<img id="ib0072" file="imgb0072.tif" wi="165" he="108" img-content="dna" img-format="tif"/><!-- EPO <DP n="48"> -->
+<img id="ib0073" file="imgb0073.tif" wi="165" he="27" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 50<br/>
+&lt;211&gt; 775<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 50
+<img id="ib0074" file="imgb0074.tif" wi="165" he="93" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 51<br/>
+&lt;211&gt; 893<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 51
+<img id="ib0075" file="imgb0075.tif" wi="165" he="42" img-content="dna" img-format="tif"/><!-- EPO <DP n="49"> -->
+<img id="ib0076" file="imgb0076.tif" wi="165" he="64" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 52<br/>
+&lt;211&gt; 1210<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 52
+<img id="ib0077" file="imgb0077.tif" wi="165" he="120" img-content="dna" img-format="tif"/><!-- EPO <DP n="50"> -->
+<img id="ib0078" file="imgb0078.tif" wi="165" he="20" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 53<br/>
+&lt;211&gt; 891<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 53
+<img id="ib0079" file="imgb0079.tif" wi="165" he="109" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 54<br/>
+&lt;211&gt; 882<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 54
+<img id="ib0080" file="imgb0080.tif" wi="165" he="37" img-content="dna" img-format="tif"/><!-- EPO <DP n="51"> -->
+<img id="ib0081" file="imgb0081.tif" wi="165" he="71" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 55<br/>
+&lt;211&gt; 1239<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 55
+<img id="ib0082" file="imgb0082.tif" wi="165" he="111" img-content="dna" img-format="tif"/><!-- EPO <DP n="52"> -->
+<img id="ib0083" file="imgb0083.tif" wi="165" he="35" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 56<br/>
+&lt;211&gt; 874<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 56
+<img id="ib0084" file="imgb0084.tif" wi="165" he="108" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 57<br/>
+&lt;211&gt; 961<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 57
+<img id="ib0085" file="imgb0085.tif" wi="165" he="24" img-content="dna" img-format="tif"/><!-- EPO <DP n="53"> -->
+<img id="ib0086" file="imgb0086.tif" wi="165" he="100" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 58<br/>
+&lt;211&gt; 1712<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 58
+<img id="ib0087" file="imgb0087.tif" wi="165" he="94" img-content="dna" img-format="tif"/><!-- EPO <DP n="54"> -->
+<img id="ib0088" file="imgb0088.tif" wi="165" he="115" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 59<br/>
+&lt;211&gt; 2155<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 59
+<img id="ib0089" file="imgb0089.tif" wi="165" he="71" img-content="dna" img-format="tif"/><!-- EPO <DP n="55"> -->
+<img id="ib0090" file="imgb0090.tif" wi="165" he="183" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 60<br/>
+&lt;211&gt; 721<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 60
+<img id="ib0091" file="imgb0091.tif" wi="165" he="5" img-content="dna" img-format="tif"/><!-- EPO <DP n="56"> -->
+<img id="ib0092" file="imgb0092.tif" wi="165" he="84" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 61<br/>
+&lt;211&gt; 925<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 61
+<img id="ib0093" file="imgb0093.tif" wi="165" he="101" img-content="dna" img-format="tif"/><!-- EPO <DP n="57"> -->
+<img id="ib0094" file="imgb0094.tif" wi="165" he="12" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 62<br/>
+&lt;211&gt; 926<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 62
+<img id="ib0095" file="imgb0095.tif" wi="165" he="114" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 63<br/>
+&lt;211&gt; 726<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 63
+<img id="ib0096" file="imgb0096.tif" wi="165" he="35" img-content="dna" img-format="tif"/><!-- EPO <DP n="58"> -->
+<img id="ib0097" file="imgb0097.tif" wi="165" he="56" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 64<br/>
+&lt;211&gt; 598<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 64
+<img id="ib0098" file="imgb0098.tif" wi="165" he="71" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 65<br/>
+&lt;211&gt; 595<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 65
+<img id="ib0099" file="imgb0099.tif" wi="165" he="35" img-content="dna" img-format="tif"/><!-- EPO <DP n="59"> -->
+<img id="ib0100" file="imgb0100.tif" wi="165" he="35" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 66<br/>
+&lt;211&gt; 598<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 66
+<img id="ib0101" file="imgb0101.tif" wi="165" he="71" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 67<br/>
+&lt;211&gt; 598<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 67
+<img id="ib0102" file="imgb0102.tif" wi="165" he="61" img-content="dna" img-format="tif"/><!-- EPO <DP n="60"> -->
+<img id="ib0103" file="imgb0103.tif" wi="165" he="13" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 68<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 68
+<img id="ib0104" file="imgb0104.tif" wi="158" he="155" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 69<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum<!-- EPO <DP n="61"> --></li><li>&lt;400&gt; 69
+<img id="ib0105" file="imgb0105.tif" wi="149" he="156" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 70<br/>
+&lt;211&gt; 219<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 70
+<img id="ib0106" file="imgb0106.tif" wi="148" he="31" img-content="dna" img-format="tif"/><!-- EPO <DP n="62"> -->
+<img id="ib0107" file="imgb0107.tif" wi="160" he="122" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 71<br/>
+&lt;211&gt; 219<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 71
+<img id="ib0108" file="imgb0108.tif" wi="148" he="65" img-content="dna" img-format="tif"/><!-- EPO <DP n="63"> -->
+<img id="ib0109" file="imgb0109.tif" wi="149" he="88" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 72<br/>
+&lt;211&gt; 219<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 72
+<img id="ib0110" file="imgb0110.tif" wi="148" he="99" img-content="dna" img-format="tif"/><!-- EPO <DP n="64"> -->
+<img id="ib0111" file="imgb0111.tif" wi="148" he="58" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 73<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 73
+<img id="ib0112" file="imgb0112.tif" wi="148" he="133" img-content="dna" img-format="tif"/><!-- EPO <DP n="65"> -->
+<img id="ib0113" file="imgb0113.tif" wi="148" he="20" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 74<br/>
+&lt;211&gt; 219<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 74
+<img id="ib0114" file="imgb0114.tif" wi="149" he="155" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 75<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+<!-- EPO <DP n="66"> -->&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 75
+<img id="ib0115" file="imgb0115.tif" wi="149" he="158" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 76<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 76
+<img id="ib0116" file="imgb0116.tif" wi="148" he="20" img-content="dna" img-format="tif"/><!-- EPO <DP n="67"> -->
+<img id="ib0117" file="imgb0117.tif" wi="149" he="133" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 77<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 77
+<img id="ib0118" file="imgb0118.tif" wi="148" he="54" img-content="dna" img-format="tif"/><!-- EPO <DP n="68"> -->
+<img id="ib0119" file="imgb0119.tif" wi="149" he="99" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 78<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 78
+<img id="ib0120" file="imgb0120.tif" wi="148" he="88" img-content="dna" img-format="tif"/><!-- EPO <DP n="69"> -->
+<img id="ib0121" file="imgb0121.tif" wi="148" he="65" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 79<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 79
+<img id="ib0122" file="imgb0122.tif" wi="149" he="121" img-content="dna" img-format="tif"/><!-- EPO <DP n="70"> -->
+<img id="ib0123" file="imgb0123.tif" wi="148" he="31" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 80<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 80
+<img id="ib0124" file="imgb0124.tif" wi="149" he="157" img-content="dna" img-format="tif"/><!-- EPO <DP n="71"> --></li><li>&lt;210&gt; 81<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 81
+<img id="ib0125" file="imgb0125.tif" wi="152" he="155" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 82<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 82
+<img id="ib0126" file="imgb0126.tif" wi="148" he="9" img-content="dna" img-format="tif"/><!-- EPO <DP n="72"> -->
+<img id="ib0127" file="imgb0127.tif" wi="148" he="144" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 83<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 83
+<img id="ib0128" file="imgb0128.tif" wi="148" he="42" img-content="dna" img-format="tif"/><!-- EPO <DP n="73"> -->
+<img id="ib0129" file="imgb0129.tif" wi="148" he="110" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 84<br/>
+&lt;211&gt; 197<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 84
+<img id="ib0130" file="imgb0130.tif" wi="148" he="77" img-content="dna" img-format="tif"/><!-- EPO <DP n="74"> -->
+<img id="ib0131" file="imgb0131.tif" wi="148" he="66" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 85<br/>
+&lt;211&gt; 196<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 85
+<img id="ib0132" file="imgb0132.tif" wi="149" he="130" img-content="dna" img-format="tif"/><!-- EPO <DP n="75"> -->
+<img id="ib0133" file="imgb0133.tif" wi="149" he="20" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 86<br/>
+&lt;211&gt; 197<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 86
+<img id="ib0134" file="imgb0134.tif" wi="149" he="144" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 87<br/>
+&lt;211&gt; 197<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;400&gt; 87<!-- EPO <DP n="76"> -->
+<img id="ib0135" file="imgb0135.tif" wi="149" he="144" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 88<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (356)..(357)<br/>
+&lt;223&gt; AA instead of cc in wild-type sequence</li><li>&lt;400&gt; 88
+<img id="ib0136" file="imgb0136.tif" wi="165" he="27" img-content="dna" img-format="tif"/><!-- EPO <DP n="77"> -->
+<img id="ib0137" file="imgb0137.tif" wi="165" he="49" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 89<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (356)..(357)<br/>
+&lt;223&gt; AA instead of cc in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (524)..(524).<br/>
+&lt;223&gt; c instead of A in wild-type sequence</li><li>&lt;400&gt; 89
+<img id="ib0138" file="imgb0138.tif" wi="165" he="79" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 90<br/>
+&lt;211&gt; 660<br/>
+&lt;212&gt; DNA<br/>
+&lt;213&gt; Branchiostoma lanceolatum<!-- EPO <DP n="78"> --></li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (356)..(357)<br/>
+&lt;223&gt; AA instead of cc in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (469)..(469)<br/>
+&lt;223&gt; A instead of G in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (471)..(471)<br/>
+&lt;223&gt; G instead of C in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; mutation<br/>
+&lt;222&gt; (524)..(524)<br/>
+&lt;223&gt; C instead of A in wild-type sequence</li><li>&lt;400&gt; 90
+<img id="ib0139" file="imgb0139.tif" wi="165" he="79" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 91<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (119)..(119)<br/>
+&lt;223&gt; Lys instead of Thr in wild-type sequence</li><li>&lt;400&gt; 91
+<img id="ib0140" file="imgb0140.tif" wi="148" he="8" img-content="dna" img-format="tif"/><!-- EPO <DP n="79"> -->
+<img id="ib0141" file="imgb0141.tif" wi="149" he="144" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 92<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (119)..(119)<br/>
+&lt;223&gt; Lys in stead of Thr in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (175)..(175)<br/>
+&lt;223&gt; Thr in stead of Asn in wild-type sequence</li><li>&lt;400&gt; 92
+<img id="ib0142" file="imgb0142.tif" wi="148" he="8" img-content="dna" img-format="tif"/><!-- EPO <DP n="80"> -->
+<img id="ib0143" file="imgb0143.tif" wi="148" he="145" img-content="dna" img-format="tif"/></li><li>&lt;210&gt; 93<br/>
+&lt;211&gt; 220<br/>
+&lt;212&gt; PRT<br/>
+&lt;213&gt; Branchiostoma lanceolatum</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (119)..(119)<br/>
+&lt;223&gt; Lys instead of Thr in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (157)..(157)<br/>
+&lt;223&gt; Lys instead of Asp in wild-type sequence</li><li>&lt;220&gt;<br/>
+&lt;221&gt; MUTAGEN<br/>
+&lt;222&gt; (175)..(175)<br/>
+<!-- EPO <DP n="81"> -->&lt;223&gt; Thr instead of Asn in wild-type sequence</li><li>&lt;400&gt; 93
+<img id="ib0144" file="imgb0144.tif" wi="149" he="156" img-content="dna" img-format="tif"/></li></ul></p></description><claims mxw-id="PCLM56986130" lang="DE" load-source="patent-office"><!-- EPO <DP n="84"> --><claim id="c-de-01-0001" num="0001"><claim-text>Fluoreszenzprotein, wobei das Protein eine isolierte Mutante oder ein rekombinantes Protein ist, das mindestens 80% Aminosäuresequenzidentität mit dem Fluoreszenzprotein hat, das eine Aminosäuresequenz, ausgewählt aus der Gruppe bestehend aus SEQ ID NOs:24-46, 68-87 und 91-93, hat, und das die interne Aminosäuresequenz
+<img id="ib0147" file="imgb0147.tif" wi="125" he="12" img-content="dna" img-format="tif"/>
+hat,<br/>
+wobei
+<claim-text>Xaa an der Position 3 Ala oder Gly ist,</claim-text>
+<claim-text>Xaa an der Position 4 Phe, His oder Tyr ist,</claim-text>
+<claim-text>Xaa an der Position 5 His, Tyr oder Asn ist, und</claim-text>
+<claim-text>Xaa an der Position 10 Phe oder Tyr ist.</claim-text></claim-text></claim><claim id="c-de-01-0002" num="0002"><claim-text>Isoliertes und aufgereinigtes Strukturgen, das ein Fluoreszenzprotein gemäß Anspruch 1 codiert, umfassend die interne Aminosäuresequenz
+<img id="ib0148" file="imgb0148.tif" wi="125" he="12" img-content="dna" img-format="tif"/>
+wobei
+<claim-text>Xaa an der Position 3 Ala oder Gly ist,</claim-text>
+<claim-text>Xaa an der Position 4 Phe, His oder Tyr ist,</claim-text>
+<claim-text>Xaa an der Position 5 His, Tyr oder Asn ist, und</claim-text>
+<claim-text>Xaa an der Position 10 Phe oder Tyr ist.</claim-text></claim-text></claim><claim id="c-de-01-0003" num="0003"><claim-text>Strukturgen gemäß Anspruch 2, wobei das Strukturgen ausgewählt ist aus der Gruppe bestehend aus SEQ ID NOs:1-23.</claim-text></claim><claim id="c-de-01-0004" num="0004"><claim-text>Strukturgen gemäß Anspruch 2, wobei das Strukturgen ausgewählt ist aus der Gruppe bestehend aus SEQ ID NOs:48-67.</claim-text></claim><claim id="c-de-01-0005" num="0005"><claim-text>Strukturgen gemäß Anspruch 2, wobei das Strukturgen ausgewählt ist aus der Gruppe bestehend aus SEQ ID NOs:88-90.</claim-text></claim><claim id="c-de-01-0006" num="0006"><claim-text>Vektor, umfassend ein Strukturgen gemäß einem der Ansprüche 2 bis 5.</claim-text></claim><claim id="c-de-01-0007" num="0007"><claim-text>Wirtszelle, umfassend einen Vektor gemäß Anspruch 6 oder ein Transgen, das ein Strukturgen gemäß einem der Ansprüche 2 bis 5 beinhaltet.</claim-text></claim></claims><claims mxw-id="PCLM56986131" lang="EN" load-source="patent-office"><!-- EPO <DP n="82"> --><!-- EPO <DP n="83"> --><claim id="c-en-01-0001" num="0001"><claim-text>A fluorescent protein, wherein the protein is an isolated mutant or recombinant protein that has at least 80% amino acid sequence identity with the fluorescent protein having an amino acid sequence selected from the group consisting of SEQ ID NOs: 24 - 46, 68 - 87, and 91 - 93, and has the internal amino acid sequence
+<img id="ib0145" file="imgb0145.tif" wi="134" he="12" img-content="dna" img-format="tif"/>
+wherein
+<claim-text>Xaa in position 3 is Ala or Gly,</claim-text>
+<claim-text>Xaa in position 4 is Phe, His or Tyr,</claim-text>
+<claim-text>Xaa in position 5 is His, Tyr or Asn, and</claim-text>
+<claim-text>Xaa in position 10 is Phe or Tyr.</claim-text></claim-text></claim><claim id="c-en-01-0002" num="0002"><claim-text>An isolated and purified structural gene encoding a fluorescent protein according to claim 1, comprising the internal amino acid sequence
+<img id="ib0146" file="imgb0146.tif" wi="123" he="13" img-content="dna" img-format="tif"/>
+wherein
+<claim-text>Xaa in position 3 is Ala or Gly,</claim-text>
+<claim-text>Xaa in position 4 is Phe, His or Tyr,</claim-text>
+<claim-text>Xaa in position 5 is His, Tyr or Asn, and</claim-text>
+<claim-text>Xaa in position 10 is Phe or Tyr.</claim-text></claim-text></claim><claim id="c-en-01-0003" num="0003"><claim-text>The structural gene according to claim 2, wherein the structural gene is selected from the group consisting of SEQ ID NOs: 1 - 23.</claim-text></claim><claim id="c-en-01-0004" num="0004"><claim-text>The structural gene according to claim 2, wherein the structural gene is selected from the group consisting of SEQ ID NOs: 48 - 67.</claim-text></claim><claim id="c-en-01-0005" num="0005"><claim-text>The structural gene according to claim 2, wherein the structural gene is selected from the group consisting of SEQ ID NOs: 88 - 90.</claim-text></claim><claim id="c-en-01-0006" num="0006"><claim-text>A vector comprising a structural gene according to any one of claims 2-5.</claim-text></claim><claim id="c-en-01-0007" num="0007"><claim-text>A host cell comprising a vector according to claim 6 or a transgene including a structural gene according to any one of claims 2-5.</claim-text></claim></claims><claims mxw-id="PCLM56986132" lang="FR" load-source="patent-office"><!-- EPO <DP n="85"> --><claim id="c-fr-01-0001" num="0001"><claim-text>Protéine fluorescente, où la protéine est un mutant isolé ou une protéine recombinante qui présente au moins 80 % d'identité en séquence d'acides aminés avec la protéine fluorescente ayant une séquence d'acides aminés choisie parmi le groupe comprenant SEQ ID N° : 24-46, 68-87 et 91-93 et possède la séquence d'acides aminés interne
+<img id="ib0149" file="imgb0149.tif" wi="124" he="13" img-content="dna" img-format="tif"/>
+où
+<claim-text>Xaa à la position 3 est Ala ou Gly,</claim-text>
+<claim-text>Xaa à la position 4 est Phe, His ou Tyr,</claim-text>
+<claim-text>Xaa à la position 5 est His, Tyr ou Asn et</claim-text>
+<claim-text>Xaa à la position 10 est Phe ou Tyr.</claim-text></claim-text></claim><claim id="c-fr-01-0002" num="0002"><claim-text>Gène structural isolé et purifié codant pour une protéine fluorescente selon la revendication 1, comprenant la séquence d'acides aminés interne
+<img id="ib0150" file="imgb0150.tif" wi="124" he="13" img-content="dna" img-format="tif"/>
+où
+<claim-text>Xaa à la position 3 est Ala ou Gly,</claim-text>
+<claim-text>Xaa à la position 4 est Phe, His ou Tyr,</claim-text>
+<claim-text>Xaa à la position 5 est His, Tyr ou Asn et</claim-text>
+<claim-text>Xaa à la position 10 est Phe ou Tyr.</claim-text></claim-text></claim><claim id="c-fr-01-0003" num="0003"><claim-text>Gène structural selon la revendication 2, où le gène structural est choisi parmi le groupe comprenant SEQ ID N° : 1-23.</claim-text></claim><claim id="c-fr-01-0004" num="0004"><claim-text>Gène structural selon la revendication 2, où le gène structural est choisi parmi le groupe comprenant SEQ ID N° : 48-67.<!-- EPO <DP n="86"> --></claim-text></claim><claim id="c-fr-01-0005" num="0005"><claim-text>Gène structural selon la revendication 2, où le gène structural est choisi parmi le groupe comprenant SEQ ID N° : 88-90.</claim-text></claim><claim id="c-fr-01-0006" num="0006"><claim-text>Vecteur comprenant un gène structural selon l'une quelconque des revendications 2-5.</claim-text></claim><claim id="c-fr-01-0007" num="0007"><claim-text>Cellule hôte comprenant un vecteur selon la revendication 6 ou un transgène incluant un gène structural selon l'une quelconque des revendications 2-5.</claim-text></claim></claims><drawings mxw-id="PDW16672362" load-source="patent-office"><!-- EPO <DP n="87"> --><figure id="f0001" num="1,2"><img id="if0001" file="imgf0001.tif" wi="165" he="206" img-content="drawing" img-format="tif"/></figure><!-- EPO <DP n="88"> --><figure id="f0002" num="3,4"><img id="if0002" file="imgf0002.tif" wi="165" he="196" img-content="drawing" img-format="tif"/></figure><!-- EPO <DP n="89"> --><figure id="f0003" num="5,6"><img id="if0003" file="imgf0003.tif" wi="165" he="194" img-content="drawing" img-format="tif"/></figure><!-- EPO <DP n="90"> --><figure id="f0004" num="7"><img id="if0004" file="imgf0004.tif" wi="165" he="110" img-content="drawing" img-format="tif"/></figure></drawings><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

@@ -1,0 +1,514 @@
+/* =====================================================
+   BASE
+===================================================== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    overflow: hidden; /* ΣΗΜΑΝΤΙΚΟ */
+}
+
+/* =====================================================
+   HEADER TABS
+===================================================== */
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    z-index: 20;
+}
+
+.tab-button {
+    padding: 10px 26px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    background: #e9edf2;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #2f80ed;
+    color: white;
+}
+
+/* =====================================================
+   TABS
+===================================================== */
+.tab-content {
+    display: none;
+    height: calc(100vh - 60px);
+    padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* =====================================================
+   SEARCH LAYOUT
+===================================================== */
+.search-layout {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    min-width: 0;
+}
+
+/* =====================================================
+   CRITERIA PANEL
+===================================================== */
+.criteria-panel {
+    width: 280px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 14px;
+    padding: 16px;
+    overflow-y: auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+.criteria-title {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.criteria-section {
+    margin-bottom: 12px;
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.criteria-section summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.criteria-body {
+    margin-top: 8px;
+    display: grid;
+    gap: 8px;
+}
+
+.criteria-panel input[type="number"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+/* =====================================================
+   CHECKBOX GRID
+===================================================== */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px 10px;
+    margin-top: 8px;
+}
+
+.checkbox-group label {
+    font-size: 0.85rem;
+    display: flex;
+    gap: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* =====================================================
+   RESULTS PANEL
+===================================================== */
+.results-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0; /* ΠΟΛΥ ΣΗΜΑΝΤΙΚΟ */
+}
+
+.query-summary-card {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* =====================================================
+   RESULTS TABLE WRAPPER (THE FIX)
+===================================================== */
+.results-table-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden; /* κλειδώνει layout */
+}
+
+/* ----- TOP SCROLLBAR (ΠΑΝΤΑ ΟΡΑΤΗ) ----- */
+.table-scroll-top {
+    height: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #f1f5f9;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.table-scroll-inner {
+    height: 1px;
+}
+
+/* ----- ACTUAL TABLE SCROLL AREA ----- */
+.table-scroll-body {
+    flex: 1;
+    overflow: auto;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+table.results {
+    border-collapse: collapse;
+    width: max-content;
+    min-width: 100%;
+}
+
+table.results th,
+table.results td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+
+table.results thead th {
+    position: sticky;
+    top: 0;
+    background: #f1f5f9;
+    z-index: 5;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.toolbar-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #e5e7eb;
+}
+
+.toolbar-button.primary {
+    background: #2f80ed;
+    color: white;
+}
+
+/* =====================================================
+   LOAD MORE
+===================================================== */
+.load-more-wrapper {
+    padding: 8px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+/* =====================================================
+   TABLE TAB LAYOUT
+===================================================== */
+
+.table-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 12px;
+}
+
+/* ================= TOP ROW ================= */
+
+.table-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* ================= CARDS ================= */
+
+.table-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.table-messages {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #374151;
+    overflow-y: auto;
+}
+
+/* ================= RESULTS ================= */
+
+.table-results-wrapper {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    border: 1px solid #d1d5db;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* top scrollbar */
+.table-scroll-top {
+    height: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #f1f5f9;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.table-scroll-inner {
+    height: 1px;
+}
+
+/* body */
+.table-scroll-body {
+    flex: 1;
+    overflow: auto;
+}
+
+/* ================= TABLE ================= */
+
+#results-table table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+#results-table th,
+#results-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+
+#results-table thead th {
+    position: sticky;
+    top: 0;
+    background: #f8fafc;
+    z-index: 5;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+
+.sql-used-textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+    border: none;              /* ⬅️ ΤΟ ΣΗΜΑΝΤΙΚΟ */
+    outline: none;             /* ⬅️ ΚΑΝΕΝΑ ΜΑΥΡΟ */
+    background: transparent;   /* ⬅️ “δένει” με το card */
+
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+
+    resize: vertical;
+}
+
+.sql-used-textarea:focus {
+    background: #f9fafb;
+    box-shadow: inset 0 0 0 1px #cbd5e1;
+}
+.sql-used-run-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+    min-height: 38px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(135deg, #2f80ed, #1f6ad6);
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.05s ease;
+}
+.sql-used-run-btn:hover {
+    background: linear-gradient(135deg, #3a8cff, #2563eb);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+.sql-used-run-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+.sql-used-run-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.35);
+}
+.stats-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-card-header {
+  margin-bottom: 12px;
+}
+
+.stats-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.stats-card-header p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.stats-chart-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+#stats-chart {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* =====================================================
+   FINAL SIDEBAR FIX (SAFE – NO FUNCTIONAL CHANGES)
+===================================================== */
+
+:root {
+    --sidebar-w: 250px;
+}
+
+/* Sidebar stays fixed */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    z-index: 2000;
+}
+
+/* Hidden state */
+.sidebar.hidden {
+    transform: translateX(calc(-1 * var(--sidebar-w)));
+}
+
+/* ✅ THE FIX: shift content with padding, not width */
+#content {
+    padding-left: var(--sidebar-w);
+    transition: padding-left 0.4s ease;
+    box-sizing: border-box;
+}
+
+/* When sidebar closes */
+#content.expanded {
+    padding-left: 0;
+}
+
+/* Mouse activation zone */
+#left-zone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100vh;
+    z-index: 3000;
+}
+/* Tabs must respect sidebar padding */
+#content > .tabs-header {
+    padding-left: var(--sidebar-w);
+    box-sizing: border-box;
+}
+
+/* When sidebar is closed */
+#content.expanded > .tabs-header {
+    padding-left: 0;
+}
+
+
+/* ===============================
+   SIDEBAR – FINAL STABLE FIX
+   (ΔΕΝ ΣΠΑΕΙ ΚΑΜΙΑ ΛΕΙΤΟΥΡΓΙΑ)
+================================ */
+
+/* Sidebar: μόνο transform, εκτός layout */
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+  z-index: 2000;
+}
+
+/* Κλειστό sidebar */
+.sidebar.hidden {
+  transform: translateX(-250px);
+}
+
+/* Content: ΠΑΝΤΑ full width */
+.content {
+  margin-left: 0 !important;
+  width: 100%;
+  transition: none;
+}
+
+/* Hover activation zone */
+#left-zone {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100vh;
+  z-index: 3000;
+}

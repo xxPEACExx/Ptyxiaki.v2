@@ -239,3 +239,2403 @@
 2025-07-29 13:33:08,737 - INFO - 127.0.0.1 - - [29/Jul/2025 13:33:08] "POST /query_documents HTTP/1.1" 200 -
 2025-07-29 13:42:14,938 - INFO -  * Detected change in 'C:\\Users\\n_gio\\PycharmProjects\\PythonProject\\PythonProject\\Ptyxiaki\\app.py', reloading
 2025-07-29 13:42:14,996 - INFO -  * Restarting with stat
+[INSERT_ERROR] DID 1193, name: PANDJAITAN RUDY, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: PANDJAITAN, RUDY, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: PANDJAITAN, RUDY, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: HERRMANN MANUELA, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: HERRMANN, Manuela, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: HERRMANN, Manuela, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: REMLER PETER, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: REMLER, PETER, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: REMLER, PETER, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] DID 1193, name: Cunow, Gerda, error: 2013 (HY000): Lost connection to MySQL server during query
+[INSERT_ERROR] title insert did: 4837, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[INSERT_ERROR] title insert did: 6255, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[INSERT_ERROR] title insert did: 9015, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[INSERT_ERROR] title insert did: 9074, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[INSERT_ERROR] title insert did: 9126, error: 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`epdatabase`.`title`, CONSTRAINT `title_ibfk_1` FOREIGN KEY (`DID`) REFERENCES `document` (`DID`) ON DELETE CASCADE ON UPDATE CASCADE)
+[INSERT_ERROR] title insert did: 10099, error: 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`epdatabase`.`title`, CONSTRAINT `title_ibfk_1` FOREIGN KEY (`DID`) REFERENCES `document` (`DID`) ON DELETE CASCADE ON UPDATE CASCADE)
+[INSERT_ERROR] title insert did: 16115, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[INSERT_ERROR] title insert did: 18911, error: 1406 (22001): Data too long for column 'title_text' at row 1
+[SELECT_ERROR] SID: 1, name: corrected, error: 1146 (42S02): Table 'epdatabase.status' doesn't exist
+[SELECT_ERROR] SID: 2, name: deleted, error: 1146 (42S02): Table 'epdatabase.status' doesn't exist
+[TITLE_PARSE_ERROR] DID 213:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 213:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 213:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 214:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 214:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 214:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 215:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 215:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 215:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 216:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 216:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 216:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 217:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 217:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 217:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 218:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 218:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 218:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 219:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 219:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 219:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 220:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 220:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 220:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 221:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 221:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 221:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 222:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 222:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 222:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 223:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 223:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 223:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 224:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 224:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 224:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 225:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 225:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 225:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 226:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 226:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 226:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 227:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 227:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 227:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 228:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 228:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 228:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 229:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 229:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 229:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 230:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 230:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 230:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 231:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 231:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 231:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 232:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 232:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 232:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 233:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 233:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 233:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 234:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 234:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 234:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 235:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 235:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 235:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 236:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 236:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 236:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 237:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 237:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 237:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 238:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 238:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 238:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 239:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 239:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 239:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 240:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 240:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 240:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 241:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 241:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 241:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 242:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 242:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 242:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 243:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 243:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 243:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 244:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 244:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 244:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 245:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 245:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 245:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 246:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 246:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 246:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 247:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 247:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 247:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 248:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 248:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 248:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 249:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 249:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 249:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'epdatabase.title' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 153, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'epdatabase.title' doesn't exist
+
+[TITLE_PARSE_ERROR] DID 268:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 268:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+
+[TITLE_PARSE_ERROR] DID 19:
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 755, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'title_text' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\Ptyxiaki\title.py", line 150, in insert_title
+    cursor.execute("""
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 351, in execute
+    self._connection.cmd_query(
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\n_gio\PycharmProjects\PythonProject\PythonProject\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 763, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'title_text' at row 1
+

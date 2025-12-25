@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959753-A1" country="EP" doc-number="2959753" kind="A1" date="20151230" family-id="49935273" file-reference-id="254717" date-produced="20180826" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452348" ucid="EP-2959753-A1"><document-id><country>EP</country><doc-number>2959753</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14845147-A" is-representative="NO"><document-id mxw-id="PAPP193867664" load-source="patent-office" format="original"><country>EP</country><doc-number>14845147.9</doc-number><date>20140903</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193867665" load-source="docdb" format="epo"><country>EP</country><doc-number>14845147</doc-number><kind>A</kind><date>20140903</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162029753" ucid="CN-201310429592-A" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>201310429592</doc-number><kind>A</kind><date>20130918</date></document-id></priority-claim><priority-claim mxw-id="PPC162031335" ucid="CN-2014085872-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>CN</country><doc-number>2014085872</doc-number><kind>W</kind><date>20140903</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1871694550" load-source="docdb">H05B  37/02        20060101AFI20161125BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1871694551" load-source="docdb">H05B  33/08        20060101ALI20161125BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1987771442" load-source="docdb" scheme="CPC">H05B  37/02        20130101 LI20150819BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987788066" load-source="docdb" scheme="CPC">H05B  33/0845      20130101 FI20150813BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165548510" lang="DE" load-source="patent-office">LED-ANTRIEBS- UND DIMMERSCHALTUNG SOWIE KONFIGURATIONSVERFAHREN</invention-title><invention-title mxw-id="PT165548511" lang="EN" load-source="patent-office">LED DRIVING AND DIMMING CIRCUIT AND CONFIGURATION METHOD</invention-title><invention-title mxw-id="PT165548512" lang="FR" load-source="patent-office">CIRCUIT D'ATTAQUE ET DE GRADATION D'INTENSITÉ DE DEL ET PROCÉDÉ DE CONFIGURATION</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103332560" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO</last-name><address><country>CN</country></address></addressbook></applicant><applicant mxw-id="PPAR1103334810" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>ZHEJIANG SHENGHUI LIGHTING CO., LTD</last-name></addressbook></applicant><applicant mxw-id="PPAR1101641494" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Zhejiang Shenghui Lighting Co., Ltd</last-name><iid>101500790</iid><address><street>West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing, Zhejiang 314015</city><country>CN</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103306666" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>LOU JUNSHAN</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103317976" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>LOU, JUNSHAN</last-name></addressbook></inventor><inventor mxw-id="PPAR1101643913" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>LOU, JUNSHAN</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang 314015</city><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103316229" load-source="docdb" sequence="2" format="epo"><addressbook><last-name>SHEN JINXIANG</last-name><address><country>CN</country></address></addressbook></inventor><inventor mxw-id="PPAR1103344913" load-source="docdb" sequence="2" format="intermediate"><addressbook><last-name>SHEN, JINXIANG</last-name></addressbook></inventor><inventor mxw-id="PPAR1101649859" load-source="patent-office" sequence="2" format="original"><addressbook><last-name>SHEN, JINXIANG</last-name><address><street>Zhejiang Shenghui Lighting Co. Ltd West Jiachuang Road Xiuzhou Industrial Park</street><city>Jiaxing Zhejiang314015</city><country>CN</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR1101647580" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Jöstingmeier, Martin</last-name><iid>101285990</iid><address><street>Lohr, Jöstingmeier &amp; Partner Junkersstraße 3</street><city>82178 Puchheim</city><country>DE</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="CN-2014085872-W"><document-id><country>CN</country><doc-number>2014085872</doc-number><kind>W</kind><date>20140903</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2015039561-A1"><document-id><country>WO</country><doc-number>2015039561</doc-number><kind>A1</kind><date>20150326</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660700186" load-source="docdb">AL</country><country mxw-id="DS660787843" load-source="docdb">AT</country><country mxw-id="DS660620965" load-source="docdb">BE</country><country mxw-id="DS660706082" load-source="docdb">BG</country><country mxw-id="DS660700791" load-source="docdb">CH</country><country mxw-id="DS660620966" load-source="docdb">CY</country><country mxw-id="DS660787844" load-source="docdb">CZ</country><country mxw-id="DS660700192" load-source="docdb">DE</country><country mxw-id="DS660620975" load-source="docdb">DK</country><country mxw-id="DS660620976" load-source="docdb">EE</country><country mxw-id="DS660717931" load-source="docdb">ES</country><country mxw-id="DS660706087" load-source="docdb">FI</country><country mxw-id="DS660700792" load-source="docdb">FR</country><country mxw-id="DS660700193" load-source="docdb">GB</country><country mxw-id="DS660620977" load-source="docdb">GR</country><country mxw-id="DS660700194" load-source="docdb">HR</country><country mxw-id="DS660787845" load-source="docdb">HU</country><country mxw-id="DS660700793" load-source="docdb">IE</country><country mxw-id="DS660620978" load-source="docdb">IS</country><country mxw-id="DS660706088" load-source="docdb">IT</country><country mxw-id="DS660620987" load-source="docdb">LI</country><country mxw-id="DS660706089" load-source="docdb">LT</country><country mxw-id="DS660622871" load-source="docdb">LU</country><country mxw-id="DS660706090" load-source="docdb">LV</country><country mxw-id="DS660706095" load-source="docdb">MC</country><country mxw-id="DS660622872" load-source="docdb">MK</country><country mxw-id="DS660622873" load-source="docdb">MT</country><country mxw-id="DS660620988" load-source="docdb">NL</country><country mxw-id="DS660700200" load-source="docdb">NO</country><country mxw-id="DS660620989" load-source="docdb">PL</country><country mxw-id="DS660706096" load-source="docdb">PT</country><country mxw-id="DS660787846" load-source="docdb">RO</country><country mxw-id="DS660706097" load-source="docdb">RS</country><country mxw-id="DS660620990" load-source="docdb">SE</country><country mxw-id="DS660700794" load-source="docdb">SI</country><country mxw-id="DS660700201" load-source="docdb">SK</country><country mxw-id="DS660700202" load-source="docdb">SM</country><country mxw-id="DS660622874" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA152011713" ref-ucid="WO-2015039561-A1" lang="EN" load-source="patent-office"><p num="0000">An LED driving and dimming circuit and configuration method are provided. The circuit can include a switch connected to an AC power supply, an LED driver circuit connected to the switch, a switch-status detection circuit connected to the switch, and a brightness- selection circuit having one end connected to the switch- status detection circuit and another end connected to the LED driver circuit. The switch- status detection circuit is configured to detect whether the switch is open or closed and to output a detected result to the brightness-selection circuit. The LED driver circuit is configured to control a brightness level of the LED lighting device, according to a voltage result from the brightness-selection circuit.</p></abstract><abstract mxw-id="PA152368906" ref-ucid="WO-2015039561-A1" lang="EN" source="national office" load-source="docdb"><p>An LED driving and dimming circuit and configuration method are provided. The circuit can include a switch connected to an AC power supply, an LED driver circuit connected to the switch, a switch-status detection circuit connected to the switch, and a brightness- selection circuit having one end connected to the switch- status detection circuit and another end connected to the LED driver circuit. The switch- status detection circuit is configured to detect whether the switch is open or closed and to output a detected result to the brightness-selection circuit. The LED driver circuit is configured to control a brightness level of the LED lighting device, according to a voltage result from the brightness-selection circuit.</p></abstract><abstract mxw-id="PA152011714" ref-ucid="WO-2015039561-A1" lang="FR" load-source="patent-office"><p num="0000">La présente invention concerne un circuit d'attaque et de gradation d'intensité de DEL et un procédé de configuration. Le circuit peut comprendre un commutateur connecté à une alimentation en courant alternatif, un circuit d'attaque de DEL connecté au commutateur, un circuit de détection d'état de commutateur connecté au commutateur, et un circuit de sélection de luminosité comportant une extrémité connectée au circuit de détection d'état de commutateur et une autre extrémité connectée au circuit d'attaque de DEL. Le circuit de détection d'état de commutateur est conçu pour détecter si le commutateur se trouve ouvert ou fermé et pour émettre un résultat détecté vers le circuit de sélection de luminosité. Le circuit d'attaque de DEL est conçu pour réguler un niveau de luminosité du dispositif d'éclairage à DEL, en fonction d'un résultat de tension en provenance du circuit de sélection de luminosité.</p></abstract><abstract mxw-id="PA152368907" ref-ucid="WO-2015039561-A1" lang="FR" source="national office" load-source="docdb"><p>La présente invention concerne un circuit d'attaque et de gradation d'intensité de DEL et un procédé de configuration. Le circuit peut comprendre un commutateur connecté à une alimentation en courant alternatif, un circuit d'attaque de DEL connecté au commutateur, un circuit de détection d'état de commutateur connecté au commutateur, et un circuit de sélection de luminosité comportant une extrémité connectée au circuit de détection d'état de commutateur et une autre extrémité connectée au circuit d'attaque de DEL. Le circuit de détection d'état de commutateur est conçu pour détecter si le commutateur se trouve ouvert ou fermé et pour émettre un résultat détecté vers le circuit de sélection de luminosité. Le circuit d'attaque de DEL est conçu pour réguler un niveau de luminosité du dispositif d'éclairage à DEL, en fonction d'un résultat de tension en provenance du circuit de sélection de luminosité.</p></abstract><description mxw-id="PDES88807711" ref-ucid="WO-2015039561-A1" lang="EN" load-source="patent-office"><invention-title lang="EN"> LED DRIVING AND DIMMING CIRCUIT AND CONFIGURATION METHOD 
+	 </invention-title><technical-field><heading id="h01">Technical Field</heading><p id="p02" num="1"> The present disclosure generally relates to the
+		field of LED (i.e., light emitting diode) lighting technology and, more
+		particularly, relates to a driving and dimming circuit for an LED lighting
+		device and a method for configuring the driving and dimming circuit. </p></technical-field><background-art><heading id="h03">Background Art</heading><p id="p32" num="2">LED lighting may generally provide advantages in
+		energy conservation, environmental protection, controllable lighting, solid
+		state lighting, and long operational lifetime. LED lamps thus have been widely
+		used in various areas for public, commercial, and/or indoor lighting. </p><p id="p31" num="3">Often, LED lamps may have lamp-head structures
+		generally-designed similar to incandescent lamps, energy saving lamps, and
+		other conventional lamps. Presumably, LED lamps may be used to directly replace
+		other conventional lamps by an easy installation without changing original
+		structures of a lighting system including other conventional lamps.</p><p id="p30" num="4">However, when other conventional lamps are replaced
+		by conventional LED lamps, dimming feature of the LED lamps may not be applied,
+		because those other conventional lamps do not include any dimmers to implement
+		the dimming feature of the replaced LED lamps. To add a dimmer in those
+		conventional systems can increase cost in use and can require complicated,
+		additional installation.</p><p id="p29" num="5">In some LED lamps, a switch may be used to replace a
+		dimmer to control brightness of an LED lamp. One method of using a switch for
+		dimming control includes a step-less dimming process. When a user presses the
+		switch for a first time, lighting brightness of the lamp may gradually change
+		from a minimum brightness level to a maximum brightness level, which may take a
+		few seconds. During this gradual changing process, if the user presses the
+		switch for a second time, the lamp may be turned off and the brightness level
+		at this point may be memorized by the LED lamp. When the user presses the
+		switch for a third time, the lamp may provide the previously-memorized
+		brightness. When the user presses the switch for a fourth time, the lamp may
+		then be turned off. When the switch is pressed again, the process may be
+		repeated. In some cases, after pressing the switch for the first time, the user
+		may not press the switch during the time interval for gradually changing
+		brightness from the minimum level to the maximum level. The lamp may then be
+		operated at the maximum brightness level until the switch is pressed again to
+		turn off the lamp. </p><p id="p28" num="6">In another method of using a switch for dimming
+		control, a brightness level may be selected from several set-brightness levels.
+		In a two-level dimming process, the lamp may be operated at a first
+		set-brightness level when the switch is pressed for a first time. When the
+		switch is pressed for a second time, the lamp may be turned off. When the
+		switch is pressed for a third time, the lamp may be operated at a second
+		set-brightness level. When the switch is pressed for a fourth time, the lamp
+		may be turned off. When the switch is pressed for a fifth time, the lamp may be
+		operated at the first set-brightness level, which is the same as for the step
+		when the switch is pressed for the first time. Such a process may then be
+		repeated.</p><p id="p27" num="7">In other cases, the brightness level may be selected
+		using a dimming chip or a microcontroller (MCU). Such designs, however, require
+		complicated circuit and increase the cost for the LED lamps.</p></background-art><disclosure><tech-solution><heading id="h07">Technical Solution</heading><p id="p47" num="8"> One aspect or embodiment of the present disclosure
+		  includes a driving and dimming circuit for driving an LED lighting device. The
+		  circuit can include a switch connected to an AC power supply, an LED driver
+		  circuit connected to the switch, a switch-status detection circuit connected to
+		  the switch, and a brightness-selection circuit having one end connected to the
+		  switch-status detection circuit and another end connected to the LED driver
+		  circuit. The switch-status detection circuit is configured to detect whether
+		  the switch is open or closed and to output a detected result to the
+		  brightness-selection circuit. The LED driver circuit is configured to control a
+		  brightness level of the LED lighting device, according to a voltage result from
+		  the brightness-selection circuit. </p><p id="p46" num="9"> The switch-status detection circuit includes a
+		  first comparator, a second comparator, and a first capacitor. The first
+		  comparator has an output end connected to an input end of the second
+		  comparator. The first capacitor has one end connected to the output end of the
+		  first comparator and has another end grounded. </p><p id="p45" num="10"> The brightness-selection circuit includes a
+		  self-latching circuit and a second capacitor configured in parallel with the
+		  self-latching circuit. The self-latching circuit includes a first transistor, a
+		  second transistor, a first resistor, a second resistor, a third resistor, and a
+		  fourth resistor. Optionally, the first transistor is a PNP type transistor, and
+		  the second transistor is an NPN type transistor. The first transistor, the
+		  third resistor, and the fourth resistor are connected in series. The second
+		  transistor, the first resistor, and the second resistor are configured in
+		  series. </p><p id="p44" num="11"> The first transistor has a collector connected to
+		  the third resistor, and has an emitter and a base respectively connected to
+		  both ends of the first resistor. The second transistor has a collector
+		  connected to the second resistor, and has an emitter and a base respectively
+		  connected to both ends of the fourth resistor. </p><p id="p43" num="12"> Alternatively, the switch-status detection
+		  circuit includes a first comparator, a second comparator, a capacitor, and a
+		  resistor. The brightness-selection circuit includes a T’-counter. The first
+		  comparator has an output end connected to a CP (clock pulse) terminal of the
+		  T’-counter. The second comparator has an output end connected to a reset
+		  terminal of the T’-counter. The capacitor has one end connected to supply power
+		  to the first and second comparators. The capacitor has another end be grounded
+		  and also connected to a non-inverting input end of the second comparator via
+		  the resistor. </p><p id="p42" num="13"> Another aspect or embodiment of the present
+		  disclosure includes a method for configuring a driving and dimming circuit for
+		  driving an LED lighting device. A switch is connected to an AC power supply in
+		  the driving and dimming circuit. Each of an LED driver circuit and a
+		  switch-status detection circuit is connected to the switch. A
+		  brightness-selection circuit is configured to have one end connected to the
+		  switch-status detection circuit and another end connected to the LED driver
+		  circuit. The switch-status detection circuit detects whether the switch is open
+		  or closed and outputs a detected result to the brightness-selection circuit.
+		  The LED driver circuit controls a brightness level of the LED lighting device,
+		  according to a voltage result of the brightness-selection circuit. </p><p id="p41" num="14"> The switch-status detection circuit includes a
+		  first comparator, a second comparator, and a first capacitor. The first
+		  comparator has an output end connected to an input end of the second
+		  comparator. The first capacitor has one end connected to the output end of the
+		  first comparator and has another end grounded. </p><p id="p40" num="15"> The brightness-selection circuit includes a
+		  self-latching circuit and a second capacitor configured in parallel with the
+		  self-latching circuit. The self-latching circuit includes a first transistor, a
+		  third resistor, and a fourth resistor connected in series. The self-latching
+		  circuit also includes a second transistor, a first resistor, and a second
+		  resistor configured in series. The first transistor has a collector connected
+		  to the third resistor, and has an emitter and a base respectively connected to
+		  both ends of the first resistor. The second transistor has a collector
+		  connected to the second resistor, and has an emitter and a base respectively
+		  connected to both ends of the fourth resistor. </p><p id="p39" num="16"> The circuit is configured such that: when the
+		  switch is pressed for a first time to close the circuit, the self-latching
+		  circuit does not operate, and the brightness-selection circuit outputs a
+		  voltage to the LED driver circuit to operate the LED lighting device at a first
+		  set-brightness level. When the switch is pressed for a second time to open the
+		  circuit, the second comparator outputs a high level voltage to trigger the
+		  self-latching circuit and to output a low level voltage to the LED driver
+		  circuit. </p><p id="p38" num="17"> When the switch is pressed for a third time to
+		  close the circuit within a time period of TL, counted from a time when the
+		  switch is pressed for the second time to a time that the second capacitor is
+		  depleted to reset the self-latching circuit, the LED driver circuit receives a
+		  voltage to operate the LED lighting device at a second set-brightness level.
+		  </p><p id="p37" num="18"> When the switch is pressed for a third time to
+		  close the circuit after a time period of TL, counted from a time when the
+		  switch is pressed for the second time to a time that the second capacitor is
+		  depleted to reset the self-latching circuit, the LED driver circuit receives a
+		  voltage to operate the LED lighting device back at the first set-brightness
+		  level. </p><p id="p36" num="19"> Alternatively, the switch-status detection
+		  circuit includes a first comparator, a second comparator, a capacitor, and a
+		  resistor. The brightness-selection circuit includes a T’-counter. The first
+		  comparator has an output end connected to a CP (clock pulse) terminal of the
+		  T’-counter. The second comparator has an output end connected to a reset
+		  terminal of the T’-counter. The capacitor has one end connected to supply power
+		  to the first and second comparators. The capacitor has another end be grounded
+		  and also connected to a non-inverting input end of the second comparator via
+		  the resistor.</p><p id="p35" num="20"> The circuit is configured such that: when the
+		  switch is pressed for a first time to close the circuit, the LED driver circuit
+		  operates the LED lighting device at a first set-brightness level. After the
+		  switch is pressed for a second time to open the circuit and when the switch is
+		  pressed for a third time to close the circuit within a time period of TL,
+		  counted from a time when the switch is pressed for the second time to a time
+		  that the first capacitor is depleted, the LED driver circuit receives a high
+		  level voltage to operate the LED lighting device at a second set-brightness
+		  level. </p><p id="p34" num="21"> Alternatively, after the switch is pressed for
+		  the second time to open the circuit, and when the switch is pressed for the
+		  third time to close the circuit after the time period of TL, counted from a
+		  time when the switch is pressed for the second time to a time that the first
+		  capacitor is depleted, the LED driver circuit receives a low voltage to operate
+		  the LED lighting device back at the first set-brightness level. </p><p id="p33" num="22"> Other aspects or embodiments of the present
+		  disclosure can be understood by those skilled in the art in light of the
+		  description, the claims, and the drawings of the present disclosure.</p></tech-solution></disclosure><description-of-drawings><heading id="h11">Description of Drawings</heading><p id="p51" num="23"> The following drawings are merely examples for
+		illustrative purposes according to various disclosed embodiments and are not
+		intended to limit the scope of the present disclosure. </p><p id="p50" num="24"> FIG. 1 depicts an exemplary LED driving and dimming
+		circuit consistent with various disclosed embodiments;</p><p id="p49" num="25"> FIG. 2 depicts an exemplary circuit block including
+		a switch-status detection circuit and a brightness-selection circuit in an LED
+		driving and dimming circuit consistent with various disclosed embodiments;
+		and</p><p id="p48" num="26">FIG. 3 depicts another exemplary circuit block
+		including a switch-status detection circuit and a brightness-selection circuit
+		in an LED driving and dimming circuit consistent with various disclosed
+		embodiments.</p></description-of-drawings><mode-for-invention><heading id="h15">Mode for Invention</heading><p id="p85" num="27"> Reference will now be made in detail to exemplary
+		embodiments of the disclosure, which are illustrated in the accompanying
+		drawings. Wherever possible, the same reference numbers will be used throughout
+		the drawings to refer to the same or like parts.</p><p id="p84" num="28"> An LED driving and dimming circuit and
+		configuration method are provided. An exemplary driving and dimming circuit for
+		driving an LED lighting device can include, for example, an AC power supply, a
+		switch connected to the AC power supply, an LED driver circuit connected to the
+		switch, a switch-status detection circuit connected to the switch, and/or a
+		brightness-selection circuit having one end connected to the switch-status
+		detection circuit and having another end connected to the LED driver circuit.
+		</p><p id="p83" num="29"> The switch-status detection circuit can be
+		configured to detect whether the switch is closed or opened and to output a
+		detected result to the brightness-selection circuit. The brightness-selection
+		circuit can have an output end connected to the LED driver circuit. The LED
+		driver circuit can be configured to control a brightness level of the LED
+		lighting device, according to a voltage result from the brightness-selection
+		circuit. </p><p id="p82" num="30"> In one embodiment, the switch-status detection
+		circuit can include a first comparator, a second comparator, and/or a first
+		capacitor. The first comparator can have an output end connected to an input
+		end of the second comparator. The first capacitor can have one end connected to
+		the output end of the second comparator and can have another end be grounded.
+		</p><p id="p81" num="31"> The brightness-selection circuit can include a
+		self-latching circuit and a second capacitor configured in parallel with the
+		self-latching circuit. The self-latching circuit can include a first
+		transistor, a second transistor, a first resistor, a second resistor, a third
+		resistor, and a fourth resistor. </p><p id="p80" num="32"> In another embodiment, the switch-status detection
+		circuit can include a first comparator and a second comparator. In this case,
+		the brightness-selection circuit may include a T’-counter. The first comparator
+		can have an output end connected to a CP (clock pulse) terminal of the
+		T’-counter, and the second comparator can have an output end connected to a
+		reset terminal of the T’-counter. </p><p id="p79" num="33"> As such, a switch-status detection circuit and a
+		brightness-selection circuit can be included in the disclosed LED driving and
+		dimming circuit. Further, the switch-status detection circuit and a
+		brightness-selection circuit can be included into the LED lighting device. Each
+		of the switch-status detection circuit and the brightness-selection circuit can
+		be formed by discrete components. Compared with a conventional LED driver
+		circuit, the added switch-status detection circuit and brightness-selection
+		circuit can provide desired function with a low cost while adding little extra
+		changes to conventional circuit lines. Embodiments consistent with the present
+		disclosure thus may decrease the cost of the LED lighting devices. </p><p id="p78" num="34"> FIG. 1 depicts an exemplary LED driving and dimming
+		circuit consistent with various disclosed embodiments. As shown in FIG. 1, the
+		LED driving and dimming circuit can be used to drive an LED lighting device 6.
+		</p><p id="p77" num="35"> The LED driving and dimming circuit can include an
+		AC power supply 1, a switch 2, an LED driver circuit 3, a switch-status
+		detection circuit 4, and/or a brightness-selection circuit 5. Among them, each
+		of the AC power supply 1, the switch 2, and the LED driver circuit 3 can
+		include any suitable control structure(s) for LED lighting devices as desired.
+		</p><p id="p76" num="36"> As disclosed herein, the switch-status detection
+		circuit 4 can be configured to detect whether the switch 2 is turned on or
+		turned off, and to output detected result to the brightness-selection circuit
+		5. The brightness-selection circuit 5 can have an output end connected to the
+		LED driver circuit 3. According to a voltage result from the
+		brightness-selection circuit 5, the LED driver circuit 3 can thus control
+		brightness level of the LED lighting device 6. </p><p id="p75" num="37"> FIG. 2 depicts an exemplary circuit block including
+		a switch-status detection circuit and a brightness-selection circuit configured
+		in an LED driving and dimming circuit consistent with various disclosed
+		embodiments. As shown in FIG. 2, the switch-status detection circuit 4 can
+		include a first comparator 41, a second comparator 42, and/or a first capacitor
+		43. </p><p id="p74" num="38"> The first comparator 41 can have an output end
+		connected to an input end of the second comparator 42. The first capacitor 43
+		can have one end connected to the output end of the first comparator 41 and can
+		have another end be grounded. </p><p id="p73" num="39"> The brightness-selection circuit 5 can include a
+		self-latching circuit 51 and a second capacitor 52, configured in parallel with
+		the self-latching circuit 51. The self-latching circuit 51 can include a first
+		transistor 53 and a second transistor 54, e.g., configured in series. The
+		self-latching circuit 51 can further include a first resistor 55, a second
+		resistor 56, a third resistor 57, and/or a fourth resistor 58. </p><p id="p72" num="40"> In one embodiment, the first transistor 53 can be a
+		PNP type transistor, while the second transistor 54 can be an NPN type
+		transistor. The first transistor 53, the third resistor 57, and/or the fourth
+		resistor 58 can be connected in series. The second transistor 54, the second
+		resistor 56, and/or the first resistor 55 can also be configured in series. The
+		first transistor 53 can have a collector connected to the third resistor 57.
+		The first transistor 53 can also have an emitter and a base respectively
+		connected to both ends of the first resistor 55. The second transistor 54 can
+		have a collector connected to the second resistor 56. The second transistor 54
+		can also have an emitter and a base respectively connected to both ends of the
+		fourth resistor 58. </p><p id="p71" num="41"> In operation, when the switch 2 is pressed for a
+		first time, the switch 2 can close the circuit. Voltage VA at point A as shown
+		in FIG. 1 can be at a high level and can be greater than a reference voltage
+		Vref of the first comparator 41 as shown in FIG. 2. The first comparator 41 can
+		output a low level voltage VB, while the second comparator 42 can also output a
+		low level voltage. Voltage VC at point C shown in FIGS. 1-2 can be at a high
+		level. When the LED driver circuit 3 receives a voltage VC, the LED lighting
+		device 6 can be operated at a first set-brightness level. </p><p id="p70" num="42"> When the switch 2 is pressed for a second time, the
+		switch 2 can open the circuit. Voltage VA at point A can be reduced. When the
+		voltage VA is lower than the reference voltage Vref of the first comparator 41,
+		the first comparator 41 can output voltage VB at a high level. After a time
+		delay Td, the first capacitor 43 can be charged to have a potential Vcl higher
+		than reference voltage Vref of the second comparator 42. The second comparator
+		42 can output a high level voltage to trigger the self-latching circuit 51 and
+		to change voltage VC from the high level to a low level. The self-latching
+		circuit 51 can be powered by the second capacitor 52 as shown in FIG. 2. After
+		a period of time TL, the second capacitor 52 can be depleted, and the
+		self-latching circuit 51 can be restored (or reset). The period of time TL can
+		be counted from the time when the switch 2 is pressed for the second time to
+		the time when the second capacitor 52 is fully depleted. </p><p id="p69" num="43"> In one embodiment, when the switch 2 is pressed for
+		a third time to close the circuit before the time period of TL when the second
+		capacitor 52 is depleted, the LED driver circuit 3 can receive the low level
+		voltage VC, and the LED lighting device 6 can be operated at a second
+		set-brightness level. </p><p id="p68" num="44"> In another embodiment when the switch 2 is pressed
+		for the third time to close the circuit after the time period of TL, as the
+		self-latching circuit 51 is restored, the voltage VC can be at a high level and
+		the LED driver circuit 3 can operate the LED lighting device 6 at the first
+		set-brightness level. In various embodiments, the first set-brightness level
+		may require a low voltage VC, while the second set-brightness level may require
+		a high voltage VC; or vice versa, depending on specific applications. </p><p id="p67" num="45"> Likewise, when the switch 2 is pressed for a fourth
+		time to open the circuit (e.g., as similar to when the switch 2 is pressed for
+		the second time) and for a fifth time to close the circuit (e.g., as similar to
+		when the switch 2 is pressed for the third time) with a time interval less than
+		the time period of TL, the LED driver circuit 3 can operate the LED lighting
+		device 6 at the second set-brightness level. In another case, when the switch 2
+		is pressed for a fourth time and fifth time with a time interval greater than
+		the time period of TL, the LED driver circuit 3 can operate the LED lighting
+		device 6 at the first set-brightness level. </p><p id="p66" num="46"> Such a dimming control process of the LED lighting
+		device between the first and second set-brightness levels can be repeated. In
+		various embodiments, Td and TL for charging and/or depleting a corresponding
+		capacitor can be configured according to specific applications. </p><p id="p65" num="47"> Note that although two levels of set-brightness are
+		primarily described in the present disclosure, the disclosed driving and
+		dimming circuit can be used to control dimming of the LED lighting device for
+		more than two levels of set-brightness. For example, the time period TL counted
+		from a time for pressing the switch for the second time to the time for the
+		second capacitor 52 to be depleted can be controlled sufficiently long, such
+		that, during the time period of TL, the switch 2 can pressed not only for the
+		third time, but also for an additional fourth time, an additional fifth time,
+		an additional sixth time, etc. Accordingly, the LED driver circuit 3 can
+		receive the voltage VC at various levels to control the LED lighting device 6
+		to be operated at the second set-brightness level and also at a third
+		set-brightness level, a fourth set-brightness level, a fifth set-brightness
+		level, etc. </p><p id="p64" num="48"> FIG. 3 depicts another exemplary circuit block
+		including a switch-status detection circuit and a brightness-selection circuit
+		in an LED driving and dimming circuit consistent with various disclosed
+		embodiments. </p><p id="p63" num="49"> As shown, the switch-status detection circuit 4a in
+		FIG. 3 can include a first comparator 41a, a second comparator 42a, a first
+		capacitor 43a, and/or a fifth resistor 44a. The first capacitor 43a can have
+		one end connected to supply power to the first and second comparators 41a and
+		42a. The first capacitor 43a can have other end be grounded and also be
+		connected to a non-inverting input end of the second comparator 42a via the
+		fifth resistor 44a. </p><p id="p62" num="50"> The brightness-selection circuit 5a can include a
+		T’-counter. The output end of the first comparator 41a can be connected to a CP
+		(clock pulse) terminal of the T’-counter. The output end of the second
+		comparator 42a can be connected to a reset terminal of the T’-counter, as shown
+		in FIG. 3. </p><p id="p61" num="51"> In operation, when the switch 2 is pressed for a
+		first time, the switch 2 can close the circuit. The first capacitor 43a can be
+		charged. When voltage Vr5 of the fifth resistor 44a is lower than the reference
+		voltage Vref of the second comparator 42a, the second comparator 42a can output
+		a low level voltage. The T’-counter can be reset. Thereafter, when voltage Vr5
+		of the fifth resistor 44a is increased to be higher than the reference voltage
+		Vref of the second comparator 42a, the second comparator 42a can output a high
+		level voltage. When voltage VA at point A as shown in FIGS. 1 and 3 is greater
+		than Vref of the first comparator 41a, the first comparator 41a can output a
+		voltage VB at a low level, while the second comparator 42a can still output the
+		high level voltage. In this case, the T’-counter does not operate and maintains
+		at an initial state, and voltage VC is outputted at a low level by the
+		brightness-selection circuit 5a to the LED driver circuit 3. When the LED
+		driver circuit 3 receives the low level voltage VC, the lighting device 6 can
+		be operated at a first set-brightness level. </p><p id="p60" num="52"> When the switch 2 is pressed for a second time, the
+		switch 2 can open the circuit. Voltage VA at point A can be reduced. When the
+		voltage VA is lower than the reference voltage Vref of the first comparator
+		41a, the first comparator 41a can output a voltage VB that becomes a high
+		level. After a time delay Td for the T’-counter to flip, voltage VC can change
+		from the low level to a high level. After the switch 2 is pressed for the
+		second time, the voltage of the first capacitor 43a is reduced. After a time
+		length TL, voltage Vr5 of the fifth resistor 44a is less than Vref of the
+		second comparator 42a, voltage outputted by the second comparator 42a can
+		change from the high level to a low level. T’-counter can then be reset. </p><p id="p59" num="53"> In an embodiment when the switch 2 is pressed for a
+		third time during the time period of TL, the LED driver circuit 3 can receive
+		the high level voltage VC and the LED lighting device can operate at a second
+		set-brightness level. </p><p id="p58" num="54"> However, in the case when the switch 2 is pressed
+		for the third time following the time period of TL, as the T’-counter is reset
+		and voltage VC is at a low level, the LED driver circuit 3 can operate the LED
+		lighting device 6 at the first set-brightness level. </p><p id="p57" num="55"> Likewise, when the switch 2 is pressed for a fourth
+		time (which is similar to the case when the switch 2 is pressed for the second
+		time), the first comparator 41a can output a voltage at a high level. The
+		T’-counter can flip. Voltage VC can change from one level to another level. In
+		one embodiment, when a time interval between the fourth time and a fifth time
+		of pressing the switch 2 falls within the time period of TL, the LED driver
+		circuit 3 can operate the LED lighting device 6 back at the first
+		set-brightness level. As such, the LED driver circuit 3 can operate the LED
+		lighting device 6 between the two set-brightness levels. </p><p id="p56" num="56"> In this manner, such a dimming control process of
+		the LED lighting device between the first and second set-brightness levels can
+		be repeated. In various embodiments, Td and TL for corresponding counter and
+		capacitor can be configured according to specific applications. </p><p id="p55" num="57"> Note that although two levels of set-brightness are
+		primarily described in the present disclosure, the disclosed driving and
+		dimming circuit can be used to control dimming of the LED lighting device for
+		more than two levels of set-brightness. For example, the time period TL counted
+		from a time for pressing the switch for the second time to the time for the
+		first capacitor 43a to be depleted can be controlled sufficiently long, such
+		that, during the time period of TL, the switch 2 can pressed not only for the
+		third time, but also for an additional fourth time, an additional fifth time,
+		an additional sixth time, etc. Accordingly, the LED driver circuit 3 can
+		receive the voltage VC at various levels to control the LED lighting device 6
+		to be operated at the second set-brightness level and also at a third
+		set-brightness level, a fourth set-brightness level, a fifth set-brightness
+		level, etc. </p><p id="p54" num="58"> In addition, the disclosed driving and dimming
+		circuit and the LED lighting device can be used to directly replace other
+		lighting sources (e.g., incandescent lamps and/or halogen lamps) without
+		changing their layout of lighting systems. For example, the driving and dimming
+		circuit can be installed within a lamp-head structure of the LED lighting
+		device. Such a lamp-head structure can be easily transported and installed with
+		the LED lighting device to replace other lighting sources in any lighting
+		system.</p><p id="p53" num="59"> Note that, the term "comprising", "including" or
+		any other variants thereof are intended to cover a non-exclusive inclusion,
+		such that the process, method, article, or apparatus containing a number of
+		elements also include not only those elements, but also other elements that are
+		not expressly listed; or further include inherent elements of the process,
+		method, article or apparatus. Without further restrictions, the statement
+		"includes a ......" does not exclude other elements included in the process,
+		method, article, or apparatus having those elements.</p><p id="p52" num="60"> The embodiments disclosed herein are exemplary
+		only. Other applications, advantages, alternations, modifications, or
+		equivalents to the disclosed embodiments are obvious to those skilled in the
+		art and are intended to be encompassed within the scope of the present
+		disclosure.</p><p id="p114" num="61">Reference Sign List：</p><p id="p113" num="62">AC power supply 1</p><p id="p112" num="63">Switch 2</p><p id="p111" num="64">LED driver circuit 3</p><p id="p110" num="65">Switch-status detection circuit 4</p><p id="p109" num="66">Brightness-selection circuit 5 </p><p id="p108" num="67">LED lighting device 6</p><p id="p107" num="68">First comparator 41</p><p id="p106" num="69">Second comparator 42</p><p id="p105" num="70">First capacitor 43 </p><p id="p104" num="71">Self-latching circuit 51</p><p id="p103" num="72">Second capacitor 52</p><p id="p102" num="73">First transistor 53</p><p id="p101" num="74">Second transistor 54</p><p id="p100" num="75">First resistor 55</p><p id="p99" num="76">Second resistor 56</p><p id="p98" num="77">Third resistor 57</p><p id="p97" num="78">Fourth resistor 58</p><p id="p96" num="79">Switch-status detection circuit 4a</p><p id="p95" num="80">Brightness-selection circuit 5a </p><p id="p94" num="81">First comparator 41a</p><p id="p93" num="82">Second comparator 42a</p><p id="p92" num="83">First capacitor 43a</p><p id="p91" num="84">Fifth resistor 44a</p></mode-for-invention><industrial-applicability><heading id="h17">Industrial Applicability And Advantageous Effects
+		  </heading><p id="p89" num="85"> Without limiting the scope of any claim and/or the
+		specification, examples of industrial applicability and certain advantageous
+		effects of the disclosed embodiments are listed for illustrative purposes.
+		Various alternations, modifications, or equivalents to the technical solutions
+		of the disclosed embodiments can be obvious to those skilled in the art and can
+		be included in this disclosure.</p><p id="p88" num="86"> An LED driving and dimming circuit and
+		configuration method are provided. The circuit can include a switch connected
+		to an AC power supply, an LED driver circuit connected to the switch, a
+		switch-status detection circuit connected to the switch, and a
+		brightness-selection circuit having one end connected to the switch-status
+		detection circuit and another end connected to the LED driver circuit. The
+		switch-status detection circuit is configured to detect whether the switch is
+		open or closed and to output a detected result to the brightness-selection
+		circuit. The LED driver circuit is configured to control a brightness level of
+		the LED lighting device, according to a voltage result from the
+		brightness-selection circuit. </p><p id="p87" num="87"> As such, a switch-status detection circuit and a
+		brightness-selection circuit can be included in the disclosed LED driver
+		circuit. Each of the switch-status detection circuit and the
+		brightness-selection circuit can be formed by discrete components. Compared
+		with a conventional LED driver circuit, the added switch-status detection
+		circuit and brightness-selection circuit can provide desired function at a low
+		cost without much additional changes over conventional circuit lines.
+		Embodiments consistent with the present disclosure thus may decrease the cost
+		of the LED lighting devices. </p><p id="p86" num="88"> In addition, the disclosed driving and dimming
+		circuit and the LED lighting device can be used to directly replace other
+		lighting sources (e.g., incandescent lamps and/or halogen lamps) without
+		changing their layout of lighting systems. For example, the driving and dimming
+		circuit can be installed within a head structure of the LED lighting device.
+		Such head structures can be easily transported to replace other lighting
+		sources in any lighting system. </p></industrial-applicability></description><claims mxw-id="PCLM80535135" ref-ucid="WO-2015039561-A1" lang="EN" load-source="patent-office"><claim id="c21" num="1"><claim-text> 1.A driving and dimming circuit for driving an LED lighting
+		  device, comprising: </claim-text><claim-text>a switch connected to an AC power supply;</claim-text><claim-text>an LED driver circuit connected to the switch;</claim-text><claim-text>a switch-status detection circuit connected to the switch;
+		  and</claim-text><claim-text>a brightness-selection circuit having one end connected to
+		  the switch-status detection circuit and another end connected to the LED driver
+		  circuit, wherein:</claim-text><claim-text>the switch-status detection circuit is configured to detect
+		  whether the switch is open or closed and to output a detected result to the
+		  brightness-selection circuit, and </claim-text><claim-text>the LED driver circuit is configured to control a brightness
+		  level of the LED lighting device, according to a voltage result from the
+		  brightness-selection circuit. </claim-text><claim-text>2.The circuit according to claim 1, wherein the switch-status
+		  detection circuit comprises a first comparator, a second comparator, and a
+		  first capacitor, wherein the first comparator has an output end connected to an
+		  input end of the second comparator, and the first capacitor has one end
+		  connected to the output end of the first comparator and has another end
+		  grounded. </claim-text><claim-text>3.The circuit according to claim 2, wherein the
+		  brightness-selection circuit comprises a self-latching circuit and a second
+		  capacitor configured in parallel with the self-latching circuit.</claim-text><claim-text>4.The circuit according to claim 3, wherein the self-latching
+		  circuit comprises a first transistor, a second transistor, a first resistor, a
+		  second resistor, a third resistor, and a fourth resistor. </claim-text><claim-text>5.The circuit according to claim 4, wherein the first
+		  transistor is a PNP type transistor, and the second transistor is an NPN type
+		  transistor. </claim-text><claim-text>6.The circuit according to claim 4, wherein the first
+		  transistor, the third resistor, and the fourth resistor are connected in
+		  series, and wherein the second transistor, the first resistor, and the second
+		  resistor are configured in series. </claim-text><claim-text>7.The circuit according to claim 4, wherein the first
+		  transistor has a collector connected to the third resistor, and has an emitter
+		  and a base respectively connected to both ends of the first resistor.
+		  </claim-text><claim-text>8.The circuit according to claim 4, wherein the second
+		  transistor has a collector connected to the second resistor, and has an emitter
+		  and a base respectively connected to both ends of the fourth resistor.
+		  </claim-text><claim-text>9.The circuit according to claim 1, wherein the switch-status
+		  detection circuit comprises a first comparator, a second comparator, a
+		  capacitor, and a resistor.</claim-text><claim-text>10.The circuit according to claim 9, wherein the
+		  brightness-selection circuit comprises a T’-counter, wherein the first
+		  comparator has an output end connected to a CP (clock pulse) terminal of the
+		  T’-counter, and the second comparator has an output end connected to a reset
+		  terminal of the T’-counter. </claim-text><claim-text>11.The circuit according to claim 9, wherein the capacitor
+		  has one end connected to supply power to the first and second comparators, and
+		  the capacitor has another end be grounded and also connected to a non-inverting
+		  input end of the second comparator via the resistor. </claim-text><claim-text>12.A method for configuring a driving and dimming circuit for
+		  driving an LED lighting device, comprising: </claim-text><claim-text>configuring a switch connected to an AC power supply in the
+		  driving and dimming circuit;</claim-text><claim-text>connecting an LED driver circuit to the switch;</claim-text><claim-text>connecting a switch-status detection circuit to the switch;
+		  and</claim-text><claim-text>configuring a brightness-selection circuit having one end
+		  connected to the switch-status detection circuit and another end connected to
+		  the LED driver circuit, </claim-text><claim-text>wherein the switch-status detection circuit detects whether
+		  the switch is open or closed and outputs a detected result to the
+		  brightness-selection circuit, and wherein the LED driver circuit controls a
+		  brightness level of the LED lighting device, according to a voltage result of
+		  the brightness-selection circuit. </claim-text><claim-text>13.The method according to claim 12, wherein the
+		  switch-status detection circuit comprises a first comparator, a second
+		  comparator, and a first capacitor, wherein the first comparator has an output
+		  end connected to an input end of the second comparator, and the first capacitor
+		  has one end connected to the output end of the first comparator and has another
+		  end grounded. </claim-text><claim-text>14.The method according to claim 13, wherein the
+		  brightness-selection circuit comprises a self-latching circuit and a second
+		  capacitor configured in parallel with the self-latching circuit.</claim-text><claim-text>15.The method according to claim 14, wherein the
+		  self-latching circuit comprises a first transistor, a third resistor, and a
+		  fourth resistor connected in series, and comprises a second transistor, a first
+		  resistor, and a second resistor configured in series; wherein the first
+		  transistor has a collector connected to the third resistor, and has an emitter
+		  and a base respectively connected to both ends of the first resistor; and
+		  wherein the second transistor has a collector connected to the second resistor,
+		  and has an emitter and a base respectively connected to both ends of the fourth
+		  resistor. </claim-text><claim-text>16.The method according to claim 15, wherein the circuit is
+		  configured such that:</claim-text><claim-text>when the switch is pressed for a first time to close the
+		  circuit, the self-latching circuit does not operate, and the
+		  brightness-selection circuit outputs a voltage to the LED driver circuit to
+		  operate the LED lighting device at a first set-brightness level;
+		  and</claim-text><claim-text>when the switch is pressed for a second time to open the
+		  circuit, the second comparator outputs a high level voltage to trigger the
+		  self-latching circuit and to output a low level voltage to the LED driver
+		  circuit. </claim-text><claim-text>17.The method according to claim 16, wherein the circuit is
+		  configured such that:</claim-text><claim-text>when the switch is pressed for a third time to close the
+		  circuit within a time period of TL, counted from a time when the switch is
+		  pressed for the second time to a time that the second capacitor is depleted to
+		  reset the self-latching circuit, the LED driver circuit receives a voltage to
+		  operate the LED lighting device at a second set-brightness level. </claim-text><claim-text>18.The method according to claim 16, wherein the circuit is
+		  configured such that:</claim-text><claim-text>when the switch is pressed for a third time to close the
+		  circuit after a time period of TL, counted from a time when the switch is
+		  pressed for the second time to a time that the second capacitor is depleted to
+		  reset the self-latching circuit, the LED driver circuit receives a voltage to
+		  operate the LED lighting device back at the first set-brightness level.
+		  </claim-text><claim-text>19.The method according to claim 12, wherein the
+		  switch-status detection circuit comprises a first comparator, a second
+		  comparator, a capacitor, and a resistor, and the brightness-selection circuit
+		  comprises a T’-counter; wherein the first comparator has an output end
+		  connected to a CP (clock pulse) terminal of the T’-counter, and the second
+		  comparator has an output end connected to a reset terminal of the T’-counter;
+		  and wherein the capacitor has one end connected to supply power to the first
+		  and second comparators, and the capacitor has another end be grounded and also
+		  connected to a non-inverting input end of the second comparator via the
+		  resistor.</claim-text><claim-text>20.The method according to claim 19, wherein the circuit is
+		  configured such that:</claim-text><claim-text>when the switch is pressed for a first time to close the
+		  circuit, the LED driver circuit operates the LED lighting device at a first
+		  set-brightness level; and</claim-text><claim-text>after the switch is pressed for a second time to open the
+		  circuit and when the switch is pressed for a third time to close the circuit
+		  within a time period of TL, counted from a time when the switch is pressed for
+		  the second time to a time that the first capacitor is depleted, the LED driver
+		  circuit receives a voltage to operate the LED lighting device at a second
+		  set-brightness level; or </claim-text><claim-text>after the switch is pressed for the second time to open the
+		  circuit, and when the switch is pressed for the third time to close the circuit
+		  after the time period of TL, counted from a time when the switch is pressed for
+		  the second time to a time that the first capacitor is depleted, the LED driver
+		  circuit receives a voltage to operate the LED lighting device back at the first
+		  set-brightness level. </claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>

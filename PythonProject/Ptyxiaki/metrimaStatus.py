@@ -9,7 +9,7 @@ def find_statuses_in_file(file_path):
         statuses = []
 
         for elem in root.iter():
-            status_attr = elem.attrib.get('status')
+            status_attr = elem.attrib.get('country')
             if status_attr:
                 statuses.append(status_attr.strip())
 
@@ -37,7 +37,7 @@ def find_statuses_in_folder(folder_path):
     return Counter(all_statuses)
 
 if __name__ == "__main__":
-    folder = r"C:/WPI/Aposibiesmena/EP"
+    folder = r"C:\WPI\Aposibiesmena\EP"
     statuses_count = find_statuses_in_folder(folder)
 
     if statuses_count:

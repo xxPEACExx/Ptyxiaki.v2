@@ -31,7 +31,7 @@
           <li class="active">🏠︎ Αρχική Σελίδα</li>
           <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>
           <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>
-          <li onclick="window.location.href='/statistics'">📈 Στατιστικά</li>
+          <li onclick="window.location.href='/workspace'">📈 Workspace</li>
 
         </ul>
       </nav>
@@ -91,7 +91,7 @@
             <span>Όνομα</span>
             <span>Τύπος</span>
             <span>Εισαγωγή</span>
-            <span>Ημερομηνία</span>
+            <span>Ημερομηνία Εισαγωγής</span>
             <span></span>
         </div>
 
@@ -125,8 +125,29 @@
      <div class="progress-container">
     <div class="progress-bar" id="progressBar"></div>
   </div>
-  <span id="countdown">4</span> δευτ.
 
+<div id="upload-popup" class="upload-popup hidden">
+
+    <div class="upload-row">
+        <div class="circle-progress">
+            <svg>
+                <circle cx="37" cy="37" r="35"></circle>
+                <circle cx="37" cy="37" r="35" id="progress-circle"></circle>
+            </svg>
+            <span id="upload-percent">0%</span>
+        </div>
+
+        <div class="upload-info">
+            <strong id="upload-title">Μεταφόρτωση...</strong>
+            <p id="upload-status">Ξεκινά το ανέβασμα...</p>
+        </div>
+    </div>
+
+    <div class="upload-controls">
+        <button id="pause-btn" class="control-btn">⏸ Παύση</button>
+        <button id="stop-btn" class="control-btn danger">⛔ Διακοπή</button>
+    </div>
+</div>
 
 
 

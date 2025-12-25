@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patent-document ucid="EP-2959673-A1" country="EP" doc-number="2959673" kind="A1" date="20151230" family-id="50391327" file-reference-id="313851" date-produced="20180826" status="corrected" lang="EN"><bibliographic-data><publication-reference fvid="160452503" ucid="EP-2959673-A1"><document-id><country>EP</country><doc-number>2959673</doc-number><kind>A1</kind><date>20151230</date><lang>EN</lang></document-id></publication-reference><application-reference ucid="EP-14713931-A" is-representative="NO"><document-id mxw-id="PAPP193867974" load-source="docdb" format="epo"><country>EP</country><doc-number>14713931</doc-number><kind>A</kind><date>20140207</date><lang>EN</lang></document-id><document-id mxw-id="PAPP193867975" load-source="patent-office" format="original"><country>EP</country><doc-number>14713931.5</doc-number><date>20140207</date><lang>EN</lang></document-id></application-reference><priority-claims><priority-claim mxw-id="PPC162026939" ucid="JP-2013031376-A" load-source="docdb"><document-id format="epo"><country>JP</country><doc-number>2013031376</doc-number><kind>A</kind><date>20130220</date></document-id></priority-claim><priority-claim mxw-id="PPC162029368" ucid="JP-2014000677-W" linkage-type="W" load-source="docdb"><document-id format="epo"><country>JP</country><doc-number>2014000677</doc-number><kind>W</kind><date>20140207</date></document-id></priority-claim></priority-claims><technical-data><classifications-ipcr><classification-ipcr mxw-id="PCL-1988522228" load-source="docdb">H04N   5/225       20060101AFI20140910BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988525170" load-source="docdb">H04N   5/232       20060101ALI20140910BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988526407" load-source="docdb">G06F   3/01        20060101ALI20140910BHEP        </classification-ipcr><classification-ipcr mxw-id="PCL-1988527015" load-source="docdb">G03B  15/03        20060101ALI20140910BHEP        </classification-ipcr></classifications-ipcr><classifications-cpc><classification-cpc mxw-id="PCL-1772442142" load-source="docdb" scheme="CPC">H04N   5/23293     20130101 LI20170810BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1772442143" load-source="docdb" scheme="CPC">H04N   5/23232     20130101 LI20170810BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1772442144" load-source="docdb" scheme="CPC">H04N   5/23229     20130101 LI20170815BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1772442145" load-source="docdb" scheme="CPC">H04N   5/23216     20130101 FI20170815BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145907" load-source="docdb" scheme="CPC">H04N   5/23296     20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145908" load-source="docdb" scheme="CPC">H04N   5/23264     20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145909" load-source="docdb" scheme="CPC">H04N   5/23254     20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145910" load-source="docdb" scheme="CPC">H04N   5/23219     20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145912" load-source="docdb" scheme="CPC">H04N   5/2259      20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145913" load-source="docdb" scheme="CPC">H04N   5/2258      20130101 LI20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145914" load-source="docdb" scheme="CPC">G06T2207/20201     20130101 LA20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145915" load-source="docdb" scheme="CPC">G03B2213/025       20130101 LA20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145916" load-source="docdb" scheme="CPC">G03B  15/03        20130101 LA20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1857145917" load-source="docdb" scheme="CPC">G06T2207/10016     20130101 LA20170118BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987767526" load-source="docdb" scheme="CPC">H04N   5/2252      20130101 LI20151217BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987771263" load-source="docdb" scheme="CPC">G06T2200/28        20130101 LA20151217BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987782453" load-source="docdb" scheme="CPC">G06F   3/013       20130101 LI20151217BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987790847" load-source="docdb" scheme="CPC">G06T   5/003       20130101 LI20151219BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987793217" load-source="docdb" scheme="CPC">G06T2207/10004     20130101 LA20151217BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987799701" load-source="docdb" scheme="CPC">H04N   5/247       20130101 LI20151217BHEP        </classification-cpc><classification-cpc mxw-id="PCL-1987800039" load-source="docdb" scheme="CPC">G06T   7/20        20130101 LI20151217BHEP        </classification-cpc></classifications-cpc><invention-title mxw-id="PT165548975" lang="DE" load-source="patent-office">BILDVERARBEITUNGSVORRICHTUNG, FOTOGRAFISCHES STEUERUNGSVERFAHREN UND PROGRAMM</invention-title><invention-title mxw-id="PT165548976" lang="EN" load-source="patent-office">IMAGE PROCESSING DEVICE, PHOTOGRAPHING CONTROL METHOD, AND PROGRAM</invention-title><invention-title mxw-id="PT165548977" lang="FR" load-source="patent-office">DISPOSITIF DE TRAITEMENT D'IMAGES, PROCÉDÉ DE CONTRÔLE DE PRISE DE VUES ET PROGRAMME</invention-title></technical-data><parties><applicants><applicant mxw-id="PPAR1103328030" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>SONY CORP</last-name><address><country>JP</country></address></addressbook></applicant><applicant mxw-id="PPAR1103342750" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>SONY CORPORATION</last-name></addressbook></applicant><applicant mxw-id="PPAR1101646288" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>Sony Corporation</last-name><iid>100830309</iid><address><street>1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></applicant></applicants><inventors><inventor mxw-id="PPAR1103334537" load-source="docdb" sequence="1" format="epo"><addressbook><last-name>SHINOZAKI HIROTAKA</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103340337" load-source="docdb" sequence="1" format="intermediate"><addressbook><last-name>SHINOZAKI, HIROTAKA</last-name></addressbook></inventor><inventor mxw-id="PPAR1101645422" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>SHINOZAKI, HIROTAKA</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103336361" load-source="docdb" sequence="2" format="epo"><addressbook><last-name>YOSHIMURA SHINICHI</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103305659" load-source="docdb" sequence="2" format="intermediate"><addressbook><last-name>YOSHIMURA, SHINICHI</last-name></addressbook></inventor><inventor mxw-id="PPAR1101649998" load-source="patent-office" sequence="2" format="original"><addressbook><last-name>YOSHIMURA, SHINICHI</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103332248" load-source="docdb" sequence="3" format="epo"><addressbook><last-name>KONAMI SHUICHI</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103312301" load-source="docdb" sequence="3" format="intermediate"><addressbook><last-name>KONAMI, SHUICHI</last-name></addressbook></inventor><inventor mxw-id="PPAR1101646816" load-source="patent-office" sequence="3" format="original"><addressbook><last-name>KONAMI, SHUICHI</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103312747" load-source="docdb" sequence="4" format="epo"><addressbook><last-name>MARUYAMA MAYUKO</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103306440" load-source="docdb" sequence="4" format="intermediate"><addressbook><last-name>MARUYAMA, MAYUKO</last-name></addressbook></inventor><inventor mxw-id="PPAR1101644985" load-source="patent-office" sequence="4" format="original"><addressbook><last-name>MARUYAMA, MAYUKO</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103304612" load-source="docdb" sequence="5" format="epo"><addressbook><last-name>TACHI MASAYUKI</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103340686" load-source="docdb" sequence="5" format="intermediate"><addressbook><last-name>TACHI, MASAYUKI</last-name></addressbook></inventor><inventor mxw-id="PPAR1101646548" load-source="patent-office" sequence="5" format="original"><addressbook><last-name>TACHI, MASAYUKI</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103322617" load-source="docdb" sequence="6" format="epo"><addressbook><last-name>OHKI MITSUHARU</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103334911" load-source="docdb" sequence="6" format="intermediate"><addressbook><last-name>OHKI, MITSUHARU</last-name></addressbook></inventor><inventor mxw-id="PPAR1101644060" load-source="patent-office" sequence="6" format="original"><addressbook><last-name>OHKI, MITSUHARU</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103335775" load-source="docdb" sequence="7" format="epo"><addressbook><last-name>YAMADA HIDESHI</last-name><address><country>JP</country></address></addressbook></inventor><inventor mxw-id="PPAR1103325347" load-source="docdb" sequence="7" format="intermediate"><addressbook><last-name>YAMADA, HIDESHI</last-name></addressbook></inventor><inventor mxw-id="PPAR1101653842" load-source="patent-office" sequence="7" format="original"><addressbook><last-name>YAMADA, HIDESHI</last-name><address><street>c/o Sony Corporation 1-7-1 Konan Minato-ku</street><city>Tokyo 108-0075</city><country>JP</country></address></addressbook></inventor></inventors><agents><agent mxw-id="PPAR1101643619" load-source="patent-office" sequence="1" format="original"><addressbook><last-name>D Young &amp; Co LLP</last-name><iid>101533551</iid><address><street>120 Holborn</street><city>London EC1N 2DY</city><country>GB</country></address></addressbook></agent></agents></parties><international-convention-data><pct-or-regional-filing-data ucid="JP-2014000677-W"><document-id><country>JP</country><doc-number>2014000677</doc-number><kind>W</kind><date>20140207</date><lang>EN</lang></document-id></pct-or-regional-filing-data><pct-or-regional-publishing-data ucid="WO-2014129141-A1"><document-id><country>WO</country><doc-number>2014129141</doc-number><kind>A1</kind><date>20140828</date><lang>EN</lang></document-id></pct-or-regional-publishing-data><designated-states><ep-contracting-states><country mxw-id="DS660709135" load-source="docdb">AL</country><country mxw-id="DS660723580" load-source="docdb">AT</country><country mxw-id="DS660709137" load-source="docdb">BE</country><country mxw-id="DS660702830" load-source="docdb">BG</country><country mxw-id="DS660623586" load-source="docdb">CH</country><country mxw-id="DS660702897" load-source="docdb">CY</country><country mxw-id="DS660723581" load-source="docdb">CZ</country><country mxw-id="DS660709138" load-source="docdb">DE</country><country mxw-id="DS660702898" load-source="docdb">DK</country><country mxw-id="DS660702903" load-source="docdb">EE</country><country mxw-id="DS660788601" load-source="docdb">ES</country><country mxw-id="DS660702851" load-source="docdb">FI</country><country mxw-id="DS660623595" load-source="docdb">FR</country><country mxw-id="DS660709143" load-source="docdb">GB</country><country mxw-id="DS660702904" load-source="docdb">GR</country><country mxw-id="DS660709144" load-source="docdb">HR</country><country mxw-id="DS660723582" load-source="docdb">HU</country><country mxw-id="DS660788602" load-source="docdb">IE</country><country mxw-id="DS660702905" load-source="docdb">IS</country><country mxw-id="DS660702852" load-source="docdb">IT</country><country mxw-id="DS660702906" load-source="docdb">LI</country><country mxw-id="DS660702853" load-source="docdb">LT</country><country mxw-id="DS660624446" load-source="docdb">LU</country><country mxw-id="DS660702854" load-source="docdb">LV</country><country mxw-id="DS660702859" load-source="docdb">MC</country><country mxw-id="DS660624451" load-source="docdb">MK</country><country mxw-id="DS660624452" load-source="docdb">MT</country><country mxw-id="DS660624453" load-source="docdb">NL</country><country mxw-id="DS660623596" load-source="docdb">NO</country><country mxw-id="DS660624454" load-source="docdb">PL</country><country mxw-id="DS660788603" load-source="docdb">PT</country><country mxw-id="DS660625072" load-source="docdb">RO</country><country mxw-id="DS660788604" load-source="docdb">RS</country><country mxw-id="DS660624459" load-source="docdb">SE</country><country mxw-id="DS660709146" load-source="docdb">SI</country><country mxw-id="DS660623597" load-source="docdb">SK</country><country mxw-id="DS660623598" load-source="docdb">SM</country><country mxw-id="DS660702911" load-source="docdb">TR</country></ep-contracting-states><ep-extended-states><ep-extended-state-data><country>BA</country></ep-extended-state-data><ep-extended-state-data><country>ME</country></ep-extended-state-data></ep-extended-states></designated-states></international-convention-data><office-specific-data><eptags><ep-no-a-document-published>*</ep-no-a-document-published></eptags></office-specific-data></bibliographic-data><abstract mxw-id="PA139076781" ref-ucid="WO-2014129141-A1" lang="EN" load-source="patent-office"><p num="0000">An information processing system that acquires first image data captured by a first camera unit disposed on a first side of a housing; acquires second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modifies the second image data based on the first image data.</p></abstract><abstract mxw-id="PA139543740" ref-ucid="WO-2014129141-A1" lang="EN" source="national office" load-source="docdb"><p>An information processing system that acquires first image data captured by a first camera unit disposed on a first side of a housing; acquires second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modifies the second image data based on the first image data.</p></abstract><abstract mxw-id="PA139076782" ref-ucid="WO-2014129141-A1" lang="FR" load-source="patent-office"><p num="0000">L'invention concerne un système de traitement d'informations qui acquiert des premières données d'images capturées par une première unité de prise de vues disposée sur un premier côté d'un boîtier, qui acquiert des deuxièmes données d'images capturées par une deuxième unité de prise de vues disposée sur un deuxième côté du boîtier opposé au premier et qui modifie les deuxièmes données d'images sur la base des premières données d'images.</p></abstract><abstract mxw-id="PA139543741" ref-ucid="WO-2014129141-A1" lang="FR" source="national office" load-source="docdb"><p>L'invention concerne un système de traitement d'informations qui acquiert des premières données d'images capturées par une première unité de prise de vues disposée sur un premier côté d'un boîtier, qui acquiert des deuxièmes données d'images capturées par une deuxième unité de prise de vues disposée sur un deuxième côté du boîtier opposé au premier et qui modifie les deuxièmes données d'images sur la base des premières données d'images.</p></abstract><description mxw-id="PDES78479404" ref-ucid="WO-2014129141-A1" lang="EN" load-source="patent-office"><invention-title lang="EN">IMAGE PROCESSING DEVICE, PHOTOGRAPHING CONTROL METHOD, AND PROGRAM</invention-title><technical-field><p num="0001">
+&lt;CROSS REFERENCE TO RELATED APPLICATIONS&gt;<br/>
+This application claims the benefit of Japanese Priority Patent Application JP 2013-031376 filed February 20, 2013, the entire contents of which are incorporated herein by reference.
+</p><p num="0002">
+The present technology relates to an image processing device, a photographing control method, and a program, and more particularly, an image processing device, a photographing control method, and a program capable of obtaining a higher-quality image.
+</p></technical-field><background-art><p num="0003">
+In the past, imaging devices on which two cameras are mounted have been known.  Some of the imaging devices can simultaneously photograph images with two cameras.
+</p><p num="0004">
+For example, as the imaging devices, imaging devices have been suggested which performs control such that imaging is configured to be performed with a main camera when a subject is attempted to be imaged with the main camera and an expression of a photographer imaged with a sub-camera is changed (for example, see PTL 1).
+</p></background-art><citation-list><patent-literature><p num="0005"><patcit num="1"><text>Japanese Unexamined Patent Application Publication No. 2010-11253</text></patcit></p></patent-literature></citation-list><?BRFSUM description="Brief Summary" end="lead"?><summary-of-invention><tech-problem><p num="0006">
+However, in the above-described technology, a photographing timing is controlled by the main camera based on an image obtained with the sub-camera.  Thus, a higher-quality image such as an image having higher sharpness or an image closer to a point of sight of the photographer may not be obtained.
+</p><p num="0007">
+It is desirable to provide a technology capable of a higher-quality image.
+</p></tech-problem><tech-solution><p num="0008">
+According to one aspect, the disclosure is directed to an information processing system including circuitry configured to acquire first image data captured by a first camera unit disposed on a first side of a housing; acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modify the second image data based on the first image data.
+</p><p num="0009">
+The first image data may be captured by the first camera unit at substantially the same time as the second image data is captured by the second camera unit.
+</p><p num="0010">
+The circuitry may be configured to modify the second image data by performing blur correction on the second image data based on the first image data.
+</p><p num="0011">
+The circuitry may be configured to: generate first motion information based on the first image data; generate second motion information based on the second image data; and modify the second image data by performing blur correction on the second image data based on the first motion information and the second motion information.
+</p><p num="0012">
+The circuitry may be configured to modify the second image data by controlling an image capture angle corresponding to the second image data based on the first image data.
+</p><p num="0013">
+The circuitry may be configured to control the image capture angle corresponding to the second image data by at least one of changing a zoom ratio of the second camera unit, changing a diaphragm of the second camera unit, changing an orientation of the second camera unit, and performing image deformation of the second image data.
+</p><p num="0014">
+The circuitry may be configured to: output the second image data to a display; detect a gaze position of a user on the display based on the first image data; and modify the second image data by controlling an image capture parameter of the second camera unit based on the detected gaze position of the user on the display.
+</p><p num="0015">
+The circuitry may be configured to modify the second image data by synthesizing the first image data and the second image data.
+</p><p num="0016">
+The circuitry may be configured to: obtain a first white balance value corresponding to the first image data; obtain a second white balance value corresponding to the second image data; and control a light source to emit light based on the first white balance value and the second white balance value.
+</p><p num="0017">
+The circuitry may be configured to: acquire third image data captured by the first camera unit while the light source is emitting light; and modify the second image data by synthesizing the third image data and the second image data.
+</p><p num="0018">
+According to another aspect, the disclosure is directed to an information processing method including: acquiring first image data captured by a first camera unit disposed on a first side of a housing; acquiring second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modifying the second image data based on the first image data.
+</p><p num="0019">
+According to another aspect, the disclosure is directed to a non-transitory computer-readable medium including computer-program instructions, which when executed by an information processing system, cause the system to: acquire first image data captured by a first camera unit disposed on a first side of a housing; acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modify the second image data based on the first image data.
+</p></tech-solution><advantageous-effects><p num="0020">
+According to an embodiment of the present technology, it is possible to obtain a higher-quality image.
+</p></advantageous-effects></summary-of-invention><?BRFSUM description="Brief Summary" end="tail"?><description-of-drawings><p num="0021"><figref num="1">Fig. 1 is a diagram illustrating a configuration example of the outer appearance of an image processing device.</figref><figref num="2">Fig. 2 is a diagram illustrating a configuration example of the image processing device.</figref><figref num="3">Fig. 3 is a diagram illustrating a configuration example of a signal processing unit.</figref><figref num="4">Fig. 4 is a flowchart for describing a photographing process.</figref><figref num="5">Fig. 5 is a diagram for describing motion information.</figref><figref num="6">Fig. 6 is a diagram for describing the motion information.</figref><figref num="7">Fig. 7 is a diagram for describing a camera blur correction.</figref><figref num="8">Fig. 8 is a diagram illustrating a configuration example of an image processing device.</figref><figref num="9">Fig. 9 is a flowchart for describing a photographing process.</figref><figref num="10">Fig. 10 is a diagram for describing field angle adjustment.</figref><figref num="11">Fig. 11 is a diagram illustrating a configuration example of a signal processing unit.</figref><figref num="12">Fig. 12 is a flowchart for describing a photographing process.</figref><figref num="13">Fig. 13 is a diagram for describing field angle adjustment.</figref><figref num="14">Fig. 14 is a diagram for describing focal point adjustment.</figref><figref num="15">Fig. 15 is a diagram illustrating a configuration example of a signal processing unit.</figref><figref num="16">Fig. 16 is a flowchart for describing a photographing process.</figref><figref num="17">Fig. 17 is a diagram for describing light source matching.</figref><figref num="18">Fig. 18 is a diagram illustrating a configuration example of a signal processing unit.</figref><figref num="19">Fig. 19 is a flowchart for describing a photographing process.</figref><figref num="20">Fig. 20 is a diagram illustrating a configuration example of the outer appearance of an image processing device.</figref><figref num="21">Fig. 21 is a diagram illustrating a configuration example of an image processing device.</figref><figref num="22">Fig. 22 is a flowchart for describing a photographing process.</figref><figref num="23">Fig. 23 is a flowchart for describing a photographing process.</figref><figref num="24">Fig. 24 is a diagram illustrating a configuration example of a computer.</figref></p><p num="0022">
+&lt;Description of Embodiments&gt;<br/>
+Hereinafter, embodiments to which the present technology is applied will be described with reference to the drawings.
+</p><p num="0023">
+&lt;First Embodiment&gt;<br/>
+&lt;Overview of Embodiments of Present Technology&gt;<br/>
+An embodiment of the present technology relates to devices including a plurality of imaging units, such as a multi-function type mobile phone or a digital camera, which can photograph images in mutually different directions and performing photographing control based on information obtained from an image photographed by another imaging unit when a main imaging unit photographs an image.
+</p><p num="0024">
+The photographing control performed here is control for adjustment relevant to an image to be photographed, for example, driving control of an imaging unit such as image view adjustment or illumination of a subject or image quality adjustment of an image such as camera blur correction or white balance adjustment.  The photographing control is assumed to include control of image processing performed up to recording of an image after photographing of the image to obtain a final image for recording.  In embodiments of the present technology, a higher-quality image can be obtained by performing such photographing control.
+</p><p num="0025">
+Fig. 1 is a diagram illustrating a configuration example of the outer appearance of an image processing device such as a multi-function mobile phone to which an embodiment of the present technology is applied.
+</p><p num="0026">
+In Fig. 1, the outer appearance of an image processing device 11 indicated by an arrow A11 is a front surface side, that is, an outer appearance side viewed from a user when the user holds the image processing device 11 to perform an operation.  The outer appearance of the image processing device 11 indicated by an arrow A12 is a side surface side, that is, an outer appearance side when viewed from the left side or the right side of the image processing device 11 indicated by the arrow A11 in the drawing.  The outer appearance of the image processing device 11 indicated by an arrow A13 is a rear surface side, that is, an outer appearance of an opposite surface side to the front surface side.
+</p><p num="0027">
+As indicated by the arrow A11, a display unit 21 that displays an image or the like is installed on the front surface side of the image processing device 11.  A touch panel used for the user to perform an input operation is installed to be superimposed on the display unit 21.  In the drawing of the display unit 21 on the front surface of the image processing device 11, an in-image capturing unit 22 that photographs a subject present in the direction of the front surface side of the image processing device 11 is also installed on the upper side.  Accordingly, an image photographed by the in-image capturing unit 22 is an image of the user operating the image processing device 11 in most cases.  Hereinafter, an image photographed by the in-image capturing unit 22 is referred to as an in-image.  The description will be continued assuming that an image of a user is photographed as the in-image.
+</p><p num="0028">
+As indicated by the arrow A13, an out-image capturing unit 23 that photographs a subject present in the direction of the rear surface side of the image processing device 11 is installed on the rear surface of the image processing device 11.  In this example, the out-image capturing unit 23 is installed to photograph an image in an opposite direction to the photographing direction of the in-image capturing unit 22.  However, the in-image capturing unit 22 and the out-image capturing unit 23 may be disposed such that photographing directions are different from each other.
+</p><p num="0029">
+An image photographed by the out-image capturing unit 23 is normally an image of a landscape, a human, or the like viewed by the user, that is, an image of a subject which the user considers desirable to photograph.  Hereinafter, an image photographed by the out-image capturing unit 23 is referred to as an out-image.
+</p><p num="0030">
+The image processing device 11 photographs an in-image together with an out-image at the time of photography of the out-image and performs photographing control to obtain the out-image with higher sharpness by removing a camera shake component of the out-image using the in-image.  That is, camera blur correction is performed as the photographing control of the out-image.  In this embodiment, moving images are assumed to be photographed as the out-image and the in-image.
+</p><p num="0031">
+(Configuration Example 1 of Image Processing Device)<br/>
+Next, a more detailed configuration of the image processing device 11 will be described.
+</p><p num="0032">
+Fig. 2 is a block diagram illustrating a more detailed configuration example of the image processing device 11.  In Fig. 2, the same reference numerals are given to constituent elements corresponding to the constituent elements in Fig. 1 and the description thereof will be appropriately omitted.
+</p><p num="0033">
+The image processing device 11 illustrated in Fig. 2 includes the display unit 21, the in-image capturing unit 22, the out-image capturing unit 23, an operation input unit 51, a control unit 52, a signal processing unit 53, and a recording unit 54.
+</p><p num="0034">
+For example, the operation input unit 51 is formed by the touch panel superimposed on the display unit 21 and supplies a signal according to a user's operation to the control unit 52.
+</p><p num="0035">
+The control unit 52 controls a process of the entire image processing device 11 according to the signal supplied from the operation input unit 51.  For example, the control unit 52 instructs the in-image capturing unit 22 or the out-image capturing unit 23 to photograph an image or instructs the signal processing unit 53 to perform various kinds of image processing on the out-image.  The control unit 52 instructs the display unit 21 to display an image or instructs the recording unit 54 to record an image.
+</p><p num="0036">
+The signal processing unit 53 performs camera blur correction on the out-image based on the out-image supplied from the out-image capturing unit 23 and the in-image supplied from the in-image capturing unit 22 and supplies the out-image obtained as the result of the image processing to the recording unit 54 to record the out-image.  The signal processing unit 53 reads the out-image from the recording unit 54 and supplies the out-image to the display unit 21 to display the out-image.
+</p><p num="0037">
+The recording unit 54 records the out-image supplied from the signal processing unit 53 and supplies the out-image recorded as necessary to the signal processing unit 53.
+</p><p num="0038">
+(Configuration Example 1 of Signal Processing Unit)<br/>
+More specifically, the signal processing unit 53 in Fig. 2 is configured as in Fig. 3.
+</p><p num="0039">
+The signal processing unit 53 illustrated in Fig. 3 includes a motion estimation unit 81, a motion estimation unit 82, a synthesis unit 83, and a camera blur correction unit 84.
+</p><p num="0040">
+The motion estimation unit 81 generates motion information indicating a motion of the image processing device 11 at the time of the photography of the out-image by performing motion estimation on the out-image supplied from the out-image capturing unit 23 and supplies the generated motion information to the synthesis unit 83.
+</p><p num="0041">
+The motion estimation unit 82 generates motion information indicating a motion of the image processing device 11 at the time of photography of the in-image by performing motion estimation on the in-image supplied from the in-image capturing unit 22 and supplies the generated motion information to the synthesis unit 83.  The in-image is simultaneously photographed with the out-image.
+</p><p num="0042">
+The synthesis unit 83 obtains motion information indicating the final motion of the image processing device 11 at the time of the photography of the out-image by synthesizing the motion information supplied from the motion estimation unit 81 and the motion information supplied from the motion estimation unit 82 and supplies the obtained motion information to the camera blur correction unit 84.
+</p><p num="0043">
+The camera blur correction unit 84 performs camera blur correction on the out-image supplied from the out-image capturing unit 23 based on the motion information supplied from the synthesis unit 83 and supplies the out-image acquired as the result to the recording unit 54.
+</p><p num="0044">
+&lt;Description 1 of Photographing Process&gt;<br/>
+Here, when the user operates the operation input unit 51, a mode for performing the camera blur correction of the out-image is selected, and an instruction to photograph the out-image is given by simultaneous photography of the out-image and the in-image, the image processing device 11 performs a photographing process to photograph the out-image.  Hereinafter, the photographing process performed by the image processing device 11 will be described with reference to the flowchart of Fig. 4.
+</p><p num="0045">
+In step S11, the out-image capturing unit 23 photographs an out-image in response to an instruction of the control unit 52 and supplies the out-image to the motion estimation unit 81 and the camera blur correction unit 84.  For example, a moving image such as a landscape image is photographed as the out-image.  At the time of the photography of the out-image, the signal processing unit 53 supplies the out-image supplied from the out-image capturing unit 23 to the display unit 21 so that the out-image is displayed.  Thus, the user can perform the photographing while confirming the out-image on the display unit 21, as necessary.
+</p><p num="0046">
+In step S12, the in-image capturing unit 22 photographs an in-image in response to an instruction of the control unit 52 and supplies the in-image to the motion estimation unit 82.  For example, a moving image of the face of the user operating the image processing device 11 is photographed as the in-image.
+</p><p num="0047">
+In step S13, the motion estimation unit 81 generates motion information of the image processing device 11 by performing the motion estimation on the out-image supplied from the out-image capturing unit 23 and supplies the motion information to the synthesis unit 83.
+</p><p num="0048">
+In step S14, the motion estimation unit 82 generates motion information of the image processing device 11 by performing the motion estimation on the in-image supplied from the in-image capturing unit 22 and supplies the motion information to the synthesis unit 83.
+</p><p num="0049">
+In step S15, the synthesis unit 83 synthesizes the motion information supplied from the motion estimation unit 81 and the motion information supplied from the motion estimation unit 82 and supplies the synthesized motion information to the camera blur correction unit 84.
+</p><p num="0050">
+Specifically, for example, the following processes are performed in step S13 to step S15 described above.
+</p><p num="0051">
+That is, as indicated by an arrow A21 of Fig. 5, a group of a plurality of images, that is, a moving image including images of respective frames can be assumed to be obtained as an out-image.  Here, each rectangle indicated by the arrow A21 represents each frame of the out-image.
+</p><p num="0052">
+When the out-image including the plurality of frames is obtained, the motion estimation unit 81 divides the out-image into a plurality of local regions and obtains a motion vector of each local region, as indicated by an arrow A22.  One rectangle indicated by the arrow A22 represents an out-image and each rectangle in the out-image represents the local region on the out-image.  Further, an arrow drawn in each local region indicates a motion vector of the local region.
+</p><p num="0053">
+In the calculation of the motion vector of the local region, for example, a method of obtaining an amount of movement of a subject by similarity between images at respective times (frames), for example, a template matching method, is used.  Thus, when the motion vector is obtained for each local region of the out-image, the motion estimation unit 81 calculates motion vector A of the image processing device 11 as motion information based on the motion vector of each local region of the out-image at each time.
+</p><p num="0054">
+For example, motion vector A of the image processing device 11 is calculated according to a method such as affine parameter estimation by a Newton method.
+</p><p num="0055">
+As in the case of the out-image, the motion information based on the in-image is also calculated.  That is, when a group of images indicated by an arrow A23 is obtained as an in-image, the motion estimation unit 82 divides the in-image into a plurality of local regions, as indicated by an arrow A24, and obtains a motion vector of each local region by template matching or the like.
+</p><p num="0056">
+Each rectangle indicated by the arrow A23 represents each frame of the in-image.  One rectangle indicated by the arrow A24 represents an in-image and each rectangle in the in-image represents the local region on the in-image.  Further, an arrow drawn in each local region indicates a motion vector of the local region.
+</p><p num="0057">
+The motion estimation unit 82 calculates motion vector B of the image processing device 11 as motion information by a Newton method or the like based on the motion vector of each local region of the in-image at each time.
+</p><p num="0058">
+The right, left, upper, and lower portions of motion vector B obtained from the in-image in this way are reversed with respect to motion vector A obtained from the out-image, as illustrated in Fig. 6.
+</p><p num="0059">
+That is, as illustrated in Fig. 6, a direction perpendicular to the front surface of the image processing device 11, that is, a direction parallel to the photographing direction of the out-image capturing unit 23 is referred to as a Z axis direction and axes perpendicular to the Z axis are referred to as an X axis and a Y axis.  Here, the X axis is an axis in the horizontal direction of the image processing device 11, that is, the direction parallel to the horizon plane and the Y axis is an axis in the direction parallel to the vertical direction.
+</p><p num="0060">
+When motion vector A and motion vector B are calculated using the out-image and the in-image, respectively, and for example, a motion of the image processing device 11 is only a rotation motion around the Y axis serving as a rotation axis, as illustrated in the upper side of the drawing, motion vector A and motion vector B are in the same direction.
+</p><p num="0061">
+On the other hand, when the motion of the image processing device 11 is only a rotation motion around the X axis serving as a rotation axis and a rotation motion around the Z axis serving as a rotation axis, as illustrated in the lower side of the drawing, the right, left, upper, and lower portions of motion vector A and motion vector B are reversed so that the directions thereof are reversed to be opposite directions.
+</p><p num="0062">
+One rectangle in the right side of the drawing represents the out-image or the in-image and an arrow in the image represents a motion vector of the image.
+</p><p num="0063">
+When motion vector A and motion vector B are obtained as the motion information in this way, the synthesis unit 83 synthesizes motion vector A and motion vector B to generate motion vector C.  The obtained motion vector C is assumed to be the final motion information of the image processing device 11.
+</p><p num="0064">
+Specifically, for example, the synthesis unit 83 calculates the motion vector C by calculating the following Expression (1).<br/>
+<maths id="" num="1"><img file="JPOXMLDOC01-appb-M000001.tif" he="5.8" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths>
+</p><p num="0065">
+In Expression (1), a1 and b1 indicate coefficients which are weights for motion vector A and motion vector B, respectively, and are determined so that "a1 + b1 = 1.0" is satisfied.
+</p><p num="0066">
+For example, the out-image capturing unit 23 and the in-image capturing unit 22 may perform the photographing so that exposure times differ and a larger weight may be given to a motion vector obtained from an image for which the exposure time is shorter, so that the coefficients a1 and b1 are determined according to the accuracy of the motion estimation.  Here, the reason why the larger weight is given to the motion vector obtained from the image for which the exposure time is shorter is that the image for which the exposure time is shorter at the time of the photography of the image has less blurring caused due to a moving subject or camera shake and the motion estimation can be performed accurately.
+</p><p num="0067">
+In particular, of the out-image capturing unit 23 and the in-image capturing unit 22, a distance up to a subject is shorter for the in-image capturing unit 22 photographing a user who is a photographer in many cases.  Therefore, blurring (shake) caused due to camera shake is less in the in-image than in the out-image and the motion estimation can be performed with higher accuracy.  Accordingly, more effectiveness can be acquired when the exposure time of the in-image is set to be shorter than the exposure time of the out-image and the coefficient b1 is set to have a larger value than the coefficient a1.
+</p><p num="0068">
+Referring back to the flowchart of Fig. 4 to make the description, when the motion information of the image processing device 11 is calculated as the control information for camera blur correction in the process of step S15, the process of step S16 is subsequently performed.
+</p><p num="0069">
+In step S16, the camera blur correction unit 84 performs the camera blur correction on the out-image supplied from the out-image capturing unit 23 based on the motion information supplied from the synthesis unit 83 and supplies the out-image obtained as the result to the recording unit 54.
+</p><p num="0070">
+For example, the camera blur correction unit 84 calculates an amount of movement of a feature point inside each local region on the out-image based on the motion vector C which is the motion information supplied from the synthesis unit 83 and calculates an affine parameter based on the amount of movement.
+</p><p num="0071">
+More specifically, as illustrated in the upper side of Fig. 7, a motion vector of each local region is assumed to be obtained as motion information of the image processing device 11 in an out-image AP11 at a time t (frame t).  Each rectangle in the out-image AP11 represents the local region and an arrow in each local region represents a motion vector of the local region.
+</p><p num="0072">
+Now, as illustrated in the lower side of the drawing, feature points are assumed to be obtained for each local region of the out-image AP11.  In the lower side of the drawing, one circle, more specifically, a circle with no diagonal represents one feature point at a time t and a circle with diagonals represents a feature point at a time t+1.
+</p><p num="0073">
+In this case, the camera blur correction unit 84 obtains the motion vector C as motion information, that is, the motion vector of each local region, and the position of the feature point at the time t+1 based on the position of each feature point at the time t.  Then, the camera blur correction unit 84 obtains deformation parameters a to l satisfying the following Expression (2) and Expression (3) as affine parameters.  Here, P feature points are assumed to be on the out-image AP11.<br/>
+<maths id="" num="2"><img file="JPOXMLDOC01-appb-M000002.tif" he="20.4" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths>
+</p><p num="0074"><maths id="" num="3"><img file="JPOXMLDOC01-appb-M000003.tif" he="20.4" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths></p><p num="0075">
+In Expression (2), a vector having elements s, t, and u indicates the coordinates of the feature points of the out-image AP11 at the time t.  That is, the vector having the elements s, t, and u indicates the coordinates of the feature points represented by the circles with no diagonal in Fig. 7.
+</p><p num="0076">
+In Expression (3), a vector having elements X, Y, and Z indicates the coordinates of the feature points of the out-image AP11 at the time t+1 obtained from the motion information.  That is, the vector having elements X, Y, and Z indicates the coordinates of the feature points represented by the circles with the diagonals in Fig. 7.
+</p><p num="0077">
+Expression (3) indicates image deformation in which the feature points at the time t+1 in Fig. 7 overlap the feature points at the time t, that is, a deformation expression of the affine transform.  Accordingly, in Expression (2) and Expression (3), a vector having elements x, y, and z indicates the coordinates of the feature points after the deformation when the image deformation is performed on the coordinates of the feature points of the out-image AP11 at the time t+1 using the affine parameters.
+</p><p num="0078">
+When the deformation parameters a to l are calculated, as indicated in Expression (2), the deformation parameters a to l are obtained for the P feature points matched with each other so that differences between the positions of the feature points at the time t+1 after the deformation and the positions of the feature points at the time t, that is, a transform error is the minimum.
+</p><p num="0079">
+When the affine parameters are obtained in this way, the camera blur correction unit 84 performs motion correction by performing image deformation indicated in the foregoing Expression (3) using the obtained affine parameters and deforming the actual out-image at the time t+1 supplied from the out-image capturing unit 23.  That is, the camera shake component is removed from the out-image, the camera blur correction is performed, and the out-image obtained as the result is supplied to the recording unit 54.  In the camera blur correction by the image deformation (image transform) indicated in Expression (3), motions of translation, expansion and contraction, rotation, and distortion can be treated with.
+</p><p num="0080">
+Referring back to the flowchart of Fig. 4 to make the description, when the camera blur correction is performed on the out-image in step S16, the process proceeds to step S17.
+</p><p num="0081">
+In step S17, the recording unit 54 records the out-image supplied from the camera blur correction unit 84 under the control of the control unit 52, and then the photographing process ends.
+</p><p num="0082">
+As described above, the image processing device 11 performs the camera blur correction on the out-image based on the motion information acquired by obtaining the motion information of the image processing device 11 using the out-image and the in-image.
+</p><p num="0083">
+Thus, the motion of the image processing device 11 can be estimated with higher accuracy using both of the out-image and the in-image.  Thus, even when the image processing device 11 moves more complexly at the time of the photography of the out-image, a shake component occurring in the motion of the image processing device 11 can be removed with higher accuracy.  That is, it is possible to obtain the out-image with high quality and higher sharpness.
+</p><p num="0084">
+In other words, in the image processing device 11, by performing the photographing control on the images using information regarding the images obtained through the photographing in two different directions, the photographing control can be performed using more pieces of information compared to a case in which one image is photographed.  Thus, it is possible to obtain the out-image with higher quality.
+</p><p num="0085">
+The example in which the camera blur correction is performed on the out-image has been described above.  However, the camera blur correction may be performed on the in-image through the same process and the in-image obtained as the result may be recorded.
+</p><p num="0086">
+(Modification Example 1 of First Embodiment)<br/>
+(Configuration Example 2 of Image Processing Device)<br/>
+As described above, the motion vector C has been obtained by synthesizing the motion vector A obtained from the out-image and the motion vector B obtained from the in-image.  However, a motion vector obtained by a sensor may be also synthesized in addition to the motion vectors.
+</p><p num="0087">
+In this case, the image processing device 11 has, for example, a configuration illustrated in Fig. 8.  In Fig. 8, the same reference numerals are given to constituent elements corresponding to the constituent elements illustrated in Fig. 2 and the description thereof will be appropriately omitted.
+</p><p num="0088">
+The image processing device 11 illustrated in Fig. 8 is configured such that a motion detection unit 111 is further installed in the image processing device 11 in Fig. 2.
+</p><p num="0089">
+The motion detection unit 111 includes, for example, an acceleration sensor or a gyro sensor, detects a motion of the image processing device 11, and supplies a motion vector D indicating the detection result as motion information to the synthesis unit 83 of the signal processing unit 53.
+</p><p num="0090">
+Here, the signal processing unit 53 of the image processing device 11 in Fig. 8 has the configuration of the signal processing unit 53 illustrated in Fig. 3.  The synthesis unit 83 of the signal processing unit 53 synthesizes motion information supplied from the motion estimation unit 81, motion information supplied from the motion estimation unit 82, and the motion information supplied from the motion detection unit 111 and supplies the synthesized motion information to the camera blur correction unit 84.
+</p><p num="0091">
+&lt;Description 2 of Photographing Process&gt;<br/>
+Next, a photographing process performed when the image processing device 11 has the configuration illustrated in Fig. 8 will be described with reference to the flowchart of Fig. 9.  Since processes of step S41 and step S42 are the same as the processes of step S11 and step S12 of Fig. 4, the description thereof will be omitted.
+</p><p num="0092">
+In step S43, the motion detection unit 111 detects a motion of the image processing device 11 and supplies the motion vector D indicating the detection result as the motion information to the synthesis unit 83.
+</p><p num="0093">
+When the motion vector D is calculated, processes of step S44 and step S45 are subsequently performed to perform motion estimation on an out-image and an in-image.  Since these processes are the same as the processes of step S13 and step S14 of Fig. 4, the description thereof will be omitted.
+</p><p num="0094">
+In step S46, the synthesis unit 83 synthesizes the motion information supplied from the motion estimation unit 81, the motion information supplied from the motion estimation unit 82, and the motion information supplied from the motion detection unit 111 and supplies the synthesized motion information to the camera blur correction unit 84.  Specifically, for example, the synthesis unit 83 calculates the motion vector C by calculating the following Expression (4).<br/>
+<maths id="" num="4"><img file="JPOXMLDOC01-appb-M000004.tif" he="5.8" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths>
+</p><p num="0095">
+In Expression (4), c1 indicates a coefficient serving as a weight for the motion vector D and coefficients a1, b1, and c1 are determined so that "a1 + b1 + c1 = 1.0" is satisfied.  Accordingly, in Expression (4), weighted addition is performed on the motion vector A, the motion vector B, and the motion vector D as the motion information, so that the motion vector C which is the final motion information of the image processing device 11 is obtained.
+</p><p num="0096">
+Thus, when the motion information of the image processing device 11 is obtained, processes of step S47 and step S48 are subsequently performed and the photographing process ends.  Since these processes are the same as the process of step S16 and step S17 of Fig. 4, the description thereof will be omitted.
+</p><p num="0097">
+Thus, the image processing device 11 synthesizes the motion information obtained from the out-image and the in-image and the motion information obtained by the motion detection unit 111 and performs the camera blur correction on the out-image based on the motion information obtained as the result.
+</p><p num="0098">
+Accordingly, by using not only the motion information obtained from the out-image and the in-image but also the motion information obtained by the motion detection unit 111, it is possible to estimate the motion of the image processing device 11 with higher accuracy.  Thus, since the shake component can be removed through the camera blur correction with higher accuracy, it is possible to obtain the out-image with higher quality.
+</p><p num="0099">
+&lt;Second Embodiment&gt;<br/>
+(Configuration Example 2 of Signal Processing Unit)<br/>
+The example in which the camera blur correction of the out-image is performed as the photographing control has been described above.  However, adjustment of a field angle of an out-image may be performed as photographing control.
+</p><p num="0100">
+In this case, for example, as illustrated in Fig. 10, adjustment of a field angle of an out-image is performed according to a sight line direction of user who is a photographer.
+</p><p num="0101">
+Specifically, as indicated by an arrow A31, normally, when a user U11 images target subjects by orienting the out-image capturing unit 23 of the image processing device 11 in directions in which a subject H11 and a subject H12 are located, the user U11 performs the photographing, viewing images displayed on the display unit 21.  Accordingly, since the position of the out-image capturing unit 23 photographing the out-image is actually different from a viewpoint position PE11 of the user U11 viewing the subject, an image intended by the user U11 may not necessarily be obtained.
+</p><p num="0102">
+In this example, straight lines AG11 indicate a field angle of the out-image capturing unit 23, that is, a photographing range, and two subjects H11 and H12 are contained within a region in the photographing range.  For this reason, as indicated by an arrow A32, the subjects H11 and H12 are shown in the out-image photographed by the out-image capturing unit 23.  Since the out-image is displayed on the display unit 21, the user U11 can perform photographing, viewing the display unit 21.
+</p><p num="0103">
+In practice, however, the user U11 may not desire to photograph both of the subjects H11 and H12.  In this example, as indicated in the upper side of the drawing, when the user U11 views the subject H11 on the screen of the display unit 21, there is a high probability that the user U11 pays attention to the subject H11.  In Fig. 10, dotted lines AG12 indicate a sight line of the user U11, that is, the range of a viewing field, and thus the sight line of the user U11 is oriented in the direction of the subject H11.
+</p><p num="0104">
+Thus, the image processing device 11 performs field angle control of the out-image capturing unit 23 as the photographing control of the out-image.  For example, the image processing device 11 adjusts the field angle of the out-image capturing unit 23 so that the photographing range of the out-image capturing unit 23 is the range indicated by the straight lines AG13.
+</p><p num="0105">
+The adjustment of the field angle is realized, for example, by changing a zoom magnification or a diaphragm of the out-image capturing unit 23, inclining the out-image capturing unit 23, more specifically, an imaging unit in the out-image capturing unit 23, or performing image deformation on the out-image.
+</p><p num="0106">
+When the adjustment of the field angle of the out-image capturing unit 23, that is, the adjustment of the field angle of the out-image is performed, as indicated by an arrow A33, only the subject H11 is contained in the out-image.  That is, the photographing range of the out-image capturing unit 23 becomes close to the range of the viewing field viewed from the viewpoint position PE11 of the user U11.  Thus, an image shown near the viewpoint of the user U11 and close to an image intended by the user U11, that is, a higher-quality image can be obtained.
+</p><p num="0107">
+When the adjustment of the field angle of the out-image is performed as the photographing control, the signal processing unit 53 of the image processing device 11 illustrated in Fig. 2 has a configuration illustrated in Fig. 11.
+</p><p num="0108">
+The signal processing unit 53 illustrated in Fig. 11 includes a position calculation unit 141 and a field angle transformation processing unit 142.
+</p><p num="0109">
+The position calculation unit 141 calculates a viewpoint position of the user, that is, a photographer who operates the image processing device 11 based on the in-image supplied from the in-image capturing unit 22 and supplies the viewpoint position to the field angle transformation processing unit 142.
+</p><p num="0110">
+The field angle transformation processing unit 142 calculates information necessary for the adjustment of the field angle of the out-image based on the viewpoint position supplied from the position calculation unit 141 and supplies the information to the control unit 52.  The control unit 52 generates control information for controlling the out-image capturing unit 23 based on the information from the field angle transformation processing unit 142.  Then, the control unit 52 performs the adjustment of the field angle by changing the zoom magnification or the diaphragm of the out-image capturing unit 23 or inclining the imaging unit of the out-image capturing unit 23 based on the control information.
+</p><p num="0111">
+The field angle transformation processing unit 142 includes an image deformation unit 151.  The image deformation unit 151 transforms the field angle of the out-image by performing the image deformation on the out-image from the out-image capturing unit 23 according to the viewpoint position from the position calculation unit 141 and supplies the changed field angle to the display unit 21 and the recording unit 54.
+</p><p num="0112">
+&lt;Description 3 of Photographing Process&gt;<br/>
+Next, a photographing process performed by the image processing device 11 will be described with reference to the flowchart of Fig. 12 when the signal processing unit 53 has the configuration illustrated in Fig. 11.
+</p><p num="0113">
+The photographing process is performed when a mode in which the photographing is performed while the adjustment of the field angle of the out-image is performed is selected by the user and an instruction to start photographing the out-image is given.
+</p><p num="0114">
+Since processes of step S71 and step S72 are the same as the processes of step S11 and step S12 of Fig. 4, the description thereof will be omitted.  However, an out-image photographed in step S71 is supplied to the field angle transformation processing unit 142 and an in-image photographed in step S72 is supplied to the position calculation unit 141.
+</p><p num="0115">
+In step S73, the position calculation unit 141 calculates the viewpoint position of the user based on the in-image supplied from the in-image capturing unit 22.
+</p><p num="0116">
+For example, the position calculation unit 141 obtains the viewpoint position by detecting the face or eyes of the user from the in-image and calculating the position of the eyes of the user from the in-image capturing unit 22, that is, the distance up to the viewpoint position, the height of the viewpoint position, and an amount of deviation between the right and left of the viewpoint position with respect to the in-image capturing unit 22.  The viewpoint position obtained in this way is a 3-dimensional position, that is, the position of the viewpoint of the user in a 3-dimensional coordinate system in which a predetermined position is set as a reference.  Further, the sight line direction of the user may be obtained from the position of the pupils of the user in the in-image.
+</p><p num="0117">
+In step S74, the control unit 52 generates the control information for changing the field angle of the out-image capturing unit 23 based on the information supplied from the field angle transformation processing unit 142.
+</p><p num="0118">
+In step S75, the control unit 52 performs the adjustment of the field angle of the out-image by controlling the out-image capturing unit 23 based on the generated control information.  Specifically, the control unit 52 performs the adjustment of the field angle by changing the zoom magnification or the diaphragm of the out-image capturing unit 23 or inclining the imaging unit of the out-image capturing unit 23.
+</p><p num="0119">
+Thus, the out-image subjected to the adjustment of the field angle to some extent is supplied from the out-image capturing unit 23 to the field angle transformation processing unit 142.
+</p><p num="0120">
+In step S76, the image deformation unit 151 adjusts the field angle of the out-image by performing the image deformation on the out-image supplied from the out-image capturing unit 23 based on the viewpoint position supplied from the position calculation unit 141 and supplies the adjusted field angle to the display unit 21 and the recording unit 54.
+</p><p num="0121">
+Here, the processes of step S74 to step S76 described above will be described in more detail.
+</p><p num="0122">
+For example, as illustrated in the upper side of Fig. 13, when the user U11 who is a photographer normally views the center of a display screen of the display unit 21 at the time of the photography of an out-image, the sight line direction of the user U11 is obtained based on the viewpoint position PE11 of the user U11 and the position of the display screen of the display unit 21.  In the upper side of Fig. 13, the sight line of the user U11 is indicated by a dotted line bound by the viewpoint position PE11 and the image processing device 11.  In Fig. 13, the same reference numerals are given to the portions corresponding to the portions in Fig. 10, and the description thereof will be appropriately omitted.
+</p><p num="0123">
+The field angle transformation processing unit 142 obtains the sight line direction of the user U11 based on the viewpoint position PE11 and the position of the display unit 21 in step S74.  Further, the field angle transformation processing unit 142 determines which out-image can be acquired when the out-image capturing unit 23 is virtually moved to the viewpoint position PE11 based on the obtained sight line direction and the viewpoint position PE11.
+</p><p num="0124">
+Now, as indicated by an arrow Q11 in the upper side of the drawing, the out-image capturing unit 23 is assumed to be virtually moved to the viewpoint position PE11 of the user U11.  In this example, an amount of movement of the out-image capturing unit 23 to the viewpoint position PE11, an amount of rotation of the out-image capturing unit 23, or the like can be calculated based on the position of the out-image capturing unit 23, the viewpoint position PE11, and the sight line direction of the user U11.
+</p><p num="0125">
+Therefore, the field angle transformation processing unit 142 uniquely determines to which position a point on a predetermined 3-dimensional space is projected on the display screen of the display unit 21 before the movement of the out-image capturing unit 23 and to which position the point is projected on the display screen of the display unit 21 after the movement of the out-image capturing unit 23.
+</p><p num="0126">
+Thus, the field angle transformation processing unit 142 obtains the 3-dimensional positions of three or more subjects, that is, positions on the 3-dimensional space through the estimation from the out-image and calculates affine parameters between two images shown in the foregoing Expression (3) based on the obtained 3-dimensional positions of the three or more points.
+</p><p num="0127">
+A technology for obtaining the positions before and after the movement of the projected point is described in, for example, "Multiple View Geometry in Computer Vision, " by Richard Hartley and Andrew Zisserman in Cambridge University Press, March 2004.
+</p><p num="0128">
+Thus, when the affine parameters for transforming the out-image can be obtained in the image obtained at the time of the movement of the out-image capturing unit 23 to the viewpoint position PE11, the adjustment of the field angle is performed based on the affine parameters.
+</p><p num="0129">
+For example, the field angle transformation processing unit 142 supplies the obtained affine parameters to the control unit 52.  Then, the control unit 52 generates the field angle of the out-image capturing unit 23, that is, the control information for changing the field angle of the out image based on the affine parameters from the field angle transformation processing unit 142.  Here, the control information is, for example, information indicating an amount of transformation of the zoom magnification or the diaphragm of the out-image capturing unit 23 or an inclination angle of the imaging unit of the out-image capturing unit 23.  The control unit 52 controls the out-image capturing unit 23 based on the control information and then performs the adjustment of the field angle.
+</p><p num="0130">
+The image deformation unit 151 performs the image deformation on the out-image based on the affine parameters to adjust the field angle of the out-image.  That is, the image deformation unit 151 adjusts the field angle by performing signal processing (deformation process) on the out-image.
+</p><p num="0131">
+Here, translation or rotation components can be obtained in the affine parameters.  Accordingly, for example, the zoom may correspond to translation in the Z axis direction illustrated in Fig. 6, the inclination of the imaging unit may correspond to rotation in the X axis direction illustrated in Fig. 6, and the image deformation may correspond to other adjustment of the field angle.  In the rotation in the X axis direction, the imaging unit may be inclined by rotating the imaging unit using the X axis as a rotation axis.
+</p><p num="0132">
+Through the adjustment of the field angle, as illustrated in the lower side of Fig. 13, the out-image for which the out-image capturing unit 23 seems to be located at the viewpoint position PE11 of the user U11 who is the photographer can be acquired.
+</p><p num="0133">
+In this example, an out-image AP21 indicates an out-image photographed by the out-image capturing unit 23 before the adjustment of the field angle.  In the out-image AP21, a point HP11 on the subject H11 is projected to the middle lower side in the out-image AP21.
+</p><p num="0134">
+On the other hand, an out-image AP22 indicates an out-image which is photographed by the out-image capturing unit 23 after the adjustment of the field angle and is subjected to the image deformation by the image deformation unit 151.  In the out image AP22, the point HP11 on the subject H11 is projected to the middle upper side in the out-image AP22.
+</p><p num="0135">
+Thus, when the adjustment of the field angle is performed on the out-image, the out-image for which the user U11 seems to view the actual subject H11 through the display unit 21, that is, the high-quality out-image closer to the viewpoint of the user U11 can be obtained.
+</p><p num="0136">
+Referring back to the flowchart of Fig. 12 to make the description, the process proceeds from step S76 to step S77 when the adjustment of the field angle on the out-image is performed and the out-image obtained as the result is supplied to the display unit 21 and the recording unit 54.
+</p><p num="0137">
+In step S77, the display unit 21 displays the out-image supplied from the field angle transformation processing unit 142 and obtained after the adjustment of the field angle.
+</p><p num="0138">
+In step S78, the recording unit 54 records the out-image supplied from the field angle transformation processing unit 142 and obtained after the adjustment of the field angle, and then the photographing process ends.
+</p><p num="0139">
+As described above, the image processing device 11 obtains the viewpoint position of the user based on the in-image and performs the adjustment of the field angle of the out-image based on the viewpoint position.  Thus, by performing the adjustment of the field angle on the out-image, the out-image according to the sight line of the user can be obtained.  That is, it is possible to acquire the higher-quality out-image closer to the viewpoint of the user.
+</p><p num="0140">
+As described above, the example has been described in which both of the adjustment of the field angle by the out-image capturing unit 23 and the adjustment of the field angle by the image deformation of the image deformation unit 151, such as the adjustment of the zoom magnification or the diaphragm, are performed.  However, only one of the adjustments of the field angle may be performed.
+</p><p num="0141">
+&lt;Third Embodiment&gt;<br/>
+(Configuration Example 3 of Signal Processing Unit)<br/>
+Control may be performed as photographing control such that a sight line direction of the user is detected from an in-image and a focal point, lightness, white balance, or the like is adapted in correspondence with a gaze position of a user on an out-image obtained by the sight line direction.
+</p><p num="0142">
+In this case, for example, as indicated by an arrow A41 of Fig. 14, the image processing device 11 photographs an image of the user U11 who is a photographer as an in-image and obtains a viewpoint position PE11 of the user U11 based on the in-image.  In Fig. 14, the same reference numerals are given to constituent elements corresponding to the constituent elements illustrated in Fig. 10 and the description thereof will be appropriately omitted.
+</p><p num="0143">
+In this example, the user U11 orients the out-image capturing unit 23 to two subjects H11 and H12 and photographs an out-image.  At this time, an image received by the out-image capturing unit 23 is displayed as a preview image of the out-image on the display unit 21 installed on the surface (front surface) of the image processing device 11 on the side of the user U11.
+</p><p num="0144">
+The user U11 gives an instruction to perform photographing, viewing the preview image displayed on the display unit 21 and causes the out-image to be photographed.  In Fig. 14, a dotted arrow oriented from the viewpoint position PE11 to the image processing device 11 indicates a sight line of the user U11.
+</p><p num="0145">
+When the image processing device 11 obtains the viewpoint position PE11 from the in-image, the image processing device 11 obtains the sight line direction of the user U11 based on the viewpoint position PE11 and specifies a gaze position of the user U11 on the out-image from the sight line direction, as indicated by an arrow A42.
+</p><p num="0146">
+In the image processing device 11 indicated by the arrow A42, the out-image, more particularly, the preview image of the out-image is displayed on the display unit 21 and the position indicated by a star mark on the subject H11 is assumed to be the gaze position of the user U11.  The gaze position is a position at which the sight line of the user U11 and the display screen of the display unit 21 intersect each other and is a position of a region on the out-image which the user U11 pays attention to.
+</p><p num="0147">
+When the gaze position of the user U11 on the out-image is obtained, the image processing device 11 controls the out-image capturing unit 23 as the photographing control such that the subject H11 located at the gaze position on the out-image is focused.  The image processing device 11 performs lightness adjustment or white balance adjustment so that the lightness (exposure) and white balance of the subject H11 located at the gaze position on the out-image are appropriate.
+</p><p num="0148">
+Thus, as illustrated in the lower right side of the drawing, the subject H11 is focused on the out-image and the lightness or the white balance of the subject H11 is appropriate.  That is, it is possible to acquire the higher-quality out-image subjected to the focusing, the lightness adjustment, and the white balance adjustment by setting the subject which the user U11 pays attention to as a reference.
+</p><p num="0149">
+Thus, when the focusing, the lightness adjustment, and the like are performed setting a gaze region of the user as a reference, the signal processing unit 53 of the image processing device 11 illustrated in Fig. 2 has, for example, a configuration illustrated in Fig. 15.  The signal processing unit 53 illustrated in Fig. 15 includes a sight line direction calculation unit 181 and a gaze position calculation unit 182.
+</p><p num="0150">
+The sight line direction calculation unit 181 calculates a sight line direction of the user operating the image processing device 11 based on the in-image supplied from the in-image capturing unit 22 and supplies the sight line direction to the gaze position calculation unit 182.
+</p><p num="0151">
+The gaze position calculation unit 182 obtains the gaze position based on the sight line direction supplied from the sight line direction calculation unit 181 and supplies the gaze position to the control unit 52.  The control unit 52 generates control information based on the gaze position from the gaze position calculation unit 182 so that the subject at the gaze position on the out-image is focused and the exposure (lightness) and the white balance of the subject at the gaze position are appropriate.  Then, the control unit 52 controls the out-image capturing unit 23 based on the generated control information.
+</p><p num="0152">
+&lt;Description 4 of Photographing Process&gt;<br/>
+Next, a photographing process performed when the signal processing unit 53 has the configuration illustrated in Fig. 15 will be described with reference to the flowchart of Fig. 16.  Since processes of step S101 and step S102 are the same as the processes of step S11 and step S12 of Fig. 4, the description thereof will be omitted.
+</p><p num="0153">
+In step S103, the sight line direction calculation unit 181 calculates the sight line direction of the user who is a photographer based on the in-image supplied from the in-image capturing unit 22 and supplies the sight line direction to the gaze position calculation unit 182.  For example, the sight line direction calculation unit 181 obtains the viewpoint position of the user by performing the same process as the process of step S73 of Fig. 12 and obtains the sight line direction of the user based on the viewpoint position.  For example, the viewpoint position is calculated by detecting the positions of the face and eyes of the user from the in-image and the sight line direction is specified based on the viewpoint position and the positions of the pupils of the user on the in-image.
+</p><p num="0154">
+In step S104, the gaze position calculation unit 182 obtains the gaze position based on the sight line direction supplied from the sight line direction calculation unit 181 and the viewpoint position and supplies the gaze position to the control unit 52.  For example, the gaze position calculation unit 182 obtains the gaze position on the out-image based on the sight lie direction of the user, the viewpoint position of the user, and the position of the display unit 21.
+</p><p num="0155">
+In step S105, the control unit 52 generates control information used for focal point adjustment, lightness adjustment, and white balance adjustment of the out-image capturing unit 23 based on the gaze position supplied from the gaze position calculation unit 182.
+</p><p num="0156">
+For example, based on the gaze position, the control unit 52 generates the control information used for the focal point adjustment, the exposure adjustment, and the white balance adjustment by which the subject at the gaze position is focused and the lightness and the white balance of the subject are optimum.
+</p><p num="0157">
+In step S106, the control unit 52 performs the adjustment of the focal point position, the lightness, and the white balance by controlling the out-image capturing unit 23 based on the control information.  Thus, the out-image in which the subject at the gaze position of the user is focused and the lightness and the white balance of the subject are appropriately adjusted is supplied from the out-image capturing unit 23 to the signal processing unit 53.  Further, the signal processing unit 53 supplies the out-image supplied from the out-image capturing unit 23 to the display unit 21 and the recording unit 54.
+</p><p num="0158">
+Here, the example in which the out-image capturing unit 23 performs the lightness adjustment and the white balance adjustment has been described.  However, the lightness adjustment or the white balance adjustment may be performed by the signal processing unit 53.
+</p><p num="0159">
+In step S107, the display unit 21 displays the out-image supplied from the signal processing unit 53.  Then, in step S108, the recording unit 54 records the out-image supplied from the signal processing unit 53, and then the photographing process ends.
+</p><p num="0160">
+As described above, the image processing device 11 specifies the gaze position of the out-image which the user pays attention to based on the sight line direction of the user obtained from the in-image and performs the focal point adjustment or the lightness adjustment based on the gaze position.  Accordingly, it is possible to acquire the higher-quality out-image in which the subject which the user pays attention to is focused and the lightness or the white balance of the subject is appropriate.  Further, in this case, the focal point and the lightness are appropriately adjusted although the user does not particularly perform an input operation.  Therefore, convenience can be improved.
+</p><p num="0161">
+&lt;Fourth Embodiment&gt;<br/>
+(Configuration Example 4 of Signal Processing Unit)<br/>
+The example in which the photographing control of the out-image is performed has been described above.  However, photographing control of an in-image may be performed based on the in-image and an out-image.
+</p><p num="0162">
+Specifically, for example, as illustrated in Fig. 17, a user U21 who is a photographer is assumed to orient the out-image capturing unit 23 of the image processing device 11 from a room to the outside to photograph a sunset landscape as an out-image P31 and photograph the user U21 as an in-image.  Then, the image processing device 11 is assumed to synthesize the in-image on the out-image P31 and acquire a synthesized image obtained as the result as a final image which the user U21 intends to acquire.
+</p><p num="0163">
+In this case, light sources of light with which a subject is radiated at the time of the photography differ in the inside and the outside of the room.  That is, the white balance of the out-image P31 and the white balance of the in-image are not identical.  For this reason, when the in-image is simply synthesized with the out-image, for example, an image in which color balance is unnatural between the user U21 on the in-image and the background as in a synthesized image P32 may be obtained in some cases.  In this example, the color of the background (landscape) of the synthesized image P32 is dark, but the color of the user U21 is bright since the user U21 is photographed indoors.
+</p><p num="0164">
+Accordingly, the image processing device 11 preliminarily photographs the in-image at the time of the photography of the out-image P31 and obtains white balance values of the acquired out-image P31 and the in-image.  Then, the image processing device 11 causes the display unit 21 to emit light so that hues of the in-image and the out-image P31 are the same based on the white balance values.  That is, the image processing device 11 obtains a light source color for adapting the white balance of the in-image intended to be photographed from the now to the white balance of the out-image P31, causes the display unit 21 to emit light with the light source color, and re-photographs an in-image.  Then, the image processing device 11 synthesizes the already photographed out-image P31 and the re-photographed in-image to generate a synthesized image P33.
+</p><p num="0165">
+At the time of the re-photography of the in-image, the user U21 who is a subject is radiated with appropriate light when the display unit 21 emits the light.  Therefore, the in-image is photographed under the same light source as the light source of the case in which the out-image P31 is photographed, and thus the hue of the user U21 on the acquired in-image is the same as the hue of the out-image P31 which is the background.  That is, the white balance of the out-image P31 is identical with the white balance of the in-image.  Accordingly, the synthesized image P33 with the natural hue can be acquired without performing white balance adjustment on the photographed image.
+</p><p num="0166">
+Thus, by performing the photographing control on the in-image based on the white balance values of the out-image and the in-image, the light source of the out-image is matched with the light source of the in-image and the synthesized image with the natural hue, that is, a higher-quality synthesized image can be acquired.  The photographing control is effective particularly, for example, when the outside under the sun is photographed in the inside illuminated with a fluorescent lamp or the like and an in-image photographed in the inside and an out-image photographed outside are synthesized.
+</p><p num="0167">
+When the photographing control is performed, the signal processing unit 53 of the image processing device 11 in Fig. 2 has, for example, a configuration illustrated in Fig. 18.
+</p><p num="0168">
+The signal processing unit 53 illustrated in Fig. 18 includes a white balance calculation unit 211, a white balance calculation unit 212, a light source color calculation unit 213, and a synthesis unit 214.
+</p><p num="0169">
+The white balance calculation unit 211 calculates the white balance value of the out-image supplied from the out-image capturing unit 23 and supplies the white balance value to the light source color calculation unit 213.  The white balance calculation unit 212 calculates the white balance value of the in-image supplied from the in-image capturing unit 22 and supplies the white balance value to the light source color calculation unit 213.
+</p><p num="0170">
+The light source color calculation unit 213 calculates light source color information for adapting the white balance of the in-image to the white balance of the out-image based on the white balance values supplied from the white balance calculation unit 211 and the white balance calculation unit 212 and supplies the light source color information to the control unit 52.  The control unit 52 generates control information for causing the display unit 21 to emit light based on the light source color information from the light source color calculation unit 213.
+</p><p num="0171">
+The synthesis unit 214 generates a synthesized image by synthesizing the out-image from the out-image capturing unit 23 and the in-image from the in-image capturing unit 22 and supplies the synthesized image to the recording unit 54.
+</p><p num="0172">
+&lt;Description 5 of Photographing Process&gt;<br/>
+Here, when the user operates the operation input unit 51 to select a mode in which the out-image and the in-image are synthesized to generate the synthesized image and gives an instruction to start photographing, the image processing device 11 starts the photographing process and generates the synthesized image.  Hereinafter, the photographing process performed when the signal processing unit 53 has the configuration illustrated in Fig. 18 will be described with reference to the flowchart of Fig. 19.
+</p><p num="0173">
+Since processes of step S131 and step S132 are the same as the processes of step S11 and step S12 of Fig. 4, the description thereof will be omitted.  However, in step S131 and step S132, still images are photographed as the out-image and the in-image.  In particular, the in-image photographed in step S132 is photographed to generate the light source color information and is not used for the synthesis with the out-image.
+</p><p num="0174">
+The out-image is supplied from the out-image capturing unit 23 to the white balance calculation unit 211 and the synthesis unit 214 and the in-image is supplied from the in-image capturing unit 22 to the white balance calculation unit 212 and the synthesis unit 214.
+</p><p num="0175">
+In step S133, the white balance calculation unit 211 calculates the white balance value of the out-image supplied from the out-image capturing unit 23 and supplies the white balance value to the light source color calculation unit 213.  For example, the white balance calculation unit 211 calculates a white balance value Wr1 of an R (red) pixel of the out-image and a white balance value Wb1 of a B (blue) pixel of the out-image.
+</p><p num="0176">
+In step S134, the white balance calculation unit 212 calculates the white balance value of the in-image supplied from the in-image capturing unit 22 and supplies the white balance value to the light source color calculation unit 213.  For example, the white balance calculation unit 212 calculates a white balance value Wr2 of an R (red) pixel of the in-image and a white balance value Wb2 of a B (blue) pixel of the in-image.
+</p><p num="0177">
+In step S135, the light source color calculation unit 213 determines whether the light sources of the out-image and the in-image are the same based on the white balance values from the white balance calculation unit 211 and the white balance values from the white balance calculation unit 212.
+</p><p num="0178">
+For example, the light source color calculation unit 213 determines that the light sources are the same, when the white balance values of the out-image and the in-image are the same, that is, Wr1 = Wr2 and Wb1 = Wb2.
+</p><p num="0179">
+In step S135, when it is determined that the light sources are not the same, that is, the light sources differ from each other, the process proceeds to step S136.
+</p><p num="0180">
+In step S136, the light source color calculation unit 213 generates the light source color information for adapting the white balance of the in-image to the white balance of the out-image based on the white balance values of the out-image and the in-image and supplies the light source color information to the control unit 52.
+</p><p num="0181">
+For example, the light source color calculation unit 213 performs calculation of the following Expression (5) and generates light source color information indicating a relation between the respective hues of R, G, and B when the display unit 21 is caused to emit light.  That is, information indicating the relation of Expression (5) is the light source color information.<br/>
+<maths id="" num="5"><img file="JPOXMLDOC01-appb-M000005.tif" he="5.8" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths>
+</p><p num="0182">
+In step S137, the control unit 52 generates control information for causing the display unit 21 to emit the light with the hue indicated by the light source color information based on the light source color information supplied from the light source color calculation unit 213 and performs light-emission control of the display unit 21 based on the control information.  That is, the control unit 52 causes the display unit 21 to emit the light with the hue indicated by Expression (5).
+</p><p num="0183">
+When the process of step S137 is performed or it is determined in step S135 that the light sources are the same, the in-image capturing unit 22 photographs the in-image in step S138 and supplies the in-image to the white balance calculation unit 212 and the synthesis unit 214.
+</p><p num="0184">
+For example, when the display unit 21 is caused to emit the light in step S137, the user who is a subject is radiated with the light from the light source under an indoor fluorescent lamp or the like through the light emission and the light from the display unit 21 and the in-image is consequently photographed under the light source which is identical with the light source of the out-image.  That is, in the photographing of step S138, the in-image with the same white balance as that of the out-image acquired in step S131 can be acquired.
+</p><p num="0185">
+For example, when it is determined in step S135 that the light sources are the same, the display unit 21 does not emit the light.  However, in this case, although the display unit 21 is particularly caused not to emit the light, the out-image and the in-image are photographed under the same light source.  That is, the white balance of the in-image photographed in step S138 is identical with the white balance of the out-image photographed in step S131.
+</p><p num="0186">
+In step S139, the synthesis unit 214 generates the synthesized image by synthesizing the out-image supplied from the out-image capturing unit 23 and the in-image supplied from the in-image capturing unit 22 and supplies the synthesized image to the recording unit 54.  Here, the out-image acquired in step S131 and the in-image acquired in step S138 are synthesized, so that the synthesized image is generated.
+</p><p num="0187">
+When the light sources of the out-image and the in-image are the same, the process of step S138 may not be performed and the out-image acquired in step S131 and the in-image acquired in step S132 may be synthesized.
+</p><p num="0188">
+In step S140, the recording unit 54 records the synthesized image supplied from the synthesis unit 214, and then the photographing process ends.
+</p><p num="0189">
+As described above, the image processing device 11 causes the display unit 21 to emit the light so that the white balance of the out-image is identical with the white balance of the in-image based on the white balance values of the out-image and the in-image.  Then, the image processing device 11 re-photographs the in-image and generates the synthesized image by synthesizing the acquired in-image and the out-image.
+</p><p num="0190">
+Thus, by causing the display unit 21 to emit the light with the appropriate hue and adapting the white balance of the in-image to the white balance of the out-image, it is possible to acquire the synthesized image with a more natural hue.  That is, a higher-quality synthesized image can be acquired.
+</p><p num="0191">
+In the image processing device 11, the white balance of the out-image can be identical with the white balance of the in-image by causing the display unit 21 installed on the same surface as the in-image capturing unit 22 photographing the in-image to emit light with an appropriate color (display an image with an appropriate color).  That is, the light sources of the out-image and the in-image can be virtually caused to be identical.  Accordingly, even when the light sources of the out-image and the in-image differ from each other, an image photographed under the same light source can be acquired, and thus the synthesized image with a more natural hue can be acquired.
+</p><p num="0192">
+&lt;Fifth Embodiment&gt;<br/>
+(Outer Appearance Configuration Example of Image Processing Device)<br/>
+As described above, the example has been described in which the display unit 21 is installed only on the front surface side of the image processing device 11, as illustrated in Fig. 1.  However, display units may be installed on both of the front surface and the rear surface of an image processing device.
+</p><p num="0193">
+In this case, for example, the outer appearance of the image processing device is configured, as illustrated in Fig. 20.  In Fig. 20, the same reference numerals are given to constituent elements corresponding to the constituent elements illustrated in Fig. 1 and the description thereof will be appropriately omitted.
+</p><p num="0194">
+A first surface 261 and a second surface 262 are installed in an image processing device 251 illustrated in Fig. 20, for example, as indicated by an arrow A51.
+</p><p num="0195">
+The display unit 21 and the in-image capturing unit 22 are installed on the first surface 261.  For example, an in-image photographed by the in-image capturing unit 22 is displayed on the display unit 21.  Further, the out-image capturing unit 23 and a display unit 271 are installed on the second surface 262.  An out-image photographed by the out-image capturing unit 23 is displayed on the display unit 271.  A touch panel (not illustrated) is installed to be superimposed on the display unit 271, and thus an input operation can be performed by a user.
+</p><p num="0196">
+In the example indicated by the arrow A51, the first surface 261 and the second surface 262 are arranged on the same plane.  Further, when the image processing device 251 in the state indicated by the arrow A51 is viewed from the upper side of the drawing, as indicated by an arrow A52, a hinge mechanism 272 configured to rotate one of the first surface 261 and the second surface 262 with respect to the other thereof is installed between the first surface 261 and the second surface 262.
+</p><p num="0197">
+Accordingly, as indicated by an arrow A53, the first surface 261 and the second surface 262 can be folded by the user.  In the folded state of the image processing device 251, the first surface 261 and the second surface 262 are superimposed so that the display unit 21 and the display unit 271 are located mutually outside.  That is, in the state indicated by the arrow A53, the display unit 21 and the in-image capturing unit 22 are located to the left side in the drawing of the first surface 261 and the display unit 271 and the out-image capturing unit 23 are located to the right side in the drawing of the second surface 262.
+</p><p num="0198">
+Thus, when the user operates the image processing device 251 in the folded state of the image processing device 251, the user can perform an operation particularly without distinguishing the front surface and the rear surface from each other.  For example, the user can operate the first surface 261 toward the user side and can also operate the second surface 262 toward the user side.  Accordingly, an image photographed by an imaging unit oriented toward the user side is an in-image and an image photographed by an imaging unit oriented to the opposite side to the user is an out-image.
+</p><p num="0199">
+Hereinafter, to facilitate the description, the first surface 261 is referred to as a front surface and the second surface 262 is referred to as a rear surface.  That is, the user is assumed to operate the first surface 261 toward the user side.  Accordingly, an image photographed by the in-image capturing unit 22 is an in-image and an image photographed by the out-image capturing unit 23 is an out-image.
+</p><p num="0200">
+(Configuration Example 3 of Image Processing Device)<br/>
+More specifically, the image processing device 251 has a configuration illustrated in Fig. 21.  In Fig. 21, the same reference numerals are given to constituent elements corresponding to the constituent elements illustrated in Fig. 2 or 20 and the description thereof will be appropriately omitted.
+</p><p num="0201">
+The image processing device 251 illustrated in Fig. 21 includes a display unit 21, a display unit 271, an in-image capturing unit 22, an out-image capturing unit 23, an operation input unit 51, a control unit 52, a signal processing unit 53, and a recording unit 54.
+</p><p num="0202">
+The image processing device 251 is configured such that the display unit 271 is further included with respect to the image processing device 11 illustrated in Fig. 2.  The display unit 271 displays an image supplied from the signal processing unit 53 under the control of the control unit 52.  In the display unit 271, a touch panel serving as the operation input unit 51 is installed to be superimposed, and thus the user can input various instructions by operating the touch panel serving as the operation input unit 51.
+</p><p num="0203">
+&lt;Description 6 of Photographing Process&gt;<br/>
+The image processing device 251 having such a configuration can perform the same process as the photographing process performed by the above-described image processing device 11.
+</p><p num="0204">
+For example, when the image processing device 251 performs the same process as the photographing process described with reference to Fig. 19, the following process is performed.  Hereinafter, a photographing process performed by the image processing device 251 will be described with reference to the flowchart of Fig. 22.
+</p><p num="0205">
+In this case, the signal processing unit 53 of the image processing device 251 has a configuration illustrated in Fig. 18.  In the photographing process, the white balance of an image of the user photographed by the in-image capturing unit 22, that is, the white balance of the in-image is assumed to be adapted to the white balance of the out-image.
+</p><p num="0206">
+When the photographing process starts, processes of step S171 to step S175 are performed.  Since these processes are the same as the processes of step S131 to step S135 of Fig. 19, the description thereof will be omitted.
+</p><p num="0207">
+When it is determined in step S175 that the light sources of the in-image and the out-image are different from each other, the process of step S176 is performed.  That is, in step S176, the light source color calculation unit 213 calculates the foregoing Expression (5) based on white balance values of the out-image and the in-image and generates light source color information for adapting the white balance of the in-image to the white balance of the out-image.
+</p><p num="0208">
+The light source color calculation unit 213 supplies the light source color information acquired in this way to the control unit 52.
+</p><p num="0209">
+In step S177, the control unit 52 generates control information for causing the display unit 21 to emit light with a hue indicated by the light source color information supplied from the light source color calculation unit 213 and performs light-emission control of the display unit 21 located on an inside, that is, the user side based on the control information.
+</p><p num="0210">
+When the process of step S177 is performed or it is determined in step S175 that the light sources are the same, the in-image capturing unit 22 photographs an in-image of the user as a subject in step S178 and supplies the in-image to the white balance calculation unit 212 and the synthesis unit 214.
+</p><p num="0211">
+Thereafter, processes of step S179 and step S180 are performed, and then the photographing process ends.  Since these processes are the same as the processes of step S139 and step S140 of Fig. 19, the description thereof will be omitted.
+</p><p num="0212">
+As described above, the image processing device 251 causes the display unit 21 to emit light so that the white balance of the out-image and the white balance of the in-image are identical with each other based on the white balance values of the out-image and the in-image.  Then, the image processing device 251 re-photographs an in-image and generates a synthesized image by synthesizing the acquired in-image and the out-image.
+</p><p num="0213">
+Thus, by causing the display unit 21 to emit the light with the appropriately hue, it is possible to acquire the synthesized image with a more natural hue.
+</p><p num="0214">
+(Another Example of Photographing Process)<br/>
+In the photographing process described with reference to Fig. 22, the example has been described in which the white balance of the in-image is adapted to the white balance of the out-image.  However, the white balance of the out-image may be adapted to the white balance of the in-image.
+</p><p num="0215">
+For example, in the image processing device 251, the display unit 271 is installed on the second surface 262 in which the out-image capturing unit 23 is installed.  Therefore, when the display unit 271 is caused to appropriately emit light, the white balance of the out-image can be adapted to the white balance of the in-image.  The photographing control is effective particularly when a subject of the out-image is located at a position close to the image processing device 251.
+</p><p num="0216">
+Hereinafter, a photographing process performed by the image processing device 251 will be described with reference to the flowchart of Fig. 23 when the white balance of the out-image is adapted to the white balance of the in-image.
+</p><p num="0217">
+Since processes of step S211 to step S215 are the same as the processes of step S131 o step S135 of Fig. 19, the description thereof will be appropriately omitted.
+</p><p num="0218">
+When it is determined in step S215 that the light sources are not the same, that is, the light sources differ from each other, the process proceeds to step S216.
+</p><p num="0219">
+In step S216, the light source color calculation unit 213 generates light source color information for adapting the white balance of the out-image to the white balance of the in-image based on the white balance values of the out-image and the in-image and supplies the light source color information to the control unit 52.
+</p><p num="0220">
+For example, the light source color calculation unit 213 performs calculation of the following Expression (6) and generates light source color information indicating a relation between the respective hues of R, G, and B when the display unit 271 is caused to emit light.  That is, information indicating the relation of Expression (6) is the light source color information.<br/>
+<maths id="" num="6"><img file="JPOXMLDOC01-appb-M000006.tif" he="5.8" img-content="drawing" img-format="tif" inline="no" orientation="portrait" wi="124.8"/></maths>
+</p><p num="0221">
+In step S217, the control unit 52 generates control information for causing the display unit 271 to emit light with a hue indicated by the light source color information from the light source color calculation unit 213 and performs light-emission control of the display unit 271 located on the outside, that is, the opposite side to the user side based on the control information.  That is, the control unit 52 causes the display unit 271 to emit the light with the hue indicated by Expression (6).  Accordingly, a subject of the out-image is radiated with the light from the display unit 271.
+</p><p num="0222">
+When the process of step S217 is performed or it is determined in step S215 that the light sources are the same, the out-image capturing unit 23 photographs the out-image in step S218 and supplies the out-image to the white balance calculation unit 211 and the synthesis unit 214.
+</p><p num="0223">
+For example, when the display unit 271 is caused to emit the light in step S217, the subject of the out-image is radiated with the light from the light source under an outside the sunlight or the like through the light emission and the light from the display unit 271 and the out-image is consequently photographed under the light source which is identical with the light source of the in-image.  That is, in the photographing of step S218, the out-image with the same white balance as that of the in-image acquired in step S212 can be acquired.
+</p><p num="0224">
+For example, when it is determined in step S215 that the light sources are the same, the display unit 271 does not emit the light.  However, in this case, the in-image and the out-image are photographed under the same light source.
+</p><p num="0225">
+When the out-image is re-photographed in this way, processes of step S219 and step S220 are subsequently performed, and then the photographing process ends.  Since these processes are the same as the processes of step S139 and step S140 of Fig. 19, the description thereof will be omitted.  However, in step S219, the in-image acquired in step S212 and the out-image acquired in step S218 are synthesized.
+</p><p num="0226">
+As described above, the image processing device 251 causes the display unit 271 to emit the light so that the white balance of the in-image is identical with the white balance of the out-image based on the white balance values of the out-image and the in-image.  Then, the image processing device 251 re-photographs the out-image and generates the synthesized image by synthesizing the acquired out-image and the acquired in-image.
+</p><p num="0227">
+Thus, by causing the display unit 271 to emit the light with the appropriate hue and adapting the white balance of the out-image to the white balance of the in-image, it is possible to acquire the synthesized image with a more natural hue.  That is, a higher-quality synthesized image can be acquired.
+</p><p num="0228">
+The image processing device 251 may be configured such that the user can select whether the display unit 21 is caused to emit the light or the display unit 271 is caused to emit the light.  When the user can select whether the display unit 21 or the display unit 271 is caused to emit the light, for example, when the display unit installed on the surface at which a subject is closer to the image processing device 251 is caused to display the light, a more natural synthesized image can be acquired.
+</p><p num="0229">
+The above-described series of processes may be performed by hardware or may be performed by software.  When the series of processes is performed by software, a program of the software is installed in a computer.  Here, examples of the computer include a computer embedded in dedicated hardware or a general-purpose personal computer capable of executing various functions by installing various programs.
+</p><p num="0230">
+Fig. 24 is a block diagram illustrating a hardware configuration example of a computer executing the above-described series of processes by a program.
+</p><p num="0231">
+In the computer, a central processing unit (CPU) 501, a read-only memory (ROM) 502, and a random access memory (RAM) 503 are connected to each other by a bus 504.
+</p><p num="0232">
+Further, an input/output interface 505 is connected to the bus 504.  An input unit 506, an output unit 507, a recording unit 508, a communication unit 509, and a drive 510 are connected to the input/output interface 505.
+</p><p num="0233">
+The input unit 506 is configured by a keyboard, a mouse, a microphone, an imaging element, or the like.  The output unit 507 is configured by a display, a speaker, or the like.  The recording unit 508 is configured by a hard disk, a non-volatile memory, or the like.  The communication unit 509 is configured by a network interface or the like.  The drive 510 drives a removable medium 511 such as a magnetic disk, an optical disc, a magneto-optical disc, or a semiconductor memory.
+</p><p num="0234">
+In the computer having the above-described configuration, for example, the CPU 501 performs the above-described series of processes by loading the program recorded on the recording unit 508 to the RAM 503 via the input/output interface 505 and the bus 504 and executing the program.
+</p><p num="0235">
+For example, the program executed by the computer (the CPU 501) can be recorded and shared in the removable medium 511 serving as a package medium.  The program can be provided via a wired or wireless transmission medium such as a local area network, the Internet, or digital satellite broadcast.
+</p><p num="0236">
+In the computer, the program can be installed on the recording unit 508 via the input/output interface 505 by mounting the removable medium 511 on the drive 510.  The program can be received by the communication unit 509 via a wired or wireless transmission medium and can be installed on the recording unit 508.  Further, the program can be installed in advance in the ROM 502 or the recording unit 508.
+</p><p num="0237">
+The program executed by the computer may be a program processed chronologically in an order described in this specification or may be a program processed in parallel or at a necessary timing such as a called time.
+</p><p num="0238">
+Embodiments of the present technology are not limited to the above-described embodiments, but may be modified in various ways within the scope of the present technology without departing from the gist of the present technology.
+</p><p num="0239">
+For example, an embodiment of the present technology may be realized by a cloud computing configuration in which one function is distributed and processed collectively by a plurality of devices via a network.
+</p><p num="0240">
+The respective steps described in the above-described flowcharts may be performed by one device and may be also distributed and performed by a plurality of devices.
+</p><p num="0241">
+When a plurality of processes are included in one step, the plurality of processes included in the one step may be performed by one device or may be distributed and performed by a plurality of devices.
+</p><p num="0242">
+Further, embodiments of the present technology may be realized as follows.
+</p><p num="0243">
+(1) An information processing system including: circuitry configured to acquire first image data captured by a first camera unit disposed on a first side of a housing; acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modify the second image data based on the first image data.<br/>
+ (2) The information processing system of (1), wherein<br/>
+the first image data is captured by the first camera unit at substantially the same time as the second image data is captured by the second camera unit.<br/>
+ (3) The information processing system of any of (1) to (2), wherein <br/>
+the circuitry is configured to modify the second image data by performing blur correction on the second image data based on the first image data.<br/>
+ (4)The information processing system of any of (1) to (3), wherein <br/>
+the circuitry is configured to: generate first motion information based on the first image data; generate second motion information based on the second image data; and modify the second image data by performing blur correction on the second image data based on the first motion information and the second motion information.<br/>
+ (5) The information processing system of (4), wherein <br/>
+the first motion information is a first motion vector corresponding to the first image data, and the second motion information is a second motion vector corresponding to the second image data.<br/>
+ (6) The information processing system of (5), wherein <br/>
+the circuitry is configured to: generate a third motion vector by synthesizing the first motion vector and the second motion vector; and modify the second image data by performing blur correction on the second image data based on the third motion vector.<br/>
+ (7) The information processing system of claim 1, wherein <br/>
+the circuitry is configured to: generate first motion information corresponding to motion of the information processing apparatus based on the first image data; generate second motion information corresponding to the motion of the information processing apparatus based on the second image data; generate third motion information corresponding to the motion of the information processing apparatus based on the first motion information and the second motion information; and modify the second image data by performing blur correction on the second image data based on the third motion information.<br/>
+ (8) The information processing system of any of (1) to (7), wherein <br/>
+the circuitry is configured to modify the second image data by controlling an image capture angle corresponding to the second image data based on the first image data.<br/>
+(9) The information processing system of (8), wherein <br/>
+the circuitry is configured to control the image capture angle corresponding to the second image data by at least one of changing a zoom ratio of the second camera unit, changing a diaphragm of the second camera unit, changing an orientation of the second camera unit, and performing image deformation of the second image data.<br/>
+ (10) The information processing system of any of (8) to (9), wherein <br/>
+the circuitry is configured to: calculate a viewpoint of a user based on the first image data; and control the image capture angle corresponding to the second image data based on the calculated viewpoint of the user.<br/>
+ (11) The information processing system of (10), wherein<br/>
+the circuitry is configured to calculate the viewpoint of a user by obtaining a sight line direction of the user in relation to a display included in the information processing system.<br/>
+ (12) The information processing system of any of (1) to (11), wherein <br/>
+the circuitry is configured to: output the second image data to a display;  detect a gaze position of a user on the display based on the first image data; and modify the second image data by controlling an image capture parameter of the second camera unit based on the detected gaze position of the user on the display.<br/>
+ (13) The information processing system of (12), wherein <br/>
+a plurality of objects are included in the second image data; and<br/>
+the circuitry is configured to determine which of the plurality of objects displayed on the display corresponds to the detected gaze position of the user; and control the image capture parameter corresponding to the second image data based on the determining.<br/>
+ (14) The information processing system of any of (1) to (13), wherein <br/>
+the circuitry is configured to modify the second image data by synthesizing the first image data and the second image data.<br/>
+ (15) The information processing system of any of (1) to (14), wherein <br/>
+the circuitry is configured to: obtain a first white balance value corresponding to the first image data; obtain a second white balance value corresponding to the second image data; and control a light source to emit light based on the first white balance value and the second white balance value.<br/>
+ (16) The information processing system of (15), wherein <br/>
+the circuitry is configured to: acquire third image data captured by the first camera unit while the light source is emitting light; and modify the second image data by synthesizing the third image data and the second image data.<br/>
+ (17) The system of any of (1) to (16), wherein <br/>
+the system is a mobile phone including the housing and the circuitry.<br/>
+ (18) The system of any of (1) to (17), wherein <br/>
+the system comprises: a server including the circuitry and an interface configured to receive the first and second image data from a device connected to the server via a network.<br/>
+ (19) An information processing method including: acquiring first image data captured by a first camera unit disposed on a first side of a housing; acquiring second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modifying the second image data based on the first image data.<br/>
+ (20) A non-transitory computer-readable medium including computer-program instructions, which when executed by an information processing system, cause the system to: acquire first image data captured by a first camera unit disposed on a first side of a housing; acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and modify the second image data based on the first image data.<br/>
+(21) An image processing device includes: a first imaging unit that performs photographing in a first direction; a second imaging unit that performs photographing in a second direction different from the first direction; and a control information generation unit that generates control information for adjustment of a second image obtained through the photographing by the second imaging unit based on information obtained from a first image obtained through the photographing by the first imaging unit.<br/>
+(22) In the image processing device described in (21), the control information generation unit may generate motion information indicating a motion of the image processing device as the control information based on motion information obtained from the first image.  The image processing device may further include a correction unit that corrects motion shake of the second image caused by the image processing device based on the control information.<br/>
+(23) In the image processing device described in (21) or (22), the control information generation unit may generate the control information by synthesizing the motion information obtained from the first image and motion information obtained from the second image.<br/>
+(24) In the image processing device described in any of (21) through (23), the first imaging unit may be provided on a surface of a user side on which the image processing device is operated.  The control information generation unit may generate the control information for changing a field angle of the second image based on a viewpoint position of the user obtained from the first image.<br/>
+(25) In the image processing device described in any of (21) through (24), the control information generation unit may adjust the field angle of the second image by controlling the second imaging unit based on the control information.<br/>
+(26) In the image processing device described in any of (21) through (25), the control information generation unit may perform field angle adjustment by changing a zoom magnification or a diaphragm of the second imaging unit or inclining the second imaging unit.<br/>
+(27) The image processing device described in any of (21) through (26) may further include an image deformation unit that adjusts the field angle of the second image by performing image deformation on the second image based on the viewpoint position.<br/>
+(28) In the image processing device described in any of (21) through (27), the first imaging unit may be provided on a surface of a user side on which the image processing device is operated.  The control information generation unit may generate the control information for performing focal point adjustment of the second imaging unit, lightness adjustment of the second image, or white balance adjustment of the second image based on a sight line direction of the user obtained from the first image.<br/>
+(29) The image processing device described in any of (21) through (28) may further include a display unit that is provided on a surface of a side of the second imaging unit.  The control information generation unit may generate the control information for radiating a subject of the second image with light by causing the display unit to emit the light based on a white balance value of the first image and a white balance value of the second image.<br/>
+(30) The image processing device described in any of (21) through (29) may further include a synthesis unit that synthesizes the first image and the second image photographed when the display unit emits the light based on the control information.
+</p><p num="0244">
+It should be understood by those skilled in the art that various modifications, combinations, sub-combinations and alterations may occur depending on design requirements and other factors insofar as they are within the scope of the appended claims or the equivalents thereof.
+</p></description-of-drawings><reference-signs-list><p num="0245">
+11 Image processing device<br/>
+21 Display unit<br/>
+22 In-image capturing unit<br/>
+23 Out-image capturing unit<br/>
+53 Signal processing unit<br/>
+81 Motion estimation unit<br/>
+82 Motion estimation unit<br/>
+84 Camera blur correction unit<br/>
+141 Position calculation unit<br/>
+142 Field angle transformation processing unit<br/>
+211 White balance calculation unit<br/>
+212 White balance calculation unit<br/>
+213 Light source color calculation unit<br/>
+214 Synthesis unit
+</p></reference-signs-list></description><claims mxw-id="PCLM70079710" ref-ucid="WO-2014129141-A1" lang="EN" load-source="patent-office"><claim num="1"><claim-text>
+An information processing system comprising:<br/>
+circuitry configured to<br/>
+acquire first image data captured by a first camera unit disposed on a first side of a housing;<br/>
+acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and<br/>
+modify the second image data based on the first image data.
+</claim-text></claim><claim num="2"><claim-text>
+The information processing system of claim 1, wherein<br/>
+the first image data is captured by the first camera unit at substantially the same time as the second image data is captured by the second camera unit.
+</claim-text></claim><claim num="3"><claim-text>
+The information processing system of claim 1, wherein<br/>
+the circuitry is configured to modify the second image data by performing blur correction on the second image data based on the first image data.
+</claim-text></claim><claim num="4"><claim-text>
+The information processing system of claim 1, wherein the circuitry is configured to:<br/>
+generate first motion information based on the first image data;<br/>
+generate second motion information based on the second image data; and<br/>
+modify the second image data by performing blur correction on the second image data based on the first motion information and the second motion information.
+</claim-text></claim><claim num="5"><claim-text>
+The information processing system of claim 4, wherein<br/>
+the first motion information is a first motion vector corresponding to the first image data, and<br/>
+the second motion information is a second motion vector corresponding to the second image data.
+</claim-text></claim><claim num="6"><claim-text>
+The information processing system of claim 5, wherein the circuitry is configured to:<br/>
+generate a third motion vector by synthesizing the first motion vector and the second motion vector; and <br/>
+modify the second image data by performing blur correction on the second image data based on the third motion vector.
+</claim-text></claim><claim num="7"><claim-text>
+The information processing system of claim 1, wherein the circuitry is configured to:<br/>
+generate first motion information corresponding to motion of the information processing apparatus based on the first image data;<br/>
+generate second motion information corresponding to the motion of the information processing apparatus based on the second image data; <br/>
+generate third motion information corresponding to the motion of the information processing apparatus based on the first motion information and the second motion information; and<br/>
+modify the second image data by performing blur correction on the second image data based on the third motion information.
+</claim-text></claim><claim num="8"><claim-text>
+The information processing system of claim 1, wherein<br/>
+the circuitry is configured to modify the second image data by controlling an image capture angle corresponding to the second image data based on the first image data.
+</claim-text></claim><claim num="9"><claim-text>
+The information processing system of claim 8, wherein<br/>
+the circuitry is configured to control the image capture angle corresponding to the second image data by at least one of changing a zoom ratio of the second camera unit, changing a diaphragm of the second camera unit, changing an orientation of the second camera unit, and performing image deformation of the second image data.
+</claim-text></claim><claim num="10"><claim-text>
+The information processing system of claim 8, wherein the circuitry is configured to:<br/>
+calculate a viewpoint of a user based on the first image data; and <br/>
+control the image capture angle corresponding to the second image data based on the calculated viewpoint of the user.
+</claim-text></claim><claim num="11"><claim-text>
+The information processing system of claim 10, wherein<br/>
+the circuitry is configured to calculate the viewpoint of a user by obtaining a sight line direction of the user in relation to a display included in the information processing system.
+</claim-text></claim><claim num="12"><claim-text>
+The information processing system of claim 1, wherein the circuitry is configured to:<br/>
+output the second image data to a display; <br/>
+detect a gaze position of a user on the display based on the first image data; and<br/>
+modify the second image data by controlling an image capture parameter of the second camera unit based on the detected gaze position of the user on the display.
+</claim-text></claim><claim num="13"><claim-text>
+The information processing system of claim 12, wherein<br/>
+a plurality of objects are included in the second image data; and<br/>
+the circuitry is configured to<br/>
+determine which of the plurality of objects displayed on the display corresponds to the detected gaze position of the user; and<br/>
+control the image capture parameter corresponding to the second image data based on the determining.
+</claim-text></claim><claim num="14"><claim-text>
+The information processing system of claim 1, wherein<br/>
+the circuitry is configured modify the second image data by synthesizing the first image data and the second image data.
+</claim-text></claim><claim num="15"><claim-text>
+The information processing system of claim 1, wherein the circuitry is configured to:<br/>
+obtain a first white balance value corresponding to the first image data; <br/>
+obtain a second white balance value corresponding to the second image data; and<br/>
+control a light source to emit light based on the first white balance value and the second white balance value.
+</claim-text></claim><claim num="16"><claim-text>
+The information processing system of claim 15, wherein the circuitry is configured to:<br/>
+acquire third image data captured by the first camera unit while the light source is emitting light; and<br/>
+modify the second image data by synthesizing the third image data and the second image data.
+</claim-text></claim><claim num="17"><claim-text>
+The system of claim 1, wherein<br/>
+the system is a mobile phone including the housing and the circuitry.
+</claim-text></claim><claim num="18"><claim-text>
+The system of claim 1, wherein the system comprises:<br/>
+a server including the circuitry and an interface configured to receive the first and second image data from a device connected to the server via a network.
+</claim-text></claim><claim num="19"><claim-text>
+An information processing method comprising:<br/>
+acquiring first image data captured by a first camera unit disposed on a first side of a housing;<br/>
+acquiring second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and<br/>
+modifying the second image data based on the first image data.
+</claim-text></claim><claim num="20"><claim-text>
+A non-transitory computer-readable medium including computer-program instructions, which when executed by an information processing system, cause the system to:<br/>
+acquire first image data captured by a first camera unit disposed on a first side of a housing;<br/>
+acquire second image data captured by a second camera unit disposed on a second side of the housing, which is opposite to the first side of the housing; and<br/>
+modify the second image data based on the first image data.
+</claim-text></claim></claims><copyright>User acknowledges that Fairview Research LLC and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws.  User acquires no ownership rights to this xml including but not limited to its format.  User hereby accepts the terms and conditions of the Licence Agreement</copyright></patent-document>
