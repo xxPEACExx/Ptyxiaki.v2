@@ -37,7 +37,7 @@ def find_statuses_in_folder(folder_path):
     return Counter(all_statuses)
 
 if __name__ == "__main__":
-    folder = r"C:\WPI\Aposibiesmena\EP"
+    folder = r"C:\WPI\Aposibiesmena\EP\20140101"
     statuses_count = find_statuses_in_folder(folder)
 
     if statuses_count:

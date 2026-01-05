@@ -112,7 +112,7 @@ function updateQuerySummary() {
   const minClaims   = document.querySelector('input[name="min_claims"]')?.value || "";
   const minAbstract = document.querySelector('input[name="min_abstract_words"]')?.value || "";
 
-  lines.push("<strong>Documents</strong>");
+  lines.push("<strong>Criteria</strong>");
 
   if (yearFrom || yearTo) lines.push(`Year: ${escapeHtml(yearFrom || "…")} – ${escapeHtml(yearTo || "…")}`);
   if (states.length) lines.push("Country / State: " + escapeHtml(states.join(", ")));
@@ -375,11 +375,7 @@ loadKinds();
 loadStates();
 
 // update summary on any input change inside Search tab
-document.querySelectorAll('#tab-query input, #tab-query select')
-  .forEach(el => {
-    el.addEventListener("change", updateQuerySummary);
-    el.addEventListener("input", updateQuerySummary);
-  });
+
 
 updateQuerySummary();
 
@@ -610,26 +606,45 @@ function runClaimsVsAbstract() {
             canvas.style.display = "none";
         });
 }
-// =====================================================
-// SIDEBAR (auto-open -> auto-close, hover reveal)
-// =====================================================
 document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
     const content = document.getElementById("content");
     const leftZone = document.getElementById("left-zone");
 
+    if (!sidebar || !content || !leftZone) return;
+
+    // αρχική κατάσταση: ανοιχτό
+    let isOpen = true;
+
+    // κλείσε μετά από λίγο
     setTimeout(() => {
         sidebar.classList.add("hidden");
         content.classList.add("expanded");
-    }, 8000);
+        isOpen = false;
+    }, 3000);
 
+    // άνοιγμα όταν μπαίνει στο left-zone
     leftZone.addEventListener("mouseenter", () => {
+        if (isOpen) return;
         sidebar.classList.remove("hidden");
         content.classList.remove("expanded");
+        isOpen = true;
     });
 
+    // κλείσιμο όταν φεύγει από το sidebar
     sidebar.addEventListener("mouseleave", () => {
+        if (!isOpen) return;
         sidebar.classList.add("hidden");
         content.classList.add("expanded");
+        isOpen = false;
     });
+});
+
+// ===============================
+// LIVE UPDATE SUMMARY (delegation)
+// ===============================
+document.addEventListener("change", (e) => {
+    if (e.target.closest("#tab-query") && e.target.matches("input, select")) {
+        updateQuerySummary();
+    }
 });

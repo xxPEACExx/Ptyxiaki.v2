@@ -54,7 +54,7 @@ def create_loadsource_table(cursor, db):
 
         cursor.execute("""
             CREATE TABLE loadsource (
-                LID INT NOT NULL,
+                LID tinyint NOT NULL,
                 name_loadsource VARCHAR(50) NOT NULL,
                 PRIMARY KEY (LID),
                 UNIQUE (name_loadsource)

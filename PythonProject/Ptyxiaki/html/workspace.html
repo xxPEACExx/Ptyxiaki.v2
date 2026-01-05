@@ -1,5 +1,4 @@
 
-
 <!--<!DOCTYPE html>-->
 <!--<html lang="el">-->
 <!--<head>-->
@@ -8,24 +7,20 @@
 
 <!--    <link rel="stylesheet" href="{{ url_for('static', filename='workspace_css.css') }}">-->
 <!--    <script src="{{ url_for('static', filename='workspace_js.js') }}" defer></script>-->
+
 <!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.3.0"></script>-->
-
 <!--</head>-->
 
 <!--<body>-->
 
-
-<!--<div id="left-zone"></div>-->
-
-<!--<aside class="sidebar" id="sidebar">-->
+<!--&lt;!&ndash; SIDEBAR &ndash;&gt;-->
+<!--<aside class="sidebar">-->
 <!--    <h2 class="logo">🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>-->
-
-<!--    <button class="button-33">Ανέβασμα Αρχείου</button>-->
 
 <!--    <nav>-->
 <!--        <ul class="menu">-->
-<!--            <li onclick="window.location.href='/'">🏠︎ Αρχική</li>-->
+<!--            <li onclick="window.location.href='/index'">🏠︎ Αρχική</li>-->
 <!--            <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>-->
 <!--            <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>-->
 <!--            <li class="active">📈 Workspace</li>-->
@@ -33,202 +28,178 @@
 <!--    </nav>-->
 <!--</aside>-->
 
+<!--&lt;!&ndash; ΟΛΟ ΤΟ WORKSPACE ΠΕΡΙΕΧΟΜΕΝΟ &ndash;&gt;-->
+<!--<div class="content" id="content">-->
 
-
-
-<!--&lt;!&ndash; ================= HEADER TABS ================= &ndash;&gt;-->
-<!--<div class="tabs-header">-->
-<!--    <button class="tab-button active" data-tab="tab-query">Search</button>-->
-<!--    <button class="tab-button" data-tab="tab-table">Table</button>-->
-<!--    <button class="tab-button" data-tab="tab-stats">Statistics</button>-->
-<!--</div>-->
-
-<!--&lt;!&ndash; ================= SEARCH TAB ================= &ndash;&gt;-->
-<!--<div id="tab-query" class="tab-content active">-->
-
-<!--    <div class="search-layout">-->
-
-<!--        &lt;!&ndash; ===== LEFT: CRITERIA ===== &ndash;&gt;-->
-<!--        <aside class="criteria-panel">-->
-
-<!--            <h3 class="criteria-title">Φίλτρα</h3>-->
-
-<!--            <div class="criteria-section">-->
-<!--                <details open>-->
-<!--                    <summary>Έτος Δημοσίευσης</summary>-->
-<!--                    <div class="criteria-body">-->
-<!--                        <input type="number" name="year_from" placeholder="Από Έτος">-->
-<!--                        <input type="number" name="year_to" placeholder="Έως Έτος">-->
-<!--                    </div>-->
-<!--                </details>-->
-<!--            </div>-->
-
-<!--            <div class="criteria-section">-->
-<!--                <details>-->
-<!--                    <summary>Χώρα / Κράτος</summary>-->
-<!--                    <div id="state-checkboxes" class="checkbox-group"></div>-->
-<!--                </details>-->
-<!--            </div>-->
-
-<!--            <div class="criteria-section">-->
-<!--                <details>-->
-<!--                    <summary>Kind</summary>-->
-<!--                    <div id="kind-checkboxes" class="checkbox-group"></div>-->
-<!--                </details>-->
-<!--            </div>-->
-
-<!--            <div class="criteria-section">-->
-<!--                <details>-->
-<!--                    <summary>Family</summary>-->
-<!--                    <label class="single-checkbox">-->
-<!--                        <input type="checkbox" name="family_only">-->
-<!--                        Unique families-->
-<!--                    </label>-->
-<!--                </details>-->
-<!--            </div>-->
-
-<!--            <div class="criteria-section">-->
-<!--                <details>-->
-<!--                    <summary>Επιπλέον Φίλτρα</summary>-->
-<!--                    <div class="criteria-body">-->
-<!--                        <input type="number" name="min_claims" placeholder="Ελάχιστο claims π.χ 2">-->
-<!--                        <input type="number" name="min_abstract_words" placeholder="Ελάχιστο αριθμό λέξεων π.χ 100">-->
-<!--                    </div>-->
-<!--                </details>-->
-<!--            </div>-->
-
-<!--        </aside>-->
-
-<!--        &lt;!&ndash; ===== RIGHT: RESULTS ===== &ndash;&gt;-->
-<!--        <section class="results-panel">-->
-
-<!--            <div class="query-summary-card">-->
-<!--                <div id="query-summary">No criteria selected.</div>-->
-
-<!--            <button-->
-<!--    id="run-query-btn"-->
-<!--    type="button"-->
-<!--    class="toolbar-button primary">-->
-<!--    Run-->
-<!--</button>-->
-
-<!--            </div>-->
-
-<!--            <div class="results-table-wrapper">-->
-
-<!--    &lt;!&ndash; TOP horizontal scrollbar &ndash;&gt;-->
-
-
-<!--    &lt;!&ndash; ACTUAL table &ndash;&gt;-->
-<!--    <div class="table-scroll-body">-->
-<!--        <div id="results-table-query"></div>-->
+<!--    &lt;!&ndash; ================= HEADER TABS ================= &ndash;&gt;-->
+<!--    <div class="tabs-header">-->
+<!--        <button class="tab-button active" data-tab="tab-query">Search</button>-->
+<!--        <button class="tab-button" data-tab="tab-table">Table</button>-->
+<!--        <button class="tab-button" data-tab="tab-stats">Statistics</button>-->
 <!--    </div>-->
 
-<!--</div>-->
+<!--    &lt;!&ndash; ================= SEARCH TAB ================= &ndash;&gt;-->
+<!--    <div id="tab-query" class="tab-content active">-->
+
+<!--        <div class="search-layout">-->
+
+<!--            &lt;!&ndash; ===== LEFT: CRITERIA ===== &ndash;&gt;-->
+<!--            <aside class="criteria-panel">-->
+
+<!--                <h3 class="criteria-title">Φίλτρα</h3>-->
+
+<!--                <div class="criteria-section">-->
+<!--                    <details open>-->
+<!--                        <summary>Έτος Δημοσίευσης</summary>-->
+<!--                        <div class="criteria-body">-->
+<!--                            <input type="number" name="year_from" placeholder="Από Έτος">-->
+<!--                            <input type="number" name="year_to" placeholder="Έως Έτος">-->
+<!--                        </div>-->
+<!--                    </details>-->
+<!--                </div>-->
+
+<!--                <div class="criteria-section">-->
+<!--                    <details>-->
+<!--                        <summary>Χώρα / Κράτος</summary>-->
+<!--                        <div id="state-checkboxes" class="checkbox-group"></div>-->
+<!--                    </details>-->
+<!--                </div>-->
+
+<!--                <div class="criteria-section">-->
+<!--                    <details>-->
+<!--                        <summary>Kind</summary>-->
+<!--                        <div id="kind-checkboxes" class="checkbox-group"></div>-->
+<!--                    </details>-->
+<!--                </div>-->
+
+<!--                <div class="criteria-section">-->
+<!--                    <details>-->
+<!--                        <summary>Family</summary>-->
+<!--                        <label class="single-checkbox">-->
+<!--                            <input type="checkbox" name="family_only">-->
+<!--                            Unique families-->
+<!--                        </label>-->
+<!--                    </details>-->
+<!--                </div>-->
+
+<!--                <div class="criteria-section">-->
+<!--                    <details>-->
+<!--                        <summary>Επιπλέον Φίλτρα</summary>-->
+<!--                        <div class="criteria-body">-->
+<!--                            <input type="number" name="min_claims" placeholder="Ελάχιστο claims π.χ 2">-->
+<!--                            <input type="number" name="min_abstract_words" placeholder="Ελάχιστο αριθμό λέξεων π.χ 100">-->
+<!--                        </div>-->
+<!--                    </details>-->
+<!--                </div>-->
+
+<!--            </aside>-->
+
+<!--            &lt;!&ndash; ===== RIGHT: RESULTS ===== &ndash;&gt;-->
+<!--            <section class="results-panel">-->
+
+<!--                <div class="query-summary-card">-->
+<!--                    <div id="query-summary">No criteria selected.</div>-->
+
+<!--                    <button id="run-query-btn" type="button" class="toolbar-button primary">-->
+<!--                        Run-->
+<!--                    </button>-->
+<!--                </div>-->
+
+<!--                <div class="results-table-wrapper">-->
+<!--                    <div class="table-scroll-body">-->
+<!--                        <div id="results-table-query"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
 <!--                <div class="load-more-wrapper">-->
 <!--                    <button id="load-more-btn" class="toolbar-button">Load more</button>-->
 <!--                </div>-->
-<!--            </div>-->
 
-<!--        </section>-->
+<!--            </section>-->
 
+<!--        </div>-->
 <!--    </div>-->
-<!--</div>-->
 
-<!--&lt;!&ndash; ================= TABLE TAB ================= &ndash;&gt;-->
-<!--<div id="tab-table" class="tab-content">-->
+<!--    &lt;!&ndash; ================= TABLE TAB ================= &ndash;&gt;-->
+<!--    <div id="tab-table" class="tab-content">-->
 
-<!--    <div class="table-layout">-->
+<!--        <div class="table-layout">-->
 
-<!--        &lt;!&ndash; ===== TOP ROW ===== &ndash;&gt;-->
-<!--        <div class="table-top-row">-->
+<!--            <div class="table-top-row">-->
 
-<!--            &lt;!&ndash; SQL QUERY &ndash;&gt;-->
-<!--            <div class="table-card">-->
-<!--                <div class="card-title">SQL Query</div>-->
+<!--                <div class="table-card">-->
+<!--                    <div class="card-title">SQL Query</div>-->
 
-<!--                <form onsubmit="return runQueryAJAX(this)">-->
-<!--                    <textarea name="sql_input"-->
-<!--                              class="sql-used-textarea"-->
-<!--                              placeholder="Write SQL query here..."></textarea>-->
+<!--                    <form onsubmit="return runQueryAJAX(this)">-->
+<!--                        <textarea name="sql_input"-->
+<!--                                  class="sql-used-textarea"-->
+<!--                                  placeholder="Write SQL query here..."></textarea>-->
 
-<!--                    <div class="sql-used-toolbar">-->
-<!--                        <button type="submit" class="sql-used-run-btn">Run</button>-->
+<!--                        <div class="sql-used-toolbar">-->
+<!--                            <button type="submit" class="sql-used-run-btn">Run</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+
+<!--                <div class="table-card">-->
+<!--                    <div class="card-title">Messages</div>-->
+<!--                    <div id="table-messages" class="table-messages">-->
+<!--                        No SQL executed yet.-->
 <!--                    </div>-->
-<!--                </form>-->
+<!--                </div>-->
+
 <!--            </div>-->
 
-<!--            &lt;!&ndash; MESSAGES &ndash;&gt;-->
-<!--            <div class="table-card">-->
-<!--                <div class="card-title">Messages</div>-->
-<!--                <div id="table-messages" class="table-messages">-->
-<!--                    No SQL executed yet.-->
+<!--            <div class="table-results-wrapper">-->
+<!--                <div class="table-scroll-top">-->
+<!--                    <div class="table-scroll-inner"></div>-->
+<!--                </div>-->
+
+<!--                <div class="table-scroll-body">-->
+<!--                    <div id="results-table">No results yet.</div>-->
 <!--                </div>-->
 <!--            </div>-->
 
 <!--        </div>-->
+<!--    </div>-->
 
-<!--        &lt;!&ndash; ===== RESULTS ===== &ndash;&gt;-->
-<!--        <div class="table-results-wrapper">-->
+<!--    &lt;!&ndash; ================= STATS TAB ================= &ndash;&gt;-->
+<!--    <div id="tab-stats" class="tab-content">-->
 
-<!--            &lt;!&ndash; top horizontal scrollbar &ndash;&gt;-->
-<!--            <div class="table-scroll-top">-->
-<!--                <div class="table-scroll-inner"></div>-->
+<!--        <div class="stats-toolbar">-->
+<!--            <div class="stats-controls">-->
+<!--                <label for="stat-type">Analysis type</label>-->
+<!--                <select id="stat-type">-->
+<!--                    <option value="heatmap">Country × Kind Heatmap</option>-->
+<!--                    <option value="kind-country">Kind distribution per Country</option>-->
+<!--                    <option value="claims-abstract">Claims vs Abstract length</option>-->
+<!--                </select>-->
 <!--            </div>-->
 
-<!--            &lt;!&ndash; actual table &ndash;&gt;-->
-<!--            <div class="table-scroll-body">-->
-<!--                <div id="results-table">No results yet.</div>-->
+<!--            <button id="run-stats" class="toolbar-button primary">-->
+<!--                Run analysis-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--        <div class="stats-card">-->
+<!--            <div class="stats-card-header">-->
+<!--                <div>-->
+<!--                    <h3>Document Distribution</h3>-->
+<!--                    <p>Heatmap of documents by country and document kind</p>-->
+<!--                </div>-->
 <!--            </div>-->
 
+<!--            <div class="stats-chart-wrapper">-->
+<!--                <div class="stats-placeholder" id="stats-placeholder">-->
+<!--                    Select analysis type and click “Run analysis”.-->
+<!--                </div>-->
+<!--                <canvas id="stats-chart" style="display:none;"></canvas>-->
+<!--            </div>-->
 <!--        </div>-->
 
 <!--    </div>-->
-<!--</div>-->
 
-<!--&lt;!&ndash; ================= STATS TAB ================= &ndash;&gt;-->
-<!--<div id="tab-stats" class="tab-content">-->
-
-<!--    &lt;!&ndash; Toolbar &ndash;&gt;-->
-<!--    <div class="stats-toolbar">-->
-<!--        <div class="stats-controls">-->
-<!--            <label for="stat-type">Analysis type</label>-->
-
-<!--            <select id="stat-type">-->
-
-<!--                <option value="heatmap">Country × Kind Heatmap</option>-->
-
-<!--                <option value="kind-country">Kind distribution per Country</option>-->
-
-<!--                <option value="claims-abstract">Claims vs Abstract length</option>-->
-
-<!--            </select>-->
-<!--        </div>-->
-
-<!--        <button id="run-stats" class="toolbar-button primary">-->
-<!--            Run analysis-->
-<!--        </button>-->
-<!--    </div>-->
-
-<!--   <div class="stats-card">-->
-<!--  <div class="stats-card-header">-->
-<!--    <div>-->
-<!--      <h3>Document Distribution</h3>-->
-<!--      <p>Heatmap of documents by country and document kind</p>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div class="stats-chart-wrapper">-->
-<!--    <div class="stats-placeholder" id="stats-placeholder">-->
-<!--      Select analysis type and click “Run analysis”.-->
-<!--    </div>-->
-<!--    <canvas id="stats-chart" style="display:none;"></canvas>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--</div>-->
-
+<!--</div> &lt;!&ndash; END content &ndash;&gt;-->
 
 <!--</body>-->
 <!--</html>-->
@@ -248,12 +219,13 @@
 
 <body>
 
-<!-- Αόρατη ζώνη hover -->
+<!-- ΑΟΡΑΤΗ ΖΩΝΗ ΕΝΕΡΓΟΠΟΙΗΣΗΣ SIDEBAR -->
 <div id="left-zone"></div>
 
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
-    <h2 class="logo">🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>
+
+    <h2 class="logo">🎓 ΠΤΥΧΙΑΚΗ <br> ΕΡΓΑΣΙΑ</h2>
 
     <nav>
         <ul class="menu">
@@ -309,15 +281,15 @@
                     </details>
                 </div>
 
-                <div class="criteria-section">
-                    <details>
-                        <summary>Family</summary>
-                        <label class="single-checkbox">
-                            <input type="checkbox" name="family_only">
-                            Unique families
-                        </label>
-                    </details>
-                </div>
+<!--                <div class="criteria-section">-->
+<!--                    <details>-->
+<!--                        <summary>Family</summary>-->
+<!--                        <label class="single-checkbox">-->
+<!--                            <input type="checkbox" name="family_only">-->
+<!--                            Unique families-->
+<!--                        </label>-->
+<!--                    </details>-->
+<!--                </div>-->
 
                 <div class="criteria-section">
                     <details>

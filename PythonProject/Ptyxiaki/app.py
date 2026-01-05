@@ -10,6 +10,11 @@ import threading
 import time
 import logging
 from datetime import datetime
+
+from Ptyxiaki.abstract import create_abstract_table, insert_abstract
+from Ptyxiaki.country import create_country_table, initialize_country
+# from Ptyxiaki.abstract import create_abstract_table, insert_abstract
+# from Ptyxiaki.country import create_country_table, initialize_country
 from Ptyxiaki.role import initialize_role, create_role_table
 from Ptyxiaki.scheme import initialize_scheme, create_scheme_table
 from Ptyxiaki.kind import initialize_kind, create_kind_table
@@ -230,6 +235,9 @@ def process_files(files):
             insert_classification(did, root, thread_cursor, thread_db)
             insert_parties(did, root, thread_cursor, thread_db)
             insert_title(did, root, thread_cursor, thread_db)
+            insert_abstract(did, root, thread_cursor, thread_db)
+
+
 
             thread_db.commit()
 
@@ -499,38 +507,33 @@ def home():
 def information():
     return render_template("information.html")
 
-
 @app.route("/database")
 def database():
-
     try:
         per_page = 10
         page = request.args.get("page", 1, type=int)
         offset = (page - 1) * per_page
 
-        cursor.execute(
-            """
-            SELECT did,
-                   ucid,
-                   doc_number,
-                   kind,
-                   state,
-                   date,
-                   family_id,
-                   status,
-                   lang,
-                   size_description,
-                   size_description_pars,
-                   size_description_words,
-                   how_many_claims,
-                   date_produced,
-                   abstract_size_chars,
-                   abstract_word_count
-            FROM document
+        cursor.execute("""
+            SELECT
+                d.did,
+                d.ucid,
+                d.doc_number,
+                d.kind,
+                d.state,
+                d.date,
+                d.family_id,
+                d.status,
+                d.lang,
+                d.size_description,
+                d.size_description_pars,
+                d.size_description_words,
+                d.how_many_claims,
+                d.date_produced
+            FROM document d
             LIMIT %s OFFSET %s
-            """,
-            (per_page, offset),
-        )
+        """, (per_page, offset))
+
         rows = cursor.fetchall()
 
         cursor.execute("SELECT COUNT(*) FROM document")
@@ -543,9 +546,11 @@ def database():
             page=page,
             total_pages=total_pages,
         )
+
     except Exception as e:
         logging.error(f"/database error: {e}")
         return render_template("database.html", rows=[], page=1, total_pages=1)
+
 
 
 @app.route("/list_uploaded_files", methods=["GET"])
@@ -1035,6 +1040,9 @@ if __name__ == "__main__":
         create_format_table(cursor, db)
         initialize_format(cursor, db)
 
+        # create_country_table(cursor, db)
+        # initialize_country(cursor, db)
+
         create_loadsource_table(cursor, db)
         initialize_loadsource(cursor, db)
 
@@ -1055,15 +1063,15 @@ if __name__ == "__main__":
 
         create_claims_table(cursor, db)
 
-
         create_parties_table(cursor, db)
 
         create_classification_table(cursor, db)
 
         create_title_table(cursor, db)
 
-        create_document_table(cursor, db)
+        create_abstract_table(cursor, db)
 
+        create_document_table(cursor, db)
 
 
 

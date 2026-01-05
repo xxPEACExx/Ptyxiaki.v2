@@ -6,8 +6,90 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f5f7fa;
     color: #333;
-    overflow: hidden; /* ΣΗΜΑΝΤΙΚΟ */
+    overflow: hidden;
 }
+/* =====================================================
+   SIDEBAR (SAME AS INDEX / DATABASE)
+===================================================== */
+:root {
+    --sidebar-w: 250px;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: #ffffff; /* ✔ καθαρό λευκό */
+
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(calc(-1 * var(--sidebar-w)));
+}
+
+.sidebar .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #2563eb;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sidebar nav ul li:hover {
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+}
+
+.sidebar nav ul li.active {
+    background: rgba(37, 99, 235, 0.16);
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   CONTENT OFFSET
+===================================================== */
+/* CONTENT OFFSET */
+.content {
+    margin-left: 250px;
+    transition: margin-left 0.35s ease;
+}
+
+.content.expanded {
+    margin-left: 0;
+}
+
+
+/* =====================================================
+   LEFT HOVER ZONE
+===================================================== */
+#left-zone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100vh;
+    z-index: 5000;
+
+}
+
 
 /* =====================================================
    HEADER TABS
@@ -131,7 +213,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    min-width: 0; /* ΠΟΛΥ ΣΗΜΑΝΤΙΚΟ */
+    min-width: 0;
 }
 
 .query-summary-card {
@@ -145,7 +227,7 @@ body {
 }
 
 /* =====================================================
-   RESULTS TABLE WRAPPER (THE FIX)
+   RESULTS TABLE WRAPPER
 ===================================================== */
 .results-table-wrapper {
     flex: 1;
@@ -154,10 +236,9 @@ body {
     border: 1px solid #d1d5db;
     border-radius: 12px;
     background: #fff;
-    overflow: hidden; /* κλειδώνει layout */
+    overflow: hidden;
 }
 
-/* ----- TOP SCROLLBAR (ΠΑΝΤΑ ΟΡΑΤΗ) ----- */
 .table-scroll-top {
     height: 14px;
     overflow-x: auto;
@@ -170,7 +251,6 @@ body {
     height: 1px;
 }
 
-/* ----- ACTUAL TABLE SCROLL AREA ----- */
 .table-scroll-body {
     flex: 1;
     overflow: auto;
@@ -226,10 +306,10 @@ table.results thead th {
     background: #fff;
     border-top: 1px solid #e5e7eb;
 }
+
 /* =====================================================
    TABLE TAB LAYOUT
 ===================================================== */
-
 .table-layout {
     display: flex;
     flex-direction: column;
@@ -237,15 +317,11 @@ table.results thead th {
     gap: 12px;
 }
 
-/* ================= TOP ROW ================= */
-
 .table-top-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
-
-/* ================= CARDS ================= */
 
 .table-card {
     background: #ffffff;
@@ -268,247 +344,92 @@ table.results thead th {
     overflow-y: auto;
 }
 
-/* ================= RESULTS ================= */
-
-.table-results-wrapper {
-    flex: 1;
+/* =====================================================
+   STATS
+===================================================== */
+.stats-card {
     background: #ffffff;
     border-radius: 14px;
+    padding: 16px;
     box-shadow: 0 4px 14px rgba(0,0,0,.08);
-    border: 1px solid #d1d5db;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
-/* top scrollbar */
-.table-scroll-top {
-    height: 14px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background: #f1f5f9;
-    border-bottom: 1px solid #d1d5db;
+.stats-card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
-.table-scroll-inner {
-    height: 1px;
-}
-
-/* body */
-.table-scroll-body {
+.stats-chart-wrapper {
     flex: 1;
-    overflow: auto;
 }
 
-/* ================= TABLE ================= */
-
-#results-table table {
-    width: max-content;
-    min-width: 100%;
-    border-collapse: collapse;
+#stats-chart {
+    width: 100% !important;
+    height: 100% !important;
 }
 
-#results-table th,
-#results-table td {
-    padding: 8px 12px;
-    border-bottom: 1px solid #e5e7eb;
-    white-space: nowrap;
-    font-size: 0.85rem;
+/* ===============================
+   SQL TOOLBAR
+================================ */
+
+.sql-used-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
-#results-table thead th {
-    position: sticky;
-    top: 0;
-    background: #f8fafc;
-    z-index: 5;
-    border-bottom: 2px solid #cbd5e1;
-}
+/* ===============================
+   RUN BUTTON
+================================ */
 
-
-.sql-used-textarea {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 10px 12px;
-    border: none;              /* ⬅️ ΤΟ ΣΗΜΑΝΤΙΚΟ */
-    outline: none;             /* ⬅️ ΚΑΝΕΝΑ ΜΑΥΡΟ */
-    background: transparent;   /* ⬅️ “δένει” με το card */
-
-    font-family: Consolas, monospace;
-    font-size: 0.9rem;
-
-    resize: vertical;
-}
-
-.sql-used-textarea:focus {
-    background: #f9fafb;
-    box-shadow: inset 0 0 0 1px #cbd5e1;
-}
 .sql-used-run-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 18px;
-    min-height: 38px;
+    padding: 8px 20px;
 
     border-radius: 8px;
     border: none;
 
-    background: linear-gradient(135deg, #2f80ed, #1f6ad6);
-    color: #ffffff;
-
-    font-size: 0.9rem;
     font-weight: 600;
+    font-size: 0.9rem;
+
+    background: #2f80ed;
+    color: white;
+
     cursor: pointer;
 
-    transition:
-        background 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.05s ease;
+    box-shadow: 0 4px 10px rgba(47, 128, 237, 0.25);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
+
 .sql-used-run-btn:hover {
-    background: linear-gradient(135deg, #3a8cff, #2563eb);
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    background: #2563eb;
+    box-shadow: 0 6px 14px rgba(47, 128, 237, 0.35);
 }
+
 .sql-used-run-btn:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 3px 8px rgba(47, 128, 237, 0.25);
 }
-.sql-used-run-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.35);
-}
-.stats-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.08);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.stats-card-header {
-  margin-bottom: 12px;
-}
-
-.stats-card-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.stats-card-header p {
-  margin: 4px 0 0;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.stats-chart-wrapper {
-  flex: 1;
-  position: relative;
-}
-
-#stats-chart {
-  width: 100% !important;
-  height: 100% !important;
-}
-/* =====================================================
-   FINAL SIDEBAR FIX (SAFE – NO FUNCTIONAL CHANGES)
-===================================================== */
-
-:root {
-    --sidebar-w: 250px;
-}
-
-/* Sidebar stays fixed */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--sidebar-w);
-    height: 100vh;
-    z-index: 2000;
-}
-
-/* Hidden state */
-.sidebar.hidden {
-    transform: translateX(calc(-1 * var(--sidebar-w)));
-}
-
-/* ✅ THE FIX: shift content with padding, not width */
-#content {
-    padding-left: var(--sidebar-w);
-    transition: padding-left 0.4s ease;
-    box-sizing: border-box;
-}
-
-/* When sidebar closes */
-#content.expanded {
-    padding-left: 0;
-}
-
-/* Mouse activation zone */
-#left-zone {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 100vh;
-    z-index: 3000;
-}
-/* Tabs must respect sidebar padding */
-#content > .tabs-header {
-    padding-left: var(--sidebar-w);
-    box-sizing: border-box;
-}
-
-/* When sidebar is closed */
-#content.expanded > .tabs-header {
-    padding-left: 0;
-}
-
 
 /* ===============================
-   SIDEBAR – FINAL STABLE FIX
-   (ΔΕΝ ΣΠΑΕΙ ΚΑΜΙΑ ΛΕΙΤΟΥΡΓΙΑ)
+   SQL textarea – same style, no black border
 ================================ */
 
-/* Sidebar: μόνο transform, εκτός layout */
-.sidebar {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
-  transform: translateX(0);
-  transition: transform 0.4s ease;
-  z-index: 2000;
-}
+.sql-used-textarea {
+    width: 50%;
+    min-height: 20px;          /* ⬅ πιο ψηλό */
 
-/* Κλειστό sidebar */
-.sidebar.hidden {
-  transform: translateX(-250px);
-}
+    padding: 14px 16px;         /* ⬅ πιο "αέρας" μέσα */
 
-/* Content: ΠΑΝΤΑ full width */
-.content {
-  margin-left: 0 !important;
-  width: 100%;
-  transition: none;
-}
+    border: 2px solid transparent;  /* ⬅ υπάρχει αλλά ΔΕΝ φαίνεται */
+    border-radius: 8px;
 
-/* Hover activation zone */
-#left-zone {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 100vh;
-  z-index: 3000;
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-family: inherit;
+
+    resize: vertical;
+    outline: none;
 }
