@@ -381,8 +381,9 @@ updateQuerySummary();
 
 // ensure scrollbars are ready even before first run
 syncAllTables();
+
 // =====================================================
-// STATISTICS TAB
+// STATISTICS TAB (FINAL – WORKING)
 // =====================================================
 
 let statsChart = null;
@@ -391,254 +392,333 @@ const runStatsBtn = document.getElementById("run-stats");
 const statTypeSelect = document.getElementById("stat-type");
 const canvas = document.getElementById("stats-chart");
 const placeholder = document.getElementById("stats-placeholder");
+const subtitle = document.getElementById("stats-subtitle");
 
-runStatsBtn.addEventListener("click", () => {
+function showPlaceholder(msg) {
+  if (placeholder) {
+    placeholder.innerText = msg || "No data available.";
+    placeholder.style.display = "block";
+  }
+  if (canvas) canvas.style.display = "none";
+}
+
+function showCanvas() {
+  if (placeholder) placeholder.style.display = "none";
+  if (canvas) canvas.style.display = "block";
+}
+
+function destroyChart() {
+  if (statsChart) {
+    statsChart.destroy();
+    statsChart = null;
+  }
+}
+
+function setSubtitle(text) {
+  if (subtitle) subtitle.innerText = text || "";
+}
+
+async function fetchJson(url) {
+  const r = await fetch(url);
+  const data = await r.json();
+  if (!r.ok) throw new Error(data?.error || `HTTP ${r.status}`);
+  return data;
+}
+
+if (runStatsBtn) {
+  runStatsBtn.addEventListener("click", async () => {
     const type = statTypeSelect.value;
+    destroyChart();
 
-    placeholder.style.display = "none";
-    canvas.style.display = "block";
+    try {
+      if (type === "claims-abstract") {
+        setSubtitle("Το συγκεκριμένο query αναδεικνύει τη σχέση μεταξύ του abstract word count, δηλαδή"+
+        "του αριθμού λέξεων της περιγραφής ενός εγγράφου, και του αριθμού των claims, που"+
+        "εκφράζουν το εύρος της νομικής προστασίας. Ο abstract word count λειτουργεί ως"+
+        "ένδειξη της έκτασης και της αναλυτικότητας της τεχνικής περιγραφής, ενώ τα claims"+
+        "αποτυπώνουν την τεχνική και νομική πολυπλοκότητα της εφεύρεσης. Μέσα από τη"+
+        "συσχέτιση των δύο μεγεθών, μπορούμε να αξιολογήσουμε κατά πόσο η αναλυτικότητα"+
+        "της περιγραφής συνοδεύεται από αυξημένο αριθμό αξιώσεων προστασίας.");
 
-    if (statsChart) {
-        statsChart.destroy();
-        statsChart = null;
+        await runClaimsVsAbstract();
+      } else if (type === "claims-intensity") {
+        setSubtitle("Average claim intensity per document kind (EP only).");
+        await runClaimsIntensity();
+      } else if (type === "complexity") {
+        setSubtitle("Top complex EP patents based on structural characteristics.");
+        await runComplexityScore();
+      } else if (type === "patents-month") {
+        setSubtitle("Το συγκεκριμένο query υπολογίζει τον αριθμό εγγράφων ανά μήνα για μια"+
+        "συγκεκριμένη χώρα. Συγκεκριμένα, εξάγει τον μήνα από την ημερομηνία (date) κάθε"+
+        "εγγράφου και ομαδοποιεί τα δεδομένα ώστε να μετρήσει πόσα έγγραφα"+
+        "καταχωρήθηκαν σε κάθε μήνα. Με αυτόν τον τρόπο, παρέχει μια χρονική κατανομή"+
+        "των εγγράφων, επιτρέποντας την ανάλυση της εποχικότητας ή των τάσεων"+
+        "καταχώρησης εγγράφων μέσα στο έτος για τη χώρα που επιλέγεται.");
+        await runPatentsPerMonth();
+      } else if (type === "growth-rate") {
+        setSubtitle("Month-to-month growth rate in EP patent publications.");
+        await runMonthlyGrowthRate();
+//      } else if (type === "seasonality") {
+//        setSubtitle("Seasonality pattern of EP publications across months of the year.");
+//        await runSeasonality();
+      } else if (type === "maturity-time") {
+        setSubtitle("Temporal evolution of patent maturity across publication years (EP only).");
+        await runMaturityOverTime(); // το έχεις ήδη, το κρατάμε
+      } else {
+        showPlaceholder("Unknown analysis type.");
+      }
+    } catch (e) {
+      console.error("Stats error:", e);
+      showPlaceholder("Error loading analysis: " + (e.message || e));
     }
-    if (type === "heatmap") {
-    runGroupedBar();
-}
-else if (type === "kind-country") {
-    runKindByCountry();
-}
-else if (type === "claims-abstract") {
-    runClaimsVsAbstract();
+  });
 }
 
-});
+// -----------------------------------------------------
+// STAT 1: Claims vs Abstract (Scatter)
+// Endpoint: /api/stats/claims-vs-abstract
+// returns: { points: [{x, y}, ...] }
+// -----------------------------------------------------
+async function runClaimsVsAbstract() {
+  const data = await fetchJson("/api/stats/claims-vs-abstract");
+  const points = data.points || [];
 
+  if (!points.length) {
+    showPlaceholder("No data available for this analysis.");
+    return;
+  }
 
-function runGroupedBar() {
+  showCanvas();
 
-    fetch("/api/stats/heatmap")
-        .then(r => r.json())
-        .then(data => {
+  statsChart = new Chart(canvas, {
+    type: "scatter",
+    data: {
+      datasets: [{
+        label: "Patents",
+        data: points,
+        backgroundColor: "rgba(52, 152, 219, 0.6)"
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx =>
+              `Abstract words: ${ctx.parsed.x}, Claims: ${ctx.parsed.y}`
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: "Abstract word count" } },
+        y: { title: { display: true, text: "Number of claims" }, beginAtZero: true }
+      }
+    }
+  });
+}
 
-            if (!data.length) {
-                placeholder.innerText = "No data available.";
-                placeholder.style.display = "block";
-                canvas.style.display = "none";
-                return;
+// -----------------------------------------------------
+// STAT 2: Complexity Score (Scatter – CORRECT)
+// Endpoint: /api/stats/complexity-score
+// returns: { rows: [{abstract_words, claims, complexity}, ...] }
+// -----------------------------------------------------
+async function runComplexityScore() {
+  const data = await fetchJson("/api/stats/complexity-score");
+  const rows = data.rows || [];
+
+  if (!rows.length) {
+    showPlaceholder("No data available for this analysis.");
+    return;
+  }
+
+  const points = rows.map(r => ({
+    x: r.abstract_words,
+    y: r.claims,
+    complexity: r.complexity
+  }));
+
+  showCanvas();
+
+  statsChart = new Chart(canvas, {
+    type: "scatter",
+    data: {
+      datasets: [{
+        label: "Patent Complexity",
+        data: points,
+        backgroundColor: "rgba(231, 76, 60, 0.6)"
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx =>
+              `Abstract: ${ctx.parsed.x}, Claims: ${ctx.parsed.y}, Complexity: ${ctx.raw.complexity.toFixed(2)}`
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: "Abstract word count" } },
+        y: { title: { display: true, text: "Number of claims" }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+// -----------------------------------------------------
+// STAT 3: Maturity Over Time (Line)
+// Endpoint: /api/stats/maturity-over-time
+// returns: { years:[...], values:[...] }
+// -----------------------------------------------------
+async function runMaturityOverTime() {
+  const data = await fetchJson("/api/stats/maturity-over-time");
+
+  const years = (data.years || []).map(String);
+  const values = (data.values || []).map(Number);
+
+  if (!years.length || !values.length) {
+    showPlaceholder("No data available for this analysis.");
+    return;
+  }
+
+  showCanvas();
+
+  statsChart = new Chart(canvas, {
+    type: "line",
+    data: {
+      labels: years,
+      datasets: [{
+        label: "Average Maturity Score",
+        data: values,
+        tension: 0.3,
+        borderWidth: 2,
+        pointRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx =>
+              `Average Maturity Score: ${ctx.parsed.y.toFixed(3)}`
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: "Publication Year" } },
+        y: { title: { display: true, text: "Maturity Score" }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+// -----------------------------------------------------
+// STAT 4: Patents per Month (Line)
+// Endpoint: /api/stats/patents-per-month
+// Returns: { labels:[YYYY-MM], values:[count] }
+// -----------------------------------------------------
+async function runPatentsPerMonth() {
+  const data = await fetchJson("/api/stats/patents-per-month");
+
+  const labels = data.labels || [];
+  const values = data.values || [];
+
+  if (!labels.length || !values.length) {
+    showPlaceholder("No data available.");
+    return;
+  }
+
+  // Average patents per month (Patents / 12 logic already aggregated)
+  const avg =
+    values.reduce((sum, v) => sum + v, 0) / values.length;
+
+  showCanvas();
+
+  statsChart = new Chart(canvas.getContext("2d"), {
+    data: {
+      labels: labels,
+      datasets: [
+        // ============================
+        // Monthly bars
+        // ============================
+        {
+          type: "bar",
+          label: "Monthly patent publications",
+          data: values,
+          backgroundColor: "rgba(52, 152, 219, 0.65)",
+          borderRadius: 6
+        },
+
+        // ============================
+        // Average reference line
+        // ============================
+        {
+          type: "line",
+          label: `Average (Patents / 12 = ${avg.toFixed(2)})`,
+          data: labels.map(() => avg),
+          borderColor: "rgba(231, 76, 60, 0.9)",
+          borderDash: [6, 6],
+          borderWidth: 3,
+          hoverBorderWidth: 4,
+          pointRadius: 0
+        }
+      ]
+    },
+
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+
+      interaction: {
+        mode: "index",
+        intersect: false
+      },
+
+      plugins: {
+        legend: {
+          position: "top"
+        },
+        tooltip: {
+          mode: "index",
+          intersect: false,
+          callbacks: {
+            label: function (ctx) {
+              if (ctx.dataset.label.startsWith("Average")) {
+                return `Average patents per month: ${avg.toFixed(2)}`;
+              }
+              return `Patents: ${ctx.parsed.y}`;
             }
+          }
+        }
+      },
 
-            placeholder.style.display = "none";
-            canvas.style.display = "block";
-
-            const countries = [...new Set(data.map(d => d.country))];
-            const kinds = [...new Set(data.map(d => d.kind))];
-
-            // matrix[country][kind] = total
-            const matrix = {};
-            countries.forEach(c => {
-                matrix[c] = {};
-                kinds.forEach(k => matrix[c][k] = 0);
-            });
-
-            data.forEach(d => {
-                matrix[d.country][d.kind] = d.total;
-            });
-
-            const datasets = kinds.map((kind, i) => ({
-                label: kind,
-                data: countries.map(c => matrix[c][kind]),
-                backgroundColor: `rgba(47,128,237,${0.25 + i * 0.08})`,
-                borderRadius: 6
-            }));
-
-            if (statsChart) statsChart.destroy();
-
-            statsChart = new Chart(canvas.getContext("2d"), {
-                type: "bar",
-                data: {
-                    labels: countries,
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: "top"
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label(ctx) {
-                                    return `${ctx.dataset.label}: ${ctx.parsed.y}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: { display: false }
-                        },
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        });
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Year – Month"
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Number of patents"
+          },
+          beginAtZero: true
+        }
+      }
+    }
+  });
 }
 
-function runKindByCountry() {
 
-    fetch("/api/stats/kind-by-country")
-        .then(r => r.json())
-        .then(data => {
 
-            if (!data.length) {
-                placeholder.innerText = "No data available.";
-                placeholder.style.display = "block";
-                canvas.style.display = "none";
-                return;
-            }
 
-            const countries = [...new Set(data.map(d => d.country))];
-            const kinds = [...new Set(data.map(d => d.kind))];
-
-            const datasets = kinds.map((kind, idx) => ({
-                label: kind,
-                data: countries.map(c =>
-                    data.find(d => d.country === c && d.kind === kind)?.total || 0
-                ),
-                backgroundColor: `hsl(${idx * 60}, 70%, 55%)`
-            }));
-
-            statsChart = new Chart(canvas.getContext("2d"), {
-                type: "bar",
-                data: {
-                    labels: countries,
-                    datasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: "bottom"
-                        },
-                        tooltip: {
-                            mode: "index",
-                            intersect: false
-                        }
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
-                            grid: { display: false }
-                        },
-                        y: {
-                            stacked: true,
-                            title: {
-                                display: true,
-                                text: "Documents"
-                            }
-                        }
-                    }
-                }
-            });
-
-        })
-        .catch(err => {
-            console.error(err);
-            placeholder.innerText = "Error loading statistics.";
-            placeholder.style.display = "block";
-            canvas.style.display = "none";
-        });
-}
-
-function runClaimsVsAbstract() {
-    fetch("/api/stats/claims-vs-abstract")
-        .then(r => r.json())
-        .then(data => {
-
-            const points = data.points || [];
-
-            statsChart = new Chart(canvas, {
-                type: "scatter",
-                data: {
-                    datasets: [{
-                        label: "Documents",
-                        data: points,
-                        backgroundColor: "rgba(47, 128, 237, 0.6)"
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        tooltip: {
-                            callbacks: {
-                                label: ctx =>
-                                    `Abstract words: ${ctx.parsed.x}, Claims: ${ctx.parsed.y}`
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: "Abstract word count"
-                            }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: "Number of claims"
-                            }
-                        }
-                    }
-                }
-            });
-        })
-        .catch(err => {
-            console.error(err);
-            placeholder.innerText = "Failed to load statistic.";
-            placeholder.style.display = "block";
-            canvas.style.display = "none";
-        });
-}
-document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("sidebar");
-    const content = document.getElementById("content");
-    const leftZone = document.getElementById("left-zone");
-
-    if (!sidebar || !content || !leftZone) return;
-
-    // αρχική κατάσταση: ανοιχτό
-    let isOpen = true;
-
-    // κλείσε μετά από λίγο
-    setTimeout(() => {
-        sidebar.classList.add("hidden");
-        content.classList.add("expanded");
-        isOpen = false;
-    }, 3000);
-
-    // άνοιγμα όταν μπαίνει στο left-zone
-    leftZone.addEventListener("mouseenter", () => {
-        if (isOpen) return;
-        sidebar.classList.remove("hidden");
-        content.classList.remove("expanded");
-        isOpen = true;
-    });
-
-    // κλείσιμο όταν φεύγει από το sidebar
-    sidebar.addEventListener("mouseleave", () => {
-        if (!isOpen) return;
-        sidebar.classList.add("hidden");
-        content.classList.add("expanded");
-        isOpen = false;
-    });
-});
 
 // ===============================
 // LIVE UPDATE SUMMARY (delegation)
@@ -647,4 +727,21 @@ document.addEventListener("change", (e) => {
     if (e.target.closest("#tab-query") && e.target.matches("input, select")) {
         updateQuerySummary();
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+        toggleBtn.textContent = "🔆";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark-theme");
+        toggleBtn.textContent = isDark ? "🔆" : "🌓";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
 });

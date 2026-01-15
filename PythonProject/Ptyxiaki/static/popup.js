@@ -1,9 +1,48 @@
+//window.onload = function () {
+//    const popup = document.getElementById("modernPopup");
+//    const circle = document.getElementById("floatingCircle");
+//    const bar = popup.querySelector(".progress-bar");
+//
+//    const duration = 8000; // ms
+//
+//    // Show popup
+//    setTimeout(() => {
+//        popup.classList.add("show");
+//        bar.style.transitionDuration = duration + "ms";
+//        bar.style.width = "100%";
+//    }, 200);
+//
+//    // Hide popup → show circle
+//    setTimeout(() => {
+//        popup.classList.remove("show");
+//
+//        setTimeout(() => {
+//            popup.style.display = "none";
+//            circle.style.display = "flex";
+//        }, 500);
+//    }, duration + 250);
+//
+//    // Click actions
+//    popup.onclick = () => window.location.href = "/information";
+//    circle.onclick = () => window.location.href = "/information";
+//};
+
 window.onload = function () {
     const popup = document.getElementById("modernPopup");
     const circle = document.getElementById("floatingCircle");
     const bar = popup.querySelector(".progress-bar");
 
     const duration = 8000; // ms
+
+    // 👉 Αν το popup έχει ήδη εμφανιστεί
+    if (sessionStorage.getItem("popupShown")) {
+        popup.style.display = "none";
+        circle.style.display = "flex"; // ✅ το i εμφανίζεται
+        return;
+    }
+
+    // 👉 Πρώτη φορά
+    sessionStorage.setItem("popupShown", "true");
 
     // Show popup
     setTimeout(() => {
@@ -18,7 +57,7 @@ window.onload = function () {
 
         setTimeout(() => {
             popup.style.display = "none";
-            circle.style.display = "flex";
+            circle.style.display = "flex"; // ✅ μετά το popup
         }, 500);
     }, duration + 250);
 
@@ -26,3 +65,4 @@ window.onload = function () {
     popup.onclick = () => window.location.href = "/information";
     circle.onclick = () => window.location.href = "/information";
 };
+

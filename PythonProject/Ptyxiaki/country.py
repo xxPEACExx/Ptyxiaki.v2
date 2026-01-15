@@ -16,7 +16,7 @@ def create_country_table(cursor, db):
 
         cursor.execute("""
             CREATE TABLE country (
-                CID TINYINT NOT NULL,
+                CID TINYINT UNSIGNED NOT NULL,
                 name VARCHAR(10) NOT NULL,
                 PRIMARY KEY (CID),
                 UNIQUE (name)

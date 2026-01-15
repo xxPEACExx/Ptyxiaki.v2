@@ -81,14 +81,134 @@
 #     except Exception as e:
 #         db.rollback()
 #         logging.error("Error committing claims for DID %s: %s", did, e)
+#
+#
+#
+#
+#
+# import traceback
+# import logging
+# from state import lang_mapping
+# from loadsource import loadsource_mapping
+#
+# # --------------------------------------------------
+# # Logging
+# # --------------------------------------------------
+# logging.basicConfig(
+#     filename="errors.log",
+#     level=logging.ERROR,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
+#
+# # --------------------------------------------------
+# # CREATE TABLE claims
+# # --------------------------------------------------
+# def create_claims_table(cursor, db):
+#     try:
+#         # Απενεργοποίηση FK checks (dev/init μόνο)
+#         cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+#
+#         cursor.execute("DROP TABLE IF EXISTS claims")
+#
+#         cursor.execute("""
+#             CREATE TABLE claims (
+#                 CID INT NOT NULL AUTO_INCREMENT,
+#                 DID INT UNSIGNED NOT NULL,
+#
+#                 claims_chars_count INT,
+#                 claims_words_count INT,
+#
+#                 lang TINYINT,
+#                 load_source TINYINT,
+#
+#                 PRIMARY KEY (CID),
+#                 KEY idx_did (DID),
+#                 KEY idx_lang (lang),
+#                 KEY idx_load_source (load_source),
+#
+#                 CONSTRAINT fk_claims_document
+#                     FOREIGN KEY (DID)
+#                     REFERENCES document(DID)
+#                     ON DELETE CASCADE
+#             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+#         """)
+#
+#         cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+#         db.commit()
+#
+#         print("[OK] Ο πίνακας claims δημιουργήθηκε")
+#
+#     except Exception as e:
+#         db.rollback()
+#         print("[ERROR] create_claims_table failed:", e)
+#
+#
+# # --------------------------------------------------
+# # INSERT claims
+# # --------------------------------------------------
+# def insert_claims(did, root, cursor, db):
+#     if not did or root is None:
+#         return
+#
+#     claims_elem = root.find(".//claims")
+#     if claims_elem is None:
+#         return
+#
+#     # ---- attributes από <claims>
+#     lang_code = claims_elem.attrib.get("lang")
+#     load_source_attr = claims_elem.attrib.get("load-source")
+#
+#     lang_id = lang_mapping.get(lang_code)
+#     load_source_id = loadsource_mapping.get(load_source_attr)
+#
+#     # ---- συλλογή ΟΛΟΥ του <claim-text>
+#     texts = []
+#
+#     for claim_text in claims_elem.findall(".//claim-text"):
+#         text = "".join(claim_text.itertext()).strip()
+#         if text:
+#             texts.append(text)
+#
+#     if not texts:
+#         return
+#
+#     full_text = " ".join(texts)
+#
+#     count_chars = len(full_text)
+#     count_words = len(full_text.split())
+#
+#     try:
+#         cursor.execute("""
+#             INSERT INTO claims
+#                 (DID, count_chars, count_words, lang, load_source)
+#             VALUES (%s, %s, %s, %s, %s)
+#         """, (
+#             did,
+#             count_chars,
+#             count_words,
+#             lang_id,
+#             load_source_id
+#         ))
+#
+#         db.commit()
+#
+#     except Exception:
+#         db.rollback()
+#         logging.error(
+#             "[CLAIMS_INSERT_ERROR] DID %s\n%s",
+#             did,
+#             traceback.format_exc()
+#         )
 
-import traceback
 import logging
+import traceback
+
 from state import lang_mapping
 from loadsource import loadsource_mapping
 
+
 # --------------------------------------------------
-# Logging
+# LOGGING
 # --------------------------------------------------
 logging.basicConfig(
     filename="errors.log",
@@ -96,23 +216,22 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+
 # --------------------------------------------------
 # CREATE TABLE claims
 # --------------------------------------------------
 def create_claims_table(cursor, db):
     try:
-        # Απενεργοποίηση FK checks (dev/init μόνο)
         cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
-
         cursor.execute("DROP TABLE IF EXISTS claims")
 
         cursor.execute("""
             CREATE TABLE claims (
                 CID INT NOT NULL AUTO_INCREMENT,
-                DID MEDIUMINT UNSIGNED NOT NULL,
+                DID INT UNSIGNED NOT NULL,
 
-                count_chars INT,
-                count_words INT,
+                claims_chars_count INT,
+                claims_words_count INT,
 
                 lang TINYINT,
                 load_source TINYINT,
@@ -134,9 +253,12 @@ def create_claims_table(cursor, db):
 
         print("[OK] Ο πίνακας claims δημιουργήθηκε")
 
-    except Exception as e:
+    except Exception:
         db.rollback()
-        print("[ERROR] create_claims_table failed:", e)
+        logging.error(
+            "[CLAIMS_TABLE_CREATE_ERROR]\n%s",
+            traceback.format_exc()
+        )
 
 
 # --------------------------------------------------
@@ -150,14 +272,14 @@ def insert_claims(did, root, cursor, db):
     if claims_elem is None:
         return
 
-    # ---- attributes από <claims>
+    # -------- attributes <claims>
     lang_code = claims_elem.attrib.get("lang")
     load_source_attr = claims_elem.attrib.get("load-source")
 
     lang_id = lang_mapping.get(lang_code)
     load_source_id = loadsource_mapping.get(load_source_attr)
 
-    # ---- συλλογή ΟΛΟΥ του <claim-text>
+    # -------- συλλογή ΟΛΟΥ του claim text
     texts = []
 
     for claim_text in claims_elem.findall(".//claim-text"):
@@ -170,18 +292,18 @@ def insert_claims(did, root, cursor, db):
 
     full_text = " ".join(texts)
 
-    count_chars = len(full_text)
-    count_words = len(full_text.split())
+    claims_chars_count = len(full_text)
+    claims_words_count = len(full_text.split())
 
     try:
         cursor.execute("""
             INSERT INTO claims
-                (DID, count_chars, count_words, lang, load_source)
+                (DID, claims_chars_count, claims_words_count, lang, load_source)
             VALUES (%s, %s, %s, %s, %s)
         """, (
             did,
-            count_chars,
-            count_words,
+            claims_chars_count,
+            claims_words_count,
             lang_id,
             load_source_id
         ))
@@ -195,5 +317,4 @@ def insert_claims(did, root, cursor, db):
             did,
             traceback.format_exc()
         )
-
 

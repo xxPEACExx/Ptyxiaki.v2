@@ -1,20 +1,24 @@
 
-
 import xml.etree.ElementTree as ET
-from state import lang_mapping
+import logging
+from state import lang_mapping          # γλώσσες
+from country import country_mapping     # χώρες
 from kind import kind_mapping
 from status import status_mapping
-import logging
 
 
+# --------------------------------------------------
+# Logging
+# --------------------------------------------------
 logging.basicConfig(
     filename='errors.log',
     level=logging.ERROR,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+
 # --------------------------------------------------
-# CREATE TABLE document
+# CREATE TABLE document (ΜΕ country)
 # --------------------------------------------------
 def create_document_table(cursor, db):
     try:
@@ -23,14 +27,14 @@ def create_document_table(cursor, db):
 
         cursor.execute("""
             CREATE TABLE document (
-                DID MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+                DID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 
                 ucid VARCHAR(255),
                 doc_number INT,
 
-                kind TINYINT,
-                state VARCHAR(255),
-                status TINYINT,
+                kind INT NOT NULL,
+                country TINYINT UNSIGNED NOT NULL,   
+                status INT,
                 lang TINYINT,
 
                 date DATE,
@@ -44,10 +48,29 @@ def create_document_table(cursor, db):
                 date_produced DATE,
 
                 PRIMARY KEY (DID),
+
                 KEY idx_kind (kind),
-                KEY idx_state (state),
+                KEY idx_country (country),
                 KEY idx_status (status),
-                KEY idx_lang (lang)
+                KEY idx_lang (lang),
+
+                CONSTRAINT fk_document_kind
+                    FOREIGN KEY (kind)
+                    REFERENCES kind(KID)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT,
+
+                CONSTRAINT fk_document_country
+                    FOREIGN KEY (country)
+                    REFERENCES country(CID)
+                    ON UPDATE CASCADE
+                    ON DELETE RESTRICT,
+
+                CONSTRAINT fk_document_status
+                    FOREIGN KEY (status)
+                    REFERENCES status(SID)
+                    ON UPDATE CASCADE
+                    ON DELETE SET NULL
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
         """)
 
@@ -58,13 +81,17 @@ def create_document_table(cursor, db):
     except Exception as e:
         db.rollback()
         print("[ERROR] create_document_table failed:", e)
+        raise
 
 
 # --------------------------------------------------
 # Helpers
 # --------------------------------------------------
-def get_lang_integer(lang):
+def get_lang_id(lang):
     return lang_mapping.get(lang, None)
+
+def get_country_id(country_code):
+    return country_mapping.get(country_code, None)
 
 def get_kind_id(kind):
     return kind_mapping.get(kind, None)
@@ -73,6 +100,10 @@ def get_status_id(status):
     return status_mapping.get(status.lower(), None) if status else None
 
 
+# --------------------------------------------------
+# Ensure lookup mappings
+# (country το έχεις ήδη αρχικοποιήσει αλλού)
+# --------------------------------------------------
 def ensure_mappings(cursor, db, lang_id, kind_id, status_id):
     try:
         if lang_id:
@@ -107,6 +138,7 @@ def ensure_mappings(cursor, db, lang_id, kind_id, status_id):
     except Exception as e:
         logging.error("Error in ensure_mappings: %s", e)
         db.rollback()
+        raise
 
 
 # --------------------------------------------------
@@ -130,7 +162,7 @@ def update_priority_claims_count(root, did, cursor, db):
         cursor.execute("""
             UPDATE document
             SET how_many_claims = %s
-            WHERE did = %s
+            WHERE DID = %s
         """, (claims_count, did))
 
         db.commit()
@@ -155,25 +187,31 @@ def process_document(xml_file, cursor, db):
         return None
 
     try:
+        # ---- attributes από την ΠΡΩΤΗ γραμμή
         ucid = root.get('ucid')
         doc_number = root.get('doc-number')
         date = root.get('date')
-        lang = root.get('lang')
+        lang_code = root.get('lang')          # π.χ. EN
+        country_code = root.get('country')    # π.χ. EP
         date_produced = root.get('date-produced')
-        kind = root.get('kind')
+        kind_code = root.get('kind')
         family_id = root.get('family-id')
-        status = root.get('status')
+        status_code = root.get('status')
 
-        lang_id = get_lang_integer(lang)
-        kind_id = get_kind_id(kind)
-        status_id = get_status_id(status)
+        # ---- mappings
+        lang_id = get_lang_id(lang_code)
+        country_id = get_country_id(country_code)
+        kind_id = get_kind_id(kind_code)
+        status_id = get_status_id(status_code)
 
-        if not lang_id or not kind_id:
-            raise ValueError(f"Άγνωστη γλώσσα ή είδος για το αρχείο: {xml_file}")
+        if not lang_id or not country_id or not kind_id:
+            raise ValueError(
+                f"Missing mapping: lang={lang_code}, country={country_code}, kind={kind_code}"
+            )
 
-        state_id = lang_id
         ensure_mappings(cursor, db, lang_id, kind_id, status_id)
 
+        # ---- description stats
         size_description = 0
         size_description_words = 0
         size_description_pars = 0
@@ -186,43 +224,44 @@ def process_document(xml_file, cursor, db):
                 size_description_pars = len(desc.findall('.//p'))
                 break
 
+        # ---- INSERT document
         cursor.execute("""
             INSERT INTO document (
-                ucid, doc_number, date, lang,
-                date_produced, kind, family_id, status,
-                size_description, size_description_words, size_description_pars,
-                state
+                ucid, doc_number, date,
+                lang, country, date_produced,
+                kind, family_id, status,
+                size_description, size_description_words, size_description_pars
             ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE
                 doc_number = VALUES(doc_number),
                 date = VALUES(date),
                 lang = VALUES(lang),
+                country = VALUES(country),
                 date_produced = VALUES(date_produced),
                 kind = VALUES(kind),
                 family_id = VALUES(family_id),
                 status = VALUES(status),
                 size_description = VALUES(size_description),
                 size_description_words = VALUES(size_description_words),
-                size_description_pars = VALUES(size_description_pars),
-                state = VALUES(state)
+                size_description_pars = VALUES(size_description_pars)
         """, (
             ucid,
             int(doc_number),
             date,
             lang_id,
+            country_id,
             date_produced,
             kind_id,
             family_id,
             status_id,
             size_description,
             size_description_words,
-            size_description_pars,
-            state_id
+            size_description_pars
         ))
 
         did = cursor.lastrowid
         if did == 0:
-            cursor.execute("SELECT did FROM document WHERE ucid = %s", (ucid,))
+            cursor.execute("SELECT DID FROM document WHERE ucid = %s", (ucid,))
             did = cursor.fetchone()[0]
 
         update_priority_claims_count(root, did, cursor, db)

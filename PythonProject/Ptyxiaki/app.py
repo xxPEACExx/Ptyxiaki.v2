@@ -13,6 +13,7 @@ from datetime import datetime
 
 from Ptyxiaki.abstract import create_abstract_table, insert_abstract
 from Ptyxiaki.country import create_country_table, initialize_country
+from Ptyxiaki.description import create_description_table, insert_description
 # from Ptyxiaki.abstract import create_abstract_table, insert_abstract
 # from Ptyxiaki.country import create_country_table, initialize_country
 from Ptyxiaki.role import initialize_role, create_role_table
@@ -43,7 +44,7 @@ def get_db_cursor():
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__, template_folder='html') # na trexei prwto gia na arxikopoihsoume thn vash dedomemenw me fk
-app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024  # megisto 1GB gia na mhn epivarinoume to request
+app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024 * 1024  # 5GB  # megisto 10GB gia na mhn epivarinoume to request
 
 #syndesi me thn vasi
 try:
@@ -72,6 +73,22 @@ stopped = False
 progress_percentage = 0
 zip_progress = 0
 zip_total = 0
+upload_progress = 0
+upload_total = 0
+processing_state = "idle"
+current_phase = "idle"
+
+
+
+
+
+
+
+
+
+
+
+
 
 BAD_FILES_LOG = "bad_files.log" # Metavliti gia to arxeio errors
 
@@ -175,111 +192,100 @@ def calculate_month_stats_from_db(cursor, year=None):
 
 # trexei ola ta xml, kai ta epexergazetai ena ena
 def process_files(files):
+    global running, paused, stopped, progress_percentage,current_phase
 
+    thread_db = None
+    thread_cursor = None
 
-    global running, paused, stopped, progress_percentage
-
-    #kathe tread thelei thn diki toy syndesi, gia auto pername timout apo tin vasi
     try:
+        # κάθε thread θέλει δική του σύνδεση
         thread_db = mysql.connector.connect(
             host="localhost",
             user="admin",
             password="admin",
             database="epdatabase"
         )
-
         thread_cursor = thread_db.cursor()
 
-    except Exception as e:
-        logging.critical(f" Αποτυχία δημιουργίας συνδεσης στο thread: {e}")
-        running = False
-        return
+        total_files = len(files)
 
-    total_files = len(files)
+        for idx, file_path in enumerate(files, start=1):
 
-    for idx, file_path in enumerate(files, start=1): #ενα ενα xml thn fora
-
-        #diadikasima top
-        with processing_lock:
-            if stopped:
-                logging.info(" Διακοπή διαδικασίας από χρήστη.")
-                break
-
-        # to pause
-        while True:
+            # STOP
             with processing_lock:
                 if stopped:
-                    logging.info("Διακοπή διαδικασίας από pause loop.")
-                    return
-                if not paused:
+                    logging.info("🛑 Διακοπή διαδικασίας από χρήστη.")
                     break
-            time.sleep(0.3)
 
-        #olo einai se try exception gia na mhn stamataei, auto luni to problhma poy thn eisagwgh kai kai sfalma
-        try:
+            # PAUSE
+            while True:
+                with processing_lock:
+                    if stopped:
+                        return
+                    if not paused:
+                        break
+                time.sleep(0.3)
 
-            tree = ET.parse(file_path)
-            root = tree.getroot()
+            try:
+                tree = ET.parse(file_path)
+                root = tree.getroot()
 
+                did = process_document(file_path, thread_cursor, thread_db)
 
-            did = process_document(file_path, thread_cursor, thread_db)
+                if did is None:
+                    logging.warning(f"DID δεν δημιουργήθηκε: {file_path}")
+                    with open(BAD_FILES_LOG, "a", encoding="utf-8") as f:
+                        f.write(f"{file_path} | DID not created\n")
+                    continue
 
-            #to stelnoume sto bad eeror an eixei sfalma to arxeio
-            if did is None:
-                logging.warning(f" DID δεν δημιουργήθηκε: {file_path}")
-                with open(BAD_FILES_LOG, "a", encoding="utf-8") as f:
-                    f.write(f"{file_path} | DID not created\n")
+                insert_claims(did, root, thread_cursor, thread_db)
+                insert_classification(did, root, thread_cursor, thread_db)
+                insert_parties(did, root, thread_cursor, thread_db)
+                insert_title(did, root, thread_cursor, thread_db)
+                insert_abstract(did, root, thread_cursor, thread_db)
+                insert_description(did, root, cursor, db)
+
+                thread_db.commit()
+
+                with processing_lock:
+                    progress_percentage = int((idx / total_files) * 100)
+
+                logging.info(f"📁 OK {file_path} ({progress_percentage}%)")
+
+            except ET.ParseError as e:
+                logging.error(f"Κακό XML: {file_path} – {e}")
                 continue
 
-            insert_claims(did, root, thread_cursor, thread_db)
-            insert_classification(did, root, thread_cursor, thread_db)
-            insert_parties(did, root, thread_cursor, thread_db)
-            insert_title(did, root, thread_cursor, thread_db)
-            insert_abstract(did, root, thread_cursor, thread_db)
+            except Exception as e:
+                logging.error(f"Σφάλμα σε {file_path}: {e}")
+                try:
+                    thread_db.rollback()
+                except:
+                    pass
+                continue
 
+    finally:
+        try:
+            if thread_cursor:
+                thread_cursor.close()
+            if thread_db:
+                thread_db.close()
+        except:
+            pass
 
+        with processing_lock:
+            running = False
+            paused = False
+            if stopped:
+                current_phase = "stopped"
+            else:
+                progress_percentage = 100
+                current_phase = "done"
 
-            thread_db.commit()
-
-
-            progress_percentage = int((idx / total_files) * 100)
-            logging.info(f"📁 OK {file_path} ({progress_percentage}%)")
-
-        except ET.ParseError as e:
-            logging.error(f" Κακό XML: {file_path} – {e}")
-            with open(BAD_FILES_LOG, "a", encoding="utf-8") as f:
-                f.write(f"{file_path} | XML ParseError: {e}\n")
-            continue
-
-        except Exception as e:
-            logging.error(f" Σφάλμα σε {file_path}: {e}")
-            try:
-                thread_db.rollback()
-            except:
-                logging.error(" Rollback failed (connection lost).")
-
-            with open(BAD_FILES_LOG, "a", encoding="utf-8") as f:
-                f.write(f"{file_path} | Processing Error: {e}\n")
-            continue
-
-
-    try:
-        thread_cursor.close()
-        thread_db.close()
-    except:
-        pass
-
-    with processing_lock:
-        running = False
-        paused = False
-        stopped = False
-        progress_percentage = 100
-
-    logging.info("✅ Επεξεργασία ολοκληρώθηκε κανονικά.")
+        logging.info("🧹 Τέλος processing thread.")
 
 
 def start_processing_thread(files):
-
     global processing_thread, running, paused, stopped, progress_percentage
 
     with processing_lock:
@@ -290,77 +296,265 @@ def start_processing_thread(files):
         paused = False
         stopped = False
         progress_percentage = 0
+        current_phase = "processing"
 
-    processing_thread = threading.Thread(target=process_files, args=(files,))
+    processing_thread = threading.Thread(
+        target=process_files,
+        args=(files,),
+        daemon=True
+    )
     processing_thread.start()
     return True
 
-# edw xenkinae ta endpoints
 
+# edw xenkinae ta endpointsprocess_files
 @app.route("/upload_zip", methods=["POST"])
 def upload_zip():
+    global running, paused, stopped
+    global progress_percentage, zip_progress, zip_total, current_phase
+
+    with processing_lock:
+        running = False
+        paused = False
+        stopped = False
+        progress_percentage = 0
+        zip_progress = 0
+        zip_total = 0
+        current_phase = "upload"
 
     uploaded = request.files.getlist("files")
     if not uploaded:
         return jsonify({"message": "Δεν επιλέχθηκε ZIP αρχείο."}), 400
 
     zip_file = uploaded[0]
-
-
     if not zip_file.filename.lower().endswith(".zip"):
         return jsonify({"message": "Το αρχείο δεν είναι ZIP."}), 400
 
-    base_upload_dir = "uploaded_files"
-    os.makedirs(base_upload_dir, exist_ok=True)
+    base_dir = "uploaded_files"
+    os.makedirs(base_dir, exist_ok=True)
 
-    zip_path = os.path.join(base_upload_dir, zip_file.filename)
+    zip_path = os.path.join(base_dir, zip_file.filename)
     zip_file.save(zip_path)
 
     extract_dir = os.path.join(
-        base_upload_dir,
+        base_dir,
         os.path.splitext(zip_file.filename)[0]
     )
     os.makedirs(extract_dir, exist_ok=True)
 
-    try:
+    # unzip + processing σε background
+    threading.Thread(
+        target=unzip_and_start_processing,
+        args=(zip_path, extract_dir),
+        daemon=True
+    ).start()
 
-        global zip_progress, zip_total
+    return jsonify({
+        "message": "Upload ολοκληρώθηκε. Ξεκίνησε unzip.",
+        "folder_name": os.path.splitext(zip_file.filename)[0]
+    })
+
+
+def unzip_and_start_processing(zip_path, extract_dir):
+    global zip_progress, zip_total, current_phase
+
+    with processing_lock:
+        current_phase = "unzip"
         zip_progress = 0
+        zip_total = 0
 
-        with ZipFile(zip_path, 'r') as z:
-            members = z.namelist()
-            members = [m for m in members if not m.endswith("/")]
-
+    try:
+        with ZipFile(zip_path, "r") as z:
+            members = [m for m in z.namelist() if not m.endswith("/")]
             zip_total = len(members)
-            extracted = 0
 
+            extracted = 0
             for member in members:
                 z.extract(member, extract_dir)
                 extracted += 1
-                zip_progress = int((extracted / zip_total) * 100)
-
-        xml_files = []
-        for root_dir, _, files in os.walk(extract_dir):
-            for f in files:
-                if f.lower().endswith(".xml"):
-                    full = os.path.join(root_dir, f)
-                    xml_files.append(full)
-
-        if not xml_files:
-            return jsonify({"message": "Το ZIP δεν περιέχει XML αρχεία."}), 400
+                zip_progress = int((extracted / max(zip_total, 1)) * 100)
 
         zip_progress = 100
 
+        xml_files = []
+        for root, _, files in os.walk(extract_dir):
+            for f in files:
+                if f.lower().endswith(".xml"):
+                    xml_files.append(os.path.join(root, f))
 
-        started = start_processing_thread(xml_files)
-        if not started:
-            return jsonify({"message": "Η επεξεργασία ήδη τρέχει."}), 400
+        if xml_files:
+            with processing_lock:
+                current_phase = "processing"
+            start_processing_thread(xml_files)
+        else:
+            with processing_lock:
+                current_phase = "done"
 
-        return jsonify({"message": f"Ξεκίνησε η επεξεργασία {len(xml_files)} XML από ZIP."})
+    except Exception:
+        logging.exception("Unzip failed")
+        with processing_lock:
+            current_phase = "stopped"
+            zip_progress = -1
+
+
+
+
+
+@app.route("/upload_progress", methods=["GET"])
+def upload_progress_status():
+    global upload_progress, upload_total
+    return jsonify({"progress": upload_progress, "total": upload_total})
+
+@app.route("/upload_zip_chunk", methods=["POST"])
+def upload_zip_chunk():
+    global upload_progress, upload_total
+    global zip_progress, zip_total
+    global progress_percentage
+    global running, paused, stopped
+    global current_phase
+
+    # =========================
+    # Reset state (start upload)
+    # =========================
+    with processing_lock:
+        running = False
+        paused = False
+        stopped = False
+
+        upload_progress = 0
+        upload_total = 0
+
+        zip_progress = 0
+        zip_total = 0
+
+        progress_percentage = 0
+        current_phase = "upload"
+
+    # =========================
+    # Validate input
+    # =========================
+    chunk = request.files.get("chunk")
+    if chunk is None:
+        return jsonify({"message": "Missing chunk"}), 400
+
+    upload_id = request.form.get("upload_id")
+    filename = request.form.get("filename")
+
+    try:
+        index = int(request.form.get("index"))
+        total = int(request.form.get("total"))
+    except:
+        return jsonify({"message": "Bad index/total"}), 400
+
+    if not upload_id or not filename or total <= 0 or index < 0:
+        return jsonify({"message": "Invalid upload data"}), 400
+
+    # =========================
+    # Save chunk
+    # =========================
+    base_dir = "uploaded_files"
+    os.makedirs(base_dir, exist_ok=True)
+
+    chunks_dir = os.path.join(base_dir, "_chunks", upload_id)
+    os.makedirs(chunks_dir, exist_ok=True)
+
+    part_path = os.path.join(chunks_dir, f"part_{index:06d}")
+    chunk.save(part_path)
+
+    upload_total = total
+    upload_progress = int(((index + 1) / total) * 100)
+
+    # =========================
+    # Not last chunk → done
+    # =========================
+    if index < total - 1:
+        return jsonify({
+            "message": "Chunk received",
+            "progress": upload_progress
+        })
+
+    # =========================
+    # LAST CHUNK → MERGE
+    # =========================
+    final_zip_path = os.path.join(base_dir, filename)
+    if os.path.exists(final_zip_path):
+        os.remove(final_zip_path)
+
+    try:
+        with open(final_zip_path, "wb") as out:
+            for i in range(total):
+                part_file = os.path.join(chunks_dir, f"part_{i:06d}")
+                if not os.path.exists(part_file):
+                    return jsonify({"message": f"Missing chunk {i}"}), 500
+                with open(part_file, "rb") as inp:
+                    shutil.copyfileobj(inp, out)
+
+        shutil.rmtree(chunks_dir, ignore_errors=True)
 
     except Exception as e:
-        logging.exception(" Σφάλμα κατά το upload_zip")
-        return jsonify({"message": f"Σφάλμα ZIP: {str(e)}"}), 500
+        logging.exception("Chunk merge failed")
+        return jsonify({"message": f"Merge failed: {e}"}), 500
+
+    # =========================
+    # UNZIP (1% → 100%)
+    # =========================
+    extract_dir = os.path.join(base_dir, os.path.splitext(filename)[0])
+    os.makedirs(extract_dir, exist_ok=True)
+
+    with processing_lock:
+        current_phase = "unzip"
+        zip_progress = 1
+        zip_total = 0
+
+    try:
+        with ZipFile(final_zip_path, "r") as z:
+            members = [m for m in z.namelist() if not m.endswith("/")]
+            zip_total = len(members)
+
+            extracted = 0
+            for member in members:
+                z.extract(member, extract_dir)
+                extracted += 1
+                zip_progress = int((extracted / max(zip_total, 1)) * 100)
+
+        zip_progress = 100
+
+    except Exception as e:
+        logging.exception("Unzip failed")
+        with processing_lock:
+            current_phase = "stopped"
+        return jsonify({"message": f"Unzip failed: {e}"}), 500
+
+    # =========================
+    # FIND XML FILES
+    # =========================
+    xml_files = []
+    for root_dir, _, files in os.walk(extract_dir):
+        for f in files:
+            if f.lower().endswith(".xml"):
+                xml_files.append(os.path.join(root_dir, f))
+
+    if not xml_files:
+        with processing_lock:
+            current_phase = "done"
+        return jsonify({"message": "No XML files found"}), 400
+
+    # =========================
+    # PROCESSING (1% → 100%)
+    # =========================
+    with processing_lock:
+        current_phase = "processing"
+
+    started = start_processing_thread(xml_files)
+    if not started:
+        return jsonify({"message": "Processing already running"}), 400
+
+    upload_progress = 100
+
+    return jsonify({
+        "message": f"Upload ολοκληρώθηκε. Ξεκίνησε processing {len(xml_files)} XML.",
+        "folder_name": os.path.splitext(filename)[0]
+    })
 
 
 
@@ -390,35 +584,54 @@ def upload_folder():
 
     return jsonify({"message": f"Ξεκίνησε η επεξεργασία {len(saved_files)} αρχείων."})
 
-
 @app.route("/control", methods=["POST"])
 def control():
-    global running, paused, stopped
+    global running, paused, stopped, current_phase
+
     data = request.json or {}
     action = data.get("action")
 
     with processing_lock:
         if action == "pause" and running and not paused:
             paused = True
-            return jsonify({"message": "Η επεξεργασία σταμάτησε προσωρινά."})
-        elif action == "continue" and running and paused:
+            return jsonify({"message": "Paused"})
+
+        if action == "continue" and running and paused:
             paused = False
-            return jsonify({"message": "Η επεξεργασία συνεχίζεται."})
-        elif action == "stop" and running:
+            return jsonify({"message": "Continued"})
+
+        if action == "stop" and running:
             stopped = True
             paused = False
-            return jsonify({"message": "Η επεξεργασία τερματίστηκε."})
-        else:
-            return jsonify({"message": "Μη έγκυρη ενέργεια ή η επεξεργασία δεν τρέχει."}), 400
+            current_phase = "stopped"
+            return jsonify({"message": "Stopped"})
+
+    return jsonify({"message": "Invalid action"}), 400
+
 
 
 @app.route("/get_progress", methods=["GET"])
 def get_progress():
-    global progress_percentage, running, paused
-    status = "running" if running else "stopped"
-    if paused:
-        status = "paused"
-    return jsonify({"progress": progress_percentage, "status": status})
+    with processing_lock:
+        if paused:
+            status = "paused"
+        elif running:
+            status = "running"
+        elif stopped:
+            status = "stopped"
+        else:
+            status = "idle"
+
+        return jsonify({
+            "progress": progress_percentage,
+            "zip_progress": zip_progress,
+            "zip_total": zip_total,
+            "status": status,
+            "phase": current_phase
+        })
+
+
+
 
 
 @app.route("/qquery_documents", methods=["POST"])
@@ -432,18 +645,24 @@ def qquery_documents_post():
     ]
     return jsonify({"results": results})
 
-
 @app.route("/get_documents", methods=["GET"])
 def get_documents():
-
+    conn, cur = get_db_cursor()
     try:
-        cursor.execute("SELECT did, filename FROM document ORDER BY id DESC LIMIT 50")
-        rows = cursor.fetchall()
-        results = [{"did": row[0], "filepath": row[1]} for row in rows]
+        cur.execute(
+            "SELECT did, filename FROM document ORDER BY id DESC LIMIT 50"
+        )
+        rows = cur.fetchall()
+        results = [{"did": r[0], "filepath": r[1]} for r in rows]
         return jsonify({"results": results})
     except Exception as e:
-        logging.error(f"Error in /get_documents: {e}")
+        logging.error(f"/get_documents error: {e}")
         return jsonify({"results": []}), 500
+    finally:
+        cur.close()
+        conn.close()
+
+
 
 
 @app.route("/query_documents", methods=["POST"])
@@ -507,20 +726,26 @@ def home():
 def information():
     return render_template("information.html")
 
+
 @app.route("/database")
 def database():
-    try:
-        per_page = 10
-        page = request.args.get("page", 1, type=int)
-        offset = (page - 1) * per_page
+    per_page = 10
+    page = request.args.get("page", 1, type=int)
+    offset = (page - 1) * per_page
 
-        cursor.execute("""
+    conn, cur = get_db_cursor()
+
+    try:
+        # ===============================
+        # FETCH PAGINATED DOCUMENTS
+        # ===============================
+        cur.execute("""
             SELECT
                 d.did,
                 d.ucid,
                 d.doc_number,
                 d.kind,
-                d.state,
+                d.country,
                 d.date,
                 d.family_id,
                 d.status,
@@ -531,25 +756,42 @@ def database():
                 d.how_many_claims,
                 d.date_produced
             FROM document d
+            ORDER BY d.did DESC
             LIMIT %s OFFSET %s
         """, (per_page, offset))
 
-        rows = cursor.fetchall()
+        rows = cur.fetchall()
 
-        cursor.execute("SELECT COUNT(*) FROM document")
-        total_rows = cursor.fetchone()[0]
+        # ===============================
+        # FETCH TOTAL COUNT
+        # ===============================
+        cur.execute("SELECT COUNT(*) FROM document")
+        total_rows = cur.fetchone()[0]
         total_pages = (total_rows + per_page - 1) // per_page
 
+        # ===============================
+        # RENDER TEMPLATE
+        # ===============================
         return render_template(
             "database.html",
             rows=rows,
             page=page,
-            total_pages=total_pages,
+            total_pages=total_pages
         )
 
     except Exception as e:
-        logging.error(f"/database error: {e}")
-        return render_template("database.html", rows=[], page=1, total_pages=1)
+        logging.error(f"/database error: {e}", exc_info=True)
+        return render_template(
+            "database.html",
+            rows=[],
+            page=1,
+            total_pages=1
+        )
+
+    finally:
+        cur.close()
+        conn.close()
+
 
 
 
@@ -587,6 +829,10 @@ def get_files():
     items = []
 
     for entry in os.scandir(full_path):
+
+        if entry.is_file() and entry.name.lower().endswith(".zip"):
+            continue
+
         item = {
             "name": entry.name,
             "type": "folder" if entry.is_dir() else "file",
@@ -608,7 +854,13 @@ def get_files():
 @app.route("/stats/uploads_per_week", methods=["GET"])
 def uploads_per_week():
 
-    counts = calculate_week_stats_from_db(cursor)
+    conn, cur = get_db_cursor()
+    try:
+        counts = calculate_week_stats_from_db(cur)
+    finally:
+        cur.close()
+        conn.close()
+
     labels = [f"Εβδ. {i}" for i in range(1, 13)]
     return jsonify({"labels": labels, "counts": counts})
 
@@ -657,7 +909,6 @@ def calculate_month_stats_from_db(cursor, year=None):
 
 @app.route("/zip_progress", methods=["GET"])
 def zip_progress_status():
-    global zip_progress, zip_total
     return jsonify({
         "progress": zip_progress,
         "total": zip_total
@@ -716,9 +967,14 @@ def workspace():
 
     if request.method == "POST":
         sql_input = request.form.get("sql_input", "").strip()
-        active_tab = request.form.get("active_tab", "query")  # <---- ΣΗΜΑΝΤΙΚΟ
+        active_tab = request.form.get("active_tab", "query")
 
-        cols, rows, err, elapsed = run_sql_query(sql_input, cursor)
+        conn, cur = get_db_cursor()
+        try:
+            cols, rows, err, elapsed = run_sql_query(sql_input, cur)
+        finally:
+            cur.close()
+            conn.close()
 
         last_query_state.update({
             "sql": sql_input,
@@ -741,13 +997,19 @@ def workspace():
     )
 
 
+
 @app.post("/workspace_ajax")
 def workspace_ajax():
     sql_input = request.form.get("sql_input", "").strip()
 
-    cols, rows, err, elapsed = run_sql_query(sql_input, cursor)
+    conn, cur = get_db_cursor()
+    try:
+        cols, rows, err, elapsed = run_sql_query(sql_input, cur)
+    finally:
+        cur.close()
+        conn.close()
 
-    resp = {
+    return {
         "sql": sql_input,
         "columns": cols or [],
         "rows": rows or [],
@@ -756,7 +1018,6 @@ def workspace_ajax():
         "row_count": len(rows or [])
     }
 
-    return resp
 @app.post("/api/search")
 def api_search():
     conn, cur = get_db_cursor()
@@ -767,7 +1028,6 @@ def api_search():
 
         limit = int(payload.get("limit", 100))
         offset = int(payload.get("offset", 0))
-
         limit = max(1, min(limit, 500))
         offset = max(0, offset)
 
@@ -780,7 +1040,7 @@ def api_search():
             except:
                 return None
 
-        # --- Year ---
+        # --- Year range (document.date) ---
         yf = as_int(criteria.get("year_from"))
         yt = as_int(criteria.get("year_to"))
 
@@ -791,44 +1051,65 @@ def api_search():
             where.append("d.date <= %s")
             params.append(f"{yt}-12-31")
 
-        # --- State ---
-        states = criteria.get("state") or []
-        if states:
-            where.append(f"d.state IN ({','.join(['%s'] * len(states))})")
-            params.extend(states)
+        # --- Country filter (document.country) ---
+        countries = criteria.get("country") or []
+        if countries:
+            where.append(f"d.country IN ({','.join(['%s'] * len(countries))})")
+            params.extend(countries)
 
-        # --- Kind ---
+        # --- Kind filter (document.kind) ---
         kinds = criteria.get("kind") or []
         if kinds:
             where.append(f"d.kind IN ({','.join(['%s'] * len(kinds))})")
             params.extend(kinds)
 
-        # --- Metrics ---
+        # --- Metrics: min claims (document.how_many_claims) ---
         mc = as_int(criteria.get("min_claims"))
         if mc is not None:
             where.append("d.how_many_claims >= %s")
             params.append(mc)
 
+        # --- Metrics: min abstract words (abstract.abstract_word_count) ---
         maw = as_int(criteria.get("min_abstract_words"))
         if maw is not None:
-            where.append("d.abstract_word_count >= %s")
+            # Προσοχή: είναι στον πίνακα abstract, όχι στον document
+            where.append("a.abstract_words_count >= %s")
             params.append(maw)
 
         where_sql = " WHERE " + " AND ".join(where) if where else ""
 
-        select_cols = [
-            "d.*",
-            "k.name AS kind_name",
-            "s.country_name AS state_name"
-        ]
-
+        # Σημείωση:
+        # - LEFT JOIN abstract για να μην “χάνονται” έγγραφα χωρίς abstract
+        # - Αν βάλεις φίλτρο maw, πρακτικά γίνεται “inner-like” για τα docs που δεν έχουν abstract.
         sql = f"""
-            SELECT {", ".join(select_cols)}
+            SELECT
+                d.DID,
+                d.ucid,
+                d.doc_number,
+                d.date,
+                d.family_id,
+                d.status,
+                d.lang,
+                d.kind,
+                d.country,
+                d.size_description,
+                d.size_description_pars,
+                d.size_description_words,
+                d.how_many_claims,
+                d.date_produced,
+
+                k.name AS kind_name,
+                c.name AS country_name,
+                s.country_name AS lang_name,
+
+                a.abstract_words_count AS abstract_word_count
             FROM document d
-            LEFT JOIN kind  k ON k.KID = d.kind
-            LEFT JOIN state s ON s.CID = d.state
+            LEFT JOIN kind    k ON k.KID = d.kind
+            LEFT JOIN country c ON c.CID = d.country
+            LEFT JOIN state   s ON s.CID = d.lang
+            LEFT JOIN abstract a ON a.DID = d.DID
             {where_sql}
-            ORDER BY d.date DESC
+            ORDER BY d.DID DESC
             LIMIT %s OFFSET %s
         """
 
@@ -845,7 +1126,7 @@ def api_search():
         })
 
     except Exception as e:
-        logging.error(f"/api/search error: {e}")
+        logging.error(f"/api/search error: {e}", exc_info=True)
         return jsonify({
             "columns": [],
             "rows": [],
@@ -985,6 +1266,23 @@ ORDER BY s.country_name, k.name;
 
 
 
+
+
+def clean_uploaded_files():
+    base_dir = "uploaded_files"
+
+    if os.path.exists(base_dir):
+        try:
+            shutil.rmtree(base_dir)
+            logging.info("🧹 Καθαρίστηκε ο φάκελος uploaded_files")
+        except Exception as e:
+            logging.error(f" Αποτυχία καθαρισμού uploaded_files: {e}")
+
+    os.makedirs(base_dir, exist_ok=True)
+
+
+    #ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 1
+
 @app.get("/api/stats/claims-vs-abstract")
 def api_claims_vs_abstract():
     conn, cur = get_db_cursor()
@@ -992,39 +1290,29 @@ def api_claims_vs_abstract():
     try:
         cur.execute("""
             SELECT
-                abstract_word_count,
-                how_many_claims
-            FROM document
+                d.size_description_words AS abstract_words,
+                d.how_many_claims
+            FROM document d
             WHERE
-                abstract_word_count IS NOT NULL
-                AND how_many_claims IS NOT NULL
-                AND abstract_word_count > 0
-                AND how_many_claims > 0
+                d.size_description_words IS NOT NULL
+                AND d.how_many_claims IS NOT NULL
+                AND d.size_description_words > 0
+                AND d.how_many_claims > 0
             LIMIT 5000
         """)
 
         rows = cur.fetchall()
 
-        data = [
-            {
-                "x": r[0],  # abstract words
-                "y": r[1]   # claims
-            }
-            for r in rows
-        ]
-
         return jsonify({
-            "points": data,
-            "count": len(data)
+            "points": [
+                {"x": int(r[0]), "y": int(r[1])}
+                for r in rows
+            ]
         })
 
     except Exception as e:
-        logging.error(f"/api/stats/claims-vs-abstract error: {e}")
-        return jsonify({
-            "points": [],
-            "count": 0,
-            "error": str(e)
-        }), 500
+        logging.error(f"/api/stats/claims-vs-abstract error: {e}", exc_info=True)
+        return jsonify({"points": [], "error": str(e)}), 500
 
     finally:
         cur.close()
@@ -1032,16 +1320,265 @@ def api_claims_vs_abstract():
 
 
 
+#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 2
+@app.get("/api/stats/claims-intensity")
+def stats_claims_intensity():
+    conn, cur = get_db_cursor()
+    try:
+        ep_id = get_country_id(cur, "EP")
+
+        country_filter = ""
+        params = []
+        if ep_id is not None:
+            country_filter = "AND d.country = %s"
+            params.append(ep_id)
+
+        cur.execute(f"""
+            SELECT
+                k.name AS kind,
+                AVG(d.how_many_claims) AS avg_claims,
+                COUNT(*) AS patent_count
+            FROM document d
+            JOIN kind k ON k.KID = d.kind
+            WHERE d.how_many_claims IS NOT NULL
+              {country_filter}
+            GROUP BY k.name
+            ORDER BY avg_claims DESC
+        """, params)
+
+        rows = cur.fetchall()
+        labels = [r[0] for r in rows]
+        values = [float(r[1]) if r[1] is not None else 0.0 for r in rows]
+        counts = [int(r[2]) for r in rows]
+
+        return jsonify({"labels": labels, "values": values, "counts": counts})
+
+    except Exception as e:
+        logging.error(f"/api/stats/claims-intensity error: {e}", exc_info=True)
+        return jsonify({"labels": [], "values": [], "counts": [], "error": str(e)}), 500
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 3
+
+@app.get("/api/stats/complexity-score")
+def api_complexity_score():
+    conn, cur = get_db_cursor()
+
+    try:
+        cur.execute("""
+            SELECT
+                d.DID,
+                d.how_many_claims,
+                MAX(a.abstract_words_count) AS abstract_word_count,
+                (
+                    LOG(1 + d.how_many_claims) *
+                    LOG(1 + MAX(a.abstract_words_count))
+                ) AS complexity_score
+            FROM document d
+            JOIN abstract a ON a.DID = d.DID
+            WHERE
+                d.how_many_claims > 0
+                AND a.abstract_words_count > 0
+            GROUP BY d.DID, d.how_many_claims
+            ORDER BY complexity_score DESC
+            LIMIT 1000
+        """)
+
+        rows = cur.fetchall()
+
+        return jsonify({
+            "rows": [
+                {
+                    "did": r[0],
+                    "claims": int(r[1]),
+                    "abstract_words": int(r[2]),
+                    "complexity": float(r[3])
+                }
+                for r in rows
+            ]
+        })
+
+    finally:
+        cur.close()
+        conn.close()
+
+#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 4
+
+
+#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 6
+@app.get("/api/stats/maturity-over-time")
+def api_maturity_over_time():
+    conn, cur = get_db_cursor()
+
+    try:
+        cur.execute("""
+            SELECT
+                YEAR(d.date) AS year,
+                COUNT(*) AS documents,
+                AVG(
+                    (d.how_many_claims * 0.6) +
+                    (IFNULL(a.abstract_words_count, 0) * 0.4 / 100)
+                ) AS maturity
+            FROM document d
+            LEFT JOIN abstract a ON a.DID = d.DID
+            WHERE d.date IS NOT NULL
+              AND d.country = (
+                  SELECT CID FROM country WHERE name = 'EP'
+              )
+            GROUP BY YEAR(d.date)
+            ORDER BY year
+        """)
+
+        rows = cur.fetchall()
+
+        years = []
+        values = []
+
+        for year, docs, maturity in rows:
+            if year is not None and maturity is not None:
+                years.append(year)
+                values.append(round(float(maturity), 3))
+
+        return jsonify({
+            "years": years,
+            "values": values
+        })
+
+    except Exception as e:
+        logging.error(f"maturity-over-time error: {e}", exc_info=True)
+        return jsonify({"years": [], "values": []}), 500
+
+    finally:
+        cur.close()
+        conn.close()
+
+#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 4
+@app.get("/api/stats/patents-per-month")
+def api_patents_per_month():
+    conn, cur = get_db_cursor()
+
+    try:
+        ep_id = get_country_id(cur, "EP")
+
+        cur.execute("""
+            SELECT
+                MONTH(d.date) AS m,
+                COUNT(*) AS total
+            FROM document d
+            WHERE
+                d.date IS NOT NULL
+                AND d.country = %s
+            GROUP BY m
+        """, (ep_id,))
+
+        rows = cur.fetchall()
+
+        # 1..12
+        month_counts = {int(m): int(c) for m, c in rows if m is not None}
+
+        labels = ["Jan","Feb","Mar","Apr","May","Jun",
+                  "Jul","Aug","Sep","Oct","Nov","Dec"]
+
+        values = [month_counts.get(i, 0) for i in range(1, 13)]
+
+        total_patents = sum(values)
+        avg = round(total_patents / 12, 2)
+
+        return jsonify({
+            "labels": labels,
+            "values": values,
+            "average": avg
+        })
+
+    except Exception as e:
+        logging.error(e, exc_info=True)
+        return jsonify({"labels": [], "values": [], "average": 0}), 500
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+
+def get_country_id(cur, name: str):
+    cur.execute("SELECT CID FROM country WHERE name = %s LIMIT 1", (name,))
+    row = cur.fetchone()
+    return row[0] if row else None
+
+
+
+@app.get("/api/stats/monthly-growth-rate")
+def api_monthly_growth_rate():
+    conn, cur = get_db_cursor()
+    try:
+        ep_id = get_country_id(cur, "EP")
+
+        country_filter = ""
+        params = []
+        if ep_id is not None:
+            country_filter = "AND d.country = %s"
+            params.append(ep_id)
+
+        cur.execute(f"""
+            SELECT
+                DATE_FORMAT(d.date, '%%Y-%%m') AS year_month,
+                COUNT(*) AS total
+            FROM document d
+            WHERE d.date IS NOT NULL
+              {country_filter}
+            GROUP BY year_month
+            ORDER BY year_month
+        """, params)
+
+        rows = [(r[0], int(r[1])) for r in cur.fetchall() if r[0] is not None]
+
+        if len(rows) < 2:
+            return jsonify({"labels": [], "values": []})
+
+        labels = []
+        values = []
+
+        prev_month, prev_total = rows[0]
+        for month, total in rows[1:]:
+            if prev_total <= 0:
+                growth = 0.0
+            else:
+                growth = ((total - prev_total) / prev_total) * 100.0
+
+            labels.append(month)
+            values.append(growth)
+
+            prev_total = total
+
+        return jsonify({"labels": labels, "values": values})
+
+    except Exception as e:
+        logging.error(f"/api/stats/monthly-growth-rate error: {e}", exc_info=True)
+        return jsonify({"labels": [], "values": [], "error": str(e)}), 500
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+
+
+
 
 if __name__ == "__main__":
     try:
 
+        clean_uploaded_files()
 
         create_format_table(cursor, db)
         initialize_format(cursor, db)
 
-        # create_country_table(cursor, db)
-        # initialize_country(cursor, db)
+        create_country_table(cursor, db)
+        initialize_country(cursor, db)
 
         create_loadsource_table(cursor, db)
         initialize_loadsource(cursor, db)
@@ -1052,14 +1589,14 @@ if __name__ == "__main__":
         create_kind_table(cursor, db)
         initialize_kind(cursor, db)
 
-        create_scheme_table(cursor, db)
-        initialize_scheme(cursor, db)
+        # create_scheme_table(cursor, db)
+        # initialize_scheme(cursor, db)
 
         create_role_table(cursor, db)
         initialize_role(cursor, db)
 
-        create_status_table(cursor, db)
-        initialize_status(cursor, db)
+        # create_status_table(cursor, db)
+        # initialize_status(cursor, db)
 
         create_claims_table(cursor, db)
 
@@ -1071,10 +1608,10 @@ if __name__ == "__main__":
 
         create_abstract_table(cursor, db)
 
+        create_description_table(cursor, db)
+
+
         create_document_table(cursor, db)
-
-
-
 
 
 

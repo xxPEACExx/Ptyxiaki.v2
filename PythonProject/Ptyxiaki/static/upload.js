@@ -1,215 +1,763 @@
-//javasript mono gia to ulload tou index kai to ui po
+//// =====================================================
+//// GLOBAL STATE
+//// =====================================================
+//let isPaused = false;
+//let userStopped = false;
+//let zipInterval = null;
+//let processingInterval = null;
+//
+//const UploadState = {
+//    phase: "idle", // idle | upload | unzip | processing | done | stopped
+//    progress: 0
+//};
+//
+//// =====================================================
+//// POPUP UI
+//// =====================================================
+//function showUploadPopup() {
+//    document.getElementById("upload-popup")?.classList.remove("hidden");
+//}
+//
+//function hideUploadPopup() {
+//    document.getElementById("upload-popup")?.classList.add("hidden");
+//}
+//
+//function updateUploadProgress(percent) {
+//    const circle = document.getElementById("progress-circle");
+//    if (!circle) return;
+//
+//    const max = circle.getTotalLength ? circle.getTotalLength() : 219;
+//    circle.style.strokeDashoffset = max - (percent / 100) * max;
+//
+//    const pct = document.getElementById("upload-percent");
+//    if (pct) pct.innerText = Math.round(percent) + "%";
+//}
+//
+//function renderProgress(percent, text) {
+//    UploadState.progress = percent;
+//    updateUploadProgress(percent);
+//    if (text) {
+//        const status = document.getElementById("upload-status");
+//        if (status) status.textContent = text;
+//    }
+//}
+//
+//// =====================================================
+//// WAIT FOR BACKEND PHASE
+//// =====================================================
+//function waitForPhase(targetPhase, callback) {
+//    const poll = setInterval(async () => {
+//        const res = await fetch("/get_progress");
+//        const data = await res.json();
+//
+//        if (data.phase === targetPhase) {
+//            clearInterval(poll);
+//            callback();
+//        }
+//    }, 300);
+//}
+//
+//// =====================================================
+//// PROCESSING (XML)
+//// =====================================================
+//function startProcessingProgress() {
+//    if (processingInterval) return;
+//
+//    UploadState.phase = "processing";
+//
+//    const pauseBtn = document.getElementById("pause-btn");
+//    const stopBtn = document.getElementById("stop-btn");
+//
+//    isPaused = false;
+//    userStopped = false;
+//
+//    pauseBtn.disabled = false;
+//    stopBtn.disabled = false;
+//    pauseBtn.textContent = "⏸ Παύση";
+//
+//    pauseBtn.onclick = async () => {
+//        const action = isPaused ? "continue" : "pause";
+//        await fetch("/control", {
+//            method: "POST",
+//            headers: { "Content-Type": "application/json" },
+//            body: JSON.stringify({ action })
+//        });
+//        isPaused = !isPaused;
+//        pauseBtn.textContent = isPaused ? "▶️ Συνέχεια" : "⏸ Παύση";
+//    };
+//
+//    stopBtn.onclick = async () => {
+//        userStopped = true;
+//        await fetch("/control", {
+//            method: "POST",
+//            headers: { "Content-Type": "application/json" },
+//            body: JSON.stringify({ action: "stop" })
+//        });
+//    };
+//
+//    processingInterval = setInterval(async () => {
+//        const res = await fetch("/get_progress");
+//        const data = await res.json();
+//
+//        if (data.phase === "processing") {
+//            renderProgress(
+//                data.progress ?? 0,
+//                data.status === "paused"
+//                    ? "Σε παύση..."
+//                    : "Processing XML..."
+//            );
+//        }
+//
+//        if (data.phase === "done" || data.phase === "stopped") {
+//            clearInterval(processingInterval);
+//            processingInterval = null;
+//
+//            pauseBtn.disabled = true;
+//            stopBtn.disabled = true;
+//
+//            renderProgress(
+//                100,
+//                data.phase === "stopped"
+//                    ? "Διακόπηκε."
+//                    : "Ολοκληρώθηκε!"
+//            );
+//
+//            loadFiles("");
+//            updateCards();
+//
+//            setTimeout(hideUploadPopup, 1500);
+//        }
+//    }, 500);
+//}
+//
+//// =====================================================
+//// ZIP UNZIP
+//// =====================================================
+//function startZipProgress() {
+//    if (zipInterval) clearInterval(zipInterval);
+//
+//    UploadState.phase = "unzip";
+//
+//    zipInterval = setInterval(async () => {
+//    const res = await fetch("/zip_progress");
+//    const data = await res.json();
+//
+//    // FORCE label αλλαγή
+//    renderProgress(
+//        UploadState.progress > 1 ? UploadState.progress : 1,
+//        "Unzipping files..."
+//    );
+//
+//    if (!data.total) {
+//        return;
+//    }
+//
+//    const percent = data.progress ?? 0;
+//    renderProgress(percent, "Unzipping files...");
+//
+//    if (percent >= 100) {
+//        clearInterval(zipInterval);
+//        zipInterval = null;
+//        waitForPhase("processing", startProcessingProgress);
+//    }
+//}, 400);
+//
+//}
+//
+//// =====================================================
+//// FILE UPLOAD (CHUNKED, NO OTHER CHANGES)
+//// =====================================================
+//document.addEventListener("DOMContentLoaded", () => {
+//    const uploadBtn = document.querySelector(".button-33");
+//    const cardsSection = document.querySelector("section.cards");
+//
+//    const zipInput = document.createElement("input");
+//    zipInput.type = "file";
+//    zipInput.accept = ".zip";
+//    zipInput.style.display = "none";
+//    document.body.appendChild(zipInput);
+//
+//    uploadBtn?.addEventListener("click", () => zipInput.click());
+//
+//    zipInput.addEventListener("change", async () => {
+//        const file = zipInput.files[0];
+//        if (!file) return;
+//
+//        if (processingInterval) clearInterval(processingInterval);
+//        if (zipInterval) clearInterval(zipInterval);
+//
+//        isPaused = false;
+//        userStopped = false;
+//
+//        renderProgress(0, "Preparing upload...");
+//        showUploadPopup();
+//
+//        if (!file.name.toLowerCase().endsWith(".zip")) {
+//            alert("Μόνο ZIP αρχεία.");
+//            return;
+//        }
+//
+//        UploadState.phase = "upload";
+//
+//        const CHUNK_SIZE = 20 * 1024 * 1024; // 20MB
+//        const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+//
+//        const uploadId = crypto.randomUUID();
+//
+//        for (let index = 0; index < totalChunks; index++) {
+//            const start = index * CHUNK_SIZE;
+//            const end = Math.min(start + CHUNK_SIZE, file.size);
+//            const chunk = file.slice(start, end);
+//
+//            const formData = new FormData();
+//            formData.append("chunk", chunk);
+//            formData.append("upload_id", uploadId);
+//            formData.append("filename", file.name);
+//            formData.append("index", index);
+//            formData.append("total", totalChunks);
+//
+//            const res = await fetch("/upload_zip_chunk", {
+//                method: "POST",
+//                body: formData
+//            });
+//
+//            if (!res.ok) {
+//                renderProgress(0, "Σφάλμα στο upload.");
+//                return;
+//            }
+//
+//            const percent = ((index + 1) / totalChunks) * 100;
+//            renderProgress(percent, "Uploading ZIP...");
+//        }
+//
+//        renderProgress(1, "Ξεκίνησε το unzip...");
+//        UploadState.phase = "unzip";
+//        startZipProgress();
+//    });
+//
+//    // =====================================================
+//    // UPDATE CARDS
+//    // =====================================================
+//    async function updateCards() {
+//        const res = await fetch("/get_documents");
+//        if (!res.ok) return;
+//
+//        const data = await res.json();
+//        cardsSection.innerHTML = "";
+//
+//        data.results.forEach(doc => {
+//            const card = document.createElement("div");
+//            card.className = "card";
+//            card.innerHTML = `
+//                <h3>${doc.did}</h3>
+//                <p>${doc.filepath || "Άγνωστο path"}</p>
+//                <p style="color:green;">✔️ Ανέβηκε</p>
+//            `;
+//            cardsSection.prepend(card);
+//        });
+//    }
+//
+//    setInterval(updateCards, 1000);
+//    loadFiles("");
+//});
+//
+//
+//// =====================================================
+//// THEME TOGGLE
+//// =====================================================
+//document.addEventListener("DOMContentLoaded", () => {
+//    const btn = document.getElementById("themeToggle");
+//    const body = document.body;
+//
+//    if (localStorage.getItem("theme") === "dark") {
+//        body.classList.add("dark-theme");
+//        btn.textContent = "🔆";
+//    }
+//
+//    btn.onclick = () => {
+//        const dark = body.classList.toggle("dark-theme");
+//        btn.textContent = dark ? "🔆" : "🌓";
+//        localStorage.setItem("theme", dark ? "dark" : "light");
+//    };
+//});
+//
+//// =====================================================
+//// FILE EXPLORER + BREADCRUMBS
+//// =====================================================
+//let currentPath = "";
+//let backStack = [];
+//let forwardStack = [];
+//
+//async function loadFiles(path = "") {
+//    const list = document.getElementById("fileList");
+//    if (!list) return;
+//
+//    const res = await fetch(`/get_files?path=${encodeURIComponent(path)}`);
+//    const files = await res.json();
+//
+//    currentPath = path;
+//    list.innerHTML = "";
+//
+//    files.forEach(item => {
+//        const row = document.createElement("div");
+//        row.className = "file-row";
+//
+//        row.innerHTML = `
+//            <span class="file-name">
+//                <span class="file-icon">${item.type === "folder" ? "📁" : "📄"}</span>
+//                ${item.name}
+//            </span>
+//            <span>${item.type}</span>
+//            <span>✓</span>
+//            <span>${item.date || "-"}</span>
+//            <span class="menu">⋮</span>
+//        `;
+//
+//        if (item.type === "folder") {
+//            row.onclick = () => {
+//                backStack.push(currentPath);
+//                forwardStack = [];
+//                loadFiles(item.path);
+//            };
+//        }
+//
+//        list.appendChild(row);
+//    });
+//
+//    updateBreadcrumbs();
+//}
+//
+//// =====================================================
+//// BREADCRUMBS + NAV
+//// =====================================================
+//function goBack() {
+//    if (!backStack.length) return;
+//    forwardStack.push(currentPath);
+//    loadFiles(backStack.pop());
+//}
+//
+//function goForward() {
+//    if (!forwardStack.length) return;
+//    backStack.push(currentPath);
+//    loadFiles(forwardStack.pop());
+//}
+//
+//function updateBreadcrumbs() {
+//    const bc = document.getElementById("breadcrumbs");
+//    bc.innerHTML = "";
+//
+//    const parts = currentPath ? currentPath.split("/") : [];
+//    addBreadcrumb(bc, "root", "", parts.length === 0);
+//
+//    let acc = "";
+//    parts.forEach((p, i) => {
+//        bc.append("›");
+//        acc += (i ? "/" : "") + p;
+//        addBreadcrumb(bc, p, acc, i === parts.length - 1);
+//    });
+//}
+//
+//function addBreadcrumb(container, label, path, isLast) {
+//    const span = document.createElement("span");
+//    span.textContent = label;
+//    span.className = "bc-item";
+//    if (!isLast) span.onclick = () => loadFiles(path);
+//    container.appendChild(span);
+//}
+//
+//// =====================================================
+//// SIDEBAR HOVER
+//// =====================================================
+//document.addEventListener("DOMContentLoaded", () => {
+//    const sidebar = document.getElementById("sidebar");
+//    const content = document.getElementById("content");
+//    const leftZone = document.getElementById("left-zone");
+//
+//    setTimeout(() => {
+//        sidebar.classList.add("hidden");
+//        content.classList.add("expanded");
+//    }, 8000);
+//
+//    leftZone.onmouseenter = () => {
+//        sidebar.classList.remove("hidden");
+//        content.classList.remove("expanded");
+//    };
+//
+//    sidebar.onmouseleave = () => {
+//        sidebar.classList.add("hidden");
+//        content.classList.add("expanded");
+//    };
+//});
+//
+//// =====================================================
+//// TYPEWRITER
+//// =====================================================
+//document.addEventListener("DOMContentLoaded", () => {
+//    const text = "Εδώ μπορείτε να να πλοηγηθείτε σε φακέλους, και στα τελικά αρχεία xml";
+//    const output = document.getElementById("output");
+//    let i = 0;
+//
+//    (function type() {
+//        if (!output) return;
+//        if (i < text.length) {
+//            output.textContent += text[i++];
+//            setTimeout(type, 25);
+//        } else {
+//            setTimeout(() => {
+//                output.textContent = "";
+//                i = 0;
+//                type();
+//            }, 30000);
+//        }
+//    })();
+//});
+//
+//(async function restoreProgressIfNeeded() {
+//    try {
+//        const res = await fetch("/get_progress");
+//        const data = await res.json();
+//
+//        if (!data.phase || data.phase === "idle" || data.phase === "done") {
+//            return;
+//        }
+//
+//        showUploadPopup();
+//
+//        if (data.phase === "upload") {
+//            renderProgress(10, "Uploading ZIP...");
+//        }
+//
+//        if (data.phase === "unzip" && UploadState.phase !== "unzip") {
+//        UploadState.phase = "unzip";
+//        renderProgress(1, "Ξεκίνησε το unzip...");
+//        startZipProgress();
+//        }
+//
+//
+//        if (data.phase === "processing") {
+//            startProcessingProgress();
+//        }
+//
+//    } catch (e) {
+//        console.error("Restore progress failed", e);
+//    }
+//})();
 
-//krivei to popup
+// =====================================================
+// GLOBAL STATE
+// =====================================================
+let isPaused = false;
+let userStopped = false;
+
+let phasePollInterval = null;
+
+const UploadState = {
+    phase: "idle", // idle | upload | unzip | processing | done | stopped
+    progress: 0,
+    lastUploadPercent: 0
+};
+
+// =====================================================
+// POPUP UI
+// =====================================================
 function showUploadPopup() {
-    document.getElementById("upload-popup").classList.remove("hidden");
+    document.getElementById("upload-popup")?.classList.remove("hidden");
 }
 
 function hideUploadPopup() {
-    document.getElementById("upload-popup").classList.add("hidden");
+    document.getElementById("upload-popup")?.classList.add("hidden");
 }
 
 function updateUploadProgress(percent) {
-    const max = 219;
     const circle = document.getElementById("progress-circle");
+    if (!circle) return;
 
-    if (circle) {
-        circle.style.strokeDashoffset = max - (percent / 100) * max;
-    }
+    const max = circle.getTotalLength ? circle.getTotalLength() : 219;
+    circle.style.strokeDashoffset = max - (percent / 100) * max;
+
     const pct = document.getElementById("upload-percent");
-    if (pct) pct.innerText = percent + "%";
+    if (pct) pct.innerText = Math.round(percent) + "%";
 }
 
+function renderProgress(percent, text) {
+    UploadState.progress = percent;
+    updateUploadProgress(percent);
 
+    if (text) {
+        const status = document.getElementById("upload-status");
+        if (status) status.textContent = text;
+    }
+}
 
-//mas enimeronei gia thn proodo tou upload
-let isPaused = false;
-let processingInterval = null;
+// =====================================================
+// BACKEND PHASE POLL (single source of truth)
+// =====================================================
+function stopPhasePolling() {
+    if (phasePollInterval) {
+        clearInterval(phasePollInterval);
+        phasePollInterval = null;
+    }
+}
 
-function startProcessingProgress() {
-    const status = document.getElementById("upload-status");
+function startPhasePolling() {
+    if (phasePollInterval) return;
+
+    phasePollInterval = setInterval(async () => {
+        try {
+            const res = await fetch("/get_progress", { cache: "no-store" });
+            const data = await res.json();
+
+            const backendPhase = data.phase || "idle";
+
+            // STOPPED / DONE have priority
+            if (backendPhase === "stopped") {
+                UploadState.phase = "stopped";
+                renderProgress(100, "Διακόπηκε.");
+                disableControls();
+                stopPhasePolling();
+                setTimeout(hideUploadPopup, 1500);
+                return;
+            }
+
+            if (backendPhase === "done") {
+                UploadState.phase = "done";
+                renderProgress(100, "Ολοκληρώθηκε!");
+                disableControls();
+                stopPhasePolling();
+                loadFiles("");
+                updateCards();
+                setTimeout(hideUploadPopup, 1500);
+                return;
+            }
+
+            // =========================
+            // UPLOAD PHASE (client-side %)
+            // =========================
+            if (backendPhase === "upload") {
+                UploadState.phase = "upload";
+
+                // Εδώ δεν βασιζόμαστε στο backend για % upload.
+                // Κρατάμε το τελευταίο client-side percent.
+                const p = Math.max(1, Math.min(100, UploadState.lastUploadPercent || 1));
+                renderProgress(p, "Uploading ZIP...");
+                return;
+            }
+
+            // =========================
+            // UNZIP PHASE (backend zip_progress)
+            // =========================
+            if (backendPhase === "unzip") {
+                UploadState.phase = "unzip";
+
+                // zip_progress έρχεται από backend
+                const zp = Number.isFinite(data.zip_progress) ? data.zip_progress : 0;
+
+                // Θέλεις 1..100: ποτέ 0 στο UI
+                const p = Math.max(1, Math.min(100, zp || 1));
+                renderProgress(p, "Unzipping files...");
+                return;
+            }
+
+            // =========================
+            // PROCESSING PHASE (backend progress)
+            // =========================
+            if (backendPhase === "processing") {
+                UploadState.phase = "processing";
+                enableControls();
+
+                const paused = data.status === "paused";
+                const pr = Number.isFinite(data.progress) ? data.progress : 0;
+
+                // Θέλεις 1..100: ποτέ 0 στο UI (εκτός αν όντως δεν έχει ξεκινήσει)
+                const p = Math.max(1, Math.min(100, pr || 1));
+
+                renderProgress(p, paused ? "Σε παύση..." : "Processing XML...");
+                return;
+            }
+
+            // Fallback
+            UploadState.phase = backendPhase;
+
+        } catch (e) {
+            // Δεν “σκοτώνουμε” UI σε transient error
+            // αλλά κρατάμε το τελευταίο.
+            console.error("Phase poll error:", e);
+        }
+    }, 500);
+}
+
+// =====================================================
+// CONTROLS (Pause/Stop)
+// =====================================================
+function enableControls() {
     const pauseBtn = document.getElementById("pause-btn");
     const stopBtn = document.getElementById("stop-btn");
+    if (!pauseBtn || !stopBtn) return;
 
     pauseBtn.disabled = false;
     stopBtn.disabled = false;
 
-    if (processingInterval) clearInterval(processingInterval);
-
-    processingInterval = setInterval(async () => {
-        const res = await fetch("/get_progress");
-        const data = await res.json();
-
-        updateUploadProgress(data.progress ?? 0);
-
-        if (data.status === "paused") {
-            status.textContent = "Σε παύση...";
-        } else if (data.status === "running") {
-            status.textContent = "Proccesing XML...";
-        }
-
-        if (data.progress >= 100 || data.status === "stopped") {
-            clearInterval(processingInterval);
-
-            status.textContent =
-                data.status === "stopped" ? "Διακόπηκε." : "Ολοκληρώθηκε!";
-
-            pauseBtn.disabled = true;
-            stopBtn.disabled = true;
-
-            setTimeout(hideUploadPopup, 2000);
-
-            loadFiles("");
-            updateCards();
-        }
-    }, 500);
+    pauseBtn.textContent = isPaused ? "▶️ Συνέχεια" : "⏸ Παύση";
 
     pauseBtn.onclick = async () => {
-        if (!isPaused) {
-            await fetch("/control", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ action: "pause" })
-            });
-            pauseBtn.textContent = "▶️ Συνέχεια";
-            isPaused = true;
-        } else {
-            await fetch("/control", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ action: "continue" })
-            });
-            pauseBtn.textContent = "⏸ Παύση";
-            isPaused = false;
-        }
+        const action = isPaused ? "continue" : "pause";
+        await fetch("/control", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action })
+        });
+        isPaused = !isPaused;
+        pauseBtn.textContent = isPaused ? "▶️ Συνέχεια" : "⏸ Παύση";
     };
 
     stopBtn.onclick = async () => {
+        userStopped = true;
         await fetch("/control", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ action: "stop" })
         });
-
-        clearInterval(processingInterval);
-        status.textContent = "Διακόπηκε.";
-
-        setTimeout(hideUploadPopup, 1500);
     };
 }
 
+function disableControls() {
+    const pauseBtn = document.getElementById("pause-btn");
+    const stopBtn = document.getElementById("stop-btn");
+    if (pauseBtn) pauseBtn.disabled = true;
+    if (stopBtn) stopBtn.disabled = true;
+}
 
-
-//anevasma arxeiou kai mono zip
+// =====================================================
+// FILE UPLOAD (CHUNKED)
+// =====================================================
 document.addEventListener("DOMContentLoaded", () => {
     const uploadBtn = document.querySelector(".button-33");
     const cardsSection = document.querySelector("section.cards");
 
     const zipInput = document.createElement("input");
     zipInput.type = "file";
-    zipInput.accept = ".zip, .7z";
+    zipInput.accept = ".zip";
     zipInput.style.display = "none";
     document.body.appendChild(zipInput);
 
-    if (uploadBtn) {
-        uploadBtn.addEventListener("click", () => zipInput.click());
-    }
+    uploadBtn?.addEventListener("click", () => zipInput.click());
 
-    // ZIP
     zipInput.addEventListener("change", async () => {
         const file = zipInput.files[0];
         if (!file) return;
 
-        const ext = file.name.toLowerCase();
-        if (!(ext.endsWith(".zip") || ext.endsWith(".7z"))) {
-            alert("Μπορείτε να ανεβάσετε μόνο ZIP ή 7z αρχεία.");
+        // reset UI state
+        stopPhasePolling();
+        isPaused = false;
+        userStopped = false;
+        UploadState.phase = "upload";
+        UploadState.progress = 0;
+        UploadState.lastUploadPercent = 1;
+
+        disableControls();
+        renderProgress(1, "Preparing upload...");
+        showUploadPopup();
+
+        if (!file.name.toLowerCase().endsWith(".zip")) {
+            alert("Μόνο ZIP αρχεία.");
+            hideUploadPopup();
             return;
         }
 
-        const formData = new FormData();
-        formData.append("files", file);
+        // Start polling immediately so UI follows backend phase transitions
+        startPhasePolling();
 
-        showUploadPopup();
-        document.getElementById("upload-title").textContent = "Upload...";
-        document.getElementById("upload-status").textContent = "Upload ZIP/7z...";
-        updateUploadProgress(0);
+        const CHUNK_SIZE = 20 * 1024 * 1024; // 20MB
+        const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+        const uploadId = crypto.randomUUID();
 
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload_zip");
+        // During upload we want 1..100
+        UploadState.lastUploadPercent = 1;
+        renderProgress(1, "Uploading ZIP...");
 
-        xhr.upload.onprogress = (e) => {
-            if (e.lengthComputable) {
-                updateUploadProgress(Math.round(e.loaded / e.total * 100));
+        for (let index = 0; index < totalChunks; index++) {
+            const start = index * CHUNK_SIZE;
+            const end = Math.min(start + CHUNK_SIZE, file.size);
+            const chunk = file.slice(start, end);
+
+            const formData = new FormData();
+            formData.append("chunk", chunk);
+            formData.append("upload_id", uploadId);
+            formData.append("filename", file.name);
+            formData.append("index", index);
+            formData.append("total", totalChunks);
+
+            const res = await fetch("/upload_zip_chunk", {
+                method: "POST",
+                body: formData
+            });
+
+            if (!res.ok) {
+                renderProgress(1, "Σφάλμα στο upload.");
+                stopPhasePolling();
+                setTimeout(hideUploadPopup, 2000);
+                return;
             }
-        };
 
+            const percent = ((index + 1) / totalChunks) * 100;
+            UploadState.lastUploadPercent = Math.max(1, Math.min(100, percent));
+            renderProgress(UploadState.lastUploadPercent, "Uploading ZIP...");
+        }
 
-        xhr.onload = () => {
-            document.getElementById("upload-status").textContent = "Unpiz ZIP...";
-            startZipProgress();   // ξεκινά η πρόοδος unzip
-        };
-
-        xhr.onerror = () => {
-            document.getElementById("upload-status").textContent = "Σφάλμα κατά το ανέβασμα!";
-            setTimeout(hideUploadPopup, 2000);
-        };
-
-        xhr.send(formData);
+        // After last chunk sent, backend will move to unzip/processing.
+        // We do NOT force UI here; polling will switch phase.
+        renderProgress(100, "Upload ολοκληρώθηκε. Αναμονή για unzip...");
     });
 
-
+    // =====================================================
+    // UPDATE CARDS
+    // =====================================================
     async function updateCards() {
-        try {
-            const res = await fetch("/get_documents");
-            if (!res.ok) return;
+        const res = await fetch("/get_documents");
+        if (!res.ok) return;
 
-            const data = await res.json();
-            cardsSection.innerHTML = "";
+        const data = await res.json();
+        cardsSection.innerHTML = "";
 
-            data.results.forEach(doc => {
-                const card = document.createElement("div");
-                card.classList.add("card");
-                card.innerHTML = `
-                    <h3>${doc.did}</h3>
-                    <p>${doc.filepath || "Άγνωστο path"}</p>
-                    <p style="color:green;">✔️ Ανέβηκε</p>
-                `;
-                cardsSection.prepend(card);
-            });
-        } catch (err) {
-            console.error("Error fetching documents:", err);
-        }
+        data.results.forEach(doc => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h3>${doc.did}</h3>
+                <p>${doc.filepath || "Άγνωστο path"}</p>
+                <p style="color:green;">✔️ Ανέβηκε</p>
+            `;
+            cardsSection.prepend(card);
+        });
     }
 
+    window.updateCards = updateCards; // used elsewhere
     setInterval(updateCards, 1000);
     loadFiles("");
 });
 
-
-
-
+// =====================================================
+// THEME TOGGLE
+// =====================================================
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("themeToggle");
+    const btn = document.getElementById("themeToggle");
     const body = document.body;
 
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-theme");
-        toggleBtn.textContent = "🔆";
+        btn.textContent = "🔆";
     }
 
-    toggleBtn.addEventListener("click", () => {
-        const isDark = body.classList.toggle("dark-theme");
-        toggleBtn.textContent = isDark ? "🔆" : "🌓";
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
+    btn.onclick = () => {
+        const dark = body.classList.toggle("dark-theme");
+        btn.textContent = dark ? "🔆" : "🌓";
+        localStorage.setItem("theme", dark ? "dark" : "light");
+    };
 });
 
-
-
-
-//file exlorer xekinaei edw
-
+// =====================================================
+// FILE EXPLORER + BREADCRUMBS
+// =====================================================
 let currentPath = "";
 let backStack = [];
 let forwardStack = [];
@@ -218,50 +766,44 @@ async function loadFiles(path = "") {
     const list = document.getElementById("fileList");
     if (!list) return;
 
-    try {
-        const res = await fetch(`/get_files?path=${encodeURIComponent(path)}`);
-        const files = await res.json();
-        currentPath = path;
+    const res = await fetch(`/get_files?path=${encodeURIComponent(path)}`);
+    const files = await res.json();
 
-        list.innerHTML = "";
+    currentPath = path;
+    list.innerHTML = "";
 
-        files.forEach(item => {
-            const row = document.createElement("div");
-            row.className = "file-row";
+    files.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "file-row";
 
-            const icon = item.type === "folder" ? "📁" : "📄";
+        row.innerHTML = `
+            <span class="file-name">
+                <span class="file-icon">${item.type === "folder" ? "📁" : "📄"}</span>
+                ${item.name}
+            </span>
+            <span>${item.type}</span>
+            <span>✓</span>
+            <span>${item.date || "-"}</span>
+            <span class="menu">⋮</span>
+        `;
 
-            row.innerHTML = `
-                <span class="file-name">
-                    <span class="file-icon">${icon}</span>
-                    ${item.name}
-                </span>
-                <span>${item.type}</span>
-                <span><span class="check-icon">✓</span></span>
-                <span>${item.date || "-"}</span>
-                <span class="menu">⋮</span>
-            `;
+        if (item.type === "folder") {
+            row.onclick = () => {
+                backStack.push(currentPath);
+                forwardStack = [];
+                loadFiles(item.path);
+            };
+        }
 
-            if (item.type === "folder") {
-                row.onclick = () => {
-                    backStack.push(currentPath);
-                    forwardStack = [];
-                    loadFiles(item.path);
-                };
-            }
+        list.appendChild(row);
+    });
 
-            list.appendChild(row);
-        });
-
-        updateBreadcrumbs();
-        updateButtons();
-
-    } catch (err) {
-        console.error("Load error:", err);
-    }
+    updateBreadcrumbs();
 }
 
-// Το navigation ston file explorer kai to breadcrumbs pou krataei tin diadromi
+// =====================================================
+// BREADCRUMBS + NAV
+// =====================================================
 function goBack() {
     if (!backStack.length) return;
     forwardStack.push(currentPath);
@@ -274,123 +816,99 @@ function goForward() {
     loadFiles(forwardStack.pop());
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const backBtn = document.getElementById("backBtn");
-    const forwardBtn = document.getElementById("forwardBtn");
-
-    if (backBtn) backBtn.addEventListener("click", goBack);
-    if (forwardBtn) forwardBtn.addEventListener("click", goForward);
-});
-
 function updateBreadcrumbs() {
     const bc = document.getElementById("breadcrumbs");
+    if (!bc) return;
+
     bc.innerHTML = "";
 
     const parts = currentPath ? currentPath.split("/") : [];
     addBreadcrumb(bc, "root", "", parts.length === 0);
 
-    let accumulated = "";
-
-    parts.forEach((part, i) => {
-        bc.appendChild(createSeparator());
-        accumulated += (i === 0 ? "" : "/") + part;
-        addBreadcrumb(bc, part, accumulated, i === parts.length - 1);
+    let acc = "";
+    parts.forEach((p, i) => {
+        bc.append("›");
+        acc += (i ? "/" : "") + p;
+        addBreadcrumb(bc, p, acc, i === parts.length - 1);
     });
 }
 
 function addBreadcrumb(container, label, path, isLast) {
     const span = document.createElement("span");
     span.textContent = label;
-    span.classList.add("bc-item");
-
-    if (!isLast) {
-        span.onclick = () => {
-            backStack.push(currentPath);
-            forwardStack = [];
-            loadFiles(path);
-        };
-    } else {
-        span.style.fontWeight = "600";
-        span.style.color = "#ffffff";
-    }
-
+    span.className = "bc-item";
+    if (!isLast) span.onclick = () => loadFiles(path);
     container.appendChild(span);
 }
 
-function createSeparator() {
-    const sep = document.createElement("span");
-    sep.textContent = "›";
-    sep.classList.add("separator");
-    return sep;
-}
-
-
-
-
-// hover gia to sidebar
+// =====================================================
+// SIDEBAR HOVER
+// =====================================================
 document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
     const content = document.getElementById("content");
     const leftZone = document.getElementById("left-zone");
 
     setTimeout(() => {
-        sidebar.classList.add("hidden");
-        content.classList.add("expanded");
+        sidebar?.classList.add("hidden");
+        content?.classList.add("expanded");
     }, 8000);
 
-    leftZone.addEventListener("mouseenter", () => {
-        sidebar.classList.remove("hidden");
-        content.classList.remove("expanded");
-    });
+    if (leftZone && sidebar && content) {
+        leftZone.onmouseenter = () => {
+            sidebar.classList.remove("hidden");
+            content.classList.remove("expanded");
+        };
 
-    sidebar.addEventListener("mouseleave", () => {
-        sidebar.classList.add("hidden");
-        content.classList.add("expanded");
-    });
+        sidebar.onmouseleave = () => {
+            sidebar.classList.add("hidden");
+            content.classList.add("expanded");
+        };
+    }
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
+// =====================================================
+// TYPEWRITER
+// =====================================================
+document.addEventListener("DOMContentLoaded", () => {
     const text = "Εδώ μπορείτε να να πλοηγηθείτε σε φακέλους, και στα τελικά αρχεία xml";
     const output = document.getElementById("output");
-    const delay = 25;
-    const restartDelay = 30000;
+    let i = 0;
 
-    function typeWriter(i = 0) {
+    (function type() {
+        if (!output) return;
         if (i < text.length) {
-            output.textContent += text.charAt(i);
-            setTimeout(() => typeWriter(i + 1), delay);
+            output.textContent += text[i++];
+            setTimeout(type, 25);
         } else {
             setTimeout(() => {
                 output.textContent = "";
-                typeWriter();
-            }, restartDelay);
+                i = 0;
+                type();
+            }, 30000);
         }
-    }
-
-    typeWriter();
+    })();
 });
 
-
-
-
-function startZipProgress() {
-    const status = document.getElementById("upload-status");
-    status.textContent = "Unzip ZIP...";
-
-    const interval = setInterval(async () => {
-        const res = await fetch("/zip_progress");
+// =====================================================
+// RESTORE PROGRESS ON PAGE LOAD
+// =====================================================
+(async function restoreProgressIfNeeded() {
+    try {
+        const res = await fetch("/get_progress", { cache: "no-store" });
         const data = await res.json();
 
-        const percent = data.progress ?? 0;
-        updateUploadProgress(percent);
+        if (!data.phase || data.phase === "idle" || data.phase === "done") return;
 
-        if (percent >= 100) {
-            clearInterval(interval);
-            status.textContent = "Proccesing XML...";
-            startProcessingProgress();
-        }
+        showUploadPopup();
+        startPhasePolling();
 
-    }, 400);
-}
+        // Μην forceάρεις 100 εδώ. Το poll θα αναλάβει σωστά.
+        if (data.phase === "upload") renderProgress(1, "Uploading ZIP...");
+        if (data.phase === "unzip") renderProgress(1, "Unzipping files...");
+        if (data.phase === "processing") renderProgress(1, "Processing XML...");
+
+    } catch (e) {
+        console.error("Restore progress failed", e);
+    }
+})();

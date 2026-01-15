@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='information_style.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="{{ url_for('static', filename='information_script.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='base.js') }}" defer></script>
 
 </head>
 
@@ -34,17 +35,17 @@
 
     <div class="content" id="content">
       <header class="top-bar">
-        <input
-          type="text"
-          class="search"
-          placeholder="Αναζήτηστε αρχεία ανά έτος και ημερομηνία"
-        />
+
+        <div class="top-bar-right">
 
         <button class="settings-btn" onclick="window.open('https://github.com/xxPEACExx/Ptyxiaki.v2', '_blank')">
           <img src="{{ url_for('static', filename='github1.png') }}" alt="GitHub" class="icon">
         </button>
 
         <button class="icon-btn theme-toggle" id="themeToggle">🌓</button>
+
+        </div>
+
       </header>
 
       <main class="main-content">
@@ -76,7 +77,7 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                  Το project επιτρέπει στον χρήστη να ανεβάζει ευρεσιτεχνίες (.zip ή 7z), σε μια βάση δεδομένων (MySQL) μέσω της αρχικής
+                  Το project επιτρέπει στον χρήστη να ανεβάζει ευρεσιτεχνίες XML ( .zip ), σε μια βάση δεδομένων (MySQL) μέσω της αρχικής
                   σελίδας, διαχειριζόμενος φακέλους και προβάλλοντας όσους έχουν ήδη καταχωρηθεί. Στη συνέχεια, μέσω
                   του UI της βάσης, μπορεί να δει αναλυτικά τα δεδομένα, ενώ παρέχεται και στατιστική ανάλυση των
                   καταχωρίσεων. Επιλέξτε την αρχική σελίδα για την εισαγωγή των δεδομένων.
@@ -98,8 +99,8 @@
                 <div class="logos">
                   <span>Βήματα:</span>
                   <div class="logos-list">
-                    <div class="logo-chip">Ανέβασμα αρχείου ZIP ή 7z</div>
-                    <div class="logo-chip">Επεργασία δεδομένων</div>
+                    <div class="logo-chip">Ανέβασμα αρχείου .zip</div>
+                    <div class="logo-chip">Επεξεργασία δεδομένων</div>
                     <div class="logo-chip">Στατιστική ανάλυση</div>
                   </div>
                 </div>

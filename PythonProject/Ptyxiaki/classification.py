@@ -17,7 +17,7 @@ def create_classification_table(cursor, db):
         cursor.execute("""
             CREATE TABLE classification (
                 CID INT NOT NULL AUTO_INCREMENT,
-                DID MEDIUMINT UNSIGNED,
+                DID INT UNSIGNED,
                 title VARCHAR(255),
                 title_size_words TINYINT,
                 title_size_chars SMALLINT,

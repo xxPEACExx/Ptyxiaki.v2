@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}EP Database{% endblock %}</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- GLOBAL UPLOAD POPUP (ΠΑΝΤΟΥ) -->
+    <!-- ============================= -->
+    <div id="upload-popup" class="upload-popup hidden">
+        <div class="upload-card">
+            <h4 id="upload-title">Upload</h4>
+
+            <svg class="progress-ring" width="80" height="80">
+                <circle
+                    id="progress-circle"
+                    stroke="#2f80ed"
+                    stroke-width="6"
+                    fill="transparent"
+                    r="35"
+                    cx="40"
+                    cy="40"
+                    stroke-dasharray="219"
+                    stroke-dashoffset="219"
+                />
+            </svg>
+
+            <div id="upload-percent">0%</div>
+            <div id="upload-status">Αναμονή...</div>
+
+            <div class="upload-actions">
+                <button id="pause-btn" disabled>⏸ Παύση</button>
+                <button id="stop-btn" disabled>⏹ Διακοπή</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================= -->
+    <!-- PAGE CONTENT -->
+    <!-- ============================= -->
+    {% block content %}{% endblock %}
+
+    <!-- ============================= -->
+    <!-- GLOBAL JS (ΣΤΟ ΤΕΛΟΣ ΜΟΝΟ) -->
+    <!-- ============================= -->
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

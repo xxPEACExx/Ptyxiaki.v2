@@ -207,6 +207,18 @@ body {
   color: var(--text-muted);
 }
 
+.top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-right {
+  margin-left: auto;     /* 🔑 ΜΟΝΟ ΕΔΩ */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .settings-btn:hover,
 .icon-btn:hover {
   background: rgba(148, 163, 184, 0.16);

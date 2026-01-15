@@ -8,6 +8,8 @@
 
   <script src="{{ url_for('static', filename='popup.js') }}" defer></script>
   <script src="{{ url_for('static', filename='upload.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='base.js') }}" defer></script>
+
 
 
 </head>
@@ -46,14 +48,15 @@
 
 
       <header class="top-bar">
+          <div class="top-bar-right">
 
-        <input type="text" class="search" placeholder="Αναζήτηστε αρχεία ανά έτος και ημερομηνία  " />
 
         <button class="settings-btn" onclick="window.open('https://github.com/xxPEACExx/Ptyxiaki', '_blank')">
             <img src="static/github1.png" alt="GitHub" class="icon">
         </button>
 
           <button class="icon-btn theme-toggle" id="themeToggle">🌓</button>
+          </div>
 
       </header>
 
@@ -138,7 +141,7 @@
         </div>
 
         <div class="upload-info">
-            <strong id="upload-title">Μεταφόρτωση...</strong>
+            <strong id="upload-title">Ανέβασμα φακέλου εβδομάδας...</strong>
             <p id="upload-status">Ξεκινά το ανέβασμα...</p>
         </div>
     </div>

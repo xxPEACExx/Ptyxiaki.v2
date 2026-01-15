@@ -1,12 +1,28 @@
-/* =====================================================
-   BASE
-===================================================== */
+
+:root {
+    --bg-body: #f5f7fa;
+    --bg-panel: #ffffff;
+    --bg-header: #ffffff;
+    --text-main: #333;
+    --border-soft: #e5e7eb;
+}
+
+body.dark-theme {
+    --bg-body: #0f172a;
+    --bg-panel: #020617;
+    --bg-header: #020617;
+    --text-main: #e5e7eb;
+    --border-soft: #1e293b;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f5f7fa;
     color: #333;
     overflow: hidden;
+    background: var(--bg-body);
+    color: var(--text-main);
 }
 /* =====================================================
    SIDEBAR (SAME AS INDEX / DATABASE)
@@ -96,13 +112,18 @@ body {
 ===================================================== */
 .tabs-header {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 12px;
+
+    position: relative;
+
     background: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,.08);
     z-index: 20;
+    background: var(--bg-header);
 }
+
 
 .tab-button {
     padding: 10px 26px;
@@ -433,3 +454,46 @@ table.results thead th {
     resize: vertical;
     outline: none;
 }
+
+.tabs-center {
+    display: flex;
+    gap: 12px;
+}
+
+.tabs-right {
+    position: absolute;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ίδια κουμπιά όπως στις άλλες σελίδες */
+.settings-btn,
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.settings-btn .icon {
+    width: 22px;
+    height: 22px;
+}
+
+.theme-toggle {
+    font-size: 20px;
+    line-height: 1;
+}
+

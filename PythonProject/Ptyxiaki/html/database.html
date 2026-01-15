@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Πτυχιακή</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='database.css') }}">
+  <script src="{{ url_for('static', filename='base.js') }}" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <script>
     // Hide sidebar instantly BEFORE rendering if last saved state was hidden
@@ -59,6 +60,9 @@
 
 
 
+
+
+
         <main class="table" id="customers_table">
 
           <section class="table__header">
@@ -69,17 +73,17 @@
               <i class="fa fa-search"></i>
             </div>
 
-            <div class="export__file">
-              <label for="export-file" class="export__file-btn" title="Export File"></label>
-              <input type="checkbox" id="export-file">
-              <div class="export__file-options">
-                <label>Export As →</label>
-                <label for="export-file" id="toPDF">PDF</label>
-                <label for="export-file" id="toJSON">JSON</label>
-                <label for="export-file" id="toCSV">CSV</label>
-                <label for="export-file" id="toEXCEL">EXCEL</label>
-              </div>
-            </div>
+<!--            <div class="export__file">-->
+<!--              <label for="export-file" class="export__file-btn" title="Export File"></label>-->
+<!--              <input type="checkbox" id="export-file">-->
+<!--              <div class="export__file-options">-->
+<!--                <label>Export As →</label>-->
+<!--                <label for="export-file" id="toPDF">PDF</label>-->
+<!--                <label for="export-file" id="toJSON">JSON</label>-->
+<!--                <label for="export-file" id="toCSV">CSV</label>-->
+<!--                <label for="export-file" id="toEXCEL">EXCEL</label>-->
+<!--              </div>-->
+<!--            </div>-->
           </section>
 
           <section class="table__body">
