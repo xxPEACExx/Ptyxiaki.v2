@@ -1,0 +1,57 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.info-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.info-card p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 14px;
+}
+
+.stat-box {
+  background: #f6f8fb;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+#per_page {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #cfd8e3;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#per_page:focus {
+  outline: none;
+  border-color: #4f7cff;
+}

@@ -1,23 +1,4 @@
-#
-# import logging
-#
-# # Ρύθμιση logging (αν δεν έχεις ήδη κάπου αλλού)
-# logging.basicConfig(filename='errors.log', level=logging.ERROR,
-#                     format='%(asctime)s - %(levelname)s - %(message)s')
-#
-# format_mapping = {'epo': 1, 'original': 2, 'intermediate': 3}
-#
-# def initialize_format(cursor, db):
-#     try:
-#         for name, fid in format_mapping.items():
-#             cursor.execute("SELECT COUNT(*) FROM format WHERE FID = %s", (fid,))
-#             if cursor.fetchone()[0] == 0:
-#                 print(f"[INFO] Εισαγωγή: ({fid}, '{name}') στον πίνακα format")
-#                 cursor.execute("INSERT INTO format (FID, name) VALUES (%s, %s)", (fid, name))
-#         db.commit()
-#     except Exception as e:
-#         db.rollback()
-#         logging.error("Σφάλμα στην initialize_format: %s", e)
+
 
 import logging
 
@@ -58,7 +39,7 @@ def create_format_table(cursor, db):
         """)
 
         db.commit()
-        print("[OK] Ο πίνακας format δημιουργήθηκε")
+        print("Δημιουργήθηκε ο πίνακας FORMAT")
 
     except Exception as e:
         db.rollback()
@@ -82,7 +63,7 @@ def initialize_format(cursor, db):
                 )
 
         db.commit()
-        print("[OK] Ο πίνακας format αρχικοποιήθηκε")
+        print("Aρχικοποιήθηκε o πίνακας FORMAT")
 
     except Exception as e:
         db.rollback()

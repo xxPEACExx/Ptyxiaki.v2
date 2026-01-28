@@ -1,32 +1,3 @@
-#
-# status_mapping = {
-#     'corrected': 1,
-#     'deleted': 2
-# }
-#
-# def log_error(message):
-#     with open("errors.log", "a", encoding="utf-8") as f:
-#         f.write(message + "\n")
-#
-# def initialize_status(cursor, db):
-#     for name, sid in status_mapping.items():
-#         try:
-#             cursor.execute("SELECT COUNT(*) FROM status WHERE SID = %s", (sid,))
-#             if cursor.fetchone()[0] == 0:
-#                 try:
-#                     cursor.execute("INSERT INTO status (SID, name) VALUES (%s, %s)", (sid, name))
-#                 except Exception as insert_err:
-#                     log_error(f"[INSERT_ERROR] SID: {sid}, name: {name}, error: {insert_err}")
-#                     continue
-#         except Exception as select_err:
-#             log_error(f"[SELECT_ERROR] SID: {sid}, name: {name}, error: {select_err}")
-#             continue
-#     try:
-#         db.commit()
-#     except Exception as commit_err:
-#         db.rollback()
-#         log_error(f"[COMMIT_ERROR] initialize_status commit failed: {commit_err}")
-#
 
 import logging
 
@@ -52,25 +23,46 @@ status_mapping = {
 # -------------------------------------------------
 def create_status_table(cursor, db):
     try:
-        cursor.execute("""
-            DROP TABLE IF EXISTS status
-        """)
+        print("[DEBUG] create_status_table: START")
 
+        print("[DEBUG] Disabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+
+        print("[DEBUG] Dropping table status if exists")
+        cursor.execute("DROP TABLE IF EXISTS status")
+
+        print("[DEBUG] Creating table status")
         cursor.execute("""
             CREATE TABLE status (
-                SID INT NOT NULL,
+                SID INT UNSIGNED NOT NULL,
                 name VARCHAR(30) NOT NULL,
+
                 PRIMARY KEY (SID),
-                UNIQUE (name)
+                UNIQUE KEY uq_status_name (name)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
         """)
 
+        print("[DEBUG] Enabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+
         db.commit()
-        print("[OK] Ο πίνακας status δημιουργήθηκε")
+        print("[OK] Ο πίνακας status δημιουργήθηκε επιτυχώς")
 
     except Exception as e:
+        print("[ERROR] create_status_table FAILED")
+        print("[MYSQL ERROR]", e)
+
         db.rollback()
-        logging.error("Σφάλμα στο create_status_table: %s", e)
+
+        import logging
+        import traceback
+        logging.error(
+            "[STATUS_TABLE_CREATE_ERROR]\n%s",
+            traceback.format_exc()
+        )
+
+        raise
+
 
 
 # -------------------------------------------------

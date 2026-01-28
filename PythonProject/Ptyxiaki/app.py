@@ -17,6 +17,7 @@ from Ptyxiaki.description import create_description_table, insert_description
 # from Ptyxiaki.abstract import create_abstract_table, insert_abstract
 # from Ptyxiaki.country import create_country_table, initialize_country
 from Ptyxiaki.role import initialize_role, create_role_table
+from Ptyxiaki.save_query import create_saved_sql_queries_table
 from Ptyxiaki.scheme import initialize_scheme, create_scheme_table
 from Ptyxiaki.kind import initialize_kind, create_kind_table
 from Ptyxiaki.status import initialize_status, create_status_table
@@ -25,10 +26,12 @@ from parties import insert_parties, create_parties_table
 from claims import insert_claims, create_claims_table
 from classification import insert_classification, create_classification_table
 from document import process_document, create_document_table
-from state import initialize_state, create_state_table
+from lang import initialize_lang, create_lang_table
 from format import initialize_format, create_format_table
 from loadsource import initialize_loadsource, create_loadsource_table
 
+
+# Εδώ κάνουμε την global σύνδεση για την βάση δεδομένων.
 
 def get_db_cursor():
     conn = mysql.connector.connect(
@@ -77,21 +80,13 @@ upload_progress = 0
 upload_total = 0
 processing_state = "idle"
 current_phase = "idle"
-
-
-
-
-
-
-
-
-
+batch_count = 0
+processing_finished = False
 
 
 
 
 BAD_FILES_LOG = "bad_files.log" # Metavliti gia to arxeio errors
-
 
 #einai mia methothodo gia insert, an kati paei lathos kanei rollback
 def safe_insert(query, params, cursor, db, context="Insert"):
@@ -189,7 +184,6 @@ def calculate_month_stats_from_db(cursor, year=None):
 
     return month_counts, year
 
-
 # trexei ola ta xml, kai ta epexergazetai ena ena
 def process_files(files):
     global running, paused, stopped, progress_percentage,current_phase
@@ -285,8 +279,11 @@ def process_files(files):
         logging.info("🧹 Τέλος processing thread.")
 
 
+
+
 def start_processing_thread(files):
     global processing_thread, running, paused, stopped, progress_percentage
+    global processing_finished
 
     with processing_lock:
         if running:
@@ -297,6 +294,7 @@ def start_processing_thread(files):
         stopped = False
         progress_percentage = 0
         current_phase = "processing"
+        processing_finished = False
 
     processing_thread = threading.Thread(
         target=process_files,
@@ -312,6 +310,7 @@ def start_processing_thread(files):
 def upload_zip():
     global running, paused, stopped
     global progress_percentage, zip_progress, zip_total, current_phase
+    global processing_finished
 
     with processing_lock:
         running = False
@@ -321,6 +320,7 @@ def upload_zip():
         zip_progress = 0
         zip_total = 0
         current_phase = "upload"
+        processing_finished = False
 
     uploaded = request.files.getlist("files")
     if not uploaded:
@@ -357,6 +357,7 @@ def upload_zip():
 
 def unzip_and_start_processing(zip_path, extract_dir):
     global zip_progress, zip_total, current_phase
+    global processing_finished
 
     with processing_lock:
         current_phase = "unzip"
@@ -389,6 +390,8 @@ def unzip_and_start_processing(zip_path, extract_dir):
         else:
             with processing_lock:
                 current_phase = "done"
+                processing_finished = True
+
 
     except Exception:
         logging.exception("Unzip failed")
@@ -397,13 +400,11 @@ def unzip_and_start_processing(zip_path, extract_dir):
             zip_progress = -1
 
 
-
-
-
 @app.route("/upload_progress", methods=["GET"])
 def upload_progress_status():
     global upload_progress, upload_total
     return jsonify({"progress": upload_progress, "total": upload_total})
+
 
 @app.route("/upload_zip_chunk", methods=["POST"])
 def upload_zip_chunk():
@@ -412,6 +413,7 @@ def upload_zip_chunk():
     global progress_percentage
     global running, paused, stopped
     global current_phase
+    global processing_finished
 
     # =========================
     # Reset state (start upload)
@@ -429,6 +431,7 @@ def upload_zip_chunk():
 
         progress_percentage = 0
         current_phase = "upload"
+        processing_finished = False
 
     # =========================
     # Validate input
@@ -473,9 +476,7 @@ def upload_zip_chunk():
             "progress": upload_progress
         })
 
-    # =========================
-    # LAST CHUNK → MERGE
-    # =========================
+
     final_zip_path = os.path.join(base_dir, filename)
     if os.path.exists(final_zip_path):
         os.remove(final_zip_path)
@@ -495,9 +496,7 @@ def upload_zip_chunk():
         logging.exception("Chunk merge failed")
         return jsonify({"message": f"Merge failed: {e}"}), 500
 
-    # =========================
-    # UNZIP (1% → 100%)
-    # =========================
+
     extract_dir = os.path.join(base_dir, os.path.splitext(filename)[0])
     os.makedirs(extract_dir, exist_ok=True)
 
@@ -525,9 +524,7 @@ def upload_zip_chunk():
             current_phase = "stopped"
         return jsonify({"message": f"Unzip failed: {e}"}), 500
 
-    # =========================
-    # FIND XML FILES
-    # =========================
+
     xml_files = []
     for root_dir, _, files in os.walk(extract_dir):
         for f in files:
@@ -539,9 +536,7 @@ def upload_zip_chunk():
             current_phase = "done"
         return jsonify({"message": "No XML files found"}), 400
 
-    # =========================
-    # PROCESSING (1% → 100%)
-    # =========================
+
     with processing_lock:
         current_phase = "processing"
 
@@ -627,11 +622,11 @@ def get_progress():
             "zip_progress": zip_progress,
             "zip_total": zip_total,
             "status": status,
-            "phase": current_phase
+            "phase": current_phase,
+            "batch_count": batch_count,
+            "finished": processing_finished
+
         })
-
-
-
 
 
 @app.route("/qquery_documents", methods=["POST"])
@@ -715,8 +710,6 @@ def start_batch_process():
     return jsonify({"message": f"Ξεκίνησε η επεξεργασία {len(xml_files)} αρχείων."})
 
 
-
-
 @app.route("/index")
 def home():
     return render_template("index.html")
@@ -729,16 +722,35 @@ def information():
 
 @app.route("/database")
 def database():
-    per_page = 10
+    # -----------------------------
+    # 1. READ PARAMS
+    # -----------------------------
     page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per_page", 50, type=int)
+
+    # Whitelist per_page
+    if per_page not in (25, 50, 100):
+        per_page = 50
+
+    if page < 1:
+        page = 1
+
     offset = (page - 1) * per_page
 
     conn, cur = get_db_cursor()
 
     try:
-        # ===============================
-        # FETCH PAGINATED DOCUMENTS
-        # ===============================
+
+        cur.execute("SELECT COUNT(*) FROM document")
+        total_rows = cur.fetchone()[0]
+        total_pages = max(1, (total_rows + per_page - 1) // per_page)
+
+        # Clamp page
+        if page > total_pages:
+            page = total_pages
+            offset = (page - 1) * per_page
+
+
         cur.execute("""
             SELECT
                 d.did,
@@ -762,21 +774,16 @@ def database():
 
         rows = cur.fetchall()
 
-        # ===============================
-        # FETCH TOTAL COUNT
-        # ===============================
-        cur.execute("SELECT COUNT(*) FROM document")
-        total_rows = cur.fetchone()[0]
-        total_pages = (total_rows + per_page - 1) // per_page
-
-        # ===============================
-        # RENDER TEMPLATE
-        # ===============================
+        # -----------------------------
+        # 4. RENDER
+        # -----------------------------
         return render_template(
             "database.html",
             rows=rows,
             page=page,
-            total_pages=total_pages
+            per_page=per_page,
+            total_pages=total_pages,
+            total_rows=total_rows
         )
 
     except Exception as e:
@@ -785,7 +792,9 @@ def database():
             "database.html",
             rows=[],
             page=1,
-            total_pages=1
+            per_page=50,
+            total_pages=1,
+            total_rows=0
         )
 
     finally:
@@ -802,6 +811,7 @@ def list_uploaded_files():
     result = []
 
     for root, dirs, files in os.walk(base):
+        dirs[:] = [d for d in dirs if not d.startswith("_")]
         rel_path = os.path.relpath(root, base)
 
         result.append(
@@ -829,6 +839,9 @@ def get_files():
     items = []
 
     for entry in os.scandir(full_path):
+
+        if entry.name.startswith("_"):
+            continue
 
         if entry.is_file() and entry.name.lower().endswith(".zip"):
             continue
@@ -920,13 +933,7 @@ def zip_progress_status():
 
 # Κεντρική συνάρτηση που τρέχει ένα SELECT query πάνω στη βάση
 def run_sql_query(sql_text, cursor):
-    """
-    Εκτελεί ένα SQL SELECT query και επιστρέφει:
-    - columns: λίστα με ονόματα στηλών
-    - rows: λίστα από tuples (τα αποτελέσματα)
-    - error: None ή string με μήνυμα λάθους
-    - elapsed: χρόνος εκτέλεσης σε δευτερόλεπτα (float)
-    """
+
 
     sql_clean = (sql_text or "").strip()
     if not sql_clean:
@@ -1021,18 +1028,10 @@ def workspace_ajax():
 @app.post("/api/search")
 def api_search():
     conn, cur = get_db_cursor()
-
     try:
         payload = request.get_json(silent=True) or {}
         criteria = payload.get("criteria", payload)
 
-        limit = int(payload.get("limit", 100))
-        offset = int(payload.get("offset", 0))
-        limit = max(1, min(limit, 500))
-        offset = max(0, offset)
-
-        where = []
-        params = []
 
         def as_int(x):
             try:
@@ -1040,97 +1039,176 @@ def api_search():
             except:
                 return None
 
-        # --- Year range (document.date) ---
+        page = as_int(payload.get("page")) or 1
+        if page < 1:
+            page = 1
+
+        page_size = as_int(payload.get("page_size")) or 500
+
+        # allow-list sizes (recommended)
+        allowed_sizes = {10, 100, 1000, 10000}
+        if page_size not in allowed_sizes:
+            # fallback safely
+            page_size = 500
+
+        # hard cap
+        page_size = max(1, min(page_size, 10000))
+
+        offset = (page - 1) * page_size
+
+
+        where = []
+        params = []
+
+        # YEAR RANGE
         yf = as_int(criteria.get("year_from"))
         yt = as_int(criteria.get("year_to"))
 
         if yf is not None:
             where.append("d.date >= %s")
             params.append(f"{yf}-01-01")
+
         if yt is not None:
             where.append("d.date <= %s")
             params.append(f"{yt}-12-31")
 
-        # --- Country filter (document.country) ---
-        countries = criteria.get("country") or []
-        if countries:
-            where.append(f"d.country IN ({','.join(['%s'] * len(countries))})")
-            params.extend(countries)
+        # STATE FILTER (στον κώδικά σου λέγεται state αλλά πάει στο d.lang)
+        raw_states = criteria.get("state")
+        if raw_states:
+            if not isinstance(raw_states, list):
+                raw_states = [raw_states]
 
-        # --- Kind filter (document.kind) ---
-        kinds = criteria.get("kind") or []
-        if kinds:
-            where.append(f"d.kind IN ({','.join(['%s'] * len(kinds))})")
-            params.extend(kinds)
+            state_ids = []
+            for item in raw_states:
+                iv = as_int(item)
+                if iv is not None:
+                    state_ids.append(iv)
 
-        # --- Metrics: min claims (document.how_many_claims) ---
+            if state_ids:
+                placeholders = ",".join(["%s"] * len(state_ids))
+                where.append(f"d.lang IN ({placeholders})")
+                params.extend(state_ids)
+            else:
+                return jsonify({
+                    "columns": [],
+                    "rows": [],
+                    "row_count": 0,
+                    "page": page,
+                    "page_size": page_size,
+                    "total_rows": 0,
+                    "total_pages": 1,
+                    "error": None,
+                    "elapsed": 0.0
+                })
+
+        # KIND FILTER
+        raw_kinds = criteria.get("kind")
+        if raw_kinds:
+            if not isinstance(raw_kinds, list):
+                raw_kinds = [raw_kinds]
+
+            kind_ids = []
+            for k in raw_kinds:
+                iv = as_int(k)
+                if iv is not None:
+                    kind_ids.append(iv)
+
+            if kind_ids:
+                placeholders = ",".join(["%s"] * len(kind_ids))
+                where.append(f"d.kind IN ({placeholders})")
+                params.extend(kind_ids)
+
+        # MIN CLAIMS
         mc = as_int(criteria.get("min_claims"))
         if mc is not None:
             where.append("d.how_many_claims >= %s")
             params.append(mc)
 
-        # --- Metrics: min abstract words (abstract.abstract_word_count) ---
+        # MIN ABSTRACT WORDS
         maw = as_int(criteria.get("min_abstract_words"))
         if maw is not None:
-            # Προσοχή: είναι στον πίνακα abstract, όχι στον document
-            where.append("a.abstract_words_count >= %s")
+            where.append("""
+                EXISTS (
+                    SELECT 1
+                    FROM abstract a
+                    WHERE a.DID = d.DID
+                      AND a.abstract_words_count >= %s
+                )
+            """)
+
             params.append(maw)
 
         where_sql = " WHERE " + " AND ".join(where) if where else ""
 
-        # Σημείωση:
-        # - LEFT JOIN abstract για να μην “χάνονται” έγγραφα χωρίς abstract
-        # - Αν βάλεις φίλτρο maw, πρακτικά γίνεται “inner-like” για τα docs που δεν έχουν abstract.
-        sql = f"""
-            SELECT
-                d.DID,
-                d.ucid,
-                d.doc_number,
-                d.date,
-                d.family_id,
-                d.status,
-                d.lang,
-                d.kind,
-                d.country,
-                d.size_description,
-                d.size_description_pars,
-                d.size_description_words,
-                d.how_many_claims,
-                d.date_produced,
-
-                k.name AS kind_name,
-                c.name AS country_name,
-                s.country_name AS lang_name,
-
-                a.abstract_words_count AS abstract_word_count
+        # -----------------------------
+        # 3) COUNT query (for pages)
+        # -----------------------------
+        count_sql = f"""
+            SELECT COUNT(*)
             FROM document d
-            LEFT JOIN kind    k ON k.KID = d.kind
-            LEFT JOIN country c ON c.CID = d.country
-            LEFT JOIN state   s ON s.CID = d.lang
-            LEFT JOIN abstract a ON a.DID = d.DID
             {where_sql}
-            ORDER BY d.DID DESC
-            LIMIT %s OFFSET %s
-        """
 
-        cur.execute(sql, params + [limit, offset])
+            """
+        cur.execute(count_sql, params)
+        total_rows = int(cur.fetchone()[0] or 0)
+        total_pages = max(1, (total_rows + page_size - 1) // page_size)
+
+        # clamp page if beyond total_pages
+        if page > total_pages:
+            page = total_pages
+            offset = (page - 1) * page_size
+
+        # -----------------------------
+        # 4) Data query
+        # -----------------------------
+        data_sql = f"""
+            SELECT
+    d.DID,
+    d.ucid,
+    d.doc_number,
+    d.date,
+    d.family_id,
+    d.status,
+    k.name AS kind_name,
+    c.name AS country_name,
+    l.name AS lang_name,
+    d.how_many_claims,
+    d.date_produced
+FROM document d
+LEFT JOIN kind     k ON k.KID = d.kind
+LEFT JOIN country  c ON c.CID = d.country
+LEFT JOIN lang     l ON l.CID = d.lang
+{where_sql}
+ORDER BY d.DID ASC
+LIMIT %s OFFSET %s
+
+        """
+        cur.execute(data_sql, params + [page_size, offset])
         rows = cur.fetchall()
-        columns = [d[0] for d in cur.description]
+        columns = [col[0] for col in cur.description]
 
         return jsonify({
             "columns": columns,
             "rows": rows,
             "row_count": len(rows),
+            "page": page,
+            "page_size": page_size,
+            "total_rows": total_rows,
+            "total_pages": total_pages,
             "error": None,
             "elapsed": 0.0
         })
 
     except Exception as e:
-        logging.error(f"/api/search error: {e}", exc_info=True)
+        logging.error("/api/search ERROR", exc_info=True)
         return jsonify({
             "columns": [],
             "rows": [],
             "row_count": 0,
+            "page": 1,
+            "page_size": 500,
+            "total_rows": 0,
+            "total_pages": 1,
             "error": str(e),
             "elapsed": 0.0
         }), 500
@@ -1138,6 +1216,7 @@ def api_search():
     finally:
         cur.close()
         conn.close()
+
 
 
 @app.get("/api/stats")
@@ -1154,11 +1233,11 @@ def api_stats():
                 ORDER BY YEAR(d.date)
             """)
 
-        elif stat_type == "state":
+        elif stat_type == "lang":
             cursor.execute("""
                 SELECT s.code AS label, COUNT(*) AS value
                 FROM document d
-                JOIN state s ON s.id = d.state
+                JOIN lang s ON s.id = d.lang
                 GROUP BY s.code
                 ORDER BY value DESC
             """)
@@ -1199,24 +1278,25 @@ def api_kinds():
 @app.get("/api/states")
 def api_states():
     conn, cur = get_db_cursor()
-    cur.execute("SELECT CID, country_name FROM state ORDER BY country_name")
+    cur.execute("SELECT CID, name FROM lang ORDER BY name")
     rows = cur.fetchall()
     cur.close()
     conn.close()
     return jsonify(rows)
 
+
 @app.get("/api/stats/heatmap")
 def api_stats_heatmap():
     cursor.execute("""
         SELECT
-            s.country_name AS country,
+            s.name AS country,
             k.name AS kind,
             COUNT(*) AS total
         FROM document d
-        JOIN state s ON s.CID = d.state
+        JOIN lang s ON s.CID = d.lang
         JOIN kind  k ON k.KID = d.kind
-        GROUP BY s.country_name, k.name
-        ORDER BY s.country_name, k.name
+        GROUP BY s.name, k.name
+        ORDER BY s.name, k.name
     """)
 
     rows = cursor.fetchall()
@@ -1236,14 +1316,14 @@ def stats_kind_by_country():
     try:
         sql = """
             SELECT
-    s.country_name AS country,
+    s.name AS country,
     k.name AS kind,
     COUNT(*) AS total
 FROM document d
-JOIN state s ON s.CID = d.state
+JOIN lang s ON s.CID = d.lang
 JOIN kind  k ON k.KID = d.kind
-GROUP BY s.country_name, k.name
-ORDER BY s.country_name, k.name;
+GROUP BY s.name, k.name
+ORDER BY s.name, k.name;
 
         """
 
@@ -1251,9 +1331,9 @@ ORDER BY s.country_name, k.name;
         rows = cursor.fetchall()
 
         result = []
-        for state, kind, total in rows:
+        for lang, kind, total in rows:
             result.append({
-                "country": state,   # κρατάμε country για consistency στο JS
+                "country": lang,   # κρατάμε country για consistency στο JS
                 "kind": kind,
                 "total": total
             })
@@ -1406,8 +1486,6 @@ def api_complexity_score():
         cur.close()
         conn.close()
 
-#ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 4
-
 
 #ΣΩΣΤΟ ΣΤΑΤΙΣΤΙΚΟ 6
 @app.get("/api/stats/maturity-over-time")
@@ -1502,8 +1580,6 @@ def api_patents_per_month():
         conn.close()
 
 
-
-
 def get_country_id(cur, name: str):
     cur.execute("SELECT CID FROM country WHERE name = %s LIMIT 1", (name,))
     row = cur.fetchone()
@@ -1564,8 +1640,220 @@ def api_monthly_growth_rate():
         conn.close()
 
 
+@app.get("/api/database/summary")
+def database_summary():
+    conn, cur = get_db_cursor()
+    try:
+        cur.execute("SELECT COUNT(*) FROM document")
+        documents = cur.fetchone()[0]
+
+        # Φάκελοι από filesystem
+        base = "uploaded_files"
+        folders = sum(
+            1 for root, dirs, _ in os.walk(base)
+            if root != base
+        )
+
+        return jsonify({
+            "documents": documents,
+            "folders": folders,
+            "timestamp": int(time.time())
+        })
+    finally:
+        cur.close()
+        conn.close()
 
 
+
+
+@app.post("/api/documents/delete")
+def api_documents_delete():
+    payload = request.get_json(silent=True) or {}
+    mode = (payload.get("mode") or "").strip().lower()
+
+    if mode not in ("selected", "all"):
+        return jsonify({"status": "error", "message": "Invalid mode"}), 400
+
+    conn, cur = get_db_cursor()
+    try:
+        conn.start_transaction()
+
+
+        if mode == "all":
+            # Ένα καθαρό delete. CASCADE θα καθαρίσει τα παιδιά.
+            cur.execute("DELETE FROM document")
+            deleted_count = cur.rowcount
+            conn.commit()
+            return jsonify({"status": "ok", "deleted_count": deleted_count})
+
+
+        dids = payload.get("dids", [])
+        if not isinstance(dids, list) or not dids:
+            return jsonify({"status": "error", "message": "No DIDs provided"}), 400
+
+        # sanitize ints
+        clean_dids = []
+        for d in dids:
+            try:
+                clean_dids.append(int(d))
+            except:
+                return jsonify({"status": "error", "message": "Invalid DID in list"}), 400
+
+        BATCH_SIZE = 500
+        total_deleted = 0
+
+        for i in range(0, len(clean_dids), BATCH_SIZE):
+            batch = clean_dids[i:i + BATCH_SIZE]
+            placeholders = ",".join(["%s"] * len(batch))
+            cur.execute(f"DELETE FROM document WHERE DID IN ({placeholders})", batch)
+            total_deleted += cur.rowcount
+
+        conn.commit()
+        return jsonify({"status": "ok", "deleted_count": total_deleted})
+
+    except Exception as e:
+        try:
+            conn.rollback()
+        except:
+            pass
+
+        # Πολύ σημαντικό: γράφουμε το πραγματικό error στο log για να το βλέπεις
+        logging.error(f"/api/documents/delete failed: {e}", exc_info=True)
+
+        return jsonify({
+            "status": "error",
+            "message": "Delete failed. Transaction rolled back."
+        }), 500
+
+    finally:
+        try:
+            cur.close()
+            conn.close()
+        except:
+            pass
+
+
+@app.get("/api/documents/new")
+def get_new_documents():
+    after_did = request.args.get("after", type=int, default=0)
+
+    conn, cur = get_db_cursor()
+    try:
+        cur.execute("""
+            SELECT
+                d.did,
+                d.ucid,
+                d.doc_number,
+                d.kind,
+                d.country,
+                d.date,
+                d.family_id,
+                d.status,
+                d.lang,
+                d.size_description,
+                d.size_description_pars,
+                d.size_description_words,
+                d.how_many_claims,
+                d.date_produced
+            FROM document d
+            WHERE d.did > %s
+            ORDER BY d.did DESC
+        """, (after_did,))
+
+        return jsonify(cur.fetchall())
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+
+@app.route("/api/sql/save", methods=["POST"])
+def save_sql_query():
+    try:
+        data = request.get_json(force=True)
+
+        name = (data.get("name") or "").strip()
+        sql_text = (data.get("sql_text") or "").strip()
+
+        if not name or not sql_text:
+            return jsonify({
+                "error": "Name and SQL text are required."
+            }), 400
+
+        cursor = db.cursor()
+        cursor.execute("""
+            INSERT INTO saved_sql_queries (name, sql_text)
+            VALUES (%s, %s)
+        """, (name, sql_text))
+
+        db.commit()
+
+        return jsonify({
+            "status": "ok",
+            "id": cursor.lastrowid
+        })
+
+    except Exception as e:
+        db.rollback()
+        logging.error("save_sql_query failed", exc_info=True)
+
+        return jsonify({
+            "error": "Failed to save SQL query."
+        }), 500
+
+
+@app.get("/api/sql/list")
+def list_sql_queries():
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("""
+        SELECT
+            SID       AS id,
+            name      AS name,
+            sql_text  AS sql_text
+        FROM saved_sql_queries
+        ORDER BY SID DESC
+    """)
+    rows = cursor.fetchall()
+    cursor.close()
+    return jsonify(rows)
+
+@app.delete("/api/sql/delete/<int:sid>")
+def delete_sql_query(sid):
+    try:
+        cur = db.cursor()
+        cur.execute(
+            "DELETE FROM saved_sql_queries WHERE SID = %s",
+            (sid,)
+        )
+        db.commit()
+        return jsonify({"status": "ok"})
+    except Exception:
+        db.rollback()
+        logging.exception("delete_sql_query failed")
+        return jsonify({"error": "Delete failed"}), 500
+
+
+@app.put("/api/sql/rename/<int:sid>")
+def rename_sql_query(sid):
+    try:
+        data = request.get_json(force=True)
+        name = (data.get("name") or "").strip()
+
+        if not name:
+            return jsonify({"error": "Empty name"}), 400
+
+        cur = db.cursor()
+        cur.execute(
+            "UPDATE saved_sql_queries SET name = %s WHERE SID = %s",
+            (name, sid)
+        )
+        db.commit()
+        return jsonify({"status": "ok"})
+    except Exception:
+        db.rollback()
+        logging.exception("rename_sql_query failed")
+        return jsonify({"error": "Rename failed"}), 500
 
 
 
@@ -1574,6 +1862,30 @@ if __name__ == "__main__":
 
         clean_uploaded_files()
 
+
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+
+        cursor.execute("DROP TABLE IF EXISTS description")
+        cursor.execute("DROP TABLE IF EXISTS abstract")
+        cursor.execute("DROP TABLE IF EXISTS title")
+        cursor.execute("DROP TABLE IF EXISTS classification")
+        cursor.execute("DROP TABLE IF EXISTS parties")
+        cursor.execute("DROP TABLE IF EXISTS claims")
+        cursor.execute("DROP TABLE IF EXISTS document")
+
+        cursor.execute("DROP TABLE IF EXISTS kind")
+        cursor.execute("DROP TABLE IF EXISTS lang")
+        cursor.execute("DROP TABLE IF EXISTS country")
+        cursor.execute("DROP TABLE IF EXISTS loadsource")
+        cursor.execute("DROP TABLE IF EXISTS role")
+        cursor.execute("DROP TABLE IF EXISTS status")
+        cursor.execute("DROP TABLE IF EXISTS format")
+
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+
+        # =====================
+        # 2. CREATE LOOKUPS
+        # =====================
         create_format_table(cursor, db)
         initialize_format(cursor, db)
 
@@ -1583,39 +1895,31 @@ if __name__ == "__main__":
         create_loadsource_table(cursor, db)
         initialize_loadsource(cursor, db)
 
-        create_state_table(cursor, db)
-        initialize_state(cursor, db)
+        create_lang_table(cursor, db)
+        initialize_lang(cursor, db)
 
         create_kind_table(cursor, db)
         initialize_kind(cursor, db)
 
-        # create_scheme_table(cursor, db)
-        # initialize_scheme(cursor, db)
-
         create_role_table(cursor, db)
         initialize_role(cursor, db)
 
-        # create_status_table(cursor, db)
-        # initialize_status(cursor, db)
-
-        create_claims_table(cursor, db)
-
-        create_parties_table(cursor, db)
-
-        create_classification_table(cursor, db)
-
-        create_title_table(cursor, db)
-
-        create_abstract_table(cursor, db)
-
-        create_description_table(cursor, db)
-
+        create_status_table(cursor, db)
+        initialize_status(cursor, db)
 
         create_document_table(cursor, db)
 
+        create_claims_table(cursor, db)
+        create_parties_table(cursor, db)
+        create_classification_table(cursor, db)
+        create_title_table(cursor, db)
+        create_abstract_table(cursor, db)
+        create_description_table(cursor, db)
 
+        create_saved_sql_queries_table(cursor, db)
 
-        app.run(debug=True)
+        app.run(debug=False, threaded=True)
+
     except Exception as e:
         logging.critical(f" Πρόβλημα κάτα την εκκίνηση: {e}")
         raise SystemExit(1)

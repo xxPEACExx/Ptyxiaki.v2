@@ -3,7 +3,7 @@
 
 import logging
 import traceback
-from state import lang_mapping
+from lang import lang_mapping
 from role import role_mapping
 
 # -------------------------------------------------
@@ -24,50 +24,72 @@ def log_error(message):
 # -------------------------------------------------
 def create_parties_table(cursor, db):
     try:
-        # ⚠️ ΠΡΩΤΑ drop για να μη μένουν παλιά FK
+        print("[DEBUG] create_parties_table: START")
+
+        print("[DEBUG] Disabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+
+        print("[DEBUG] Dropping table parties if exists")
         cursor.execute("DROP TABLE IF EXISTS parties")
 
+        print("[DEBUG] Creating table parties")
         cursor.execute("""
-        CREATE TABLE parties (
-            PID INT NOT NULL AUTO_INCREMENT,
-            DID INT UNSIGNED NOT NULL,
-            last_name VARCHAR(255),
-            state TINYINT UNSIGNED,
-            role INT,
-            city VARCHAR(255),
+            CREATE TABLE parties (
+                PID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                DID INT UNSIGNED NOT NULL,
 
-            PRIMARY KEY (PID),
+                last_name VARCHAR(255),
+                state TINYINT UNSIGNED,
+                role INT UNSIGNED,
+                city VARCHAR(255),
 
-            INDEX idx_parties_did (DID),
-            INDEX idx_parties_state (state),
-            INDEX idx_parties_role (role),
+                PRIMARY KEY (PID),
 
-            CONSTRAINT fk_parties_document
-                FOREIGN KEY (DID)
-                REFERENCES document(DID)
-                ON DELETE CASCADE
-                ON UPDATE CASCADE,
+                KEY idx_parties_DID (DID),
+                KEY idx_parties_state (state),
+                KEY idx_parties_role (role),
 
-            CONSTRAINT fk_parties_state
-                FOREIGN KEY (state)
-                REFERENCES state(CID)
-                ON DELETE SET NULL
-                ON UPDATE CASCADE,
+                CONSTRAINT fk_parties_document
+                    FOREIGN KEY (DID)
+                    REFERENCES document (DID)
+                    ON UPDATE CASCADE
+                    ON DELETE CASCADE,
 
-            CONSTRAINT fk_parties_role
-                FOREIGN KEY (role)
-                REFERENCES role(RID)
-                ON DELETE SET NULL
-                ON UPDATE CASCADE
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+                CONSTRAINT fk_parties_lang
+                    FOREIGN KEY (state)
+                    REFERENCES lang (CID)
+                    ON UPDATE CASCADE
+                    ON DELETE SET NULL,
+
+                CONSTRAINT fk_parties_role
+                    FOREIGN KEY (role)
+                    REFERENCES role (RID)
+                    ON UPDATE CASCADE
+                    ON DELETE SET NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
         """)
 
+        print("[DEBUG] Enabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+
         db.commit()
-        print("✔ parties table dropped & created successfully")
+        print("[OK] Ο πίνακας parties δημιουργήθηκε επιτυχώς")
 
     except Exception as e:
+        print("[ERROR] create_parties_table FAILED")
+        print("[MYSQL ERROR]", e)
+
         db.rollback()
-        print("❌ parties table creation failed:", e)
+
+        import logging
+        import traceback
+        logging.error(
+            "[PARTIES_TABLE_CREATE_ERROR]\n%s",
+            traceback.format_exc()
+        )
+
+        raise
+
 
 
 # -------------------------------------------------

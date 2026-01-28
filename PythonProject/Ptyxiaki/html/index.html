@@ -22,7 +22,7 @@
 
     <aside class="sidebar" id="sidebar">
 
-      <h2 class="logo"> 🎓 ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>
+      <h2 class="logo"> 🎓 Database Migration</h2>
         <br>
         <button class="button-33" role="button">Ανέβασμα Αρχείου</button>
         <br>
@@ -30,10 +30,10 @@
       <nav>
 
         <ul class="menu" >
-          <li class="active">🏠︎ Αρχική Σελίδα</li>
-          <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>
-          <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>
-          <li onclick="window.location.href='/workspace'">📈 Workspace</li>
+          <li class="active">🏠︎ About</li>
+          <li onclick="window.location.href='/database'">⛁ Migration</li>
+          <li onclick="window.location.href='/information'">ⓘ DB Statistics</li>
+          <li onclick="window.location.href='/workspace'">📈 DB Search</li>
 
         </ul>
       </nav>
@@ -152,9 +152,18 @@
     </div>
 </div>
 
+<div id="duplicateModal" class="modal-overlay" style="display:none;">
+  <div class="modal-box">
+    <h3>Αρχείο υπάρχει ήδη</h3>
+    <p id="duplicateModalMessage">
+      Το αρχείο έχει ήδη ανέβει.
+    </p>
 
-
-
+    <div class="modal-actions">
+      <button id="duplicateModalOk">OK</button>
+    </div>
+  </div>
+</div>
 
 
 </body>

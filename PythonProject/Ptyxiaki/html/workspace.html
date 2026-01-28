@@ -6,8 +6,13 @@
     <title>Workspace</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='workspace_css.css') }}">
+
     <script src="{{ url_for('static', filename='workspace_js.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='sql_direct.js') }}" defer></script>
     <script src="{{ url_for('static', filename='base.js') }}" defer></script>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.3.0"></script>
@@ -21,14 +26,14 @@
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
 
-    <h2 class="logo">🎓 ΠΤΥΧΙΑΚΗ <br> ΕΡΓΑΣΙΑ</h2>
+    <h2 class="logo">🎓 Database <br> Migration</h2>
 
     <nav>
         <ul class="menu">
-            <li onclick="window.location.href='/index'">🏠︎ Αρχική</li>
-            <li onclick="window.location.href='/database'">⛁ Βάση Δεδομένων</li>
-            <li onclick="window.location.href='/information'">ⓘ Πληροφορίες</li>
-            <li class="active">📈 Workspace</li>
+            <li onclick="window.location.href='/index'">🏠︎ About</li>
+            <li onclick="window.location.href='/database'">⛁ Migration</li>
+            <li onclick="window.location.href='/information'">ⓘ DB Statistics</li>
+            <li class="active">📈 DB Search</li>
         </ul>
     </nav>
 </aside>
@@ -42,8 +47,8 @@
     <div class="tabs-header">
 
     <div class="tabs-center">
-        <button class="tab-button active" data-tab="tab-query">Search</button>
-        <button class="tab-button" data-tab="tab-table">Table</button>
+        <button class="tab-button active" data-tab="tab-query">Filtering Search</button>
+        <button class="tab-button" data-tab="tab-table">SQL Direct</button>
         <button class="tab-button" data-tab="tab-stats">Statistics</button>
     </div>
 
@@ -68,7 +73,7 @@
             <!-- ===== LEFT: CRITERIA ===== -->
             <aside class="criteria-panel">
 
-                <h3 class="criteria-title">Φίλτρα</h3>
+                <h3 class="criteria-title">Filter</h3>
 
                 <div class="criteria-section">
                     <details open>
@@ -94,15 +99,6 @@
                     </details>
                 </div>
 
-<!--                <div class="criteria-section">-->
-<!--                    <details>-->
-<!--                        <summary>Family</summary>-->
-<!--                        <label class="single-checkbox">-->
-<!--                            <input type="checkbox" name="family_only">-->
-<!--                            Unique families-->
-<!--                        </label>-->
-<!--                    </details>-->
-<!--                </div>-->
 
                 <div class="criteria-section">
                     <details>
@@ -127,63 +123,127 @@
                     </button>
                 </div>
 
-                <div class="results-table-wrapper">
-                    <div class="table-scroll-body">
-                        <div id="results-table-query"></div>
-                    </div>
-                </div>
+                <div class="results-toolbar">
+  <div class="toolbar-left">
+    <label>
+      Results per page:
+      <select id="pageSizeSelect">
+        <option value="100">100</option>
+        <option value="1000" selected>1.000</option>
+        <option value="10000">10.000</option>
+      </select>
+    </label>
+  </div>
 
-                <div class="load-more-wrapper">
-                    <button id="load-more-btn" class="toolbar-button">Load more</button>
-                </div>
+  <div id="results-info"></div>
+  <div id="pagination"></div>
+</div>
+
+<div class="workspace-table results-table-wrapper">
+  <div class="table-scroll-top">
+    <div class="table-scroll-inner"></div>
+  </div>
+
+  <div class="table-scroll-body">
+    <div class="table__body" id="results-table-query"></div>
+  </div>
+</div>
+
+
+
 
             </section>
 
         </div>
     </div>
 
-    <!-- ================= TABLE TAB ================= -->
     <div id="tab-table" class="tab-content">
 
-        <div class="table-layout">
+  <div class="table-layout">
 
-            <div class="table-top-row">
+    <!-- TOP CARDS -->
+    <div class="table-top-row three-columns">
 
-                <div class="table-card">
-                    <div class="card-title">SQL Query</div>
+  <!-- COLUMN 1: SQL QUERY -->
+  <div class="table-card">
+    <div class="card-title">SQL Query</div>
 
-                    <form onsubmit="return runQueryAJAX(this)">
-                        <textarea name="sql_input"
-                                  class="sql-used-textarea"
-                                  placeholder="Write SQL query here..."></textarea>
+    <form onsubmit="return runQueryAJAX(this)">
+      <textarea
+        name="sql_input"
+        class="sql-used-textarea"
+        placeholder="Write SQL query here..."></textarea>
 
-                        <div class="sql-used-toolbar">
-                            <button type="submit" class="sql-used-run-btn">Run</button>
-                        </div>
-                    </form>
-                </div>
+      <div class="sql-used-toolbar">
+        <button type="submit" class="sql-used-run-btn">Run</button>
+        <button
+          type="button"
+          class="sql-used-save-btn"
+          id="save-sql-btn">
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
 
-                <div class="table-card">
-                    <div class="card-title">Messages</div>
-                    <div id="table-messages" class="table-messages">
-                        No SQL executed yet.
-                    </div>
-                </div>
+  <!-- COLUMN 2: SAVED QUERIES -->
+  <div class="table-card">
+    <div class="card-title">Saved Queries</div>
 
-            </div>
+    <select id="saved-sql-select">
+      <option value="">— Saved Queries —</option>
+    </select>
 
-            <div class="table-results-wrapper">
-                <div class="table-scroll-top">
-                    <div class="table-scroll-inner"></div>
-                </div>
-
-                <div class="table-scroll-body">
-                    <div id="results-table">No results yet.</div>
-                </div>
-            </div>
-
-        </div>
+    <div class="sql-saved-actions">
+      <button type="button" id="load-sql-btn">Load</button>
+      <button type="button" id="rename-sql-btn">Rename</button>
+      <button type="button" id="delete-sql-btn">Delete</button>
     </div>
+  </div>
+
+  <!-- COLUMN 3: MESSAGES -->
+  <div class="table-card">
+    <div class="card-title">Messages</div>
+    <div id="table-messages" class="table-messages">
+      No SQL executed yet.
+    </div>
+  </div>
+
+</div>
+
+    <!-- STICKY TOOLBAR -->
+    <div class="sql-toolbar">
+      <label>
+        Results per page:
+        <select id="sqlPageSize">
+          <option value="50">50</option>
+          <option value="100" selected>100</option>
+          <option value="500">500</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- STICKY RESULTS BAR -->
+    <div class="sql-results-bar sql-results-toolbar">
+  <div id="sql-results-info"></div>
+  <div id="sql-pagination"></div>
+</div>
+
+
+    <!-- SCROLL AREA (ONLY THIS SCROLLS) -->
+    <div class="workspace-table">
+  <div class="table__body" id="results-table"></div>
+</div>
+
+
+    <!-- HORIZONTAL SCROLL -->
+    <div class="table-scroll-top">
+      <div class="table-scroll-inner"></div>
+    </div>
+
+  </div>
+</div>
+
 
     <!-- ================= STATS TAB ================= -->
     <div id="tab-stats" class="tab-content">
@@ -236,6 +296,28 @@
     </div>
 
 </div> <!-- END content -->
+
+<!-- ================= MODAL ================= -->
+<div id="sql-modal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <h3 id="modal-title">Title</h3>
+
+    <input
+      type="text"
+      id="modal-input"
+      placeholder=""
+      style="display:none"
+    />
+
+    <p id="modal-message" style="display:none"></p>
+
+    <div class="modal-actions">
+      <button id="modal-cancel">Cancel</button>
+      <button id="modal-ok" class="primary">OK</button>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>

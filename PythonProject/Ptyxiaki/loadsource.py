@@ -24,25 +24,46 @@ loadsource_mapping = {
 # -------------------------------------------------
 def create_loadsource_table(cursor, db):
     try:
-        cursor.execute("""
-            DROP TABLE IF EXISTS loadsource
-        """)
+        print("[DEBUG] create_loadsource_table: START")
 
+        print("[DEBUG] Disabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+
+        print("[DEBUG] Dropping table loadsource if exists")
+        cursor.execute("DROP TABLE IF EXISTS loadsource")
+
+        print("[DEBUG] Creating table loadsource")
         cursor.execute("""
             CREATE TABLE loadsource (
-                LID tinyint NOT NULL,
+                LID TINYINT UNSIGNED NOT NULL,
                 name_loadsource VARCHAR(50) NOT NULL,
+
                 PRIMARY KEY (LID),
-                UNIQUE (name_loadsource)
+                UNIQUE KEY uq_loadsource_name (name_loadsource)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
         """)
 
+        print("[DEBUG] Enabling FOREIGN_KEY_CHECKS")
+        cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+
         db.commit()
-        print("[OK] Ο πίνακας loadsource δημιουργήθηκε")
+        print("[OK] Ο πίνακας loadsource δημιουργήθηκε επιτυχώς")
 
     except Exception as e:
+        print("[ERROR] create_loadsource_table FAILED")
+        print("[MYSQL ERROR]", e)
+
         db.rollback()
-        logging.error("Σφάλμα στο create_loadsource_table: %s", e)
+
+        import logging
+        import traceback
+        logging.error(
+            "[LOADSOURCE_TABLE_CREATE_ERROR]\n%s",
+            traceback.format_exc()
+        )
+
+        raise
+
 
 
 # -------------------------------------------------

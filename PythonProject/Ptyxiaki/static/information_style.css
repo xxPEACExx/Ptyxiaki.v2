@@ -821,3 +821,24 @@ body {
   font-size: 20px;
   line-height: 1;
 }
+
+
+.btn-download,
+.btn-ghost {
+  border-radius: var(--radius-pill);
+  padding: 9px 16px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-download {
+  background: #81d4fa;
+  color: #111827;
+  box-shadow: 0 18px 35px rgba(249, 115, 22, 0.4);
+  font-weight: 500;
+}

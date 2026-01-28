@@ -1,447 +1,4 @@
-//// =====================================================
-//// GLOBAL STATE
-//// =====================================================
-//let isPaused = false;
-//let userStopped = false;
-//let zipInterval = null;
-//let processingInterval = null;
-//
-//const UploadState = {
-//    phase: "idle", // idle | upload | unzip | processing | done | stopped
-//    progress: 0
-//};
-//
-//// =====================================================
-//// POPUP UI
-//// =====================================================
-//function showUploadPopup() {
-//    document.getElementById("upload-popup")?.classList.remove("hidden");
-//}
-//
-//function hideUploadPopup() {
-//    document.getElementById("upload-popup")?.classList.add("hidden");
-//}
-//
-//function updateUploadProgress(percent) {
-//    const circle = document.getElementById("progress-circle");
-//    if (!circle) return;
-//
-//    const max = circle.getTotalLength ? circle.getTotalLength() : 219;
-//    circle.style.strokeDashoffset = max - (percent / 100) * max;
-//
-//    const pct = document.getElementById("upload-percent");
-//    if (pct) pct.innerText = Math.round(percent) + "%";
-//}
-//
-//function renderProgress(percent, text) {
-//    UploadState.progress = percent;
-//    updateUploadProgress(percent);
-//    if (text) {
-//        const status = document.getElementById("upload-status");
-//        if (status) status.textContent = text;
-//    }
-//}
-//
-//// =====================================================
-//// WAIT FOR BACKEND PHASE
-//// =====================================================
-//function waitForPhase(targetPhase, callback) {
-//    const poll = setInterval(async () => {
-//        const res = await fetch("/get_progress");
-//        const data = await res.json();
-//
-//        if (data.phase === targetPhase) {
-//            clearInterval(poll);
-//            callback();
-//        }
-//    }, 300);
-//}
-//
-//// =====================================================
-//// PROCESSING (XML)
-//// =====================================================
-//function startProcessingProgress() {
-//    if (processingInterval) return;
-//
-//    UploadState.phase = "processing";
-//
-//    const pauseBtn = document.getElementById("pause-btn");
-//    const stopBtn = document.getElementById("stop-btn");
-//
-//    isPaused = false;
-//    userStopped = false;
-//
-//    pauseBtn.disabled = false;
-//    stopBtn.disabled = false;
-//    pauseBtn.textContent = "⏸ Παύση";
-//
-//    pauseBtn.onclick = async () => {
-//        const action = isPaused ? "continue" : "pause";
-//        await fetch("/control", {
-//            method: "POST",
-//            headers: { "Content-Type": "application/json" },
-//            body: JSON.stringify({ action })
-//        });
-//        isPaused = !isPaused;
-//        pauseBtn.textContent = isPaused ? "▶️ Συνέχεια" : "⏸ Παύση";
-//    };
-//
-//    stopBtn.onclick = async () => {
-//        userStopped = true;
-//        await fetch("/control", {
-//            method: "POST",
-//            headers: { "Content-Type": "application/json" },
-//            body: JSON.stringify({ action: "stop" })
-//        });
-//    };
-//
-//    processingInterval = setInterval(async () => {
-//        const res = await fetch("/get_progress");
-//        const data = await res.json();
-//
-//        if (data.phase === "processing") {
-//            renderProgress(
-//                data.progress ?? 0,
-//                data.status === "paused"
-//                    ? "Σε παύση..."
-//                    : "Processing XML..."
-//            );
-//        }
-//
-//        if (data.phase === "done" || data.phase === "stopped") {
-//            clearInterval(processingInterval);
-//            processingInterval = null;
-//
-//            pauseBtn.disabled = true;
-//            stopBtn.disabled = true;
-//
-//            renderProgress(
-//                100,
-//                data.phase === "stopped"
-//                    ? "Διακόπηκε."
-//                    : "Ολοκληρώθηκε!"
-//            );
-//
-//            loadFiles("");
-//            updateCards();
-//
-//            setTimeout(hideUploadPopup, 1500);
-//        }
-//    }, 500);
-//}
-//
-//// =====================================================
-//// ZIP UNZIP
-//// =====================================================
-//function startZipProgress() {
-//    if (zipInterval) clearInterval(zipInterval);
-//
-//    UploadState.phase = "unzip";
-//
-//    zipInterval = setInterval(async () => {
-//    const res = await fetch("/zip_progress");
-//    const data = await res.json();
-//
-//    // FORCE label αλλαγή
-//    renderProgress(
-//        UploadState.progress > 1 ? UploadState.progress : 1,
-//        "Unzipping files..."
-//    );
-//
-//    if (!data.total) {
-//        return;
-//    }
-//
-//    const percent = data.progress ?? 0;
-//    renderProgress(percent, "Unzipping files...");
-//
-//    if (percent >= 100) {
-//        clearInterval(zipInterval);
-//        zipInterval = null;
-//        waitForPhase("processing", startProcessingProgress);
-//    }
-//}, 400);
-//
-//}
-//
-//// =====================================================
-//// FILE UPLOAD (CHUNKED, NO OTHER CHANGES)
-//// =====================================================
-//document.addEventListener("DOMContentLoaded", () => {
-//    const uploadBtn = document.querySelector(".button-33");
-//    const cardsSection = document.querySelector("section.cards");
-//
-//    const zipInput = document.createElement("input");
-//    zipInput.type = "file";
-//    zipInput.accept = ".zip";
-//    zipInput.style.display = "none";
-//    document.body.appendChild(zipInput);
-//
-//    uploadBtn?.addEventListener("click", () => zipInput.click());
-//
-//    zipInput.addEventListener("change", async () => {
-//        const file = zipInput.files[0];
-//        if (!file) return;
-//
-//        if (processingInterval) clearInterval(processingInterval);
-//        if (zipInterval) clearInterval(zipInterval);
-//
-//        isPaused = false;
-//        userStopped = false;
-//
-//        renderProgress(0, "Preparing upload...");
-//        showUploadPopup();
-//
-//        if (!file.name.toLowerCase().endsWith(".zip")) {
-//            alert("Μόνο ZIP αρχεία.");
-//            return;
-//        }
-//
-//        UploadState.phase = "upload";
-//
-//        const CHUNK_SIZE = 20 * 1024 * 1024; // 20MB
-//        const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
-//
-//        const uploadId = crypto.randomUUID();
-//
-//        for (let index = 0; index < totalChunks; index++) {
-//            const start = index * CHUNK_SIZE;
-//            const end = Math.min(start + CHUNK_SIZE, file.size);
-//            const chunk = file.slice(start, end);
-//
-//            const formData = new FormData();
-//            formData.append("chunk", chunk);
-//            formData.append("upload_id", uploadId);
-//            formData.append("filename", file.name);
-//            formData.append("index", index);
-//            formData.append("total", totalChunks);
-//
-//            const res = await fetch("/upload_zip_chunk", {
-//                method: "POST",
-//                body: formData
-//            });
-//
-//            if (!res.ok) {
-//                renderProgress(0, "Σφάλμα στο upload.");
-//                return;
-//            }
-//
-//            const percent = ((index + 1) / totalChunks) * 100;
-//            renderProgress(percent, "Uploading ZIP...");
-//        }
-//
-//        renderProgress(1, "Ξεκίνησε το unzip...");
-//        UploadState.phase = "unzip";
-//        startZipProgress();
-//    });
-//
-//    // =====================================================
-//    // UPDATE CARDS
-//    // =====================================================
-//    async function updateCards() {
-//        const res = await fetch("/get_documents");
-//        if (!res.ok) return;
-//
-//        const data = await res.json();
-//        cardsSection.innerHTML = "";
-//
-//        data.results.forEach(doc => {
-//            const card = document.createElement("div");
-//            card.className = "card";
-//            card.innerHTML = `
-//                <h3>${doc.did}</h3>
-//                <p>${doc.filepath || "Άγνωστο path"}</p>
-//                <p style="color:green;">✔️ Ανέβηκε</p>
-//            `;
-//            cardsSection.prepend(card);
-//        });
-//    }
-//
-//    setInterval(updateCards, 1000);
-//    loadFiles("");
-//});
-//
-//
-//// =====================================================
-//// THEME TOGGLE
-//// =====================================================
-//document.addEventListener("DOMContentLoaded", () => {
-//    const btn = document.getElementById("themeToggle");
-//    const body = document.body;
-//
-//    if (localStorage.getItem("theme") === "dark") {
-//        body.classList.add("dark-theme");
-//        btn.textContent = "🔆";
-//    }
-//
-//    btn.onclick = () => {
-//        const dark = body.classList.toggle("dark-theme");
-//        btn.textContent = dark ? "🔆" : "🌓";
-//        localStorage.setItem("theme", dark ? "dark" : "light");
-//    };
-//});
-//
-//// =====================================================
-//// FILE EXPLORER + BREADCRUMBS
-//// =====================================================
-//let currentPath = "";
-//let backStack = [];
-//let forwardStack = [];
-//
-//async function loadFiles(path = "") {
-//    const list = document.getElementById("fileList");
-//    if (!list) return;
-//
-//    const res = await fetch(`/get_files?path=${encodeURIComponent(path)}`);
-//    const files = await res.json();
-//
-//    currentPath = path;
-//    list.innerHTML = "";
-//
-//    files.forEach(item => {
-//        const row = document.createElement("div");
-//        row.className = "file-row";
-//
-//        row.innerHTML = `
-//            <span class="file-name">
-//                <span class="file-icon">${item.type === "folder" ? "📁" : "📄"}</span>
-//                ${item.name}
-//            </span>
-//            <span>${item.type}</span>
-//            <span>✓</span>
-//            <span>${item.date || "-"}</span>
-//            <span class="menu">⋮</span>
-//        `;
-//
-//        if (item.type === "folder") {
-//            row.onclick = () => {
-//                backStack.push(currentPath);
-//                forwardStack = [];
-//                loadFiles(item.path);
-//            };
-//        }
-//
-//        list.appendChild(row);
-//    });
-//
-//    updateBreadcrumbs();
-//}
-//
-//// =====================================================
-//// BREADCRUMBS + NAV
-//// =====================================================
-//function goBack() {
-//    if (!backStack.length) return;
-//    forwardStack.push(currentPath);
-//    loadFiles(backStack.pop());
-//}
-//
-//function goForward() {
-//    if (!forwardStack.length) return;
-//    backStack.push(currentPath);
-//    loadFiles(forwardStack.pop());
-//}
-//
-//function updateBreadcrumbs() {
-//    const bc = document.getElementById("breadcrumbs");
-//    bc.innerHTML = "";
-//
-//    const parts = currentPath ? currentPath.split("/") : [];
-//    addBreadcrumb(bc, "root", "", parts.length === 0);
-//
-//    let acc = "";
-//    parts.forEach((p, i) => {
-//        bc.append("›");
-//        acc += (i ? "/" : "") + p;
-//        addBreadcrumb(bc, p, acc, i === parts.length - 1);
-//    });
-//}
-//
-//function addBreadcrumb(container, label, path, isLast) {
-//    const span = document.createElement("span");
-//    span.textContent = label;
-//    span.className = "bc-item";
-//    if (!isLast) span.onclick = () => loadFiles(path);
-//    container.appendChild(span);
-//}
-//
-//// =====================================================
-//// SIDEBAR HOVER
-//// =====================================================
-//document.addEventListener("DOMContentLoaded", () => {
-//    const sidebar = document.getElementById("sidebar");
-//    const content = document.getElementById("content");
-//    const leftZone = document.getElementById("left-zone");
-//
-//    setTimeout(() => {
-//        sidebar.classList.add("hidden");
-//        content.classList.add("expanded");
-//    }, 8000);
-//
-//    leftZone.onmouseenter = () => {
-//        sidebar.classList.remove("hidden");
-//        content.classList.remove("expanded");
-//    };
-//
-//    sidebar.onmouseleave = () => {
-//        sidebar.classList.add("hidden");
-//        content.classList.add("expanded");
-//    };
-//});
-//
-//// =====================================================
-//// TYPEWRITER
-//// =====================================================
-//document.addEventListener("DOMContentLoaded", () => {
-//    const text = "Εδώ μπορείτε να να πλοηγηθείτε σε φακέλους, και στα τελικά αρχεία xml";
-//    const output = document.getElementById("output");
-//    let i = 0;
-//
-//    (function type() {
-//        if (!output) return;
-//        if (i < text.length) {
-//            output.textContent += text[i++];
-//            setTimeout(type, 25);
-//        } else {
-//            setTimeout(() => {
-//                output.textContent = "";
-//                i = 0;
-//                type();
-//            }, 30000);
-//        }
-//    })();
-//});
-//
-//(async function restoreProgressIfNeeded() {
-//    try {
-//        const res = await fetch("/get_progress");
-//        const data = await res.json();
-//
-//        if (!data.phase || data.phase === "idle" || data.phase === "done") {
-//            return;
-//        }
-//
-//        showUploadPopup();
-//
-//        if (data.phase === "upload") {
-//            renderProgress(10, "Uploading ZIP...");
-//        }
-//
-//        if (data.phase === "unzip" && UploadState.phase !== "unzip") {
-//        UploadState.phase = "unzip";
-//        renderProgress(1, "Ξεκίνησε το unzip...");
-//        startZipProgress();
-//        }
-//
-//
-//        if (data.phase === "processing") {
-//            startProcessingProgress();
-//        }
-//
-//    } catch (e) {
-//        console.error("Restore progress failed", e);
-//    }
-//})();
+
 
 // =====================================================
 // GLOBAL STATE
@@ -687,17 +244,31 @@ document.addEventListener("DOMContentLoaded", () => {
             formData.append("index", index);
             formData.append("total", totalChunks);
 
-            const res = await fetch("/upload_zip_chunk", {
-                method: "POST",
-                body: formData
-            });
 
-            if (!res.ok) {
-                renderProgress(1, "Σφάλμα στο upload.");
-                stopPhasePolling();
-                setTimeout(hideUploadPopup, 2000);
-                return;
-            }
+            const res = await fetch("/upload_zip_chunk", {
+    method: "POST",
+    body: formData
+});
+
+// 1️⃣ HTTP-level error
+if (!res.ok) {
+    renderProgress(1, "Σφάλμα στο upload.");
+    stopPhasePolling();
+    setTimeout(hideUploadPopup, 2000);
+    return;
+}
+
+// 2️⃣ Parse JSON
+const data = await res.json();
+
+// 3️⃣ Duplicate ZIP detected (μόνο στο index == 0 από backend)
+if (data.already_exists) {
+    stopPhasePolling();
+    hideUploadPopup();
+    showDuplicateModal(data.message || "Το αρχείο έχει ήδη ανέβει.");
+    return; // ⛔ ΣΤΑΜΑΤΑΜΕ ΟΛΟ ΤΟ UPLOAD
+}
+
 
             const percent = ((index + 1) / totalChunks) * 100;
             UploadState.lastUploadPercent = Math.max(1, Math.min(100, percent));
@@ -708,6 +279,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // We do NOT force UI here; polling will switch phase.
         renderProgress(100, "Upload ολοκληρώθηκε. Αναμονή για unzip...");
     });
+
+
+
 
     // =====================================================
     // UPDATE CARDS
@@ -912,3 +486,25 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Restore progress failed", e);
     }
 })();
+
+function showDuplicateModal(message) {
+  const modal = document.getElementById("duplicateModal");
+  const msg = document.getElementById("duplicateModalMessage");
+
+  if (msg) {
+    msg.textContent = message || "Το αρχείο έχει ήδη ανέβει.";
+  }
+
+  if (modal) {
+    modal.style.display = "flex";
+  }
+}
+
+function hideDuplicateModal() {
+  const modal = document.getElementById("duplicateModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+document.getElementById("duplicateModalOk")?.addEventListener("click", hideDuplicateModal);

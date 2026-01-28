@@ -38,7 +38,7 @@ def find_kinds_in_folder(folder_path):
     return Counter(all_kinds)
 
 if __name__ == "__main__":
-    folder = r"C:/WPI/Aposibiesmena/EP"
+    folder = r"C:/WPI/Aposibiesmena/EP/20140101"
     kinds_count = find_kinds_in_folder(folder)
 
     if kinds_count:

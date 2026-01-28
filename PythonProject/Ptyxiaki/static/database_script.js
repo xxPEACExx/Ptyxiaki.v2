@@ -294,3 +294,40 @@ document.addEventListener("DOMContentLoaded", () => {
         content.classList.add("expanded");
     }
 });
+
+function getLastDidOnTable() {
+  const firstRow = document.querySelector("tbody tr");
+  if (!firstRow) return 0;
+
+  const didCell = firstRow.querySelector("td:nth-child(2)");
+  return didCell ? parseInt(didCell.textContent, 10) : 0;
+}
+
+function renderRow(row) {
+  const tr = document.createElement("tr");
+
+  tr.innerHTML = `
+    <td style="text-align:center;">
+      <input type="checkbox" class="rowDidCheckbox" data-did="${row[0]}">
+    </td>
+    <td>${row[0]}</td>
+    <td>${row[1]}</td>
+    <td>${row[2]}</td>
+    <td>${row[3]}</td>
+    <td>${row[4]}</td>
+    <td>${row[5]}</td>
+    <td>${row[6]}</td>
+    <td>${row[7]}</td>
+    <td>${row[8]}</td>
+    <td>${row[9]}</td>
+    <td>${row[10]}</td>
+    <td>${row[11]}</td>
+    <td>${row[12]}</td>
+    <td>${row[13]}</td>
+  `;
+
+  tr.style.opacity = "0";
+  tr.style.transition = "opacity 0.4s ease";
+
+  return tr;
+}

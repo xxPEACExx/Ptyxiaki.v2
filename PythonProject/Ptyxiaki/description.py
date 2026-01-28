@@ -1,58 +1,76 @@
+
 import logging
 import traceback
+import xml.etree.ElementTree as ET
 from collections import defaultdict
 
-from state import lang_mapping
+from lang import lang_mapping
 from loadsource import loadsource_mapping
-
 
 # --------------------------------------------------
 # LOGGING
 # --------------------------------------------------
+
+# errors.log → DB / logic errors
 logging.basicConfig(
     filename="errors.log",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+# bad_files.log → ONLY bad XML files
+bad_logger = logging.getLogger("bad_files")
+bad_logger.setLevel(logging.ERROR)
 
+bad_handler = logging.FileHandler("bad_files.log", encoding="utf-8")
+bad_handler.setFormatter(
+    logging.Formatter("%(asctime)s - %(message)s")
+)
+
+bad_logger.addHandler(bad_handler)
 
 # --------------------------------------------------
 # CREATE TABLE description
 # --------------------------------------------------
 def create_description_table(cursor, db):
     try:
+        print("[DEBUG] create_description_table: START")
+
+        print("[DEBUG] Disabling FOREIGN_KEY_CHECKS")
         cursor.execute("SET FOREIGN_KEY_CHECKS = 0")
+
+        print("[DEBUG] Dropping table description if exists")
         cursor.execute("DROP TABLE IF EXISTS description")
 
+        print("[DEBUG] Creating table description")
         cursor.execute("""
             CREATE TABLE description (
-                DEID INT NOT NULL AUTO_INCREMENT,
+                DEID INT UNSIGNED NOT NULL AUTO_INCREMENT,
                 DID INT UNSIGNED NOT NULL,
 
-                description_chars_count INT,
-                description_pars_count INT,
-                description_words_count INT,
+                description_chars_count INT UNSIGNED NOT NULL DEFAULT 0,
+                description_pars_count  INT UNSIGNED NOT NULL DEFAULT 0,
+                description_words_count INT UNSIGNED NOT NULL DEFAULT 0,
 
                 lang TINYINT UNSIGNED NOT NULL,
-                load_source TINYINT  NOT NULL,
+                load_source TINYINT UNSIGNED NOT NULL,
 
                 PRIMARY KEY (DEID),
-
                 UNIQUE KEY uq_description (DID, lang, load_source),
 
-                KEY idx_description_did (DID),
+                KEY idx_description_DID (DID),
                 KEY idx_description_lang (lang),
                 KEY idx_description_load_source (load_source),
 
                 CONSTRAINT fk_description_document
                     FOREIGN KEY (DID)
                     REFERENCES document (DID)
+                    ON UPDATE CASCADE
                     ON DELETE CASCADE,
 
                 CONSTRAINT fk_description_lang
                     FOREIGN KEY (lang)
-                    REFERENCES state (CID)
+                    REFERENCES lang (CID)
                     ON UPDATE CASCADE
                     ON DELETE RESTRICT,
 
@@ -64,38 +82,40 @@ def create_description_table(cursor, db):
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
         """)
 
+        print("[DEBUG] Enabling FOREIGN_KEY_CHECKS")
         cursor.execute("SET FOREIGN_KEY_CHECKS = 1")
+
         db.commit()
-
-        print("[OK] Ο πίνακας description δημιουργήθηκε")
-
+        print("[OK] Ο πίνακας description δημιουργήθηκε επιτυχώς")
 
     except Exception as e:
+        print("[ERROR] create_description_table FAILED")
+        print("[MYSQL ERROR]", e)
 
         db.rollback()
 
-        print("CREATE DESCRIPTION TABLE FAILED:")
-
-        print(e)
-
+        import logging
+        import traceback
         logging.error(
-
             "[DESCRIPTION_TABLE_CREATE_ERROR]\n%s",
-
             traceback.format_exc()
-
         )
 
         raise
 
 
 # --------------------------------------------------
-# INSERT description
+# INSERT description (DEFENSIVE & NULL-SAFE)
 # --------------------------------------------------
+
 def insert_description(did, root, cursor, db):
-    logging.debug("[DESC] enter insert_description | DID=%s", did)
-    if did is None or root is None:
-        return
+    logging.debug("[DESC] insert_description | DID=%s", did)
+
+    if did is None:
+        raise ValueError("DID is None")
+
+    if root is None:
+        raise ValueError("XML root is None")
 
     try:
         description_elems = root.findall(".//description")
@@ -104,14 +124,11 @@ def insert_description(did, root, cursor, db):
             "[DESCRIPTION_PARSE_ERROR]\n%s",
             traceback.format_exc()
         )
-        return
+        raise
 
     if not description_elems:
         return
 
-    # --------------------------------------------------
-    # Συλλογή κειμένου & παραγράφων ανά (lang, load_source)
-    # --------------------------------------------------
     texts_by_key = defaultdict(list)
     pars_by_key = defaultdict(int)
 
@@ -128,13 +145,9 @@ def insert_description(did, root, cursor, db):
 
         texts_by_key[(lang_code, load_source_attr)].append(text)
 
-        # μέτρηση παραγράφων
         p_count = len(desc.findall(".//p"))
         pars_by_key[(lang_code, load_source_attr)] += max(1, p_count)
 
-    # --------------------------------------------------
-    # INSERT / UPDATE ανά (lang, load_source)
-    # --------------------------------------------------
     try:
         for (lang_code, load_source_attr), texts in texts_by_key.items():
             lang_id = lang_mapping.get(lang_code)
@@ -142,12 +155,22 @@ def insert_description(did, root, cursor, db):
 
             if lang_id is None or load_source_id is None:
                 logging.warning(
-                    "[DESCRIPTION_SKIP] DID %s | lang=%s | load_source=%s",
+                    "[DESCRIPTION_SKIP] DID=%s lang=%s load_source=%s",
                     did, lang_code, load_source_attr
                 )
                 continue
 
             full_text = " ".join(texts)
+
+            # NULL-SAFE NORMALIZATION (covers all edge cases)
+            chars_count = len(full_text) if full_text else 0
+            words_count = len(full_text.split()) if full_text else 0
+            pars_count = pars_by_key.get(
+                (lang_code, load_source_attr), 0
+            )
+
+            if pars_count <= 0:
+                pars_count = 1
 
             cursor.execute("""
                 INSERT INTO description (
@@ -164,9 +187,9 @@ def insert_description(did, root, cursor, db):
                     description_words_count = VALUES(description_words_count)
             """, (
                 did,
-                len(full_text),
-                pars_by_key[(lang_code, load_source_attr)],
-                len(full_text.split()),
+                chars_count,
+                pars_count,
+                words_count,
                 lang_id,
                 load_source_id
             ))
@@ -176,8 +199,44 @@ def insert_description(did, root, cursor, db):
     except Exception:
         db.rollback()
         logging.error(
-            "[DESCRIPTION_INSERT_ERROR] DID %s\n%s",
+            "[DESCRIPTION_INSERT_ERROR] DID=%s\n%s",
             did,
             traceback.format_exc()
         )
         raise
+
+# --------------------------------------------------
+# MAIN XML BATCH PROCESSOR
+# --------------------------------------------------
+
+def process_xml_files(xml_files, cursor, db):
+    """
+    xml_files: iterable of (xml_file_path, did)
+    """
+
+    for xml_file, did in xml_files:
+        try:
+            with open(xml_file, "r", encoding="utf-8") as f:
+                xml_content = f.read()
+
+            # STRICT XML PARSING
+            try:
+                root = ET.fromstring(xml_content)
+            except Exception as e:
+                bad_logger.error(
+                    "XML PARSE ERROR | file=%s\n%s\n%s",
+                    xml_file,
+                    str(e),
+                    xml_content
+                )
+                continue  # ⬅️ ΠΑΕΙ ΣΤΟ ΕΠΟΜΕΝΟ XML
+
+            insert_description(did, root, cursor, db)
+
+        except Exception:
+            bad_logger.error(
+                "PROCESSING ERROR | file=%s\n%s",
+                xml_file,
+                traceback.format_exc()
+            )
+            continue  # ⬅️ ΠΑΕΙ ΣΤΟ ΕΠΟΜΕΝΟ XML

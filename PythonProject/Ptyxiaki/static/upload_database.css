@@ -1,0 +1,94 @@
+.upload-popup {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 290px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  border-radius: 16px;
+  z-index: 99999;
+}
+
+.hidden { display: none !important; }
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.circle-progress {
+  width: 74px;
+  height: 74px;
+  position: relative;
+}
+
+.circle-progress svg {
+  width: 74px;
+  height: 74px;
+  transform: rotate(-90deg);
+}
+
+.circle-progress circle {
+  fill: none;
+  stroke-width: 7;
+  stroke: #ddd;
+}
+
+#progress-circle {
+  stroke: #1a73e8;
+  stroke-linecap: round;
+  stroke-dasharray: 219;
+  stroke-dashoffset: 219;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+#upload-percent {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  font-weight: bold;
+}
+
+.upload-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.control-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.control-btn.danger {
+  background: #d93025;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.modal-actions {
+  text-align: right;
+  margin-top: 20px;
+}

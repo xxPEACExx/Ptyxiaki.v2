@@ -91,6 +91,10 @@ body {
 .content.expanded {
     margin-left: 0;
 }
+.content {
+  height: 100vh;
+  overflow: hidden;
+}
 
 
 /* =====================================================
@@ -439,7 +443,7 @@ table.results thead th {
 ================================ */
 
 .sql-used-textarea {
-    width: 50%;
+    width: 100%;
     min-height: 20px;          /* ⬅ πιο ψηλό */
 
     padding: 14px 16px;         /* ⬅ πιο "αέρας" μέσα */
@@ -497,3 +501,789 @@ table.results thead th {
     line-height: 1;
 }
 
+/* =====================================================
+   RESULTS TOOLBAR
+   ===================================================== */
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 16px;
+  margin-bottom: 8px;
+
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+
+  background-color: #f7f7f7;
+  font-size: 14px;
+}
+
+.results-toolbar * {
+  box-sizing: border-box;
+}
+
+.results-toolbar .toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.results-toolbar label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* =====================================================
+   PAGE SIZE SELECT
+   ===================================================== */
+
+.results-toolbar select {
+  padding: 6px 10px;
+  font-size: 14px;
+
+  border-radius: 6px;
+  border: 1px solid #bbb;
+
+  background-color: #ffffff;
+  color: #222;
+
+  cursor: pointer;
+}
+
+.results-toolbar select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+}
+
+/* =====================================================
+   RESULTS INFO TEXT
+   ===================================================== */
+
+.results-info {
+  color: #555;
+  font-size: 13px;
+}
+
+/* =====================================================
+   PAGINATION
+   ===================================================== */
+
+#pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  user-select: none;
+}
+
+/* Pagination buttons - base */
+#pagination button {
+  min-width: 36px;
+  height: 32px;
+
+  padding: 0 10px;
+
+  border-radius: 6px;
+  border: 1px solid #ccc;
+
+  background-color: #ffffff;
+  color: #333;
+
+  font-size: 13px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* Hover */
+#pagination button:hover {
+  background-color: #e9eef5;
+  border-color: #4a90e2;
+}
+
+/* Active page */
+#pagination button.active {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: #ffffff;
+  font-weight: 600;
+
+  cursor: default;
+}
+
+#pagination button.active:hover {
+  background-color: #4a90e2;
+}
+
+/* Disabled */
+#pagination button:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* =====================================================
+   DARK THEME
+   ===================================================== */
+
+body.dark-theme .results-toolbar {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-theme .results-toolbar label {
+  color: #ddd;
+}
+
+body.dark-theme .results-info {
+  color: #aaa;
+}
+
+body.dark-theme .results-toolbar select {
+  background-color: #2a2a2a;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-theme #pagination button {
+  background-color: #2a2a2a;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark-theme #pagination button:hover {
+  background-color: #3a3a3a;
+  border-color: #5aa0ff;
+}
+
+body.dark-theme #pagination button.active {
+  background-color: #5aa0ff;
+  border-color: #5aa0ff;
+  color: #000;
+}
+
+/* ===============================
+   WORKSPACE TABLE — DATABASE STYLE
+================================ */
+
+.workspace-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft, 0 18px 40px rgba(15,23,42,0.12));
+  overflow: hidden;
+}
+
+.workspace-table .table__body {
+  width: 100%;
+  padding: 0.75rem 1.2rem 1.2rem;
+}
+
+
+/* Force single-line cells */
+.workspace-table table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.workspace-table th,
+.workspace-table td {
+  padding: 0.65rem 0.75rem;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.workspace-table thead th {
+  background: #f3f4f8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-weight: 600;
+}
+
+.workspace-table table {
+  table-layout: auto !important;
+}
+
+/* ===== FILTERING SEARCH TABLE (FINAL) ===== */
+#tab-query #results-table-query table.filter-results {
+  border-collapse: collapse;
+  width: max-content;
+  min-width: 100%;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+#tab-query #results-table-query table.filter-results thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+  font-size: 12px;
+
+  padding: 10px 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+#tab-query #results-table-query table.filter-results td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  color: #111827;
+}
+
+#tab-query #results-table-query table.filter-results tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
+
+#tab-query #results-table-query table.filter-results tbody tr:hover {
+  background: rgba(37,99,235,0.08);
+}
+
+
+
+#tab-table #results-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f1f5f9;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 2px solid #e2e8f0;
+  z-index: 10;
+}
+
+#tab-table #results-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+#tab-table #results-table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
+
+#tab-table #results-table tbody tr:hover {
+  background: rgba(37,99,235,0.08);
+}
+
+/* =====================================================
+   SQL DIRECT – SAME BEHAVIOR AS FILTERING SEARCH (CLEAN)
+   ===================================================== */
+
+/* Το SQL Direct tab ΔΕΝ κάνει scroll (scroll κάνει μόνο ο πίνακας) */
+
+
+/* Flex layout για να "μείνει χώρος" για τον πίνακα */
+#tab-table .table-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+/* Ο πίνακας να παίρνει ό,τι απομένει */
+#tab-table .workspace-table {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* ΜΟΝΟ το table body scroll */
+#tab-table #results-table.table__body {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+/* Sticky header μέσα στο scroll container */
+#tab-table #results-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #f1f5f9;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* ===============================
+   FIX FILTERING SEARCH TABLE
+   =============================== */
+
+#tab-query .results-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#tab-query .results-table-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#tab-query .table-scroll-body {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+/* =========================================
+   FILTERING SEARCH — FINAL LAYOUT FIX
+   (με table-scroll-top + table-scroll-body)
+   ========================================= */
+
+/* ΜΟΝΟ το Filtering tab: να ΜΗΝ scroll-άρει το ίδιο */
+#tab-query.tab-content{
+  overflow: hidden;
+}
+
+/* Το layout να “γεμίζει” σωστά το ύψος του tab */
+#tab-query .search-layout{
+  height: 100%;
+  min-height: 0;
+}
+
+/* Δεξιά πλευρά (results) να είναι flex column */
+#tab-query .results-panel{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Wrapper του table να παίρνει όλο τον διαθέσιμο χώρο */
+#tab-query .results-table-wrapper{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Το πάνω “ψεύτικο” scroll bar */
+#tab-query .results-table-wrapper .table-scroll-top{
+  flex: 0 0 14px;
+}
+
+/* ΜΟΝΟ ΕΔΩ γίνεται το κάθετο + οριζόντιο scroll */
+#tab-query .results-table-wrapper .table-scroll-body{
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+/* Το div που γράφει ο JS (id=results-table-query) να μην σε περιορίζει */
+#tab-query #results-table-query{
+  overflow: visible;          /* το scroll το κάνει ο γονέας */
+  max-height: none !important;/* ακυρώνει τυχόν calc που έχεις αλλού */
+}
+
+/* ===============================
+   SQL DIRECT – RESULTS TOOLBAR (UI like Filtering Search)
+================================ */
+
+/* Results info */
+#tab-table #sql-results-info {
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* Pagination container */
+#tab-table #sql-pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Pagination buttons */
+#tab-table #sql-pagination button {
+  min-width: 36px;
+  height: 32px;
+  padding: 0 10px;
+
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  color: #333;
+
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+#tab-table #sql-pagination button:hover {
+  background-color: #e9eef5;
+  border-color: #4a90e2;
+}
+
+#tab-table #sql-pagination button.active {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: #fff;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* ===============================
+   DARK THEME
+================================ */
+
+body.dark-theme #tab-table #sql-results-info {
+  color: #aaa;
+}
+
+body.dark-theme #tab-table #sql-pagination button {
+  background-color: #2a2a2a;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark-theme #tab-table #sql-pagination button:hover {
+  background-color: #3a3a3a;
+  border-color: #5aa0ff;
+}
+
+body.dark-theme #tab-table #sql-pagination button.active {
+  background-color: #5aa0ff;
+  border-color: #5aa0ff;
+  color: #000;
+}
+
+/* =====================================================
+   SQL DIRECT – FIX RESULTS BAR ALIGNMENT
+   (same row like Filtering Search)
+===================================================== */
+
+
+/* κεντρικό text (1–100 από Χ) */
+#tab-table #sql-results-info {
+  text-align: center;
+}
+
+/* pagination δεξιά */
+#tab-table #sql-pagination {
+  justify-self: end;
+}
+/* =====================================================
+   SQL DIRECT – RESULTS BAR (COMPACT + CENTERED)
+===================================================== */
+
+#tab-table .sql-results-toolbar {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 8px 14px;          /* ⬅ πιο χαμηλό */
+  margin-bottom: 8px;
+
+  background-color: #f7f7f7;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+
+  font-size: 13px;            /* ⬅ λίγο πιο μικρό */
+}
+
+/* Results info */
+#tab-table #sql-results-info {
+  color: #555;
+  white-space: nowrap;
+}
+
+/* Pagination */
+#tab-table #sql-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;                   /* ⬅ πιο σφιχτό */
+}
+
+/* Pagination buttons – πιο compact */
+#tab-table #sql-pagination button {
+  min-width: 30px;
+  height: 28px;
+  padding: 0 8px;
+
+  font-size: 12px;
+
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Active */
+#tab-table #sql-pagination button.active {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== Dark theme ===== */
+body.dark-theme #tab-table .sql-results-toolbar {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-theme #tab-table #sql-results-info {
+  color: #aaa;
+}
+
+body.dark-theme #tab-table #sql-pagination button {
+  background-color: #2a2a2a;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark-theme #tab-table #sql-pagination button.active {
+  background-color: #5aa0ff;
+  border-color: #5aa0ff;
+  color: #000;
+}
+
+.sql-used-save-btn {
+  padding: 8px 18px;
+  margin-left: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  background: #f7f7f7;
+  color: #333;
+
+  cursor: pointer;
+}
+
+.sql-used-save-btn:hover {
+  background: #e9eef5;
+  border-color: #4a90e2;
+}
+
+.sql-saved-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sql-saved-bar select {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.sql-saved-bar button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.sql-saved-bar button:hover {
+  background: #e9eef5;
+}
+/* ===============================
+   SQL DIRECT – 3 COLUMN TOP BAR
+================================ */
+
+.table-top-row.three-cols {
+  display: grid;
+  grid-template-columns: 2.2fr 1.3fr 1.5fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Saved queries center column */
+.sql-saved-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sql-saved-bar select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.sql-saved-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.sql-saved-actions button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.sql-saved-actions button:hover {
+  background: #e9eef5;
+  border-color: #4a90e2;
+}
+
+/* Messages card */
+.table-messages {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+
+/* Center column: Saved Queries */
+#tab-table .table-card select#saved-sql-select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.sql-saved-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.sql-saved-actions button {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.sql-saved-actions button:hover {
+  background: #e9eef5;
+  border-color: #4a90e2;
+}
+.table-top-row.three-cols {
+  align-items: stretch;
+}
+/* ===== SQL DIRECT: 3 COLUMN LAYOUT ===== */
+.table-top-row.three-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+/* Saved queries column */
+#saved-sql-select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Buttons under dropdown */
+.sql-saved-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.sql-saved-actions button {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.sql-saved-actions button:hover {
+  background: #e9eef5;
+  border-color: #4a90e2;
+}
+
+/* Ensure textarea fills column */
+.sql-used-textarea {
+  width: 100%;
+}
+
+/* Messages column height */
+.table-messages {
+  flex: 1;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-card {
+  background: var(--bg-panel, #fff);
+  border-radius: 14px;
+  padding: 20px;
+  width: 360px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
+}
+
+.modal-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions .primary {
+  background: #2f80ed;
+  color: white;
+}
