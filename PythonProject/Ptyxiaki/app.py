@@ -187,6 +187,7 @@ def calculate_month_stats_from_db(cursor, year=None):
 # trexei ola ta xml, kai ta epexergazetai ena ena
 def process_files(files):
     global running, paused, stopped, progress_percentage,current_phase
+    global processing_finished
 
     thread_db = None
     thread_cursor = None
@@ -270,11 +271,14 @@ def process_files(files):
         with processing_lock:
             running = False
             paused = False
+            processing_finished = True
             if stopped:
                 current_phase = "stopped"
             else:
                 progress_percentage = 100
                 current_phase = "done"
+
+
 
         logging.info("🧹 Τέλος processing thread.")
 
