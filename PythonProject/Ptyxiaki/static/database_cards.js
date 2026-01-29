@@ -36,19 +36,38 @@ async function fetchDatabaseSummary(force = false) {
 
 function applySummary(data) {
   const elDocs = document.getElementById("stat-documents");
-  const elFolders = document.getElementById("stat-folders");
   const elLast = document.getElementById("stat-last-update");
+  const elFpm  = document.getElementById("stat-files-per-minute");
 
-  if (!elDocs || !elFolders || !elLast) return;
+  if (!elDocs || !elLast) return;
 
   elDocs.textContent = data.documents ?? "0";
-  elFolders.textContent = data.folders ?? "0";
 
   lastSummaryTs = Number(data.timestamp || 0);
   elLast.textContent = lastSummaryTs
     ? new Date(lastSummaryTs * 1000).toLocaleString("el-GR")
     : "–";
+
+  if (elFpm) {
+    elFpm.textContent =
+      data.files_per_minute != null
+        ? data.files_per_minute
+        : "–";
+  }
+
+  const elInserted = document.getElementById("stat-last-inserted");
+  if (elInserted) {
+    elInserted.textContent =
+      data.last_inserted != null ? data.last_inserted : "–";
+  }
+
+  const elDuration = document.getElementById("stat-duration");
+  if (elDuration) {
+    elDuration.textContent =
+      data.last_duration != null ? `${data.last_duration}s` : "–";
+  }
 }
+
 
 /* ===========================
    HUMAN TIME BUCKETS

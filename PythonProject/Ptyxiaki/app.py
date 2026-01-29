@@ -83,6 +83,13 @@ current_phase = "idle"
 batch_count = 0
 processing_finished = False
 
+processing_started_at = None
+processing_ended_at = None
+
+documents_before_processing = 0
+last_inserted_count = 0
+
+
 
 
 
@@ -189,6 +196,8 @@ def process_files(files):
     global running, paused, stopped, progress_percentage,current_phase
     global processing_finished
 
+    global processing_ended_at, last_inserted_count, documents_before_processing
+
     thread_db = None
     thread_cursor = None
 
@@ -271,14 +280,24 @@ def process_files(files):
         with processing_lock:
             running = False
             paused = False
+            processing_ended_at = time.time()
             processing_finished = True
+
             if stopped:
                 current_phase = "stopped"
             else:
                 progress_percentage = 100
                 current_phase = "done"
 
+        conn, cur = get_db_cursor()
+        cur.execute("SELECT COUNT(*) FROM document")
+        documents_after = cur.fetchone()[0]
+        cur.close()
+        conn.close()
 
+        last_inserted_count = documents_after - documents_before_processing
+        if last_inserted_count < 0:
+            last_inserted_count = 0
 
         logging.info("🧹 Τέλος processing thread.")
 
@@ -288,6 +307,14 @@ def process_files(files):
 def start_processing_thread(files):
     global processing_thread, running, paused, stopped, progress_percentage
     global processing_finished
+    global processing_started_at, processing_ended_at
+    global documents_before_processing
+
+    conn, cur = get_db_cursor()
+    cur.execute("SELECT COUNT(*) FROM document")
+    documents_before_processing = cur.fetchone()[0]
+    cur.close()
+    conn.close()
 
     with processing_lock:
         if running:
@@ -299,6 +326,9 @@ def start_processing_thread(files):
         progress_percentage = 0
         current_phase = "processing"
         processing_finished = False
+
+        processing_started_at = time.time()
+        processing_ended_at = None
 
     processing_thread = threading.Thread(
         target=process_files,
@@ -1658,10 +1688,21 @@ def database_summary():
             if root != base
         )
 
+        duration = None
+        if processing_started_at and processing_ended_at:
+            duration = int(processing_ended_at - processing_started_at)
+
+        files_per_minute = None
+        if duration and duration > 0 and last_inserted_count > 0:
+            files_per_minute = int((last_inserted_count * 60) / duration)
+
         return jsonify({
             "documents": documents,
             "folders": folders,
-            "timestamp": int(time.time())
+            "timestamp": int(time.time()),
+            "last_duration": duration,
+            "last_inserted": last_inserted_count,
+            "files_per_minute": files_per_minute
         })
     finally:
         cur.close()
