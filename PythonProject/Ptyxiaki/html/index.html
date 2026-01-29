@@ -9,6 +9,10 @@
   <script src="{{ url_for('static', filename='popup.js') }}" defer></script>
   <script src="{{ url_for('static', filename='upload.js') }}" defer></script>
   <script src="{{ url_for('static', filename='base.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 
 
 
@@ -23,14 +27,12 @@
     <aside class="sidebar" id="sidebar">
 
       <h2 class="logo"> 🎓 Database Migration</h2>
-        <br>
-        <button class="button-33" role="button">Ανέβασμα Αρχείου</button>
-        <br>
+
 
       <nav>
 
         <ul class="menu" >
-          <li class="active">🏠︎ About</li>
+          <li class="active">🖥️ Dashboard</li>
           <li onclick="window.location.href='/database'">⛁ Migration</li>
           <li onclick="window.location.href='/information'">ⓘ DB Statistics</li>
           <li onclick="window.location.href='/workspace'">📈 DB Search</li>
@@ -62,12 +64,65 @@
 
         <section class="cards">
 
+            <div class="card">
+            <div id="output"></div>
+            </div>
+        </section>
 
-    <div class="card">
-        <div id="output"></div>
+        <section class="dashboard-grid">
 
-    </div>
+  <!-- 1. Σύνολο Patents -->
+  <div class="card stat-card primary">
+    <div class="stat-value" id="total-docs"> No data yet</div>
+    <div class="stat-label">Σύνολο Patents</div>
+  </div>
+
+  <!-- 2. Χώρες / Οργανισμοί (Donut) -->
+  <div class="card stat-card">
+    <div class="card-title">Χώρες / Οργανισμοί</div>
+    <canvas id="countriesChart" height="120"></canvas>
+    <div class="legend" id="countriesLegend"></div>
+  </div>
+
+  <!-- 3. Εύρος ημερομηνιών -->
+  <div class="card stat-card">
+    <div class="stat-value" id="date-range">—</div>
+    <div class="stat-label">Χρονική κάλυψη</div>
+  </div>
+
+  <!-- 4. Μοναδικοί Applicants -->
+  <div class="card stat-card">
+    <div class="stat-value" id="unique-applicants">0</div>
+    <div class="stat-label">Μοναδικοί αιτούντες</div>
+  </div>
+
+  <!-- 5. Max Claims -->
+  <div class="card stat-card">
+    <div class="stat-value" id="max-claims">0</div>
+    <div class="stat-label">Μέγιστος αριθμός claims</div>
+  </div>
+
+  <!-- 6. Γλώσσες -->
+  <div class="card stat-card">
+    <div class="stat-value" id="languages-count">0</div>
+    <div class="stat-label">Διαθέσιμες γλώσσες</div>
+  </div>
+
+  <!-- 7. Έγγραφα με description -->
+  <div class="card stat-card">
+    <div class="stat-value" id="docs-with-description">0</div>
+    <div class="stat-label">Με πλήρη περιγραφή</div>
+  </div>
+
+  <!-- 8. Multilingual titles -->
+  <div class="card stat-card">
+    <div class="stat-value" id="multi-lang-titles">0</div>
+    <div class="stat-label">Τίτλοι > 1 γλώσσα</div>
+  </div>
+
 </section>
+
+
 
 <section class="cards">
 

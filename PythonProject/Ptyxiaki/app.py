@@ -1902,6 +1902,89 @@ def rename_sql_query(sid):
 
 
 
+@app.get("/api/overview")
+def api_overview():
+    conn, cur = get_db_cursor()
+    try:
+        # 1. Σύνολο documents
+        cur.execute("SELECT COUNT(*) FROM document")
+        total_documents = cur.fetchone()[0]
+
+        # 2. Χώρες / Οργανισμοί
+        cur.execute("""
+            SELECT c.name, COUNT(*)
+            FROM document d
+            JOIN country c ON c.CID = d.country
+            GROUP BY c.name
+        """)
+        countries = {row[0]: row[1] for row in cur.fetchall()}
+
+        # 3. Εύρος ημερομηνιών
+        cur.execute("""
+            SELECT MIN(YEAR(date)), MAX(YEAR(date))
+            FROM document
+            WHERE date IS NOT NULL
+        """)
+        min_year, max_year = cur.fetchone()
+
+        # 4. Μοναδικοί applicants
+        cur.execute("""
+            SELECT COUNT(DISTINCT PID)
+            FROM parties
+            WHERE role = 1
+        """)
+        unique_applicants = cur.fetchone()[0]
+
+        # 5. Max claims
+        cur.execute("SELECT MAX(how_many_claims) FROM document")
+        max_claims = cur.fetchone()[0] or 0
+
+        # 6. Πλήθος γλωσσών
+        cur.execute("SELECT COUNT(DISTINCT lang) FROM document")
+        languages_count = cur.fetchone()[0]
+
+        # 7. Έγγραφα με description
+        cur.execute("""
+            SELECT COUNT(*)
+            FROM document
+            WHERE size_description_pars IS NOT NULL
+              AND size_description_pars > 0
+        """)
+        documents_with_description = cur.fetchone()[0]
+
+        # 8. Multilingual titles
+        cur.execute("""
+            SELECT COUNT(*)
+            FROM (
+                SELECT DID
+                FROM title
+                GROUP BY DID
+                HAVING COUNT(DISTINCT lang) > 1
+            ) t
+        """)
+        multilingual_titles = cur.fetchone()[0]
+
+        return jsonify({
+            "total_documents": total_documents,
+            "countries": countries,
+            "date_range": {
+                "min": min_year,
+                "max": max_year
+            },
+            "unique_applicants": unique_applicants,
+            "max_claims": max_claims,
+            "languages_count": languages_count,
+            "documents_with_description": documents_with_description,
+            "multilingual_titles": multilingual_titles
+        })
+
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+
 if __name__ == "__main__":
     try:
 
