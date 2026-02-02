@@ -5,6 +5,7 @@ let sqlColumns = [];
 let sqlPage = 1;
 let sqlPageSize = 100;
 
+
 window.setSqlResults = function (columns, rows) {
   sqlColumns = columns;
   sqlAllRows = rows;
@@ -38,8 +39,15 @@ function renderSqlPage() {
     return;
   }
 
-  const from = (sqlPage - 1) * sqlPageSize;
-  const to = Math.min(from + sqlPageSize, total);
+  let from, to;
+
+  if (sqlPageSize === "all") {
+    from = 0;
+    to = total;
+  } else {
+    from = (sqlPage - 1) * sqlPageSize;
+    to = Math.min(from + sqlPageSize, total);
+  }
 
   let html = "<table class='sql-results'><thead><tr>";
   sqlColumns.forEach(c => html += `<th>${sqlEscapeHtml(c)}</th>`);
@@ -54,17 +62,27 @@ function renderSqlPage() {
   html += "</tbody></table>";
   resultsBox.innerHTML = html;
 
-  infoBox.innerHTML = `
-    <strong>${from + 1}–${to}</strong> από
-    <strong>${total}</strong> αποτελέσματα
-  `;
-
-  renderSqlPagination(total);
+  if (sqlPageSize === "all") {
+    infoBox.innerHTML = `
+      <strong>1–${total}</strong> από
+      <strong>${total}</strong> αποτελέσματα
+    `;
+    paginationBox.innerHTML = "";
+  } else {
+    infoBox.innerHTML = `
+      <strong>${from + 1}–${to}</strong> από
+      <strong>${total}</strong> αποτελέσματα
+    `;
+    renderSqlPagination(total);
+  }
 }
 
 function renderSqlPagination(total) {
   const box = document.getElementById("sql-pagination");
-  if (!box) return;
+  if (!box || sqlPageSize === "all") {
+    if (box) box.innerHTML = "";
+    return;
+  }
 
   const pages = Math.ceil(total / sqlPageSize);
   box.innerHTML = "";
@@ -103,19 +121,21 @@ function renderSqlPagination(total) {
   }
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const sel = document.getElementById("sqlPageSize");
   if (!sel) return;
 
-  sqlPageSize = Number(sel.value) || 100;
+  const initVal = sel.value;
+  sqlPageSize = initVal === "all" ? "all" : Number(initVal) || 100;
 
   sel.addEventListener("change", () => {
-    sqlPageSize = Number(sel.value);
+    const val = sel.value;
+    sqlPageSize = val === "all" ? "all" : Number(val);
     sqlPage = 1;
     renderSqlPage();
   });
 });
-
 
 function syncSqlHorizontalScroll() {
   const body = document.getElementById("sql-scroll-body");

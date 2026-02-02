@@ -26,7 +26,7 @@
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
 
-    <h2 class="logo">🎓 Database <br> Migration</h2>
+    <h2 class="logo"><img src="static/images/database_basic.png"  class="icon">Database Migration</h2>
 
     <nav>
         <ul class="menu">
@@ -129,9 +129,11 @@
     <label>
       Results per page:
       <select id="pageSizeSelect">
-        <option value="100">100</option>
-        <option value="1000" selected>1.000</option>
+
+        <option value="1000" selected>1000</option>
         <option value="10000">10.000</option>
+        <option value="all">Show All</option>
+
       </select>
     </label>
   </div>
@@ -196,7 +198,7 @@
     </select>
 
     <div class="sql-saved-actions">
-      <button type="button" id="load-sql-btn">Load</button>
+      <button type="button" id="load-sql-btn">Reset</button>
       <button type="button" id="rename-sql-btn">Rename</button>
       <button type="button" id="delete-sql-btn">Delete</button>
     </div>
@@ -217,9 +219,12 @@
       <label>
         Results per page:
         <select id="sqlPageSize">
-          <option value="50">50</option>
-          <option value="100" selected>100</option>
-          <option value="500">500</option>
+
+          <option value="1000" selected>1.000</option>
+          <option value="10000">10.000</option>
+          <option value="all">Show All</option>
+
+
         </select>
       </label>
     </div>

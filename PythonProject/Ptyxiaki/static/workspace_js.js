@@ -116,16 +116,25 @@ function updateQuerySummary() {
 // =====================================================
 // PAGE SIZE SELECTOR (NEW)
 // =====================================================
+
 const pageSizeSelect = document.getElementById("pageSizeSelect");
 if (pageSizeSelect) {
   pageSizeSelect.value = String(pageSize);
 
   pageSizeSelect.addEventListener("change", () => {
-    pageSize = Math.min(parseInt(pageSizeSelect.value, 10) || 1000, 10000);
+    const val = pageSizeSelect.value;
+
+    if (val === "all") {
+      pageSize = "all";
+    } else {
+      pageSize = Math.min(parseInt(val, 10) || 1000, 10000);
+    }
+
     currentPage = 1;
     if (lastQueryCriteria) runSearch();
   });
 }
+
 
 // =====================================================
 // RUN SEARCH
@@ -203,9 +212,11 @@ console.log("results-table-query elements:", document.querySelectorAll("#results
 // =====================================================
 // PAGINATION
 // =====================================================
+
 function renderPagination(page, total) {
   const container = document.getElementById("pagination");
-  if (!container || total <= 1) {
+
+  if (!container || total <= 1 || pageSize === "all") {
     if (container) container.innerHTML = "";
     return;
   }
@@ -633,6 +644,17 @@ function updateResultsInfo() {
     return;
   }
 
+  // ✅ ΕΙΔΙΚΗ ΠΕΡΙΠΤΩΣΗ: ALL
+  if (pageSize === "all") {
+    box.innerHTML = `
+      <strong>1–${totalRows.toLocaleString()}</strong>
+      από
+      <strong>${totalRows.toLocaleString()}</strong>
+      αποτελέσματα
+    `;
+    return;
+  }
+
   const from = (currentPage - 1) * pageSize + 1;
   const to = Math.min(currentPage * pageSize, totalRows);
 
@@ -643,6 +665,7 @@ function updateResultsInfo() {
     αποτελέσματα
   `;
 }
+
 
 function runQueryAJAX(form) {
   const textarea = form.querySelector("textarea[name='sql_input']");
@@ -686,7 +709,6 @@ function runQueryAJAX(form) {
   return false; // ⬅️ ΑΠΑΡΑΙΤΗΤΟ για να μην γίνει submit
 }
 
-
 function renderSqlPage() {
   const resultsBox = document.getElementById("results-table");
   const infoBox = document.getElementById("sql-results-info");
@@ -694,11 +716,21 @@ function renderSqlPage() {
 
   if (!total) {
     resultsBox.innerHTML = "No results.";
+    if (infoBox) infoBox.innerHTML = "";
+    const pag = document.getElementById("sql-pagination");
+    if (pag) pag.innerHTML = "";
     return;
   }
 
-  const from = (sqlPage - 1) * sqlPageSize;
-  const to = Math.min(from + sqlPageSize, total);
+  let from, to;
+
+  if (sqlPageSize === "all") {
+    from = 0;
+    to = total;
+  } else {
+    from = (sqlPage - 1) * sqlPageSize;
+    to = Math.min(from + sqlPageSize, total);
+  }
 
   let html = "<table class='sql-results'><thead><tr>";
   sqlColumns.forEach(c => html += `<th>${c}</th>`);
@@ -713,16 +745,37 @@ function renderSqlPage() {
   html += "</tbody></table>";
   resultsBox.innerHTML = html;
 
-  infoBox.innerHTML = `
-    <strong>${from + 1}–${to}</strong> από
-    <strong>${total}</strong> αποτελέσματα
-  `;
+  if (infoBox) {
+    if (sqlPageSize === "all") {
+      infoBox.innerHTML = `
+        <strong>1–${total}</strong> από
+        <strong>${total}</strong> αποτελέσματα
+      `;
+    } else {
+      infoBox.innerHTML = `
+        <strong>${from + 1}–${to}</strong> από
+        <strong>${total}</strong> αποτελέσματα
+      `;
+    }
+  }
 
-  renderSqlPagination(total);
+  if (sqlPageSize === "all") {
+    const pag = document.getElementById("sql-pagination");
+    if (pag) pag.innerHTML = "";
+  } else {
+    renderSqlPagination(total);
+  }
 }
+
 
 function renderSqlPagination(total) {
   const box = document.getElementById("sql-pagination");
+
+  if (sqlPageSize === "all") {
+    if (box) box.innerHTML = "";
+    return;
+  }
+
   const pages = Math.ceil(total / sqlPageSize);
 
   box.innerHTML = "";
@@ -751,11 +804,20 @@ function renderSqlPagination(total) {
   });
 }
 
+
 document.getElementById("sqlPageSize").addEventListener("change", e => {
-  sqlPageSize = Number(e.target.value);
+  const val = e.target.value;
+
+  if (val === "all") {
+    sqlPageSize = "all";
+  } else {
+    sqlPageSize = Number(val);
+  }
+
   sqlPage = 1;
   renderSqlPage();
 });
+
 
 
 function openModal({ title, placeholder, value = "", message, onConfirm }) {

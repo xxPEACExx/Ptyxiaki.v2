@@ -1058,7 +1058,6 @@ def workspace_ajax():
         "elapsed": elapsed,
         "row_count": len(rows or [])
     }
-
 @app.post("/api/search")
 def api_search():
     conn, cur = get_db_cursor()
@@ -1066,31 +1065,46 @@ def api_search():
         payload = request.get_json(silent=True) or {}
         criteria = payload.get("criteria", payload)
 
-
+        # -----------------------------
+        # Helpers
+        # -----------------------------
         def as_int(x):
             try:
                 return int(x)
             except:
                 return None
 
+        # -----------------------------
+        # Pagination
+        # -----------------------------
         page = as_int(payload.get("page")) or 1
         if page < 1:
             page = 1
 
-        page_size = as_int(payload.get("page_size")) or 500
+        raw_page_size = payload.get("page_size")
 
-        # allow-list sizes (recommended)
         allowed_sizes = {10, 100, 1000, 10000}
-        if page_size not in allowed_sizes:
-            # fallback safely
-            page_size = 500
+        ALL_HARD_CAP = 50000
 
-        # hard cap
-        page_size = max(1, min(page_size, 10000))
+        if raw_page_size == "all":
+            page_size = ALL_HARD_CAP
+            page = 1
+            offset = 0
+            is_all = True
+        else:
+            page_size = as_int(raw_page_size) or 500
 
-        offset = (page - 1) * page_size
+            if page_size not in allowed_sizes:
+                page_size = 500
 
+            # hard cap (μόνο για non-all)
+            page_size = max(1, min(page_size, 10000))
+            offset = (page - 1) * page_size
+            is_all = False
 
+        # -----------------------------
+        # WHERE clause
+        # -----------------------------
         where = []
         params = []
 
@@ -1106,7 +1120,7 @@ def api_search():
             where.append("d.date <= %s")
             params.append(f"{yt}-12-31")
 
-        # STATE FILTER (στον κώδικά σου λέγεται state αλλά πάει στο d.lang)
+        # STATE FILTER (mapped to d.lang)
         raw_states = criteria.get("state")
         if raw_states:
             if not isinstance(raw_states, list):
@@ -1128,9 +1142,10 @@ def api_search():
                     "rows": [],
                     "row_count": 0,
                     "page": page,
-                    "page_size": page_size,
+                    "page_size": "all" if is_all else page_size,
                     "total_rows": 0,
                     "total_pages": 1,
+                    "is_all": is_all,
                     "error": None,
                     "elapsed": 0.0
                 })
@@ -1169,53 +1184,48 @@ def api_search():
                       AND a.abstract_words_count >= %s
                 )
             """)
-
             params.append(maw)
 
         where_sql = " WHERE " + " AND ".join(where) if where else ""
 
         # -----------------------------
-        # 3) COUNT query (for pages)
+        # COUNT query
         # -----------------------------
         count_sql = f"""
             SELECT COUNT(*)
             FROM document d
             {where_sql}
-
-            """
+        """
         cur.execute(count_sql, params)
         total_rows = int(cur.fetchone()[0] or 0)
-        total_pages = max(1, (total_rows + page_size - 1) // page_size)
 
-        # clamp page if beyond total_pages
-        if page > total_pages:
-            page = total_pages
-            offset = (page - 1) * page_size
+        total_pages = 1 if is_all else max(
+            1, (total_rows + page_size - 1) // page_size
+        )
 
         # -----------------------------
-        # 4) Data query
+        # DATA query
         # -----------------------------
         data_sql = f"""
             SELECT
-    d.DID,
-    d.ucid,
-    d.doc_number,
-    d.date,
-    d.family_id,
-    d.status,
-    k.name AS kind_name,
-    c.name AS country_name,
-    l.name AS lang_name,
-    d.how_many_claims,
-    d.date_produced
-FROM document d
-LEFT JOIN kind     k ON k.KID = d.kind
-LEFT JOIN country  c ON c.CID = d.country
-LEFT JOIN lang     l ON l.CID = d.lang
-{where_sql}
-ORDER BY d.DID ASC
-LIMIT %s OFFSET %s
-
+                d.DID,
+                d.ucid,
+                d.doc_number,
+                d.date,
+                d.family_id,
+                d.status,
+                k.name AS kind_name,
+                c.name AS country_name,
+                l.name AS lang_name,
+                d.how_many_claims,
+                d.date_produced
+            FROM document d
+            LEFT JOIN kind     k ON k.KID = d.kind
+            LEFT JOIN country  c ON c.CID = d.country
+            LEFT JOIN lang     l ON l.CID = d.lang
+            {where_sql}
+            ORDER BY d.DID ASC
+            LIMIT %s OFFSET %s
         """
         cur.execute(data_sql, params + [page_size, offset])
         rows = cur.fetchall()
@@ -1226,9 +1236,10 @@ LIMIT %s OFFSET %s
             "rows": rows,
             "row_count": len(rows),
             "page": page,
-            "page_size": page_size,
+            "page_size": "all" if is_all else page_size,
             "total_rows": total_rows,
             "total_pages": total_pages,
+            "is_all": is_all,
             "error": None,
             "elapsed": 0.0
         })
@@ -1243,6 +1254,7 @@ LIMIT %s OFFSET %s
             "page_size": 500,
             "total_rows": 0,
             "total_pages": 1,
+            "is_all": False,
             "error": str(e),
             "elapsed": 0.0
         }), 500
@@ -1250,6 +1262,7 @@ LIMIT %s OFFSET %s
     finally:
         cur.close()
         conn.close()
+
 
 
 
@@ -2046,7 +2059,7 @@ if __name__ == "__main__":
 
         create_saved_sql_queries_table(cursor, db)
 
-        app.run(debug=False, threaded=True)
+        app.run(debug=True)
 
     except Exception as e:
         logging.critical(f" Πρόβλημα κάτα την εκκίνηση: {e}")
