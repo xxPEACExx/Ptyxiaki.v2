@@ -1,12 +1,25 @@
+let activeDelete = null;
+
+const TOTAL_ROWS = parseInt(
+  document.body.dataset.totalRows || "0",
+  10
+);
+
+
 (function () {
-  function $(id) { return document.getElementById(id); }
-  function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  function qsa(sel) {
+    return Array.from(document.querySelectorAll(sel));
+  }
 
   let deleteMode = null;
-  let undoTimer = null;
-  let pendingDeletePayload = null;
-  let hiddenRows = [];
 
+  // -------------------------
+  // Helpers
+  // -------------------------
   function getSelectedDidsOnPage() {
     return qsa(".rowDidCheckbox:checked")
       .map(cb => parseInt(cb.dataset.did, 10))
@@ -16,10 +29,13 @@
   function updateDeleteButtonState() {
     const btn = $("deleteSelectedBtn");
     if (!btn) return;
-    btn.disabled = !deleteMode;
-    btn.classList.toggle("enabled", !!deleteMode);
+    btn.disabled = !deleteMode || !!activeDelete;
+    btn.classList.toggle("enabled", !!deleteMode && !activeDelete);
   }
 
+  // -------------------------
+  // Modal
+  // -------------------------
   function openModal(text) {
     $("deleteConfirmText").textContent = text;
     $("deleteConfirmModal").style.display = "flex";
@@ -29,6 +45,9 @@
     $("deleteConfirmModal").style.display = "none";
   }
 
+  // -------------------------
+  // Undo Toast
+  // -------------------------
   function showUndoToast(count) {
     removeUndoToast();
 
@@ -41,7 +60,6 @@
     `;
 
     document.body.appendChild(toast);
-
     $("undoBtn").addEventListener("click", undoDelete);
   }
 
@@ -49,31 +67,27 @@
     $("undoToast")?.remove();
   }
 
+  // -------------------------
+  // UI row helpers
+  // -------------------------
   function hideRow(row) {
     row.classList.add("table-row-fadeout");
     setTimeout(() => {
       row.style.display = "none";
-    }, 350);
+    }, 300);
   }
 
-  function restoreRows() {
-    hiddenRows.forEach(row => {
-      row.style.display = "";
-      requestAnimationFrame(() => {
-        row.classList.remove("table-row-fadeout");
-      });
-    });
-    hiddenRows = [];
-  }
-
-  async function commitDelete() {
-    if (!pendingDeletePayload) return;
+  // -------------------------
+  // Backend commit
+  // -------------------------
+  async function commitDelete(deleteAction) {
+    if (!deleteAction) return;
 
     try {
       await fetch("/api/documents/delete", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pendingDeletePayload)
+        body: JSON.stringify(deleteAction.payload)
       });
 
       if (window.invalidateSummaryCache) invalidateSummaryCache();
@@ -83,46 +97,95 @@
       console.error("Delete failed", e);
     }
 
-    pendingDeletePayload = null;
     removeUndoToast();
+    deleteMode = null;
+    updateDeleteButtonState();
   }
 
+  // -------------------------
+  // Undo (ΜΟΝΟ τελευταίο delete)
+  // -------------------------
   function undoDelete() {
-    clearTimeout(undoTimer);
-    restoreRows();
-    pendingDeletePayload = null;
+    if (!activeDelete) return;
+
+    clearTimeout(activeDelete.timer);
+
+    activeDelete.rows.forEach(row => {
+      row.style.display = "";
+      requestAnimationFrame(() => {
+        row.classList.remove("table-row-fadeout");
+      });
+    });
+
+    activeDelete = null;
     removeUndoToast();
+    deleteMode = null;
+    updateDeleteButtonState();
   }
 
+  // -------------------------
+  // Prepare Delete (CORE)
+  // -------------------------
   function prepareDelete() {
+    // ❌ ΜΗΝ επιτρέπεις νέο delete αν υπάρχει undo
+    if (activeDelete) return;
+
     let payload;
+    let rowsToHide = [];
 
     if (deleteMode === "all") {
       payload = { mode: "all" };
-      hiddenRows = qsa("tbody tr");
+      rowsToHide = qsa("tbody tr").filter(row => row.style.display !== "none");
+
     } else if (deleteMode === "selected") {
       const dids = getSelectedDidsOnPage();
       if (!dids.length) return;
+
       payload = { mode: "selected", dids };
-      hiddenRows = dids
+      rowsToHide = dids
         .map(did => document.querySelector(`tr[data-did="${did}"]`))
         .filter(Boolean);
+
     } else {
       return;
     }
 
-    hiddenRows.forEach(hideRow);
+    // UI hide
+    rowsToHide.forEach(hideRow);
 
-    pendingDeletePayload = payload;
-    showUndoToast(hiddenRows.length);
+    // Καθάρισε checkboxes
+    qsa(".rowDidCheckbox").forEach(cb => cb.checked = false);
+    $("selectAllDids").checked = false;
 
-    undoTimer = setTimeout(commitDelete, 5000);
+    // Δέσε ΤΟ delete
+    activeDelete = {
+      payload,
+      rows: rowsToHide,
+      timer: null
+    };
+
+    const undoCount =
+  deleteMode === "all"
+    ? TOTAL_ROWS
+    : rowsToHide.length;
+
+showUndoToast(undoCount);
+
+
+    // Commit μετά από 5s
+    activeDelete.timer = setTimeout(() => {
+      commitDelete(activeDelete);
+      activeDelete = null;
+    }, 5000);
 
     closeModal();
     deleteMode = null;
     updateDeleteButtonState();
   }
 
+  // -------------------------
+  // Events
+  // -------------------------
   document.addEventListener("DOMContentLoaded", () => {
     const selectAll = $("selectAllDids");
     const deleteBtn = $("deleteSelectedBtn");
@@ -152,7 +215,9 @@
       if (deleteMode === "all") {
         openModal("Θέλετε να διαγράψετε ΟΛΕΣ τις εγγραφές;");
       } else if (deleteMode === "selected") {
-        openModal(`Θέλετε να διαγράψετε ${getSelectedDidsOnPage().length} εγγραφές;`);
+        openModal(
+          `Θέλετε να διαγράψετε ${getSelectedDidsOnPage().length} εγγραφές;`
+        );
       }
     });
 

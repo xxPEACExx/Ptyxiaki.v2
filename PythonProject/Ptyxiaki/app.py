@@ -1791,6 +1791,45 @@ def api_documents_delete():
             pass
 
 
+@app.post("/api/documents/delete-count")
+def api_documents_delete_count():
+    payload = request.get_json(silent=True) or {}
+    mode = (payload.get("mode") or "").strip().lower()
+
+    conn, cur = get_db_cursor()
+    try:
+        if mode == "selected":
+            dids = payload.get("dids", [])
+            if not isinstance(dids, list) or not dids:
+                return jsonify({"count": 0})
+
+            clean_dids = list({int(d) for d in dids})
+            placeholders = ",".join(["%s"] * len(clean_dids))
+            cur.execute(
+                f"SELECT COUNT(*) FROM document WHERE DID IN ({placeholders})",
+                clean_dids
+            )
+            count = cur.fetchone()[0]
+            return jsonify({"count": count})
+
+        elif mode == "query":
+            # ⚠️ ίδιο WHERE με το SELECT του πίνακα (χωρίς LIMIT)
+            cur.execute("SELECT COUNT(*) FROM document")
+            count = cur.fetchone()[0]
+            return jsonify({"count": count})
+
+        else:
+            return jsonify({"count": 0})
+
+    finally:
+        try:
+            cur.close()
+            conn.close()
+        except:
+            pass
+
+
+
 @app.get("/api/documents/new")
 def get_new_documents():
     after_did = request.args.get("after", type=int, default=0)
