@@ -908,7 +908,7 @@ def uploads_per_week():
         cur.close()
         conn.close()
 
-    labels = [f"Εβδ. {i}" for i in range(1, 13)]
+    labels = [f"Week. {i}" for i in range(1, 13)]
     return jsonify({"labels": labels, "counts": counts})
 
 

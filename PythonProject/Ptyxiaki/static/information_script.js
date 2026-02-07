@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           series: [
             {
-              name: "Ανεβασμένα αρχεία",
+              name: "Files Uploaded",
               data: realStats.counts   // REAL DATA (εβδομάδες)
             }
           ],
@@ -313,39 +313,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // === RADIAL CHART (όπως ήταν) ===
-    const chartRadialEl = document.querySelector("#chart-radial");
-    if (chartRadialEl) {
-      const radialOptions = {
-        chart: { type: "radialBar", height: 230 },
-        series: [95, 88, 92, 86],
-        labels: ["Συλλογή", "Ανάλυση", "Οπτικοποίηση", "Αναφορές"],
-        plotOptions: {
-          radialBar: {
-            hollow: { size: "34%" },
-            dataLabels: {
-              name: { fontSize: "10px" },
-              value: {
-                fontSize: "14px",
-                formatter: val => val + "%"
-              },
-              total: {
-                show: true,
-                label: "Τελευταία Εισαγωγή",
-                fontSize: "10px",
-                formatter: w => {
-                  const arr = w.globals.seriesTotals;
-                  const avg = arr.reduce((a, b) => a + b, 0) / arr.length;
-                  return avg.toFixed(1) + "%";
-                }
-              }
+    // === RADIAL CHART (διορθωμένο) ===
+const chartRadialEl = document.querySelector("#chart-radial");
+if (chartRadialEl) {
+  const radialOptions = {
+    chart: {
+      type: "radialBar",
+      height: 230
+    },
+    series: [100, 100, 100, 100],
+    labels: ["Data Collection", "Analysis & Processing", "Visualization", "Statistical Overview"],
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: "34%"
+        },
+        dataLabels: {
+          name: {
+            fontSize: "10px"
+          },
+          value: {
+            fontSize: "14px",
+            formatter: val => {
+
+            }
+          },
+          total: {
+            show: true,
+            label: "Statistical Overview",
+            fontSize: "10px",
+            formatter: w => {
+              const arr = w.globals.seriesTotals;
+              const avg = arr.reduce((a, b) => a + b, 0) / arr.length;
+
+              // αν το σύνολο είναι 100%, μην εμφανίζεται
+
             }
           }
-        },
-        colors: ["#fb923c", "#6366f1", "#10b981", "#0ea5e9"]
-      };
+        }
+      }
+    },
+    colors: ["#fb923c", "#6366f1", "#10b981", "#0ea5e9"]
+  };
 
-      new ApexCharts(chartRadialEl, radialOptions).render();
-    }
+  new ApexCharts(chartRadialEl, radialOptions).render();
+}
+
   }
 });

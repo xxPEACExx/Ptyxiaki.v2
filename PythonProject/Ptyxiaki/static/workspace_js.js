@@ -648,9 +648,9 @@ function updateResultsInfo() {
   if (pageSize === "all") {
     box.innerHTML = `
       <strong>1–${totalRows.toLocaleString()}</strong>
-      από
+      From
       <strong>${totalRows.toLocaleString()}</strong>
-      αποτελέσματα
+      Results
     `;
     return;
   }
@@ -660,9 +660,9 @@ function updateResultsInfo() {
 
   box.innerHTML = `
     <strong>${from.toLocaleString()}–${to.toLocaleString()}</strong>
-    από
+    From
     <strong>${totalRows.toLocaleString()}</strong>
-    αποτελέσματα
+    Results
   `;
 }
 
@@ -748,13 +748,13 @@ function renderSqlPage() {
   if (infoBox) {
     if (sqlPageSize === "all") {
       infoBox.innerHTML = `
-        <strong>1–${total}</strong> από
-        <strong>${total}</strong> αποτελέσματα
+        <strong>1–${total}</strong> From
+        <strong>${total}</strong> Results
       `;
     } else {
       infoBox.innerHTML = `
-        <strong>${from + 1}–${to}</strong> από
-        <strong>${total}</strong> αποτελέσματα
+        <strong>${from + 1}–${to}</strong> From
+        <strong>${total}</strong> Results
       `;
     }
   }

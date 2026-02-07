@@ -50,7 +50,7 @@
     <div class="tabs-center">
         <button class="tab-button active" data-tab="tab-query">Filtering Search</button>
         <button class="tab-button" data-tab="tab-table">SQL Direct</button>
-        <button class="tab-button" data-tab="tab-stats">Statistics</button>
+<!--        <button class="tab-button" data-tab="tab-stats">Statistics</button>-->
     </div>
 
     <div class="tabs-right">
@@ -74,21 +74,21 @@
             <!-- ===== LEFT: CRITERIA ===== -->
             <aside class="criteria-panel">
 
-                <h3 class="criteria-title">Filter</h3>
+                <h3 class="criteria-title">Filters</h3>
 
                 <div class="criteria-section">
                     <details open>
-                        <summary>Έτος Δημοσίευσης</summary>
+                        <summary>Publication Year</summary>
                         <div class="criteria-body">
-                            <input type="number" name="year_from" placeholder="Από Έτος">
-                            <input type="number" name="year_to" placeholder="Έως Έτος">
+                            <input type="number" name="year_from" placeholder="Year from">
+                            <input type="number" name="year_to" placeholder="Year to">
                         </div>
                     </details>
                 </div>
 
                 <div class="criteria-section">
                     <details>
-                        <summary>Χώρα / Κράτος</summary>
+                        <summary>Country / State</summary>
                         <div id="state-checkboxes" class="checkbox-group"></div>
                     </details>
                 </div>
@@ -103,10 +103,10 @@
 
                 <div class="criteria-section">
                     <details>
-                        <summary>Επιπλέον Φίλτρα</summary>
+                        <summary>Additional Filters</summary>
                         <div class="criteria-body">
-                            <input type="number" name="min_claims" placeholder="Ελάχιστο claims π.χ 2">
-                            <input type="number" name="min_abstract_words" placeholder="Ελάχιστο αριθμό λέξεων π.χ 100">
+                            <input type="number" name="min_claims" placeholder="Minimum claims (e.g., 2)">
+                            <input type="number" name="min_abstract_words" placeholder="Minimum number of words (e.g., 100)">
                         </div>
                     </details>
                 </div>
@@ -251,55 +251,55 @@
 </div>
 
 
-    <!-- ================= STATS TAB ================= -->
-    <div id="tab-stats" class="tab-content">
+<!--    &lt;!&ndash; ================= STATS TAB ================= &ndash;&gt;-->
+<!--    <div id="tab-stats" class="tab-content">-->
 
-        <div class="stats-toolbar">
-            <div class="stats-controls">
-                <label for="stat-type">Analysis type</label>
-                <select id="stat-type">
-                    <option value="claims-abstract">Claims vs Abstract (Scatter)</option>
-<!--                    <option value="claims-intensity">Claims Intensity by Kind (Bar)</option>-->
+<!--        <div class="stats-toolbar">-->
+<!--            <div class="stats-controls">-->
+<!--                <label for="stat-type">Analysis type</label>-->
+<!--                <select id="stat-type">-->
+<!--                    <option value="claims-abstract">Claims vs Abstract (Scatter)</option>-->
+<!--&lt;!&ndash;                    <option value="claims-intensity">Claims Intensity by Kind (Bar)</option>&ndash;&gt;-->
 
-                    <option value="patents-month">Patents per Month (Line)</option>
-<!--                    <option value="growth-rate">Monthly Growth Rate (Bar %)</option>-->
-<!--                     <option value="seasonality">Seasonality (Month-of-Year)</option>-->
-                      <option value="maturity-time">EP Maturity Over Time</option>
-                    <option value="complexity">Complexity Score (Top 50)</option>
+<!--                    <option value="patents-month">Patents per Month (Line)</option>-->
+<!--&lt;!&ndash;                    <option value="growth-rate">Monthly Growth Rate (Bar %)</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                     <option value="seasonality">Seasonality (Month-of-Year)</option>&ndash;&gt;-->
+<!--                      <option value="maturity-time">EP Maturity Over Time</option>-->
+<!--                    <option value="complexity">Complexity Score (Top 50)</option>-->
 
-                </select>
+<!--                </select>-->
 
-            </div>
+<!--            </div>-->
 
-            <button id="run-stats" class="toolbar-button primary">
-                Execute
-            </button>
-        </div>
+<!--            <button id="run-stats" class="toolbar-button primary">-->
+<!--                Execute-->
+<!--            </button>-->
+<!--        </div>-->
 
-        <div class="stats-card">
-            <div class="stats-card-header">
-                <div>
-                    <h3>Στατιστική Ανάλυση</h3>
-                    <p id="stats-subtitle"></p>
+<!--        <div class="stats-card">-->
+<!--            <div class="stats-card-header">-->
+<!--                <div>-->
+<!--                    <h3>Στατιστική Ανάλυση</h3>-->
+<!--                    <p id="stats-subtitle"></p>-->
 
-                </div>
-            </div>
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="stats-chart-wrapper">
-                <div class="stats-placeholder" id="stats-placeholder">
+<!--            <div class="stats-chart-wrapper">-->
+<!--                <div class="stats-placeholder" id="stats-placeholder">-->
 
-                    <br>
-                    1. Επιλέξτε την ανάλυση που επιθυμείτε από τη διαθέσιμη λίστα. <br><br>
-                    2. Πατήστε το κουμπί “Execute” για να ξεκινήσει η εκτέλεση της ανάλυσης. <br><br>
-                    3.Τα αποτελέσματα της ανάλυσης θα εμφανιστούν αυτόματα στην οθόνη μετά την ολοκλήρωση της διαδικασίας.
+<!--                    <br>-->
+<!--                    1. Επιλέξτε την ανάλυση που επιθυμείτε από τη διαθέσιμη λίστα. <br><br>-->
+<!--                    2. Πατήστε το κουμπί “Execute” για να ξεκινήσει η εκτέλεση της ανάλυσης. <br><br>-->
+<!--                    3.Τα αποτελέσματα της ανάλυσης θα εμφανιστούν αυτόματα στην οθόνη μετά την ολοκλήρωση της διαδικασίας.-->
 
 
-                </div>
-                <canvas id="stats-chart" style="display:none;"></canvas>
-            </div>
-        </div>
+<!--                </div>-->
+<!--                <canvas id="stats-chart" style="display:none;"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
 
-    </div>
+<!--    </div>-->
 
 </div> <!-- END content -->
 

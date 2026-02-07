@@ -64,14 +64,14 @@ function renderSqlPage() {
 
   if (sqlPageSize === "all") {
     infoBox.innerHTML = `
-      <strong>1–${total}</strong> από
-      <strong>${total}</strong> αποτελέσματα
+      <strong>1–${total}</strong> from
+      <strong>${total}</strong> Results
     `;
     paginationBox.innerHTML = "";
   } else {
     infoBox.innerHTML = `
-      <strong>${from + 1}–${to}</strong> από
-      <strong>${total}</strong> αποτελέσματα
+      <strong>${from + 1}–${to}</strong> from
+      <strong>${total}</strong> Results
     `;
     renderSqlPagination(total);
   }

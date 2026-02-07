@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // TYPEWRITER
 // =====================================================
 document.addEventListener("DOMContentLoaded", () => {
-    const text = "Εδώ μπορείτε να να πλοηγηθείτε σε φακέλους, και στα τελικά αρχεία xml";
+    const text = "Here you have a concise overview of your application and the data stored in the database. You can also navigate through folders and access the final XML files.";
     const output = document.getElementById("output");
     let i = 0;
 
@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 output.textContent = "";
                 i = 0;
                 type();
-            }, 30000);
+            }, 300000);
         }
     })();
 });

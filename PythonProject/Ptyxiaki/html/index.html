@@ -75,12 +75,14 @@
   <!-- 1. Σύνολο Patents -->
   <div class="card stat-card primary">
     <div class="stat-value" id="total-docs"> No data yet</div>
-    <div class="stat-label">Σύνολο Patents</div>
+    <div class="stat-label">
+        Total Patents
+    </div>
   </div>
 
   <!-- 2. Χώρες / Οργανισμοί (Donut) -->
   <div class="card stat-card">
-    <div class="card-title">Χώρες / Οργανισμοί</div>
+    <div class="card-title">Countries / Organizations</div>
     <canvas id="countriesChart" height="120"></canvas>
     <div class="legend" id="countriesLegend"></div>
   </div>
@@ -88,37 +90,37 @@
   <!-- 3. Εύρος ημερομηνιών -->
   <div class="card stat-card">
     <div class="stat-value" id="date-range">—</div>
-    <div class="stat-label">Χρονική κάλυψη</div>
+    <div class="stat-label">Time Coverage</div>
   </div>
 
   <!-- 4. Μοναδικοί Applicants -->
   <div class="card stat-card">
     <div class="stat-value" id="unique-applicants">0</div>
-    <div class="stat-label">Μοναδικοί αιτούντες</div>
+    <div class="stat-label">Total Applicants</div>
   </div>
 
   <!-- 5. Max Claims -->
   <div class="card stat-card">
     <div class="stat-value" id="max-claims">0</div>
-    <div class="stat-label">Μέγιστος αριθμός claims</div>
+    <div class="stat-label">Maximum Number of Claims</div>
   </div>
 
   <!-- 6. Γλώσσες -->
   <div class="card stat-card">
     <div class="stat-value" id="languages-count">0</div>
-    <div class="stat-label">Διαθέσιμες γλώσσες</div>
+    <div class="stat-label">Available Languages</div>
   </div>
 
   <!-- 7. Έγγραφα με description -->
   <div class="card stat-card">
     <div class="stat-value" id="docs-with-description">0</div>
-    <div class="stat-label">Με πλήρη περιγραφή</div>
+    <div class="stat-label">With Full Description</div>
   </div>
 
   <!-- 8. Multilingual titles -->
   <div class="card stat-card">
     <div class="stat-value" id="multi-lang-titles">0</div>
-    <div class="stat-label">Τίτλοι > 1 γλώσσα</div>
+    <div class="stat-label">Titles in More Than One Language</div>
   </div>
 
 </section>
@@ -129,7 +131,7 @@
 
     <div id="fileExplorer" class="card" style="width:100%">
 
-        <h3>📁 Διαδρομή Αρχείων</h3>
+        <h3>📁 File Path</h3>
 
         <div class="breadcrumbs-bar">
 
@@ -147,10 +149,10 @@
 
         <!-- Header table -->
         <div class="file-header">
-            <span>Όνομα</span>
-            <span>Τύπος</span>
-            <span>Εισαγωγή</span>
-            <span>Ημερομηνία Εισαγωγής</span>
+            <span>Name</span>
+            <span>Type</span>
+            <span>Upload</span>
+            <span>Upload Date</span>
             <span></span>
         </div>
 

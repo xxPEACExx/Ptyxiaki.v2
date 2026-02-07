@@ -73,12 +73,12 @@ function applySummary(data) {
    HUMAN TIME BUCKETS
    =========================== */
 function formatTimeBucket(seconds) {
-  if (seconds < 60) return "Πριν λίγα δευτερόλεπτα";
-  if (seconds < 300) return "Πριν 1 λεπτό";
-  if (seconds < 600) return "Πριν 5 λεπτά";
-  if (seconds < 3600) return "Πριν 10 λεπτά";
-  if (seconds < 86400) return "Πριν 1 ώρα";
-  return "Πριν 1 μέρα";
+  if (seconds < 60) return "A Few Seconds Ago";
+  if (seconds < 300) return "1 Minute Ago";
+  if (seconds < 600) return "5 Minute Ago";
+  if (seconds < 3600) return "10 Minute Ago";
+  if (seconds < 86400) return "1 Hour Ago";
+  return "More than 1 day";
 }
 
 function updateSeconds() {

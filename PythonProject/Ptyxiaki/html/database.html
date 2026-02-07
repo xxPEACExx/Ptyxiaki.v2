@@ -179,7 +179,7 @@
               {% if rows|length == 0 %}
               <tr>
                 <td colspan="15" style="text-align:center; padding:20px;">
-                  Δεν βρέθηκαν εγγραφές.
+                  No data.
                 </td>
               </tr>
               {% endif %}
@@ -197,7 +197,7 @@
         <!-- PER PAGE -->
         <form method="get" style="display:flex; align-items:center; gap:8px;">
           <input type="hidden" name="page" value="1">
-          <label for="per_page">Εγγραφές ανά σελίδα:</label>
+          <label for="per_page">Documents per page :</label>
           <select name="per_page" id="per_page" onchange="this.form.submit()">
             <option value="25"  {{ 'selected' if per_page == 25 else '' }}>25</option>
             <option value="50"  {{ 'selected' if per_page == 50 else '' }}>50</option>
@@ -206,7 +206,7 @@
         </form>
 
         <span class="page-info">
-          Σελίδα {{ page }} από {{ total_pages }}
+          Page {{ page }} από {{ total_pages }}
         </span>
 
         <div style="display:flex; gap:10px;">
@@ -243,14 +243,14 @@
     </div>
 
     <div class="upload-info">
-      <strong>Ανέβασμα ZIP</strong>
-      <p id="upload-status">Ξεκινά...</p>
+      <strong>Uploading files..</strong>
+      <p id="upload-status">Starting...</p>
     </div>
   </div>
 
   <div class="upload-controls">
-    <button id="pause-btn" class="control-btn">⏸ Παύση</button>
-    <button id="stop-btn" class="control-btn danger">⛔ Διακοπή</button>
+    <button id="pause-btn" class="control-btn">⏸ Pause</button>
+    <button id="stop-btn" class="control-btn danger">⛔ Stop </button>
   </div>
 </div>
 
