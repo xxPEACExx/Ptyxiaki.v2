@@ -439,7 +439,6 @@ def upload_progress_status():
     global upload_progress, upload_total
     return jsonify({"progress": upload_progress, "total": upload_total})
 
-
 @app.route("/upload_zip_chunk", methods=["POST"])
 def upload_zip_chunk():
     global upload_progress, upload_total
@@ -487,11 +486,26 @@ def upload_zip_chunk():
         return jsonify({"message": "Invalid upload data"}), 400
 
     # =========================
-    # Save chunk
+    # Duplicate ZIP check (YES / NO logic)
     # =========================
+    force = request.form.get("force") == "true"
+
     base_dir = "uploaded_files"
     os.makedirs(base_dir, exist_ok=True)
 
+    final_zip_path = os.path.join(base_dir, filename)
+
+    # Αν είναι πρώτο chunk, το αρχείο υπάρχει,
+    # και ΔΕΝ έχουμε force → ρωτάμε τον χρήστη
+    if index == 0 and os.path.exists(final_zip_path) and not force:
+        return jsonify({
+            "already_exists": True,
+            "message": "Το αρχείο υπάρχει ήδη. Θέλετε να το ανεβάσετε ξανά;"
+        }), 200
+
+    # =========================
+    # Save chunk
+    # =========================
     chunks_dir = os.path.join(base_dir, "_chunks", upload_id)
     os.makedirs(chunks_dir, exist_ok=True)
 
@@ -510,8 +524,9 @@ def upload_zip_chunk():
             "progress": upload_progress
         })
 
-
-    final_zip_path = os.path.join(base_dir, filename)
+    # =========================
+    # Merge chunks
+    # =========================
     if os.path.exists(final_zip_path):
         os.remove(final_zip_path)
 
@@ -530,7 +545,9 @@ def upload_zip_chunk():
         logging.exception("Chunk merge failed")
         return jsonify({"message": f"Merge failed: {e}"}), 500
 
-
+    # =========================
+    # Unzip
+    # =========================
     extract_dir = os.path.join(base_dir, os.path.splitext(filename)[0])
     os.makedirs(extract_dir, exist_ok=True)
 
@@ -558,7 +575,9 @@ def upload_zip_chunk():
             current_phase = "stopped"
         return jsonify({"message": f"Unzip failed: {e}"}), 500
 
-
+    # =========================
+    # Collect XML files
+    # =========================
     xml_files = []
     for root_dir, _, files in os.walk(extract_dir):
         for f in files:
@@ -570,7 +589,9 @@ def upload_zip_chunk():
             current_phase = "done"
         return jsonify({"message": "No XML files found"}), 400
 
-
+    # =========================
+    # Start processing
+    # =========================
     with processing_lock:
         current_phase = "processing"
 
@@ -584,6 +605,7 @@ def upload_zip_chunk():
         "message": f"Upload ολοκληρώθηκε. Ξεκίνησε processing {len(xml_files)} XML.",
         "folder_name": os.path.splitext(filename)[0]
     })
+
 
 
 
@@ -2033,6 +2055,30 @@ def api_overview():
     finally:
         cur.close()
         conn.close()
+
+
+@app.post("/reset_upload_state")
+def reset_upload_state():
+    global current_phase, upload_progress, upload_total
+    global zip_progress, zip_total, progress_percentage
+    global running, paused, stopped, processing_finished
+
+    with processing_lock:
+        running = False
+        paused = False
+        stopped = False
+
+        upload_progress = 0
+        upload_total = 0
+        zip_progress = 0
+        zip_total = 0
+        progress_percentage = 0
+
+        current_phase = "idle"
+        processing_finished = False
+
+    return jsonify({"status": "ok"})
+
 
 
 
