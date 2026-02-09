@@ -2038,6 +2038,51 @@ def api_overview():
         """)
         multilingual_titles = cur.fetchone()[0]
 
+        # 9. Documents per Year
+        cur.execute("""
+            SELECT YEAR(date) AS year, COUNT(*)
+            FROM document
+            WHERE date IS NOT NULL
+            GROUP BY YEAR(date)
+            ORDER BY year
+        """)
+        documents_per_year = {
+            str(row[0]): row[1]
+            for row in cur.fetchall()
+            if row[0] is not None
+        }
+
+        # 10. Languages distribution
+        cur.execute("""
+            SELECT l.name, COUNT(*)
+            FROM document d
+            JOIN lang l ON l.CID = d.lang
+            GROUP BY l.name
+        """)
+        languages = {row[0]: row[1] for row in cur.fetchall()}
+
+        # 11. Top applicants (σωστό για το schema σου)
+        cur.execute("""
+            SELECT pa.last_name, COUNT(*) AS total
+            FROM parties pa
+            WHERE pa.role = 1
+              AND pa.last_name IS NOT NULL
+              AND pa.last_name <> ''
+            GROUP BY pa.last_name
+            ORDER BY total DESC
+            LIMIT 5
+        """)
+        top_applicants = {row[0]: int(row[1]) for row in cur.fetchall()}
+
+
+        # 12. Folder count (filesystem)
+        base = "uploaded_files"
+        folders_count = sum(
+            1 for root, dirs, _ in os.walk(base)
+            if root != base
+        )
+
+
         return jsonify({
             "total_documents": total_documents,
             "countries": countries,
@@ -2049,7 +2094,11 @@ def api_overview():
             "max_claims": max_claims,
             "languages_count": languages_count,
             "documents_with_description": documents_with_description,
-            "multilingual_titles": multilingual_titles
+            "multilingual_titles": multilingual_titles,
+            "documents_per_year": documents_per_year,
+            "languages": languages,
+            "top_applicants": top_applicants,
+            "folders_count": folders_count
         })
 
     finally:

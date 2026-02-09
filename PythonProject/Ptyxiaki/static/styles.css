@@ -915,4 +915,50 @@ body {
   margin: 0 auto;
 }
 
+.top-applicants {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.applicant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.applicant-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.applicant-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.applicant-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+}
+
+.applicant-count {
+  font-weight: 600;
+  font-size: 13px;
+  color: #374151;
+}
 

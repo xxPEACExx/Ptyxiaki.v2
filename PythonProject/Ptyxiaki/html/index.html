@@ -80,12 +80,13 @@
     </div>
   </div>
 
-  <!-- 2. Χώρες / Οργανισμοί (Donut) -->
-  <div class="card stat-card">
-    <div class="card-title">Countries / Organizations</div>
-    <canvas id="countriesChart" height="120"></canvas>
-    <div class="legend" id="countriesLegend"></div>
+            <div class="card stat-card">
+    <div class="stat-value" id="folders-count">0</div>
+    <div class="stat-label">Total Folders</div>
   </div>
+
+
+
 
   <!-- 3. Εύρος ημερομηνιών -->
   <div class="card stat-card">
@@ -114,7 +115,7 @@
   <!-- 7. Έγγραφα με description -->
   <div class="card stat-card">
     <div class="stat-value" id="docs-with-description">0</div>
-    <div class="stat-label">With Full Description</div>
+    <div class="stat-label">With Description</div>
   </div>
 
   <!-- 8. Multilingual titles -->
@@ -122,6 +123,33 @@
     <div class="stat-value" id="multi-lang-titles">0</div>
     <div class="stat-label">Titles in More Than One Language</div>
   </div>
+
+<!-- 2. Χώρες / Οργανισμοί (Donut) -->
+  <div class="card stat-card">
+    <div class="card-title">Countries / Organizations</div>
+    <canvas id="countriesChart" height="120"></canvas>
+    <div class="legend" id="countriesLegend"></div>
+  </div>
+
+
+
+         <div class="card">
+  <h3>Documents per Year</h3>
+  <canvas id="docsPerYearChart"></canvas>
+</div>
+
+            <div class="card">
+  <h3>Languages Distribution</h3>
+  <canvas id="languagesChart"></canvas>
+</div>
+
+         <div class="card">
+    <h3>Top Applicants</h3>
+    <div id="topApplicantsList" class="top-applicants"></div>
+  </div>
+
+
+
 
 </section>
 
