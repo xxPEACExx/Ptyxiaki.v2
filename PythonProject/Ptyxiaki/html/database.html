@@ -17,6 +17,7 @@
   <script src="{{ url_for('static', filename='upload_database.js') }}" defer></script>
   <script src="{{ url_for('static', filename='database_delete.js') }}" defer></script>
   <script src="{{ url_for('static', filename='database_cards.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='database_pdf.js') }}" defer></script>
 </head>
 
 <body data-total-rows="{{ total_rows }}">
@@ -123,6 +124,14 @@
                   title="Διαγραφή επιλεγμένων">
             <i class="fa-solid fa-trash"></i>
           </button>
+
+            <button id="downloadPdfBtn"
+            class="delete-icon-btn"
+
+            title="Κατέβασμα επιλεγμένων σε PDF">
+            <i class="fa-solid fa-file-pdf"></i>
+        </button>
+
         </section>
 
         <!-- BODY -->
@@ -206,7 +215,7 @@
         </form>
 
         <span class="page-info">
-          Page {{ page }} από {{ total_pages }}
+          Page {{ page }} From {{ total_pages }}
         </span>
 
         <div style="display:flex; gap:10px;">

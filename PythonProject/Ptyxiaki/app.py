@@ -11,16 +11,20 @@ import time
 import logging
 from datetime import datetime
 
-from Ptyxiaki.abstract import create_abstract_table, insert_abstract
-from Ptyxiaki.country import create_country_table, initialize_country
-from Ptyxiaki.description import create_description_table, insert_description
-# from Ptyxiaki.abstract import create_abstract_table, insert_abstract
-# from Ptyxiaki.country import create_country_table, initialize_country
-from Ptyxiaki.role import initialize_role, create_role_table
-from Ptyxiaki.save_query import create_saved_sql_queries_table
-from Ptyxiaki.scheme import initialize_scheme, create_scheme_table
-from Ptyxiaki.kind import initialize_kind, create_kind_table
-from Ptyxiaki.status import initialize_status, create_status_table
+from flask import send_file, request
+from io import BytesIO
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+
+from PythonProject.Ptyxiaki.abstract import insert_abstract, create_abstract_table
+from PythonProject.Ptyxiaki.country import create_country_table, initialize_country
+from PythonProject.Ptyxiaki.description import insert_description, create_description_table
+from PythonProject.Ptyxiaki.kind import create_kind_table, initialize_kind
+from PythonProject.Ptyxiaki.role import create_role_table, initialize_role
+from PythonProject.Ptyxiaki.save_query import create_saved_sql_queries_table
+from PythonProject.Ptyxiaki.status import create_status_table, initialize_status
 from title import insert_title, create_title_table
 from parties import insert_parties, create_parties_table
 from claims import insert_claims, create_claims_table
@@ -82,10 +86,8 @@ processing_state = "idle"
 current_phase = "idle"
 batch_count = 0
 processing_finished = False
-
 processing_started_at = None
 processing_ended_at = None
-
 documents_before_processing = 0
 last_inserted_count = 0
 
@@ -2128,7 +2130,184 @@ def reset_upload_state():
 
     return jsonify({"status": "ok"})
 
+@app.route("/download_documents_pdf", methods=["GET"])
+def download_documents_pdf():
+    dids_raw = request.args.get("dids", "")
+    dids = [int(x) for x in dids_raw.split(",") if x.strip().isdigit()]
 
+    if not dids:
+        return "No selected documents.", 400
+
+    conn, cur = get_db_cursor()
+
+    try:
+        placeholders = ",".join(["%s"] * len(dids))
+
+        cur.execute(f"""
+            SELECT
+                did,
+                ucid,
+                doc_number,
+                kind,
+                country,
+                date,
+                family_id,
+                status,
+                lang,
+                size_description,
+                size_description_pars,
+                size_description_words,
+                how_many_claims,
+                date_produced
+            FROM document
+            WHERE did IN ({placeholders})
+            ORDER BY did DESC
+        """, tuple(dids))
+
+        rows = cur.fetchall()
+
+        buffer = BytesIO()
+
+        doc = SimpleDocTemplate(
+            buffer,
+            pagesize=landscape(A4),
+            rightMargin=15,
+            leftMargin=15,
+            topMargin=20,
+            bottomMargin=20
+        )
+
+        styles = getSampleStyleSheet()
+        elements = []
+
+        elements.append(Paragraph("Selected Document Records", styles["Title"]))
+
+        headers = [
+            "DID", "UCID", "Doc No", "Kind", "Country", "Date",
+            "Family ID", "Status", "Lang", "Size", "Pars",
+            "Words", "Claims", "Produced"
+        ]
+
+        data = [headers]
+
+        for row in rows:
+            data.append([str(value) if value is not None else "" for value in row])
+
+        table = Table(data, repeatRows=1)
+
+        table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.lightgrey),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.black),
+            ("GRID", (0, 0), (-1, -1), 0.4, colors.grey),
+            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+            ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
+            ("FONTSIZE", (0, 0), (-1, -1), 7),
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.whitesmoke]),
+        ]))
+
+        elements.append(table)
+
+        doc.build(elements)
+        buffer.seek(0)
+
+        return send_file(
+            buffer,
+            as_attachment=True,
+            download_name="selected_documents.pdf",
+            mimetype="application/pdf"
+        )
+
+    finally:
+        cur.close()
+        conn.close()
+
+
+
+@app.route("/download_all_documents_pdf", methods=["GET"])
+def download_all_documents_pdf():
+    conn, cur = get_db_cursor()
+
+    try:
+        cur.execute("""
+            SELECT
+                did,
+                ucid,
+                doc_number,
+                kind,
+                country,
+                date,
+                family_id,
+                status,
+                lang,
+                size_description,
+                size_description_pars,
+                size_description_words,
+                how_many_claims,
+                date_produced
+            FROM document
+            ORDER BY did DESC
+        """)
+
+        rows = cur.fetchall()
+
+        buffer = BytesIO()
+
+        doc = SimpleDocTemplate(
+            buffer,
+            pagesize=landscape(A4),
+            rightMargin=15,
+            leftMargin=15,
+            topMargin=20,
+            bottomMargin=20
+        )
+
+        styles = getSampleStyleSheet()
+        elements = []
+
+        elements.append(Paragraph("All Document Records", styles["Title"]))
+
+        headers = [
+            "DID", "UCID", "Doc No", "Kind", "Country", "Date",
+            "Family ID", "Status", "Lang", "Size", "Pars",
+            "Words", "Claims", "Produced"
+        ]
+
+        data = [headers]
+
+        for row in rows:
+            data.append([str(value) if value is not None else "" for value in row])
+
+        table = Table(data, repeatRows=1)
+
+        table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.lightgrey),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.black),
+            ("GRID", (0, 0), (-1, -1), 0.4, colors.grey),
+            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+            ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
+            ("FONTSIZE", (0, 0), (-1, -1), 7),
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.whitesmoke]),
+        ]))
+
+        elements.append(table)
+
+        doc.build(elements)
+        buffer.seek(0)
+
+        return send_file(
+            buffer,
+            as_attachment=True,
+            download_name="all_documents.pdf",
+            mimetype="application/pdf"
+        )
+
+    finally:
+        cur.close()
+        conn.close()
 
 
 
