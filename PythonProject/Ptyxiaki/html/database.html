@@ -221,16 +221,16 @@
         <div style="display:flex; gap:10px;">
           {% if page > 1 %}
             <a class="button-33"
-               href="?page=1&per_page={{ per_page }}#pagination-anchor">⏮ Πρώτη</a>
+               href="?page=1&per_page={{ per_page }}#pagination-anchor">⏮ First page</a>
             <a class="button-33"
-               href="?page={{ page - 1 }}&per_page={{ per_page }}#pagination-anchor">⬅ Προηγούμενη</a>
+               href="?page={{ page - 1 }}&per_page={{ per_page }}#pagination-anchor">⬅ Previous</a>
           {% endif %}
 
           {% if page < total_pages %}
             <a class="button-33"
-               href="?page={{ page + 1 }}&per_page={{ per_page }}#pagination-anchor">Επόμενη ➡</a>
+               href="?page={{ page + 1 }}&per_page={{ per_page }}#pagination-anchor">Νext➡</a>
             <a class="button-33"
-               href="?page={{ total_pages }}&per_page={{ per_page }}#pagination-anchor">Τελευταία ⏭</a>
+               href="?page={{ total_pages }}&per_page={{ per_page }}#pagination-anchor">Last page ⏭</a>
           {% endif %}
         </div>
 
